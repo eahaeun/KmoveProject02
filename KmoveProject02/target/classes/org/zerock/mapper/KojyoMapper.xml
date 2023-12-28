@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mabatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace 속성값은 Mapper 인터페이스와 동일한 이름으로 작성한다. -->
+<mapper namespace="org.zerock.mapper.KojyoMapper">
+	<!-- id 속성값은 메서드 이름과 동일하게 작성한다. -->
+	<!-- resultType 속성의 값은 select 쿼리의 결과를 특정 클래스의 객체로 만들기 위해서 설정한다. -->
+	<select id="getList" resultType="org.zerock.domain.KojyoVO">
+		select * from kojyo
+	</select>
+	
+	
+	
+	<insert id="insert">
+		INSERT INTO kojyo (kojyo_km, hansu_tani, biko)
+		values (#{kojyo_km}, #{hansu_tani}, #{biko})
+	</insert>
+	
+	<update id="update">
+		update Kojyo
+		set
+		hansu_tani =#{hansu_tani},
+		biko = #{biko}
+		where Kojyo= #{Kojyo}
+	</update>
+	
+	<select id="read" resultType="org.zerock.domain.KojyoVO"> 
+	select * from Kojyo where kojyo_km = #{kojyo_km}
+	</select>
+	
+	<delete id="delete">
+		delete Kojyo where kojyo_km = #{kojyo_km}
+	</delete>
+	
+</mapper>

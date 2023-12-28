@@ -1,0 +1,1495 @@
+
+/* main container */
+#main_container {
+	width: 1200px;
+	min-height: 100%;
+	overflow: hidden;
+	padding-top: 10px;
+}
+
+/* main container_wide */
+#main_container_wide {
+	width: 1500px;
+	min-height: 100%;
+	overflow: hidden;
+	padding-top: 10px;
+}
+
+/* main container_메인 환영인사 */
+div.main_titimg {
+	float: left;
+	margin: 0px 0 0 30px;
+}
+
+/* 회색배경 */
+#main_header {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: 45px;
+	position: relative;
+	background-image: url('../img/main_top_bg.gif');
+	background-repeat: repeat;
+}
+
+div.header {
+	width: 1200px;
+}
+
+.header ul.logo {
+	float: left;
+	padding-left: 20px;
+	width: 300px;
+}
+
+/*회원가입 로그아웃 버튼 */
+.header ul.login_menu {
+	float: right;
+	top: 0px;
+	right: 20px;
+	font-size: 11px;
+}
+
+div.direct {
+	float: right;
+	display: inline-block;
+	font-family: 'dotum';
+	font-size: 11px;
+	float: left;
+}
+
+.direct a {
+	display: inline;
+	float: left;
+	background: url('../img/top_direct_icon.png') no-repeat;
+	color: #e8e8e8;
+	text-decoration: none;
+	padding-left: 15px;
+	margin-top: 17px; /*19px;*/
+	margin-right: 10px;
+}
+
+.direct a:hover {
+	color: #4bf20a;
+	text-decoration: underline;
+}
+
+/* 메인메뉴 */
+#bottom_gnb2017 {
+	overflow: hidden;
+	width: 100%;
+	background: url('../img/menu_bg.gif') repeat-x;
+}
+
+#bottom_gnb2017 ul li>div {
+	position: absolute;
+	visibility: hidden;
+}
+
+#bottom_gnb2017 ul li:hover>div {
+	visibility: visible;
+}
+
+/* 수정 20200207 */
+.menu_s2020 {
+	overflow: hidden;
+	list-style: none;
+	float: left;
+	margin: 0;
+	width: 1200px;
+	padding: 0
+}
+
+.menu_s2020 li {
+	float: left;
+	background: url('../img/menu_img_2020.png') no-repeat;
+}
+
+.menu_s2020 li a span {
+	display: none;
+}
+
+.menu_s2020 li a {
+	width: 171px;
+	height: 30px;
+	display: block;
+}
+
+.menu2020 .n01 {
+	background-position: 0px 0px;
+}
+
+.menu2020 .n01:hover {
+	background-position: 0px -30px;
+}
+
+.menu2020 .n02 {
+	background-position: -171px -0px;
+}
+
+.menu2020 .n02:hover {
+	background-position: -171px -30px;
+}
+
+.menu2020 .n03 {
+	background-position: -342px -0px;
+}
+
+.menu2020 .n03:hover {
+	background-position: -342px -30px;
+}
+
+.menu2020 .n04 {
+	background-position: -513px -0px;
+}
+
+.menu2020 .n04:hover {
+	background-position: -513px -30px;
+}
+
+.menu2020 .n07 {
+	background-position: -684px -0px;
+}
+
+.menu2020 .n07:hover {
+	background-position: -684px -30px;
+}
+
+.menu2020 .n05 {
+	background-position: -855px -0px;
+}
+
+.menu2020 .n05:hover {
+	background-position: -855px -30px;
+}
+
+.menu2020 .n06 {
+	background-position: -1026px -0px;
+}
+
+.menu2020 .n06:hover {
+	background-position: -1026px -30px;
+}
+
+div.menu_2depth_01_2020 {
+	overflow: hidden;
+	width: 169px;
+	border: 1px solid #44454b;
+	background: #51535d;
+}
+
+div.menu_2depth_01_2020 .menu_01 {
+	float: left;
+	margin: 2px 7px;
+	width: 95%;
+}
+
+div.menu_2depth_01_2020 .menu_01 li {
+	/*	margin-right:10px; */
+	width: 140px;
+	height: 23px;
+	padding-top: 5px;
+	padding-left: 16px;
+	border-bottom: 1px solid #4a4c55;
+	background: none;
+}
+
+div.menu_2depth_01_2020 .menu_01 li.height {
+	height: 36px;
+}
+
+div.menu_2depth_01_2020 .menu_01 li:last-child {
+	border-bottom: none;
+}
+
+div.menu_2depth_01_2020 .menu_01 li a {
+	width: 140px;
+	height: 20px;
+	color: #cccccc;
+}
+
+div.menu_2depth_01_2020 .menu_01 li a:hover {
+	color: #ffffff;
+}
+
+div.menu_2depth_01_2020.menu_01 li a:active {
+	background: #51535d;
+}
+
+div.menu_2depth_01_2020 .menu_01 li a:focus {
+	background: #51535d;
+}
+
+/* 메뉴 항목 텍스트 중앙 정렬 */
+.menu_2depth_01_2020 ul.menu_01 li a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.menu_2depth_01_2020 ul.menu_01 {
+	list-style: none;
+	padding: 0; /* 선택적으로 패딩 제거 */
+}
+
+.menu_2depth_01_2020 ul.menu_01 li {
+	margin: 0; /* 선택적으로 마진 제거 */
+}
+
+.menu_01 li {
+	margin-right: 100px;
+}
+
+/* 메인페이지 */
+/* main container_메인 환영인사 */
+div.main_titimg {
+	float: left;
+	margin: 0px 0 0 30px;
+}
+
+.b_info {
+	float: left;
+}
+
+div.b_info_detail {
+	width: 750px;
+	height: 30px;
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+}
+
+.b_info_detail li {
+	float: left;
+	margin: 3px 0;
+	padding-top: 5px;
+	color: #000;
+}
+
+.b_info_detail li.cell {
+	float: left;
+	height: 20px;
+	margin: 3px 0;
+	padding-top: 5px;
+	width: 100px;
+	text-align: center;
+	color: #2c3332;
+	background-color: #cfefec;
+}
+
+div.today {
+	display: block;
+	float: left;
+	width: 220px;
+	height: 60px;
+	margin-top: 10px;
+	margin-left: 200px;
+	padding: 53px 0 0 35px;
+	background: url('../img/main_today.gif') no-repeat;
+}
+
+div.holidaySelect {
+	display: block;
+	margin: 0 auto;
+	width: 259px;
+	height: 43px;
+	padding: 10px 0 0 0;
+	text-align: center;
+	background: url(https://img.payzon.co.kr/_commonImg/holidaySelectBg.gif)
+		no-repeat;
+}
+
+/* main container_공지사항 */
+div.notice {
+	float: left;
+	width: 550px;
+	margin: 0px 0px 0px 0px;
+}
+
+.notice ul.img {
+	float: left;
+	width: 135px;
+}
+
+.notice ul.list {
+	float: left;
+	width: 400px;
+}
+
+.notice ul.list li {
+	float: left;
+	height: 22px;
+}
+
+.notice ul.list li.date {
+	display: inline-block;
+	width: 50px;
+	text-align: right;
+}
+
+/* main container_온라인 상담*/
+div.online_c {
+	width: 550px;
+	margin: 0px 0px 0px 600px;
+}
+
+.online_c ul.img {
+	float: left;
+	width: 135px;
+}
+
+.online_c ul.list {
+	float: left;
+	width: 400px;
+}
+
+.online_c li {
+	float: left;
+	height: 22px;
+}
+
+.online_c li span.date {
+	display: inline-block;
+	width: 50px;
+	text-align: right;
+}
+
+/* main container_회원기본정보 */
+div.m_info {
+	width: 750px;
+	margin: 0 0 0 20px;
+	overflow: hidden;
+	float: left;
+}
+
+ul.c_logo {
+	float: left;
+	width: 128px;
+	text-align: center;
+}
+
+.c_logo li.box {
+	display: table-cell;
+	height: 165px;
+	background-color: #fbfbfb;
+	border: 1px solid #e2e2e2;
+	margin: auto 0px;
+	padding: 0px 10px;
+	vertical-align: middle;
+}
+
+ul.tb_main {
+	float: left;
+	margin-left: 20px;
+	margin-top: 10px;
+	width: 557px;
+	padding: 0px;
+}
+
+ul.photo { /* 사원등록 > 사진등록*/
+	float: left;
+	width: 161px;
+	text-align: center;
+}
+
+.photo li.box {
+	height: 200px;
+	background-color: #fbfbfb;
+	border: 1px solid #e2e2e2;
+	margin: auto 0px;
+}
+
+ul.logo_reg li {
+	float: left;
+	display: block;
+	line-height: 130%;
+}
+
+ul.tb_em_reg { /* 사원등록 > 기본정보*/
+	float: left;
+	margin-left: 30px;
+	width: 700px;
+}
+
+/* main container_사원정보, 사원관리 */
+div.e_total {
+	margin: 0px 0px 0px 20px;
+	overflow: hidden;
+	position: relative;
+}
+/* .e_total:after{
+		content:"";
+		display:block;
+		width:100%;
+		clear:both;
+	} */
+.e_total ul {
+	float: left;
+}
+
+.e_total ul span.btn1 {
+	float: right;
+}
+
+.e_total li {
+	float: left;
+	text-align: center;
+	padding: 5px 0 0 0;
+	height: 22px;
+}
+
+.e_total li.right {
+	float: right;
+}
+
+.e_total li.a_l {
+	float: left;
+	text-align: left;
+	height: 22px;
+	padding: 5px 0 0 0;
+}
+
+.e_total li.a_r {
+	text-align: right;
+}
+
+.e_total li.black {
+	background-color: #000;
+	border-right: 1px solid #ffffff;
+}
+
+.e_total li.blue {
+	background-color: #4294f1;
+	border-right: 1px solid #ffffff;
+}
+
+.e_total li.g1 {
+	background-color: #efefef;
+}
+
+.e_total li.g2 {
+	background-color: #999999;
+	border-right: 1px solid #ffffff;
+}
+
+.e_total li.g3 {
+	background-color: #92aad9;
+}
+
+.e_total li.g4 {
+	background-color: #f9f9f9;
+}
+
+div.e_total>select {
+	overflow: hidden;
+}
+
+button#btnEmployeeBatchIns {
+	padding: 0 20px;
+	background: #3a79c4;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	border: 0;
+	outline: 0;
+	border-radius: 5px;
+}
+
+/* main container_급여현황 */
+div.p_total_tit {
+	width: 1200px;
+	margin: 0 0 0 20px;
+	overflow: hidden;
+	float: left;
+}
+
+.p_total_tit ul {
+	float: left;
+}
+
+.p_total_tit span.btn1 {
+	float: right;
+	margin-bottom: 7px;
+}
+
+div.p_total {
+	width: 1200px;
+	margin: 0 0 0 20px;
+	overflow: hidden;
+	float: left;
+}
+
+.p_total ul {
+	width: 100%;
+	float: left;
+}
+
+.p_total li {
+	padding-top: 7px;
+}
+
+.p_total ul.total_last {
+	padding-top: 0px;
+	background-color: #ffffe0;
+	height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 1px soldi #e2e2e2;
+}
+
+.disHide {
+	display: none;
+}
+
+/* sub container */
+div.sub_titimg {
+	width: 100%;
+	margin: 20px 0px 0px 0px;
+}
+
+.sub_titimg ul {
+	float: left;
+	width: 800px; /*700*/
+}
+
+.tit_img {
+	float: left;
+	width: 70px;
+	margin-left: 50px;
+}
+
+.calculator {
+	float: right;
+	padding: 40px 10px 0px 0px;
+}
+
+/*근태설정 stop01*/
+div.diligence {
+	width: 100%;
+	text-align: center;
+	float: left;
+}
+
+div.diligence_list {
+	float: left;
+	width: 720px;
+	margin: 10px 0 0 20px;
+}
+
+.diligence_list li {
+	padding-top: 8px;
+	height: 30px;
+}
+
+.diligence_list li span.btn {
+	display: inline-block;
+	float: right;
+}
+
+div.diligence_list div.dil_w_list {
+	float: left;
+	margin: 0px;
+	width: 703px;
+}
+
+div.diligence_list div.dil_w_list_scroll {
+	float: left;
+	margin: 0px;
+	width: 720px;
+	height: 365px;
+	overflow: auto;
+}
+
+div.diligence_set {
+	float: right;
+	width: 400px;
+	margin: 10px 0 0 30px;
+}
+
+div.payset_list {
+	float: left;
+	width: 550px;
+	margin: 0 0 0 60px;
+}
+
+.payset_list li {
+	padding-top: 8px;
+	height: 30px;
+}
+
+div.payset_set {
+	float: left;
+	width: 320px;
+	margin: 0 0 0 20px;
+}
+
+.payset_set span.btn {
+	display: inline-block;
+	float: right;
+}
+
+/* search_검색영역_근태기록 : 배경없는것 */
+div.dil_search_box {
+	width: 100%;
+	margin: 0px 0px 7px 0px;
+	overflow: hidden;
+}
+
+.dil_search_box ul {
+	float: left;
+}
+
+.dil_search_box ul.right {
+	float: right;
+}
+
+input.border { /* 기본 인풋*/
+	border: 1px solid #e8e8e8;
+	background-color: #ffffff;
+	line-height: 23px;
+	display: inline;
+	font-family: 'Nanum Gothic';
+	color: #7c7c7c;
+}
+
+input.border_s { /* 기본 인풋*/
+	border: 1px solid #e8e8e8;
+	background-color: #ffffff;
+	line-height: 20px;
+	display: inline;
+	font-family: 'Nanum Gothic';
+	color: #7c7c7c;
+}
+
+input.border_none { /* 기본 인풋*/
+	border: 1px solid #ffffff;
+	background-color: #ffffff;
+	line-height: 20px;
+	display: inline;
+	font-family: 'Nanum Gothic';
+	color: #7c7c7c;
+}
+
+input.text {
+	width: 95%;
+	border: 1px solid #e8e8e8;
+	background-color: #ffffff;
+	/*line-height:20px;*/
+	height: 20px;
+	margin-top: 3px;
+	display: inline;
+	font-family: 'Nanum Gothic';
+	padding-left: 3px;
+}
+
+input.money:focus, /* 추가 */ input.text:focus {
+	border: 1px solid #4294f1;
+	line-height: 20px;
+}
+
+input.white {
+	width: 95%;
+	border: 1px solid #ffffff;
+	line-height: 20px;
+	height: 22px;
+	color: #666666;
+	font-family: 'Nanum Gothic';
+	display: inline;
+}
+
+input.white_pay {
+	width: 95%;
+	border: 1px solid #ffffff;
+	line-height: 17px;
+	height: 20px;
+	color: #333333;
+	font-family: 'Nanum Gothic';
+	font-size: 11px;
+	display: inline;
+	text-align: right;
+}
+
+input.white_yell {
+	width: 95%;
+	border: 1px solid #ffd569;
+	background-color: #ffd569;
+	line-height: 17px;
+	height: 20px;
+	color: #333333;
+	font-family: 'Nanum Gothic';
+	font-size: 11px;
+	display: inline;
+	text-align: right;
+}
+
+input.total {
+	width: 95%;
+	border: 1px solid #ffffe0;
+	background-color: #ffffe0;
+	line-height: 17px;
+	height: 20px;
+	color: #333333;
+	font-family: 'Nanum Gothic';
+	font-size: 11px;
+	display: inline;
+	text-align: right;
+	font-weight: bold;
+}
+
+input.white:focus {
+	border: 1px solid #4294f1;
+	line-height: 20px;
+}
+
+input.white_ext {
+	border: 1px solid #ffffff;
+	line-height: 20px;
+	height: 22px;
+	color: #666666;
+	font-family: 'Nanum Gothic';
+	display: inline;
+}
+
+input.white_ext:focus {
+	border: 1px solid #4294f1;
+	line-height: 20px;
+}
+
+input.yellow {
+	border: 1px solid #e9e5a0;
+	background-color: #fffaab;
+	line-height: 20px;
+	height: 22px;
+	color: #333333;
+	font-family: 'Nanum Gothic';
+	display: inline;
+	padding-right: 5px;
+}
+
+input.yellow:focus {
+	border: 1px solid #4294f1;
+	line-height: 20px;
+}
+
+input.yelled {
+	border: 1px solid #e9e5a0;
+	background-color: #ffc600;
+	line-height: 20px;
+	height: 22px;
+	color: #333333;
+	font-family: 'Nanum Gothic';
+	display: inline;
+	padding-right: 5px;
+}
+
+input.yelled:focus {
+	border: 1px solid #4294f1;
+	line-height: 20px;
+}
+
+input.black {
+	border: 1px solid #4d4d4d;
+	background-color: #202020;
+	line-height: 20px;
+	height: 22px;
+	color: #ffff00;
+	font-family: 'NanumGothic';
+	display: inline;
+	padding-right: 5px;
+	font-weight: bold;
+	text-align: right;
+}
+
+/* 추가 입력창.숫자.우측기준 */
+input.money {
+	width: 95%;
+	border: 1px solid #ffffff;
+	line-height: 20px;
+	height: 22px;
+	color: #666666;
+	font-family: 'Nanum Gothic';
+	display: inline;
+	text-align: right;
+	padding-right: 5px;
+}
+
+select {
+	border: 1px solid #f5f5f5;
+	background-color: #ffffff;
+	line-height: 20px;
+	height: 24px;
+	padding-left: 5px;
+	display: inblock;
+	font-size: 12px;
+	font-family: 'Nanum Gothic';
+}
+
+select.small {
+	border: 1px solid #e8e8e8;
+	background-color: #fafafa;
+	height: 22px;
+	padding-left: 5px;
+	display: inblock;
+	font-size: 12px;
+	font-family: 'Nanum Gothic';
+}
+
+/* table
+================================================== */
+#table0 {
+	width: 100%;
+}
+
+#table0 .caption {
+	border-top: 2px solid #000;
+	padding: 0px;
+	height: 2px;
+}
+
+#table0  ul {
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+#table0  ul.line_b {
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #7ab4ee;
+}
+
+#table0 li {
+	float: left;
+	height: 30px;
+	padding-top: 10px;
+}
+
+#table0 li.con {
+	float: left;
+	height: 30px;
+	padding-top: 5px;
+}
+
+#table0 li.con_no {
+	float: left;
+	height: 20px;
+	padding-top: 10px;
+}
+
+#table0 li.con_t0 {
+	float: left;
+	height: 25px;
+	padding: 0px;
+	margin: 0px;
+}
+
+#table0 li.con_no_r {
+	float: right;
+	height: 20px;
+	padding-top: 10px;
+	padding-right: 10px;
+}
+
+#table0 div.img {
+	float: left;
+	padding: 2px 0 0 5px;
+}
+
+#table_dil { /* 근태기록 */
+	width: 99%;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	color: #666666;
+}
+
+#table_dil .caption {
+	border-bottom: 2px solid #4499fa;
+}
+
+#table_dil ul {
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #e2e2e2;
+	border-left: 1px solid #e2e2e2;
+	color: #333333;
+}
+
+#table_dil li {
+	float: left;
+	height: 24px;
+	border-right: 1px solid #e2e2e2;
+}
+
+#table_dil li.tit {
+	background-color: #f6fdff;
+	color: #333333;
+	text-align: center;
+	padding-top: 12px;
+	font-weight: bold;
+}
+
+#tableRetireData { /* 퇴직급여명세서 목록 2014-02-04 */
+	width: 99%;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	color: #666666;
+}
+
+#tableRetireData .caption {
+	border-bottom: 2px solid #4499fa;
+}
+
+#tableRetireData ul {
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #e2e2e2;
+	border-left: 1px solid #e2e2e2;
+	color: #333333;
+}
+
+#tableRetireData li {
+	float: left;
+	height: 24px;
+	border-right: 1px solid #e2e2e2;
+}
+
+#tableRetireData li.tit {
+	background-color: #f6fdff;
+	color: #333333;
+	text-align: center;
+	padding-top: 12px;
+	font-weight: bold;
+}
+
+#table_dil_data { /* 급여입력부분 데이터 추가/삭제 테이블 설정으로 추가함 2013-10-31 */
+	width: 99%;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	color: #666666;
+}
+
+#table_dil_data .caption {
+	border-bottom: 2px solid #4499fa;
+}
+
+#table_dil_data ul {
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #e2e2e2;
+	border-left: 1px solid #e2e2e2;
+	color: #333333;
+}
+
+#table_dil_data li {
+	float: left;
+	height: 24px;
+	border-right: 1px solid #e2e2e2;
+}
+
+#table_dil_data li.tit {
+	background-color: #f6fdff;
+	color: #333333;
+	text-align: center;
+	padding-top: 12px;
+	font-weight: bold;
+}
+
+/* 퇴직급여관리 퇴직 사원 리스트 추가함 2014-01-15 */
+#table1_retireData {
+	width: 100%;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	color: #666666;
+}
+
+#table1_retireData  ul {
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #e2e2e2;
+	border-left: 1px solid #e2e2e2;
+	color: #333333;
+}
+
+#table1_retireData li {
+	float: left;
+	height: 24px;
+	border-right: 1px solid #e2e2e2;
+}
+/* 퇴직급여관리 퇴직 사원 리스트 추가함 2014-01-15 */
+#table1 { /* 사원관리리스트*/
+	width: 100%;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	color: #666666;
+}
+
+#table1 .caption {
+	border-bottom: 2px solid #4499fa;
+}
+
+#table1 .caption_01 {
+	border-top: 1px solid #4499fa;
+}
+
+#table1 .caption_retire {
+	border-top: 2px solid #9f9f9f;
+}
+
+#table1 .caption_retire_green {
+	border-top: 2px solid #339900;
+}
+
+#table1  ul {
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #e2e2e2;
+	border-left: 1px solid #e2e2e2;
+	color: #333333;
+}
+
+#table1  ul.b_none {
+	width: 100%;
+	float: left;
+	border-bottom: 0px solid #e2e2e2;
+	border-left: 1px solid #e2e2e2;
+}
+
+#table1  ul.none {
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #e2e2e2;
+	border-left: 0px solid #e2e2e2;
+}
+
+#table1  ul.border_bt {
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #999999;
+	border-left: 1px solid #e2e2e2;
+	color: #333333;
+}
+
+#table1 li {
+	float: left;
+	height: 24px;
+	border-right: 1px solid #e2e2e2;
+	padding-top: 12px;
+}
+
+#table1 li.b_none {
+	border-right: 0px solid #e2e2e2;
+}
+
+#table1 li.last_td {
+	background-color: #72a0cf;
+	color: #fff;
+}
+
+#table1 li.tit {
+	background-color: #f6fdff;
+	color: #333333;
+	text-align: center;
+	padding-top: 12px;
+	font-weight: bold;
+}
+
+#table1 li.tit_red {
+	background-color: #fff6f2;
+	color: #333333;
+	text-align: center;
+	padding-top: 8px;
+	font-weight: bold;
+}
+
+#table1 li.titLeft {
+	background-color: #f6fdff;
+	color: #333333;
+	text-align: left;
+	padding-top: 8px;
+	font-weight: bold;
+}
+
+#table1 li.tit_53_col {
+	background-color: #f6fdff;
+	color: #333333;
+	font-weight: bold;
+	padding-top: 17px;
+	height: 36px;
+}
+
+#table1 li.tit_53_col_rm {
+	background-color: #f6fdff;
+	color: #333333;
+	font-weight: bold;
+	padding-top: 13px;
+	height: 40px;
+}
+
+#table1 li.tit_90_col {
+	background-color: #f3f3f3;
+	color: #333333;
+	font-weight: bold;
+	padding-top: 35px;
+	height: 51px;
+}
+
+#table1 li.tit_20_col {
+	float: left;
+	height: 21px;
+	border-right: 1px solid #e2e2e2;
+}
+
+#table1 li.tit_53_col_black {
+	background-color: #000000;
+	color: #ffffff;
+	font-weight: bold;
+	padding-top: 17px;
+	height: 36px;
+}
+
+#table1 li.tit_total {
+	background-color: #ffffe0;
+	color: #e53600;
+	text-align: center;
+	padding-top: 8px;
+	font-weight: bold;
+}
+
+#table1 li.tit_thin {
+	background-color: #f6fdff;
+	text-align: center;
+	padding-top: 5px;
+}
+
+#table1 li.tit_s {
+	background-color: #fbfbfb;
+	padding-top: 8px;
+}
+
+#table1 li.tit_g2 {
+	background-color: #e5e5e5;
+	padding-top: 8px;
+}
+
+#table1 li.con { /*메인 기본테이블*/
+	padding-top: 8px;
+	padding-left: 7px;
+}
+
+#table1 li.con2 { /*사용자 설정_회사정보*/
+	height: 25px;
+	text-align: left;
+	padding: 3px 10px 4px 7px;
+}
+
+#table1 li.con3 {
+	padding: 4px 0px;
+	text-align: center;
+}
+
+#table1 li.con3_check {
+	padding: 8px 0 0px 0;
+	text-align: center;
+}
+
+#table1 li.con3_lp {
+	padding: 4px 0px 4px 7px;
+	text-align: center;
+}
+
+#table1 li.con48_col {
+	color: #333333;
+	height: 48px;
+}
+
+#table1 li.con53_col {
+	color: #333333;
+	padding-top: 17px;
+	height: 36px;
+}
+
+#table1 li.con73_col {
+	color: #333333;
+	padding-top: 37px;
+	padding-bottom: 5px;
+	height: 50px;
+}
+
+#table1 div.img {
+	float: left;
+	padding: 2px 0 0 5px;
+}
+
+#table1 dt.radio { /*radio버튼 정렬*/
+	float: left;
+	padding: 4px 0 0 0;
+}
+
+#table1 dt.radio_c { /*radio버튼 정렬*/
+	float: left;
+	padding: 5px 10px 0 0;
+}
+
+#table1 div.3col {
+	width: 863px;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+}
+
+#table1 div.3col ul.b_none {
+	border-bottom: 0px solid #e2e2e2;
+}
+
+#table1 div.date { /*근태조회*/
+	width: 416px;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+}
+
+#table1 div.date li {
+	float: left;
+	width: 25px;
+	height: 20px;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 6px;
+}
+
+#table1 div.paper_list li {
+	float: left;
+	height: 21px;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 5px;
+}
+
+#table1 div.retire_date { /*퇴직급여 입력*/
+	width: 384px;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+#table1 div.retire_date li {
+	float: left;
+	width: 127px;
+	height: 20px;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 6px;
+}
+
+#table1 div.retire_date_4 { /*퇴직급여 입력_4개일 경우*/
+	width: 384px;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+#table1 div.retire_date_4 li {
+	float: left;
+	width: 95px;
+	height: 20px;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 6px;
+}
+
+#table1 ul.retire {
+	width: 99.5%;
+	border: 2px solid #000000;
+}
+
+#table1 ul.retire li {
+	padding-top: 10px;
+	height: 25px;
+}
+
+#table1 ul.retire li.cell {
+	padding: 5px 0 5px 5px;
+}
+
+#table1 div.wt { /*소득공제*/
+	margin: 0px;
+	padding: 0px;
+}
+
+div.page { /*소득공제*/
+	height: 20px;
+	display: inline-block;
+	width: 100%;
+}
+
+div.page #span1 {
+	width: 1410px;
+	height: 20px;
+	text-align: right;
+	display: inline-block;
+}
+
+div.page #span2 {
+	height: 20px;
+	width: 1017px;
+	text-align: right;
+	display: inline-block;
+}
+
+div.page #span3 {
+	height: 20px;
+	width: 1210px;
+	text-align: right;
+	display: inline-block;
+}
+
+
+.disContentList {
+	height: 330px;
+	width: 696px;
+	overflow: auto;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/* .has-js .label_check {
+	background: url('../img/check-off-1.png') no-repeat;
+}
+
+.has-js .label_check, .has-js .label_radio {
+	padding-left: 17px;
+	height: 15px;
+}
+
+label {
+	display: inline-block;
+	cursor: pointer;
+	padding-bottom: 5px;
+}
+
+.has-js .label_check input, .has-js .label_radio input {
+	position: absolute;
+	left: -9999px;
+}
+
+.label_check input, .label_radio input {
+	margin-right: 7px;
+} */
+div.pay_list {
+	float: left;
+	width: 600px;
+	margin: 10px 0 0 20px;
+}
+
+.pay_list li {
+	padding-top: 8px;
+	height: 30px;
+}
+
+div.pay_list div.pay_w_list {
+	float: left;
+	margin: 0px;
+	width: 583px;
+}
+
+div.pay_list div.pay_w_list_scroll {
+	float: left;
+	margin: 0px;
+	width: 599px;
+	height: 365px;
+	overflow-y: scroll;
+}
+
+div.pay_set {
+	float: left;
+	width: 520px;
+	margin: 10px 0 0 30px;
+}
+
+/*ÀÏ¿ëÁ÷±Þ¿©µî·Ï*/
+div.dayworkerpay_list {
+	float: left;
+	width: 390px;
+	margin: 10px 0 0 20px;
+}
+
+.dayworkerpay_list li {
+	padding-top: 8px;
+	height: 30px;
+}
+
+div.dayworkerpay_list div.pay_w_list {
+	float: left;
+	margin: 0px;
+	width: 374px;
+}
+
+div.dayworkerpay_list div.pay_w_list_scroll {
+	float: left;
+	margin: 0px;
+	width: 390px;
+	height: 365px;
+	overflow-y: scroll;
+}
+
+div.dayworkerpay_set {
+	float: right;
+	width: 730px;
+	margin: 10px 0 0 30px;
+}
+
+/*±Þ¿©Á¾ÇÕÁ¤º¸*/
+div.pay_total {
+	float: left;
+	width: 100%;
+	text-align: right;
+	display: block;
+}
+
+.pay_total li.section01 {
+	background: url(https://img.payzon.co.kr/_commonImg/dil_total01.gif)
+		no-repeat;
+	width: 250px;
+	height: 59px;
+	text-align: right;
+	padding-top: 20px;
+}
+
+.pay_total li.section02 {
+	background: url(https://img.payzon.co.kr/_commonImg/dil_total02.gif)
+		no-repeat;
+	width: 281px;
+	height: 59px;
+	text-align: right;
+	padding-top: 20px;
+	margin-left: 12px;
+}
+
+.pay_total li.section03 {
+	background: url(https://img.payzon.co.kr/_commonImg/dil_total03.gif)
+		no-repeat;
+	width: 281px;
+	height: 59px;
+	text-align: right;
+	padding-top: 20px;
+	margin-left: 12px;
+}
+
+.pay_total li.section04 {
+	background: url(https://img.payzon.co.kr/_commonImg/dil_total04.gif)
+		no-repeat;
+	width: 281px;
+	height: 59px;
+	text-align: right;
+	padding-top: 20px;
+	margin-left: 12px;
+}

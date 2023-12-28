@@ -1,0 +1,2075 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+* {
+	/*margin: 0px;*/
+	padding: 0px;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	line-height: 1;
+	min-width: 1200px;
+	margin: 0px;
+	padding: 0px;
+	color: #333333;
+	font-family: 'Nanum Gothic';
+	overflow: none;
+}
+
+ol, ul, li {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+p {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+/* Basic Styles
+================================================== */
+html {
+	-webkit-text-size-adjust: none;
+}
+
+body {
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+}
+
+.bgR {
+	background-color: RED;
+}
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.f_left {
+	float: left;
+}
+
+.f_right {
+	float: right;
+}
+
+/* Main Fonts ================================================== */
+body, input, select, table {
+	font-family: 'Nanum Gothic', monospace, dotum, 맑은고딕, 돋움, Arial,
+		sans-serif;
+	font: normal 12px 'Nanum Gothic';
+}
+
+.login_menu, .link, menu_0, .date, .black, #table_employee li, .font11 {
+	font-size: 11px;
+}
+
+body, #footer h6, .table1, .pop_table, .font12, #pop_common li.font12,
+	#popImgNoMsg li.font12 {
+	/* font-size:12px; */
+	
+}
+
+#pop_common li.font13, #popImgNoMsg li.font13 {
+	font-size: 13px;
+}
+
+.font15, .button.medium, .tables-column .list li, #pop_common li.font15,
+	#popImgNoMsg li.font15 {
+	font-size: 15px;
+}
+
+.font16, #pop_common li, #pop_common li span, #popImgNoMsg li,
+	#popImgNoMsg li span {
+	font-size: 16px;
+}
+
+.m_name, .font20 {
+	font-size: 20px;
+}
+
+.bold, .m_name, #pop_common li, #pop_common li span, #popImgNoMsg li,
+	#popImgNoMsg li span {
+	font-weight: bold;
+}
+
+.normal {
+	font-weight: normal;
+}
+
+#pop_common li, #pop_common li span, .l_h150, #popImgNoMsg li,
+	#popImgNoMsg li span {
+	line-height: 150%;
+}
+
+.l_h_20 {
+	line-height: 20px;
+}
+
+blockquote {
+	font-style: italic;
+}
+
+.tip {
+	font-size: 11px;
+	color: #cc6666;
+}
+
+/* padding
+================================================== */
+.m23 {
+	margin: 23px;
+}
+
+.bottom-2 {
+	margin-bottom: 10px !important;
+}
+
+.top-3 {
+	margin-top: 3px;
+}
+
+.top-5 {
+	margin-top: 5px;
+}
+
+.top-10 {
+	margin-top: 10px;
+}
+
+.top-13 {
+	margin-top: 13px;
+}
+
+.top-15 {
+	margin-top: 15px;
+}
+
+.top-20 {
+	margin-top: 20px;
+}
+
+.top-25 {
+	margin-top: 25px;
+}
+
+.top-2 {
+	margin-top: -2px;
+}
+
+.left-5 {
+	margin-left: 5px;
+}
+
+.left-10 {
+	margin-left: 10px;
+}
+
+.left-20 {
+	margin-left: 20px;
+}
+
+.left-200 {
+	margin-left: 200px;
+}
+
+.left-15 {
+	margin-left: 15px;
+}
+
+.p5 {
+	padding: 5px;
+}
+
+.p10 {
+	padding: 10px;
+}
+
+.p15 {
+	padding: 15px;
+}
+
+.p_t1 {
+	padding-top: 1px;
+}
+
+.p_t3 {
+	padding-top: 3px;
+}
+
+.p_t4 {
+	padding-top: 3px;
+}
+
+.p_t5 {
+	padding-top: 5px;
+}
+
+.p_t6 {
+	padding-top: 6px;
+}
+
+.p_t7 {
+	padding-top: 7px;
+}
+
+.p_t8 {
+	padding-top: 8px;
+}
+
+.p_t10 {
+	padding-top: 10px;
+}
+
+.p_t15 {
+	padding-top: 15px;
+}
+
+.p_t20 {
+	padding-top: 20px;
+}
+
+.p_t30 {
+	padding-top: 30px;
+}
+
+.p_t23 {
+	padding-top: 23px;
+}
+
+.p_t40 {
+	padding-top: 40px;
+}
+
+.p_t50 {
+	padding-top: 50px;
+}
+
+.p_l5 {
+	padding-left: 5px;
+}
+
+.p_l7 {
+	padding-left: 7px;
+}
+
+.p_l10 {
+	padding-left: 10px;
+}
+
+.p_l15 {
+	padding-left: 15px;
+}
+
+.p_l20 {
+	padding-left: 20px;
+}
+
+.p_l28 {
+	padding-left: 28px;
+}
+
+.p_l30 {
+	padding-left: 30px;
+}
+
+.p_l50 {
+	padding-left: 50px;
+}
+
+.p_l70 {
+	padding-left: 70px;
+}
+
+.p_b5 {
+	padding-bottom: 5px;
+}
+
+.p_b10 {
+	padding-bottom: 10px;
+}
+
+.p_b20 {
+	padding-bottom: 20px;
+}
+
+.p_r3 {
+	padding-right: 3px;
+}
+
+.p_r5 {
+	padding-right: 5px;
+}
+
+.p_r7 {
+	padding-right: 7px;
+}
+
+.p_r13 {
+	padding-right: 13px;
+}
+
+.p_r25 {
+	padding-right: 25px;
+}
+
+.p_r30 {
+	padding-right: 30px;
+}
+
+.p_r40 {
+	padding-right: 40px;
+}
+
+.p_r50 {
+	padding-right: 50px;
+}
+
+.p_lr30 {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.p_tb3 {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+/*셀 넓이값*/
+/*상단메뉴 2depth*/
+.w_198 {
+	width: 198px;
+}
+
+.w_570 {
+	width: 570px;
+}
+
+.w_199 {
+	width: 199px;
+}
+
+.w_277 {
+	width: 277px;
+}
+
+.w_300 {
+	width: 300px;
+}
+
+.w_223 {
+	width: 223px;
+}
+
+.w_275 {
+	width: 275px;
+}
+
+.w_298 {
+	width: 298px;
+}
+
+.w_221 {
+	width: 221px;
+}
+/*----------------*/
+.w_17 {
+	width: 17px;
+}
+
+.w_20 {
+	width: 20px;
+}
+
+.w_24 {
+	width: 24px;
+}
+
+.w_35 {
+	width: 35px;
+}
+
+.w_45 {
+	width: 45px;
+}
+
+.w_50 {
+	width: 50px;
+}
+
+.w_52 {
+	width: 52px;
+}
+
+.w_55 {
+	width: 55px;
+}
+
+.w_60 {
+	width: 60px;
+}
+
+.w_64 {
+	width: 64px;
+}
+
+.w_65 {
+	width: 65px;
+}
+
+.w_70 { /* 급여항목 설정 */
+	width: 70px;
+}
+
+.w_74 { /* 2015-05-15 사원현황/관리 */
+	width: 74px;
+}
+
+.w_75 { /* 급여항목 설정 */
+	width: 75px;
+}
+
+.w_80 { /* 사원관리*/
+	width: 80px;
+}
+
+.w_85 { /* 사원관리*/
+	width: 85px;
+}
+
+.w_88 { /* popup */
+	width: 88px;
+}
+
+.w_90 {
+	width: 90px;
+}
+
+.w_92 { /*사원관리*/
+	width: 92px;
+}
+
+.w_95 { /*사원관리*/
+	width: 95px;
+}
+
+.w_98 { /*사원관리*/
+	width: 98px;
+}
+
+.w_99 { /*사원관리*/
+	width: 99px;
+}
+
+.w_100 {
+	width: 100px;
+	/* 메인 급여현황, 메인 기본정보,사용자 정보_담당자정보,사용자 정보_급여지급정보, 근태설정,popup */
+}
+
+.w_101 {
+	width: 101px; /*  */
+}
+
+.w_102 {
+	width: 102px; /*  */
+}
+
+.w_103 {
+	width: 103px; /* 급여항목 설정,사원등록 */
+}
+
+.w_104 {
+	width: 104px; /* 급여항목 설정,사원등록 */
+}
+
+.w_105 {
+	width: 105px; /* 급여항목 설정 */
+}
+
+.w_106 {
+	width: 106px; /* 급여항목 설정,사원등록 */
+}
+
+.w_107 {
+	width: 107px; /* 2015-08-10 사용자 정보_회사정보 우측 */
+}
+
+.w_108 {
+	width: 108px;
+}
+
+.w_110 {
+	width: 110px; /* 급여항목 설정,사원등록 */
+}
+
+.w_119 { /* 사용자 정보_회사정보, 근태설정 */
+	width: 119px;
+}
+
+.w_120 { /* 사용자 정보_회사정보, 근태설정 */
+	width: 120px;
+}
+
+.w_125 { /* 사용자 정보_회사정보, 근태설정 */
+	width: 125px;
+}
+
+.w_127 { /* 사용자 정보_회사정보, 근태설정 */
+	width: 127px;
+}
+
+.w_129 { /* 휴가설정 */
+	width: 129px;
+}
+
+.w_132 { /* 사원등록 */
+	width: 132px;
+}
+
+.w_133 { /* 사원등록 */
+	width: 133px;
+}
+
+.w_135 {
+	width: 135px;
+}
+
+.w_137 {
+	width: 137px;
+}
+
+.w_136 {
+	width: 136px;
+}
+
+.w_139 { /* 근태조회 */
+	width: 139px;
+}
+
+.w_140 { /* 근태설정 */
+	width: 140px;
+}
+
+.w_143 { /* 휴가현황 */
+	width: 143px;
+}
+
+.w_145 {
+	width: 145px;
+}
+
+.w_149 { /* 근태설정 */
+	width: 149px;
+}
+
+.w_150 {
+	width: 150px; /* 메인 급여현황 */
+}
+
+.w_151 {
+	width: 151px; /* 메인 급여현황 */
+}
+
+.w_153 {
+	width: 153px; /* 메인 급여현황 */
+}
+
+.w_155 {
+	width: 155px; /* 메인 급여현황,근태설정 */
+}
+
+.w_156 { /* 급여항목 설정 */
+	width: 156px;
+}
+
+.w_159 { /* 급여등록 */
+	width: 159px;
+}
+
+.w_160 { /* 급여입력 */
+	width: 160px;
+}
+
+.w_165 {
+	width: 165px; /* 2015-05-15 사원현황/관리 */
+}
+
+.w_169 {
+	width: 169px; /* 메인 기본정보 */
+}
+
+.w_170 {
+	width: 170px; /* 메인 기본정보, 근태설정 */
+}
+
+.w_175 {
+	width: 175px;
+}
+
+.w_177 {
+	width: 177px; /* 퇴직급여 입력 */
+}
+
+.w_180 {
+	width: 180px; /* 메인 급여현황, 사원현황 */
+}
+
+.w_181 {
+	width: 181px; /* 메인 급여현황 */
+}
+
+.w_182 {
+	width: 182px; /*사용자 정보_급여지급정보*/
+}
+
+.w_187 {
+	width: 187px; /*현장관리 POP*/
+}
+
+.w_190 {
+	width: 190px;
+}
+
+.w_200 {
+	width: 200px; /*사용자 정보_담당자정보*/
+}
+
+.w_203 {
+	width: 203px; /*사원등록*/
+}
+
+.w_210 {
+	width: 210px; /* 메인 사원현황 */
+}
+
+.w_219 { /*  popup  */
+	width: 219px;
+}
+
+.w_229 {
+	width: 229px;
+}
+
+.w_230 {
+	width: 230px;
+}
+
+.w_231 {
+	width: 231px;
+}
+
+.w_238 { /* pop_사원 */
+	width: 238px;
+}
+
+.w_240 {
+	width: 240px;
+}
+
+.w_241 {
+	width: 241px;
+}
+
+.w_246 { /* 2015-08-10 사용자정보. 대표자직급/대표자 */
+	width: 246px;
+}
+
+.w_248 { /* pop_사원 */
+	width: 248px;
+}
+
+.w_256 { /* 휴가설정 */
+	width: 256px;
+}
+
+.w_259 { /* 급여입력 */
+	width: 259px;
+}
+
+.w_260 { /* 사용자 정보_회사정보, */
+	width: 260px;
+}
+
+.w_261 { /* 사용자 정보_회사정보 */
+	width: 261px;
+}
+
+.w_265 { /* popup */
+	width: 265px;
+}
+
+.w_275 { /* popup_정렬기준 */
+	width: 275px;
+}
+
+.w_276 { /* popup_정렬기준, 사원등록 */
+	width: 276px;
+}
+
+.w_287 { /* 퇴직급여 */
+	width: 287px;
+}
+
+.w_301 { /* 우편번호_popup */
+	width: 301px;
+}
+
+.w_306 { /* 우편번호_popup */
+	width: 306px;
+}
+
+.w_330 {
+	width: 330px; /* 메인 공지사항, 사용자 정보_급여지급정보*/
+}
+
+.w_338 {
+	width: 338px; /* 메인 공지사항 FAQ추가, 사용자 정보_급여지급정보 */
+}
+
+.w_341 {
+	width: 341px; /* 메인 공지사항, 사용자 정보_급여지급정보 */
+}
+
+.w_390 {
+	width: 390px; /* 메인 사원현황, 공지사항 => FAQ */
+}
+
+.w_400 {
+	width: 400px; /* 메인 사원현황, 공지사항 */
+}
+
+.w_441 {
+	width: 441px; /* 2013-07-29 박기효 우편번호 검색 초기 */
+}
+
+.w_448 { /* 메인 기본정보, 우편번호 pop */
+	width: 448px;
+}
+
+.w_454 { /*  */
+	width: 454px;
+}
+
+.w_470 { /* 기본 pop */
+	width: 470px;
+}
+
+.w_475 { /*  */
+	width: 475px;
+}
+
+.w_484 { /* popup */
+	width: 484px;
+}
+
+.w_490 { /* popup */
+	width: 490px;
+}
+
+.w_510 { /* 우편번호_popup */
+	width: 510px;
+}
+
+.w_525 {
+	width: 525px; /* 휴가현황 */
+}
+
+.w_530 { /* 근태항목설정 tip*/
+	width: 530px;
+}
+
+.w_549 { /*  popup  */
+	width: 549px;
+}
+
+.w_580 {
+	width: 580px;
+}
+
+.w_590 { /*2015-08-11 사원별 급여내역*/
+	width: 590px;
+}
+
+.w_600 { /*  popup  */
+	width: 600px;
+}
+
+.w_615 {
+	width: 615px; /* 메인 기본정보 */
+}
+
+.w_660 {
+	width: 660px; /* 사용자 정보_회사정보 */
+}
+
+.w_670 {
+	width: 675px; /* 사용자 정보_회사정보 */
+}
+
+.w_671 {
+	width: 671px; /* 사용자 정보_회사정보 */
+}
+
+.w_680 {
+	width: 680px; /* 사용자 정보_회사정보 */
+}
+
+.w_697 { /*휴가설정popup,*/
+	width: 697px;
+}
+
+.w_700 {
+	width: 700px;
+}
+
+.w_720 {
+	width: 720px;
+}
+
+.w_735 {
+	width: 735px;
+}
+
+.w_750 {
+	width: 750px;
+}
+
+.w_760 {
+	width: 760px;
+}
+
+.w_784 {
+	width: 784px; /* 메인 급여현황 */
+}
+
+.w_800 {
+	width: 800px;
+}
+
+.w_980 {
+	width: 980px; /* 메인 급여현황 */
+}
+
+.w_1050 {
+	width: 1050px; /* 급여대장 */
+}
+
+.w_1150 {
+	width: 1150px; /* 사원현황/관리 */
+}
+
+.w_1348 {
+	width: 1348px; /* 급여대장 */
+}
+
+.wp_6 {
+	width: 6.1%;
+}
+
+.wp_9 {
+	width: 9.1%;
+}
+
+.wp_15 {
+	width: 15%;
+}
+
+.wp_9 {
+	width: 9.1%;
+}
+
+.wp_15 {
+	width: 15%;
+}
+
+.wp_30 { /*일용직 급여입력*/
+	width: 35%;
+}
+
+.wp_70 { /*일용직 급여입력*/
+	width: 62%;
+}
+
+.wp_85 { /*2depth메뉴*/
+	width: 89%;
+}
+
+.wp_82 { /*급여대장*/
+	width: 82%;
+}
+
+.wp_100 {
+	width: 100%;
+}
+
+.wp_99 {
+	width: 99%;
+}
+
+.wp_90 {
+	width: 90%;
+}
+
+.height_01 {
+	height: 1px;
+}
+
+.height_05 {
+	height: 5px;
+}
+
+.height_20 {
+	height: 20px;
+}
+
+.height_22 {
+	height: 22px;
+}
+
+.height_27 {
+	height: 27px;
+}
+
+.height_30 { /* 우편번호  */
+	height: 30px;
+}
+
+.height_80 { /* 우편번호  */
+	height: 80px;
+}
+
+.height_50 {
+	height: 50px;
+}
+
+.height_53 { /* 근태조회  */
+	height: 53px;
+}
+
+.height_137 { /*  popup_사원  */
+	height: 137px;
+}
+
+.height_160 { /*  popup_사원  */
+	height: 160px;
+}
+
+.height_200 { /*  popup, 우편번호  */
+	height: 200px
+}
+
+.height_210 { /*  popup, 우편번호  */
+	height: 210px
+}
+
+.height_250 { /*  popup, 우편번호  */
+	height: 250px
+}
+
+.height_260 { /*  popup, 우편번호  */
+	height: 260px
+}
+
+.height_262 { /*  popup, 근태그룹 설정 외  */
+	height: 262px;
+}
+
+.height_265 { /*  popup  */
+	height: 265px
+}
+
+.height_266 { /*  직위설정 */
+	height: 266px
+}
+
+.height_280 { /*  popup, 우편번호  */
+	height: 280px
+}
+
+.height_410 { /* 급여설정 tip  */
+	height: 410px
+}
+
+.height_450 { /* 급여설정 tip  */
+	height: 450px
+}
+
+.height_460 { /* 급여설정 tip  */
+	height: 460px
+}
+
+.height_550 { /* 매뉴얼  */
+	height: 550px
+}
+
+.height_600 { /* 매뉴얼  */
+	height: 600px
+}
+
+.positon_a {
+	position: absolute;
+}
+
+.positon_r {
+	position: relative;
+}
+
+.positon_m {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -6px
+}
+
+body, #footer h6, .table1, .pop_table, .font12, #pop_common li.font12,
+	#popImgNoMsg li.font12 {
+	font-size: 12px;
+}
+
+/* Aligns
+================================================== */
+.menu_0, #main_footer h6, .c, #pop {
+	text-align: center;
+}
+
+.aling_r, #table1 li.con_r, .align_r {
+	text-align: right;
+}
+
+.aling_l, .align_l {
+	text-align: left;
+}
+
+/* Main Colors & Backgrounds
+================================================== */
+#pop00, #pop01, #pop02, #pop03, #pop04, #pop05, #pop06, #pop_common,
+	#pop_employee, #popImgNoMsg {
+	/* background-image: url('../img/main_top_bg.gif') ; */
+	background-repeat: repeat;
+	border-radius: 8px;
+}
+
+.pay_bg {
+	background-image: url('../img/pay_bg.gif');
+	background-repeat: repeat;
+}
+
+.link a {
+	color: #e8e8e8; /* 다이렉트 메뉴 링크 컬러 */
+}
+
+h1, h2, h3, h4, h5, h6, .notice a:hover, .online_c a:hover, .black,
+	c_black, f_000 {
+	color: #000000;
+}
+
+.tab_on a, .tab_off a, li.g2, .c_white, li.g3 {
+	color: #ffffff;
+}
+
+.direct_c {
+	color: #4bf20a; /* 온라인 상담 컬러 */
+}
+
+.menu_0 {
+	color: #c6d5e7; /* ooo님 환영합니다. */
+}
+
+.blue, .black {
+	color: #0066cc;
+}
+
+span.m_d a, .f_cc {
+	color: #cccccc
+}
+
+.date, .c_999 {
+	color: #999999;
+}
+
+.notice a, .online_c a, .part a, .logo_reg, .c_666, #table_employee li,
+	#table1 li.tit, li, #table1 li.tit_thin {
+	color: #666666;
+}
+
+.table1 {
+	color: #333333;
+}
+
+.tit_h, .c_red, span.c_red {
+	color: #eb4e5d
+}
+
+.c_blue {
+	color: #3366cc
+}
+
+.c_blue02 {
+	color: #6600cc
+}
+
+.c_skyblue {
+	color: #6699cc
+}
+
+.c_linkblue {
+	color: #3399ff
+}
+
+.c_payblue {
+	color: #66ffff
+}
+
+.c_black {
+	color: #000000
+}
+
+.c_yellow {
+	color: #ffff00
+}
+
+.c_green {
+	color: #339933
+}
+
+#main_footer { /* footer 배경 */
+	background-color: #404348;
+}
+
+.b_yellow {
+	background-color: #ffffe0;
+}
+
+.b_yellowPay {
+	background-color: #ffd569;
+}
+
+.b_blue {
+	background-color: #f8fbfd;
+}
+
+.b_darkblue {
+	background-color: #4b8de0;
+}
+
+.b_red {
+	background-color: #fff6f2;
+}
+
+.b_red01 {
+	background-color: #e04b6d;
+}
+
+.b_gray { /* 우편번호 배경 */
+	background-color: #fcfcfc;
+}
+
+.b_gray2 { /* 급여대장 */
+	background-color: #f3f3f3;
+}
+
+.b_gray3 { /* 급여이체 신청 */
+	background-color: #666666;
+}
+
+.b_black { /* 급여대장 */
+	background-color: #000000;
+}
+
+.sell_bg { /* 급여입력 */
+	background-color: #1c59a5;
+}
+
+.retire_bg { /* 퇴직급여입력 */
+	background-color: #fafafa;
+}
+
+/* 스크롤
+================================================== */
+.scroll, .tip00_con {
+	scrollbar-face-color: #f4f4f4;
+	scrollbar-highlight-color: #ffffff;
+	scrollbar-3dlight-color: #d4d4d4;
+	scrollbar-shadow-color: #c4c4c4;
+	scrollbar-darkshadow-color: #ffffff;
+	scrollbar-track-color: #ffffff;
+	scrollbar-arrow-color: #c4c4c4;
+}
+
+.scroll_x {
+	overflow-x: scroll;
+}
+
+.scroll_y {
+	overflow-y: scroll;
+}
+
+/* Aligns
+================================================== */
+.menu_0, #main_footer h6, .c, #pop {
+	text-align: center;
+}
+
+.aling_r, #table1 li.con_r, .align_r {
+	text-align: right;
+}
+
+.aling_l, .align_l {
+	text-align: left;
+}
+
+/* Typography
+================================================== */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	font-weight: inherit;
+}
+
+h1 {
+	font-size: 28px;
+	line-height: 0px;
+}
+
+h2 {
+	font-size: 20px;
+	line-height: 30px;
+}
+
+h3 {
+	font-size: 17px;
+	line-height: 34px;
+}
+
+h4 {
+	font-size: 16px;
+	line-height: 30px;
+}
+
+h5 {
+	font-size: 14px;
+	line-height: 24px;
+}
+
+h6 {
+	font-size: 12px;
+	line-height: 21px;
+}
+
+p, blockquote {
+	line-height: 22px;
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+}
+
+small {
+	font-size: 80%;
+}
+
+.notice a:hover, .online_c a:hover {
+	text-decoration: underline;
+}
+
+/*	Blockquotes  */
+blockquote {
+	
+}
+
+hr {
+	border: solid #e2e2e2;
+	border-width: 1px 0 0;
+	padding-bottom: 10px;
+	clear: both;
+	height: 0;
+	width: 100%;
+	margin-left: 30px;
+}
+
+hr.dot {
+	background: url(../img/line_dot.gif) repeat-x;
+	border-width: 0px 0 0;
+	clear: both;
+	height: 0;
+	width: 95%;
+}
+
+hr.dot100 {
+	background: url(../img/line_dot.gif) repeat-x;
+	border-width: 0px 0 0;
+	clear: both;
+	height: 0;
+	width: 100%;
+}
+
+hr.hr_30 {
+	height: 30px;
+	border: 1px solid #ffffff;
+	width: 90%;
+}
+
+hr.hr_50 {
+	height: 50px;
+	border: 1px solid #ffffff;
+	width: 90%;
+}
+
+hr.hr_5 {
+	height: 5px;
+	border: 0px solid #ffffff;
+	width: 90%;
+}
+
+hr.hr_0 {
+	height: 0px;
+	border: 0px solid #ffffff;
+	width: 90%;
+}
+
+/* Images
+================================================== */
+img {
+	height: auto;
+	border: none;
+}
+
+/* border
+================================================== */
+.border_zip {
+	border-top: 1px solid #4499fa;
+	border-bottom: 1px solid #e2e6e5;
+}
+
+.border_none {
+	border: 1px solid #ffffff;
+}
+
+.border_zip01 {
+	border-top: 1px solid #4499fa;
+}
+
+.border_box {
+	border: 1px solid #e2e2e2;
+}
+
+.border_emreg {
+	border-top: 1px solid #c1c1a6;
+	border-bottom: 1px solid #c1c1a6;
+}
+
+.border_paysearch {
+	width: 37%;
+	border: 1px solid #c97578;
+	background-color: #e17a7d;
+	padding: 8px 0px 8px 10px;
+	float: left;
+	height: 28px;
+}
+
+.border_paysearch_2 {
+	width: 60%;
+	border: 1px solid #f3f3f3;
+	background-color: #f8f8f8;
+	padding: 8px 0px 8px 20px;
+	float: left;
+	height: 28px;
+}
+
+.border_rt {
+	border-right: 1px solid #e2e2e2;
+}
+
+.border_lt {
+	border-left: 1px solid #e2e2e2;
+}
+
+.border_bt {
+	border-bottom: 1px solid #cccccc;
+}
+
+.border_bt_333 {
+	border-bottom: 1px solid #333333;
+}
+
+.border_w4 {
+	border: 4px solid #ffffff;
+}
+
+.border_y4 {
+	border: 4px solid #ff9900;
+}
+
+/* 테이블1 */
+#table1 { /* 사원관리리스트*/
+	width: 100%;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	color: #666666;
+}
+
+#table1 .caption {
+	border-bottom: 2px solid #4499fa;
+}
+
+#table1 .caption_01 {
+	border-top: 1px solid #4499fa;
+}
+
+#table1 .caption_retire {
+	border-top: 2px solid #9f9f9f;
+}
+
+#table1 .caption_retire_green {
+	border-top: 2px solid #339900;
+}
+
+#table1  ul {
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #e2e2e2;
+	border-left: 1px solid #e2e2e2;
+	color: #333333;
+}
+
+#table1  ul.b_none {
+	width: 100%;
+	float: left;
+	border-bottom: 0px solid #e2e2e2;
+	border-left: 1px solid #e2e2e2;
+}
+
+#table1  ul.none {
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #e2e2e2;
+	border-left: 0px solid #e2e2e2;
+}
+
+#table1  ul.border_bt {
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #999999;
+	border-left: 1px solid #e2e2e2;
+	color: #333333;
+}
+
+#table1 li {
+	float: left;
+	height: 24px;
+	border-right: 1px solid #e2e2e2;
+	padding-top: 12px;
+}
+
+#table1 li.b_none {
+	border-right: 0px solid #e2e2e2;
+}
+
+#table1 li.last_td {
+	background-color: #72a0cf;
+	color: #fff;
+}
+
+#table1 li.tit {
+	background-color: #f6fdff;
+	color: #333333;
+	text-align: center;
+	padding-top: 12px;
+	font-weight: bold;
+}
+
+#table1 li.tit_red {
+	background-color: #fff6f2;
+	color: #333333;
+	text-align: center;
+	padding-top: 8px;
+	font-weight: bold;
+}
+
+#table1 li.titLeft {
+	background-color: #f6fdff;
+	color: #333333;
+	text-align: left;
+	padding-top: 8px;
+	font-weight: bold;
+}
+
+#table1 li.tit_53_col {
+	background-color: #f6fdff;
+	color: #333333;
+	font-weight: bold;
+	padding-top: 17px;
+	height: 36px;
+}
+
+#table1 li.tit_53_col_rm {
+	background-color: #f6fdff;
+	color: #333333;
+	font-weight: bold;
+	padding-top: 13px;
+	height: 40px;
+}
+
+#table1 li.tit_90_col {
+	background-color: #f3f3f3;
+	color: #333333;
+	font-weight: bold;
+	padding-top: 35px;
+	height: 51px;
+}
+
+#table1 li.tit_20_col {
+	float: left;
+	height: 21px;
+	border-right: 1px solid #e2e2e2;
+}
+
+#table1 li.tit_53_col_black {
+	background-color: #000000;
+	color: #ffffff;
+	font-weight: bold;
+	padding-top: 17px;
+	height: 36px;
+}
+
+#table1 li.tit_total {
+	background-color: #ffffe0;
+	color: #e53600;
+	text-align: center;
+	padding-top: 8px;
+	font-weight: bold;
+}
+
+#table1 li.tit_thin {
+	background-color: #f6fdff;
+	text-align: center;
+	padding-top: 5px;
+}
+
+#table1 li.tit_s {
+	background-color: #fbfbfb;
+	padding-top: 8px;
+}
+
+#table1 li.tit_g2 {
+	background-color: #e5e5e5;
+	padding-top: 8px;
+}
+
+#table1 li.con { /*메인 기본테이블*/
+	padding-top: 8px;
+	padding-left: 7px;
+}
+
+#table1 li.con2 { /*사용자 설정_회사정보*/
+	height: 25px;
+	text-align: left;
+	padding: 3px 10px 4px 7px;
+}
+
+#table1 li.con3 {
+	padding: 4px 0px;
+	text-align: center;
+}
+
+#table1 li.con3_check {
+	padding: 8px 0 0px 0;
+	text-align: center;
+}
+
+#table1 li.con3_lp {
+	padding: 4px 0px 4px 7px;
+	text-align: center;
+}
+
+#table1 li.con48_col {
+	color: #333333;
+	height: 48px;
+}
+
+#table1 li.con53_col {
+	color: #333333;
+	padding-top: 17px;
+	height: 36px;
+}
+
+#table1 li.con73_col {
+	color: #333333;
+	padding-top: 37px;
+	padding-bottom: 5px;
+	height: 50px;
+}
+
+#table1 div.img {
+	float: left;
+	padding: 2px 0 0 5px;
+}
+
+#table1 dt.radio { /*radio버튼 정렬*/
+	float: left;
+	padding: 4px 0 0 0;
+}
+
+#table1 dt.radio_c { /*radio버튼 정렬*/
+	float: left;
+	padding: 5px 10px 0 0;
+}
+
+#table1 div.3col {
+	width: 863px;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+}
+
+#table1 div.3col ul.b_none {
+	border-bottom: 0px solid #e2e2e2;
+}
+
+#table1 div.date { /*근태조회*/
+	width: 416px;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+}
+
+#table1 div.date li {
+	float: left;
+	width: 25px;
+	height: 20px;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 6px;
+}
+
+#table1 div.paper_list li {
+	float: left;
+	height: 21px;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 5px;
+}
+
+#table1 div.retire_date { /*퇴직급여 입력*/
+	width: 384px;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+#table1 div.retire_date li {
+	float: left;
+	width: 127px;
+	height: 20px;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 6px;
+}
+
+#table1 div.retire_date_4 { /*퇴직급여 입력_4개일 경우*/
+	width: 384px;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+#table1 div.retire_date_4 li {
+	float: left;
+	width: 95px;
+	height: 20px;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 6px;
+}
+
+#table1 ul.retire {
+	width: 99.5%;
+	border: 2px solid #000000;
+}
+
+#table1 ul.retire li {
+	padding-top: 10px;
+	height: 25px;
+}
+
+#table1 ul.retire li.cell {
+	padding: 5px 0 5px 5px;
+}
+
+#table1 div.wt { /*소득공제*/
+	margin: 0px;
+	padding: 0px;
+}
+
+div.page { /*소득공제*/
+	height: 20px;
+	display: inline-block;
+	width: 100%;
+}
+
+div.page #span1 {
+	width: 1410px;
+	height: 20px;
+	text-align: right;
+	display: inline-block;
+}
+
+div.page #span2 {
+	height: 20px;
+	width: 1017px;
+	text-align: right;
+	display: inline-block;
+}
+
+div.page #span3 {
+	height: 20px;
+	width: 1210px;
+	text-align: right;
+	display: inline-block;
+}
+
+#table_pay { /*급여입력*/
+	width: 100%;
+}
+
+#table_pay .caption {
+	border-top: 2px solid #000;
+	padding: 0px;
+	height: 2px;
+}
+
+#table_pay  ul {
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+#table_pay li {
+	float: left;
+	height: 25px;
+	padding-top: 8px;
+}
+
+#table_pay li.tit {
+	float: left;
+	padding-top: 3px;
+}
+
+#table_pay li.con {
+	float: left;
+	height: 30px;
+	padding-top: 3px;
+	text-align: right;
+}
+
+#table_pay div.scroll_auto {
+	float: left;
+	margin: 0px;
+	height: 340px;
+	overflow: auto;
+}
+
+#table_pay_divide { /*급여입력_나누는 테이블*/
+	width: 100%;
+}
+
+#table_pay_divide .caption {
+	border-top: 2px solid #000;
+	padding: 0px;
+	height: 2px;
+}
+
+#table_pay_divide  ul {
+	float: left;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+#table_pay_divide li {
+	float: left;
+	height: 25px;
+	padding-top: 8px;
+}
+
+#table_pay_divide li.tit {
+	float: left;
+	padding-top: 8px;
+}
+
+#table_pay_divide li.con {
+	float: left;
+	height: 30px;
+	padding-top: 3px;
+	text-align: right;
+}
+
+#table_pay_divide li.calc {
+	width: 259px;
+	height: 30px;
+	text-align: center;
+	padding-top: 0px;
+}
+
+/* Forms
+================================================== */
+input.btn {
+	background: url('../img/btn_bg.gif') repeat;
+	height: 21px;
+	cursor: pointer;
+	border: 1px solid #b0b0b0;
+	margin: 0px;
+	padding: 1px 7px 0px 7px;
+	color: #666666;
+	font-size: 12px;
+	font-family: 'Nanum Gothic';
+	border-radius: 3px;
+	-webkit-border-radius: 3px; /*크롬*/
+	-moz-border-radius: 3px; /*파이어 폭스*/
+}
+
+input.btn_search { /*우편번호 검색*/
+	background: url(../img/btn_bg.gif) repeat;
+	height: 22px;
+	cursor: pointer;
+	border: 1px solid #b0b0b0;
+	margin: 0 5px;
+	padding: 2px 10px 0px 10px;
+	color: #666666;
+	/*prefiz를 사용하여 border-radius지정 */
+	border-radius: 3px;
+	-webkit-border-radius: 3px; /*크롬*/
+	-moz-border-radius: 3px; /*파이어 폭스*/
+}
+
+input.border { /* 기본 인풋*/
+	border: 1px solid #e8e8e8;
+	background-color: #ffffff;
+	line-height: 23px;
+	display: inline;
+	font-family: 'Nanum Gothic';
+	color: #7c7c7c;
+}
+
+input.border_s { /* 기본 인풋*/
+	border: 1px solid #e8e8e8;
+	background-color: #ffffff;
+	line-height: 20px;
+	display: inline;
+	font-family: 'Nanum Gothic';
+	color: #7c7c7c;
+}
+
+input.border_none { /* 기본 인풋*/
+	border: 1px solid #ffffff;
+	background-color: #ffffff;
+	line-height: 20px;
+	display: inline;
+	font-family: 'Nanum Gothic';
+	color: #7c7c7c;
+}
+
+input.text {
+	width: 95%;
+	border: 1px solid #e8e8e8;
+	background-color: #ffffff;
+	/*line-height:20px;*/
+	height: 20px;
+	margin-top: 3px;
+	display: inline;
+	font-family: 'Nanum Gothic';
+	padding-left: 3px;
+}
+
+input.money:focus, /* 추가 */ input.text:focus {
+	border: 1px solid #4294f1;
+	line-height: 20px;
+}
+
+input.white {
+	width: 95%;
+	border: 1px solid #ffffff;
+	line-height: 20px;
+	height: 22px;
+	color: #666666;
+	font-family: 'Nanum Gothic';
+	display: inline;
+}
+
+input.white_pay {
+	width: 95%;
+	border: 1px solid #ffffff;
+	line-height: 17px;
+	height: 20px;
+	color: #333333;
+	font-family: 'Nanum Gothic';
+	font-size: 11px;
+	display: inline;
+	text-align: right;
+}
+
+input.white_yell {
+	width: 95%;
+	border: 1px solid #ffd569;
+	background-color: #ffd569;
+	line-height: 17px;
+	height: 20px;
+	color: #333333;
+	font-family: 'Nanum Gothic';
+	font-size: 11px;
+	display: inline;
+	text-align: right;
+}
+
+input.total {
+	width: 95%;
+	border: 1px solid #ffffe0;
+	background-color: #ffffe0;
+	line-height: 17px;
+	height: 20px;
+	color: #333333;
+	font-family: 'Nanum Gothic';
+	font-size: 11px;
+	display: inline;
+	text-align: right;
+	font-weight: bold;
+}
+
+input.white:focus {
+	border: 1px solid #4294f1;
+	line-height: 20px;
+}
+
+input.white_ext {
+	border: 1px solid #ffffff;
+	line-height: 20px;
+	height: 22px;
+	color: #666666;
+	font-family: 'Nanum Gothic';
+	display: inline;
+}
+
+input.white_ext:focus {
+	border: 1px solid #4294f1;
+	line-height: 20px;
+}
+
+input.yellow {
+	border: 1px solid #e9e5a0;
+	background-color: #fffaab;
+	line-height: 20px;
+	height: 22px;
+	color: #333333;
+	font-family: 'Nanum Gothic';
+	display: inline;
+	padding-right: 5px;
+}
+
+input.yellow:focus {
+	border: 1px solid #4294f1;
+	line-height: 20px;
+}
+
+input.yelled {
+	border: 1px solid #e9e5a0;
+	background-color: #ffc600;
+	line-height: 20px;
+	height: 22px;
+	color: #333333;
+	font-family: 'Nanum Gothic';
+	display: inline;
+	padding-right: 5px;
+}
+
+input.yelled:focus {
+	border: 1px solid #4294f1;
+	line-height: 20px;
+}
+
+input.black {
+	border: 1px solid #4d4d4d;
+	background-color: #202020;
+	line-height: 20px;
+	height: 22px;
+	color: #ffff00;
+	font-family: 'NanumGothic';
+	display: inline;
+	padding-right: 5px;
+	font-weight: bold;
+	text-align: right;
+}
+
+/* 추가 입력창.숫자.우측기준 */
+input.money {
+	width: 95%;
+	border: 1px solid #ffffff;
+	line-height: 20px;
+	height: 22px;
+	color: #666666;
+	font-family: 'Nanum Gothic';
+	display: inline;
+	text-align: right;
+	padding-right: 5px;
+}
+
+select {
+	border: 1px solid #f5f5f5;
+	background-color: #ffffff;
+	line-height: 20px;
+	height: 24px;
+	padding-left: 5px;
+	display: inblock;
+	font-size: 12px;
+	font-family: 'Nanum Gothic';
+}
+
+select.small {
+	border: 1px solid #e8e8e8;
+	background-color: #fafafa;
+	height: 22px;
+	padding-left: 5px;
+	display: inblock;
+	font-size: 12px;
+	font-family: 'Nanum Gothic';
+}
+
+/*셀렉트 박스 소스 참고*/
+textarea {
+	width: 96.6%;
+	min-height: 150px;
+}
+
+.form-box {
+	width: 200px;
+	margin: 0 20px 15px 0;
+}
+
+.form-box.last {
+	margin-right: 0;
+}
+
+.form-box.big {
+	width: 100%;
+}
+
+.form-box label {
+	padding: 5px 0;
+	margin-bottom: 8px;
+	display: block;
+}

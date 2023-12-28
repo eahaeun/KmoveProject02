@@ -1,0 +1,28 @@
+package org.zerock.mapper;
+
+import java.util.List;
+
+import org.zerock.domain.ShainVO;
+import org.zerock.domain.TaishokuVO;
+
+public interface ShainMapper {
+	public int getCount();
+
+	public int getCountByEmpType(String empType);
+
+	public void insert(ShainVO vo);
+
+	public List<ShainVO> getList();
+
+	public List<ShainVO> getListByKoyoKeitai(String kizoku_ym);
+
+	public ShainVO read(String shain_no);
+
+	public int update(ShainVO shain);
+	
+	public void updateTaishokuYMD(TaishokuVO shainDTO);
+
+	int cancelShain(String shain_no);
+	
+	public List<ShainVO> findByShain_no(String kizoku_ym);
+}

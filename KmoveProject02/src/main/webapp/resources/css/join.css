@@ -1,0 +1,6252 @@
+@import url("//fonts.googleapis.com/earlyaccess/nanumgothic.css");
+
+.fontBlack {
+	color: black;
+}
+
+.anchor {
+	cursor: pointer;
+}
+
+.disShow {
+	display: block;
+}
+
+.disHide {
+	display: none;
+}
+
+.errorMsg {
+	float: left;
+	margin: 7px 0px 0px 15px;
+	font-size: 11px;
+	color: red;
+}
+
+.errorMsg2 {
+	margin: 7px 0px 0px 15px;
+	font-size: 11px;
+	color: red;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(102, 102, 102);
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.hidden {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	visibility: hidden;
+	width: 1px;
+	height: 1px;
+	font-size: 1px;
+	line-height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+body, input, select, textarea {
+	font-family: "Nanum Gothic", µ¸¿ò, Dotum;
+	font-size: 12px;
+}
+
+.topMenuWrap {
+	background:
+		url("//imgs.yesform.com/z_n/imgs/2014/remain/top_menu_bg.gif") 0px 0px
+		repeat-x;
+}
+
+.topMenu {
+	width: 960px;
+	height: 31px;
+	margin: 0px auto;
+}
+
+.topMenu a {
+	text-decoration: none;
+	color: rgb(102, 102, 102);
+	font-size: 11px;
+}
+
+.topMenu a:hover {
+	text-decoration: underline;
+}
+
+.topMenu .shortCut {
+	float: left;
+	width: 410px;
+	height: 31px;
+	padding: 0px;
+	margin: 0px;
+	border: 0px solid;
+}
+
+.topMenu .shortCut li {
+	float: left;
+	text-indent: -9999px;
+	background: url("//imgs.yesform.com/z_n/imgs/2014/remain/top_menu.png")
+		no-repeat;
+	list-style: none;
+}
+
+.topMenu .shortCut li a {
+	display: block;
+	height: 31px;
+}
+
+.topMenu .shortCut .yesform {
+	background-position: 0px -64px;
+	width: 102px;
+}
+
+.topMenu .shortCut .yesform a {
+	width: 102px;
+	height: 31px;
+}
+
+.topMenu .shortCut .thinkzon {
+	background-position: -102px 0px;
+	width: 102px;
+	height: 31px;
+}
+
+.topMenu .shortCut .thinkzon a {
+	display: block;
+	width: 102px;
+	height: 31px;
+}
+
+.topMenu .shortCut .thinkzon:hover {
+	display: block;
+	background-position: -102px -31px;
+}
+
+.topMenu .shortCut .chamjal {
+	background-position: -204px 0px;
+	width: 102px;
+	height: 31px;
+}
+
+.topMenu .shortCut .chamjal a {
+	display: block;
+	width: 102px;
+	height: 31px;
+}
+
+.topMenu .shortCut .chamjal:hover {
+	display: block;
+	background-position: -204px -31px;
+}
+
+.topMenu .shortCut .thinkzonMall {
+	background-position: -306px 0px;
+	width: 101px;
+	height: 31px;
+}
+
+.topMenu .shortCut .thinkzonMall a {
+	display: block;
+	width: 101px;
+	height: 31px;
+}
+
+.topMenu .shortCut .thinkzonMall:hover {
+	display: block;
+	background-position: -306px -31px;
+}
+
+.topMenu .infoMenu {
+	float: right;
+	font-size: 11px;
+	height: 31px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.topMenu .infoMenu li {
+	float: left;
+	height: 16px;
+	margin: 8px 0px 0px 11px;
+	list-style: none;
+}
+
+.topMenu .infoMenu li span, .topMenu .infoMenu li a {
+	height: 16px;
+	vertical-align: middle;
+}
+
+.topMenu .infoMenu li span img, .topMenu .infoMenu li a img {
+	vertical-align: middle;
+}
+
+.topMenu .infoMenu li.mid {
+	margin-top: 7px;
+}
+
+.topMenu .infoMenu .line {
+	background:
+		url("//imgs.yesform.com/z_n/imgs/2014/remain/list_bar_01.gif") right
+		2px no-repeat;
+	margin: 9px 0px 0px;
+	padding: 0px 5px 0px 4px;
+}
+
+.topMenu .infoMenu .linend {
+	margin: 9px 0px 0px 4px;
+}
+
+.payTopWrap {
+	width: 100%;
+	height: 32px;
+	background: rgb(249, 249, 249);
+	position: relative;
+}
+
+.payTopWrap .topMenu {
+	background: rgb(249, 249, 249);
+	position: relative;
+	z-index: 1;
+	width: 1000px !important;
+}
+
+.payTopWrap .topMenu .infoMenu .payzon {
+	margin: 9px 7px 0px 0px;
+}
+
+.payTopWrap .topMenu .infoMenu .payzon span {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.payTopWrap .topMenu .infoMenu .mid img {
+	margin-top: 3px;
+}
+
+.payTopWrap .topMenu .infoMenu span.input {
+	display: inline-block;
+	width: 120px;
+	height: 19px;
+	margin: -3px 5px 0px 0px;
+	vertical-align: middle;
+	border: 1px solid rgb(204, 204, 204);
+	background: rgb(255, 255, 255);
+}
+
+.payTopWrap .topMenu .infoMenu input.input {
+	width: 112px;
+	height: 16px;
+	padding-left: 5px;
+	border: 1px solid rgb(255, 255, 255);
+	line-height: 1;
+}
+
+.payTopWrap .topMenu .infoMenu .grade a {
+	display: inline-block;
+	height: 13px;
+	margin-top: -4px;
+	padding: 2px 7px;
+	color: rgb(255, 255, 255);
+	vertical-align: middle;
+	border: 1px solid rgb(71, 95, 183);
+	background: rgb(102, 125, 205);
+}
+
+.payTopWrap .topMenu .infoMenu .btn {
+	display: inline-block;
+	height: 13px;
+	margin-top: -4px;
+	padding: 2px 7px;
+	color: rgb(255, 255, 255);
+	vertical-align: middle;
+}
+
+.payTopWrap .topMenu .infoMenu .btn.blue {
+	border: 1px solid rgb(71, 95, 183);
+	background: rgb(102, 125, 205);
+}
+
+.payTopWrap .topMenu .infoMenu .btn.black {
+	border: 1px solid rgb(69, 80, 108);
+	background: rgb(96, 96, 96);
+}
+
+.payTopWrap .topMenu .infoMenu li.bg {
+	height: 31px;
+	margin: 0px 0px 0px 11px;
+	border-right: 1px solid rgb(187, 187, 187);
+	background: rgb(157, 157, 157);
+}
+
+.payTopWrap .topMenu .infoMenu li.bg:last-child {
+	margin-left: 0px;
+}
+
+.payTopWrap .topMenu .infoMenu li.bg a {
+	display: block;
+	padding: 9px 8px 6px 20px;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-family: dotum !important;
+}
+
+.payTopWrap .topMenu .infoMenu li.bg.fav {
+	background-image: url("../img/info_fav.png");
+	background-repeat: no-repeat;
+	background-position: 7px 47%;
+}
+
+.payTopWrap .topMenu .infoMenu li.bg.sho {
+	background-image: url("../img/info_sho.png");
+	background-repeat: no-repeat;
+	background-position: 7px 47%;
+}
+
+.payTopWrap div.bg {
+	width: 50%;
+	height: 31px;
+	background: rgb(157, 157, 157);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 0;
+}
+
+.shortcutLayer {
+	width: 550px;
+	border-radius: 28px;
+	background: rgb(255, 255, 255);
+	position: relative;
+}
+
+.shortcutLayer h1 {
+	padding: 10px 0px 0px;
+	text-align: center;
+}
+
+.shortcutLayer .close {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+}
+
+.shortcutLayer div.btn {
+	padding: 20px 0px 25px;
+	text-align: center;
+}
+
+.shortcutLayer div.btn a {
+	display: inline-block;
+	margin: 0px 10px;
+}
+
+.shortcutLayer p {
+	padding: 10px 0px;
+	text-align: center;
+	font-size: 13px;
+	color: rgb(255, 255, 255);
+	border-radius: 0px 0px 28px 28px;
+	background: rgb(175, 175, 175);
+}
+
+.shortcutLayer p input {
+	margin: 0px 10px 0px 0px;
+}
+
+.shortcutLayer p span {
+	display: inline-block;
+	margin-top: -7px;
+	vertical-align: middle;
+}
+
+.logoWrap {
+	width: 1000px;
+	height: 102px;
+	margin: 0px auto;
+	position: relative;
+}
+
+.logoWrap .logo {
+	position: absolute;
+	top: -32px;
+	left: 0px;
+	z-index: 1;
+}
+
+.logoWrap .navWrap {
+	float: right;
+}
+
+.logoWrap .navWrap ul {
+	float: left;
+	margin: 42px 0px 0px;
+}
+
+.logoWrap .navWrap ul li {
+	float: left;
+	margin-right: 23px;
+}
+
+.logoWrap .navWrap .manag {
+	float: right;
+	margin: 25px 1px 0px 0px;
+	text-align: center;
+}
+
+.logoWrap .navWrap .manag img {
+	margin-top: 7px;
+}
+
+.logoWrap .navWrap .manag span.morph {
+	display: inline-block;
+	width: 46px;
+	height: 46px;
+	position: relative;
+}
+
+.logoWrap .navWrap .manag span.morph span.child {
+	position: absolute;
+	top: 9px;
+	left: 9px;
+}
+
+.visualWrap {
+	clear: both;
+	width: 100%;
+	position: relative;
+}
+
+.visualWrap #slide {
+	width: 100% !important;
+}
+
+.visualWrap #slide li {
+	width: 100% !important;
+}
+
+.visualWrap .visual .parttern {
+	width: 100%;
+	background: url("../img/visual_pattern.png") 0px 0px repeat-x;
+}
+
+.visualWrap .visual .top {
+	background: url("../img/visual_top.png") 0px 0px repeat-x;
+}
+
+.visualWrap .visual .visContent {
+	width: 1000px;
+	margin: 0px auto;
+	text-align: center;
+	position: relative;
+}
+
+.visualWrap .visColor01_1 {
+	width: 100%;
+	background: rgb(91, 88, 81);
+}
+
+.visualWrap .visColor01_1 .parttern .join {
+	position: absolute;
+	top: 266px;
+	left: 477px;
+}
+
+.visualWrap .visColor01_1 .parttern .trial {
+	position: absolute;
+	top: 266px;
+	left: 655px;
+}
+
+.visualWrap .visColor01_1 .parttern .visContent .visContentBg {
+	width: 177px;
+	height: 127px;
+	background: url("../img/main_visual_01_bg.png") 0px 0px no-repeat;
+	position: absolute;
+	top: 90px;
+	left: -151px;
+}
+
+.visualWrap .visColor01_2 {
+	width: 100%;
+	background: rgb(72, 87, 99);
+}
+
+.visualWrap .visColor01_2 .parttern .join {
+	position: absolute;
+	top: 270px;
+	left: 550px;
+}
+
+.visualWrap .visColor01_2 .parttern .trial {
+	position: absolute;
+	top: 270px;
+	left: 728px;
+}
+
+.visualWrap .visColor01_3 {
+	width: 100%;
+	background: url("../img/main_visual_03_bg.jpg") center top no-repeat
+		rgb(16, 83, 65);
+}
+
+.visualWrap .visColor01_3 .parttern {
+	width: 100%;
+	background: url("../img/visual_pattern.png") 50% 0px repeat !important;
+}
+
+.visualWrap .visColor01_3 .parttern .visContent {
+	left: -22px;
+}
+
+.visualWrap .visColor01_3 .parttern .join {
+	position: absolute;
+	top: 248px;
+	left: 53px;
+}
+
+.visualWrap .visual.payroll .top a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.visualWrap .visColor01_3.payroll {
+	background: url("../img/main_visual_kbBg.jpg") center top no-repeat
+		rgb(71, 122, 183);
+}
+
+.visualWrap .visColor01_4 {
+	width: 100%;
+}
+
+.visualWrap .visColor01_4 .parttern {
+	width: 100%;
+	background: url("../img/visual_pattern_03.gif") 50% 0px repeat
+		!important;
+}
+
+.visualWrap .visColor01_4 .parttern .visContent {
+	left: -22px;
+}
+
+.visualWrap .visColor01_4 .parttern .top {
+	background: url("../img/visual_top.png") 0px 0px repeat-x;
+}
+
+.visualWrap .visColor01_4 .parttern .join {
+	position: absolute;
+	top: 258px;
+	left: 557px;
+}
+
+.visualWrap .visColor01_4 .parttern .trial {
+	position: absolute;
+	top: 258px;
+	left: 745px;
+}
+
+.visualWrap .visColor01_5 {
+	width: 100%;
+	background: rgb(234, 111, 91);
+}
+
+.visualWrap .visColor01_5 .visContent {
+	z-index: 1;
+}
+
+.visualWrap .visColor01_5 .visContentBg {
+	width: 100%;
+	min-width: 1000px;
+	height: 347px;
+	background: url("../img/main_visual_05_bg.png") 50% 0px no-repeat;
+	position: absolute;
+	bottom: 0px;
+}
+
+.visualWrap .visColor02 {
+	width: 100%;
+	background: rgb(88, 107, 112);
+}
+
+.visualWrap .visColor02 .parttern .visContent .visContentBg {
+	width: 1077px;
+	height: 168px;
+	background: url("../img/visual_02_bg.png") 0px 0px no-repeat;
+	position: absolute;
+	top: 0px;
+	left: -134px;
+}
+
+.visualWrap .visColor03 {
+	width: 100%;
+	background: rgb(121, 89, 131);
+}
+
+.visualWrap .visColor03 .parttern .visContent .visContentBg {
+	width: 1077px;
+	height: 168px;
+	background: url("../img/visual_03_bg.png") 0px 0px no-repeat;
+	position: absolute;
+	top: 0px;
+	left: -134px;
+}
+
+.visualWrap .visColor04 {
+	width: 100%;
+	background: rgb(105, 132, 92);
+}
+
+.visualWrap .visColor04 .parttern .visContent .visContentBg {
+	width: 1077px;
+	height: 168px;
+	background: url("../img/visual_04_bg.png") 0px 0px no-repeat;
+	position: absolute;
+	top: 0px;
+	left: -184px;
+}
+
+.visualWrap .visColor05 {
+	width: 100%;
+	background: rgb(77, 110, 145);
+}
+
+.visualWrap .visColor05 .parttern .visContent .visContentBg {
+	width: 1077px;
+	height: 168px;
+	background: url("../img/visual_05_bg.png") 0px 0px no-repeat;
+	position: absolute;
+	top: 0px;
+	left: -184px;
+}
+
+.visualWrap .visColor06 {
+	width: 100%;
+	background: rgb(122, 104, 77);
+}
+
+.visualWrap .visColor06 .parttern .visContent .visContentBg {
+	width: 1077px;
+	height: 168px;
+	background: url("../img/visual_06_bg.png") 0px 0px no-repeat;
+	position: absolute;
+	top: 0px;
+	left: -184px;
+}
+
+.visualWrap .visColor07 {
+	width: 100%;
+	background: rgb(104, 151, 138);
+}
+
+.visualWrap .visColor07 .parttern .visContent .visContentBg {
+	width: 1324px;
+	height: 168px;
+	background: url("../img/visual_08_bg.png") 0px bottom no-repeat;
+	position: absolute;
+	top: 0px;
+	left: -209px;
+}
+
+.visualWrap .visColor07 .visContent a {
+	position: absolute;
+	top: 94px;
+	z-index: 10;
+}
+
+.visualWrap .visColor07 .visContent a.manual-btn-01 {
+	left: 240px;
+}
+
+.visualWrap .visColor07 .visContent a.manual-btn-02 {
+	left: 436px;
+}
+
+.visualWrap .visColor07 .visContent a.manual-btn-03 {
+	left: 634px;
+}
+
+.visualWrap .visColor11 {
+	width: 100%;
+	background: rgb(107, 101, 92);
+}
+
+.visualWrap .visColor11 .parttern .visContent .visContentBg {
+	width: 1077px;
+	height: 172px;
+	background: url("../img/visual_11_bg.png") 0px bottom no-repeat;
+	position: absolute;
+	top: 0px;
+	left: -77px;
+}
+
+.visualWrap .visualListWrap {
+	clear: both;
+	width: 1000px;
+	margin: 0px auto;
+	position: relative;
+}
+
+.visualWrap .visualListWrap.main {
+	top: -350px;
+	left: 56px;
+}
+
+.visualWrap .visualListWrap.other {
+	top: -282px;
+	left: 56px;
+}
+
+.visualWrap .visualListWrap .rollingBtn {
+	position: absolute;
+	top: 86px;
+	right: 9px;
+}
+
+.visualWrap .visualListWrap .rollingBtn li {
+	width: 35px;
+	height: 5px;
+	margin-bottom: 8px;
+	background: url("../img/rolling_btn_off.png");
+}
+
+.visualWrap .visualListWrap .rollingBtn .usl-current {
+	width: 35px;
+	height: 5px;
+	background: url("../img/rolling_btn_on.png");
+}
+
+.visualWrap .visualListWrap .manag {
+	width: 56px;
+	height: 56px;
+	background: url("../img/main_visual_manage_btn.png") 50% 50% no-repeat;
+}
+
+.visualWrap .visualListWrap .manag .child {
+	margin: 3px 0px 0px 14px;
+}
+
+.visualWrap .visualListWrap .manag .child svg {
+	top: 10px !important;
+}
+
+.visualWrap .visualListWrap .Smanag {
+	width: 56px;
+	height: 44px;
+	padding-top: 12px;
+	background: url("../img/visual_manage_btn.png") 0px 0px no-repeat;
+}
+
+.visualWrap .visualListWrap .Smanag .child {
+	margin: 14px 0px 0px 14px;
+}
+
+.visualWrap .visualListWrap .per {
+	position: absolute;
+	top: 138px;
+	right: 0px;
+}
+
+.visualWrap .visualListWrap .per .child {
+	position: absolute;
+	top: -1px;
+	left: -1px;
+}
+
+.visualWrap .visualListWrap .pay {
+	position: absolute;
+	top: 202px;
+	right: 0px;
+}
+
+.visualWrap .visualListWrap .pay .child {
+	position: absolute;
+	top: -1px;
+	left: 0px;
+}
+
+.footerWrap {
+	font-family: µ¸¿ò;
+	font-size: 11px;
+	clear: both;
+	height: 155px;
+	background: url("../img/footer_bg.gif") 0px bottom repeat-x;
+	margin-top: 0px !important;
+}
+
+.footerWrap .footer {
+	width: 1000px;
+	margin: 0px auto;
+}
+
+.footerWrap .footer .guideMenuWrap {
+	height: 36px;
+	padding-right: 15px;
+}
+
+.footerWrap .footer .guideMenuWrap ul {
+	width: 605px;
+	padding: 0px;
+}
+
+.footerWrap .footer .guideMenuWrap h2 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	font-size: 1px;
+	line-height: 0;
+}
+
+.footerWrap .footer .guideMenuWrap li {
+	float: left;
+	text-indent: -9999px;
+	margin: 12px 0px 0px 15px;
+	background: url("../img/footer.png") no-repeat;
+	list-style: none;
+}
+
+.footerWrap .footer .guideMenuWrap .company {
+	width: 55px;
+	background-position: 0px 0px;
+}
+
+.footerWrap .footer .guideMenuWrap .company a {
+	display: block;
+	width: 40px;
+	height: 11px;
+}
+
+.footerWrap .footer .guideMenuWrap .copyrights {
+	width: 66px;
+	background-position: -55px 0px;
+}
+
+.footerWrap .footer .guideMenuWrap .copyrights a {
+	display: block;
+	width: 51px;
+	height: 11px;
+}
+
+.footerWrap .footer .guideMenuWrap .privacy {
+	width: 96px;
+	background-position: -121px 0px;
+}
+
+.footerWrap .footer .guideMenuWrap .privacy a {
+	display: block;
+	width: 81px;
+	height: 11px;
+}
+
+.footerWrap .footer .guideMenuWrap .agreement {
+	width: 87px;
+	background-position: -217px 0px;
+}
+
+.footerWrap .footer .guideMenuWrap .agreement a {
+	display: block;
+	width: 72px;
+	height: 11px;
+}
+
+.footerWrap .footer .guideMenuWrap .btu {
+	width: 56px;
+	background-position: 0px -11px;
+}
+
+.footerWrap .footer .guideMenuWrap .btu a {
+	display: block;
+	width: 41px;
+	height: 11px;
+}
+
+.footerWrap .footer .guideMenuWrap .customer {
+	width: 56px;
+	background-position: -56px -11px;
+}
+
+.footerWrap .footer .guideMenuWrap .customer a {
+	display: block;
+	width: 41px;
+	height: 11px;
+}
+
+.footerWrap .footer .guideMenuWrap .all {
+	width: 71px;
+	background-position: -112px -11px;
+}
+
+.footerWrap .footer .guideMenuWrap .all a {
+	display: block;
+	width: 71px;
+	height: 11px;
+}
+
+.footerWrap .footer .guideMenuWrap .siteKind {
+	float: right;
+	width: 200px;
+	height: 20px;
+	margin: 7px -60px 0px 0px;
+	text-align: center;
+	border: 1px solid rgb(97, 114, 119);
+	background: rgb(255, 255, 255);
+}
+
+.footerWrap .footer .guideMenuWrap .siteKind a {
+	text-decoration: none;
+	color: rgb(117, 117, 117);
+	line-height: 20px;
+	font-size: 12px;
+}
+
+.footerWrap .footer .guideMenuWrap .siteKind_yes {
+	float: right;
+	width: 200px;
+	height: 20px;
+	margin: 7px 84px 0px 0px;
+	text-align: center;
+	border: 1px solid rgb(97, 114, 119);
+	background: rgb(255, 255, 255);
+}
+
+.footerWrap .footer .guideMenuWrap .siteKind_yes a {
+	text-decoration: none;
+	color: rgb(117, 117, 117);
+	line-height: 20px;
+	font-size: 12px;
+}
+
+.footerWrap .footer .guideMenuWrap .siteKindChild {
+	float: right;
+	width: 200px;
+	position: relative;
+	top: -245px;
+	right: -200px;
+}
+
+.footerWrap .footer .guideMenuWrap .siteKindChild .familysiteList {
+	width: 194px;
+	padding: 3px;
+	line-height: 15px;
+	text-align: left;
+	border: 1px solid rgb(97, 114, 119);
+	background: rgb(255, 255, 255);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.footerWrap .footer .guideMenuWrap .siteKindChild .familysiteList a {
+	text-decoration: none;
+	color: rgb(117, 117, 117);
+	font-size: 12px;
+}
+
+.footerWrap .footer .guideMenuWrap .siteKindChild .familysiteList a:hover
+	{
+	text-decoration: underline;
+	color: rgb(117, 117, 117);
+	font-size: 12px;
+}
+
+.footerWrap .footer .guideMenuWrap .siteKindChild .familysiteList a:visited
+	{
+	text-decoration: none;
+	color: rgb(117, 117, 117);
+	font-size: 12px;
+}
+
+.footerWrap .footer .guideMenuWrap .siteKindChild .familysiteList a:active
+	{
+	text-decoration: none;
+	color: rgb(117, 117, 117);
+	font-size: 12px;
+}
+
+.footerWrap .footer .guideMenuWrap .siteKindChild .familysiteList a:focus
+	{
+	text-decoration: none;
+	color: rgb(117, 117, 117);
+	font-size: 12px;
+}
+
+.footerWrap .footer .callBtn {
+	float: left;
+	width: 81px;
+	height: 81px;
+	text-indent: -9999px;
+	margin: 19px 0px 0px 14px;
+	background: url("../img/footer.png") 0px -22px no-repeat;
+}
+
+.footerWrap .footer .callBtn a {
+	display: block;
+	width: 81px;
+	height: 81px;
+}
+
+.footerWrap .footer .customerCenter {
+	float: left;
+	width: 360px;
+	height: 58px;
+	text-indent: -9999px;
+	margin: 31px 28px 0px 18px;
+	background: url("../img/footer.png") -81px -22px no-repeat;
+}
+
+.footerWrap .footer address {
+	float: left;
+	height: 56px;
+	margin-top: 33px;
+	padding-left: 30px;
+	line-height: 14px;
+	border-left: 1px solid rgb(105, 108, 113);
+	color: rgb(185, 186, 190);
+	font-family: µ¸¿ò;
+	font-style: normal;
+	font-size: 11px;
+}
+
+.footerWrap .footer .ssl {
+	float: right;
+	width: 135px;
+	margin-top: 16px;
+}
+
+.footer.new {
+	clear: both;
+	border-top: 2px solid rgb(0, 0, 0);
+	background: rgb(244, 245, 246);
+	font-family: "¸¼Àº °íµñ", "Malgun Gothic", µ¸¿ò, Dotum, Helvetica,
+		AppleGothic, sans-serif;
+}
+
+.footer.new .utility {
+	position: relative;
+	border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+.footer.new .utility .content {
+	height: auto !important;
+}
+
+.footer.new .list-utility {
+	padding: 18px 0px;
+	margin-bottom: 0px;
+}
+
+.footer.new .list-utility li {
+	position: relative;
+	display: inline-block;
+	padding: 0px 25px;
+	line-height: 1;
+	margin-right: -5px;
+}
+
+.footer.new .list-utility li:first-child {
+	padding-left: 0px;
+}
+
+.footer.new .list-utility li::after {
+	content: "";
+	width: 1px;
+	height: 13px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-color: rgb(216, 216, 216);
+}
+
+.footer.new .list-utility li:last-child::after {
+	display: none;
+}
+
+.footer.new .list-utility li a {
+	font-size: 14px;
+}
+
+.footer.new .list-utility li.private-txt a {
+	font-weight: bold;
+}
+
+.footer.new .content {
+	height: 205px;
+	padding: 0px;
+	position: relative;
+	z-index: 0;
+	width: 980px !important;
+	min-height: 0px !important;
+}
+
+.footer.new .content .top {
+	position: absolute;
+	top: 0px;
+	right: -65px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.footer.new .center {
+	float: left;
+	width: 438px;
+}
+
+.footer.new .center img {
+	vertical-align: bottom;
+}
+
+.footer.new .center p {
+	margin: 38px 0px 15px;
+	font-size: 18px;
+	font-weight: bold;
+	color: rgb(0, 0, 0);
+}
+
+.footer.new .center p.cscenter-info {
+	margin-top: 10px;
+	font-size: 13px;
+	color: rgb(102, 102, 102);
+	font-weight: normal;
+}
+
+.footer.new .center .cs-btn {
+	display: inline-block;
+	width: 124px;
+	height: 27px;
+	padding-left: 18px;
+	margin-left: 6px;
+	border-radius: 27px;
+	border: 1px solid rgb(242, 242, 242);
+	font-size: 13px;
+	line-height: 25px;
+	letter-spacing: -0.5px;
+	color: rgb(0, 0, 0);
+	background: url("../img/cs_btn_bg.png") 125px center no-repeat
+		rgb(255, 255, 255);
+	box-sizing: content-box;
+}
+
+.footer.new .customer {
+	float: left;
+	margin: 34px 0px 0px 51px;
+}
+
+.footer.new .siteKind {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.footer.new .siteKind select {
+	display: block;
+	width: 194px;
+	height: 28px;
+	margin-top: 10px;
+	padding-left: 10px;
+	line-height: 26px;
+	text-decoration: none;
+	border-radius: 2px;
+	border: 1px solid rgb(203, 212, 217);
+	background: url("../img/footer-family-arr.gif") 187px 50% no-repeat
+		rgb(255, 255, 255);
+	box-sizing: content-box;
+	appearance: none;
+}
+
+.footer.new .siteKind option {
+	text-decoration: none;
+	color: rgb(117, 117, 117);
+	line-height: 20px;
+	font-size: 12px;
+}
+
+.footer.new .address {
+	float: left;
+	margin: 72px 0px 0px;
+	font-size: 13px;
+	line-height: 1.5;
+	color: rgb(127, 127, 127);
+}
+
+.footer.new .address p {
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.footer.new .address strong {
+	display: block;
+	color: rgb(0, 0, 0);
+}
+
+.footer.new .address p:first-child {
+	float: left;
+	width: 310px;
+}
+
+.footer.new .address p:last-child {
+	float: right;
+}
+
+.about {
+	width: 980px;
+	margin: 0px auto;
+	overflow: hidden;
+}
+
+.certiArea {
+	float: left;
+}
+
+.partnerArea {
+	float: right;
+}
+
+.certiArea div, .partnerArea div {
+	display: inline-block;
+	padding: 24px 0px;
+	margin-right: -3px;
+}
+
+.partnerArea div:last-child {
+	margin-right: 0px;
+}
+
+.commonBtn {
+	display: inline-block;
+	width: auto;
+	height: 21px;
+	padding-left: 20px;
+	padding-right: 7px;
+	border: 1px solid rgb(232, 232, 232);
+	background:
+		url("https://www.payzon.co.kr/_commonImg/btn_common_icon.png") left
+		center no-repeat;
+	color: rgb(153, 153, 153);
+	line-height: 21px;
+}
+
+.ui-widget-content.ui-widget-content {
+	border-radius: 10px;
+}
+
+.curtain-bannerV2 {
+	min-width: 100%;
+	height: 50px;
+	background: rgb(255, 255, 238);
+	border-bottom: 1px solid rgb(230, 230, 215);
+	font-size: 12px;
+	color: rgb(0, 0, 0);
+}
+
+.curtain-bannerV2 .content {
+	height: 51px;
+	position: relative;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	display: flex;
+	letter-spacing: 0px;
+}
+
+.curtain-bannerV2 .btn {
+	position: relative;
+	z-index: 10;
+	font-size: 12px;
+	border-radius: 19.5px;
+	line-height: 10px;
+	margin-left: 20px;
+	background: rgb(6, 125, 253);
+	color: rgb(255, 255, 255);
+}
+
+.curtain-bannerV2 .btnClose {
+	position: relative;
+	float: right;
+	margin: 4px;
+	font-size: 12px;
+	color: rgb(0, 0, 0);
+}
+
+.curtain-bannerV2 .notice {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	width: auto;
+	color: rgb(0, 0, 0);
+}
+
+.curtain-bannerV2 .notice>img {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	margin-bottom: 3px;
+}
+
+.curtain-bannerV2 .notice ul {
+	display: flex;
+	padding-left: 25px;
+	height: 41px;
+}
+
+.curtain-bannerV2 .notice .btn {
+	background: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.curtain-bannerV2 .notice a {
+	width: auto;
+	height: auto;
+	border: 0px;
+}
+
+.curtain-bannerV2 .notice .btnimg {
+	width: 100%;
+	height: 41px;
+	margin: 0px;
+}
+
+/* payzon.css */
+.claer {
+	clear: both;
+}
+
+.newsWrap {
+	width: 100%;
+	height: 44px;
+	border-bottom: solid 1px #dddddd;
+}
+
+.newsWrap .news {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.newsWrap .news h2.tit {
+	float: left;
+	margin: 17px 0 0 30px;
+}
+
+.newsWrap .news p.txt {
+	float: left;
+	height: 44px;
+	margin-left: 20px;
+	line-height: 45px;
+	font-size: 15px;
+}
+
+.newsWrap .news p.txt a {
+	color: #ef007c;
+}
+
+.newsWrap .news p.txt span {
+	font-size: 12px;
+	color: #666;
+}
+
+.contentBottomBg {
+	width: 100%;
+	padding: 0 0 35px 0;
+	background: #f9f9f9;
+}
+
+.contentBottomBg .tab {
+	width: 335px;
+	height: 29px;
+	margin: 0 auto;
+}
+
+.contentBottomBg .tab li {
+	float: left;
+}
+
+.content {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+h2.txt {
+	padding: 50px 0 27px 0;
+	text-align: center;
+}
+
+.content .list {
+	height: 384px;
+}
+
+.content .list li {
+	float: left;
+	width: 25%;
+	height: 159px;
+	margin: 0 0 33px 0;
+	text-align: center;
+	position: relative;
+}
+
+.content .list li span {
+	position: absolute;
+	top: 10px;
+	left: 44%;
+}
+
+.content .list02 {
+	float: left;
+	margin-bottom: 36px;
+}
+
+.content .list02 li {
+	float: left;
+	width: 49%;
+	height: 100px;
+	padding: 18px 0 17px 0;
+	text-align: center;
+	border-bottom: dashed 1px #e1e1e1;
+}
+
+.content .list02 li.last {
+	border-bottom: none;
+}
+
+.content .list02 .line {
+	border-right: dashed 1px #e1e1e1;
+}
+/*ë©”ì¸-íŽ˜ì´ì¡´ìž¥ì  ìˆ˜ì •*/
+.content.new .icon_box {
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+}
+
+.icon_box.box01 {
+	background: #ffba2b;
+}
+
+.icon_box.box02 {
+	background: #2c9c93;
+}
+
+.icon_box.box03 {
+	background: #704d87;
+}
+
+.icon_box.box04 {
+	background: #4f5152;
+}
+
+.icon_box.box05 {
+	background: #e04042;
+}
+
+.icon_box.box06 {
+	background: #8ecedb;
+}
+
+.icon_box.box07 {
+	background: #664ac9;
+}
+
+.icon_box.box08 {
+	background: #c96d4a;
+}
+
+.content.new h2.txt {
+	margin-bottom: 20px;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.content.new h2.txt span {
+	color: #5880d5;
+}
+
+.content.new .list li span {
+	left: 42.5%;
+}
+
+.content.new .list li a:hover {
+	text-decoration: none;
+}
+
+.content.new .list li .con_txt {
+	margin-top: 20px;
+	font-size: 18px;
+	color: #333;
+	font-weight: bold;
+	letter-spacing: -0.5px;
+}
+
+.content.new .list li .f-red {
+	color: #de4c4c;
+}
+
+.content.new .list li .f-blue {
+	color: #3366cc;
+}
+
+.content.new .list li .con_sub {
+	margin-top: 8px;
+	font-size: 13px;
+	line-height: 18px;
+	color: #818181;
+}
+
+.content.new .list li .con_sub span {
+	position: static;
+	border-bottom: 1px solid #818181;
+}
+
+.content .link-box .link {
+	float: left;
+}
+
+.content .link-box .link.no3 {
+	margin-left: 60px;
+}
+
+.content .link-box .link.no4 {
+	margin-left: 80px;
+}
+
+.content .link-box .link h3 {
+	width: 100px;
+	margin: 0 auto;
+	padding: 100px 0 10px 0;
+	text-align: center;
+}
+
+.content .link-box .link.no1 h3 {
+	background:
+		url(https://img.payzon.co.kr/_guideImg/main/link-list-img-01.png)
+		no-repeat 50% 20px;
+}
+
+.content .link-box .link.no2 h3 {
+	background:
+		url(https://img.payzon.co.kr/_guideImg/main/link-list-img-02.png)
+		no-repeat 50% 20px;
+}
+
+.content .link-box .link.no3 h3 {
+	background:
+		url(https://img.payzon.co.kr/_guideImg/main/link-list-img-03.png)
+		no-repeat 50% 20px;
+}
+
+.content .link-box .link.no4 h3 {
+	background:
+		url(https://img.payzon.co.kr/_guideImg/main/link-list-img-04.png)
+		no-repeat 50% 20px;
+}
+
+.content .link-box .link.no1>ul {
+	padding-left: 40px;
+}
+
+.content .link-box .link.no2>ul {
+	padding-left: 50px;
+}
+
+.content .link-box .link.no3>ul {
+	padding-left: 25px;
+}
+
+.content .link-box .link.no4>ul {
+	padding-left: 20px;
+}
+
+.content .link-box .link ul li a {
+	display: inline-block;
+	height: 15px;
+	margin-bottom: 3px;
+}
+
+.content .link-box .link ul li li {
+	padding-left: 22px;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/main/link-list-child-bg.png)
+		no-repeat 9px 0;
+}
+
+.content .link-box .ad {
+	float: right;
+	margin-top: 20px;
+}
+
+.payzonIs {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.payzonIs li {
+	float: left;
+	width: 20%;
+	padding: 56px 0 46px 0;
+	text-align: center;
+}
+
+.funcListWrap {
+	width: 100%;
+	background: #fbfbfb;
+}
+
+.funcList {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.funcList h2.txt {
+	padding: 50px 0 27px 0;
+	text-align: center;
+}
+
+.funcList .list li {
+	float: left;
+	width: 25%;
+	height: 159px;
+	margin: 0 0 33px 0;
+	text-align: center;
+	position: relative;
+}
+
+.funcList .list li span {
+	position: absolute;
+	top: 10px;
+	left: 41%;
+}
+
+.funcList .list02 {
+	float: left;
+	margin-bottom: 36px;
+}
+
+.funcList .list02 li {
+	float: left;
+	width: 49%;
+	height: 100px;
+	padding: 18px 0 17px 0;
+	text-align: center;
+	border-bottom: dashed 1px #e1e1e1;
+}
+
+.funcList .list02 li.last {
+	border-bottom: none;
+}
+
+.funcList .list02 .line {
+	border-right: dashed 1px #e1e1e1;
+}
+
+.wcsWrap {
+	float: left;
+	width: 50%;
+	background: #aff1e7;
+}
+
+.wcsWrap .wcs {
+	float: right;
+	width: 500px;
+	height: 192px;
+	padding: 20px 0px; /*padding:40px 0; margin:0 2% 0 0;*/
+}
+
+.wcsWrap .wcs .img {
+	float: left;
+	margin-right: 25px;
+}
+
+.wcsWrap .wcs .img_stamp {
+	float: left;
+	margin-right: 0px;
+}
+
+.wcsWrap .wcs .tit {
+	float: left;
+	margin-bottom: 24px;
+}
+
+.wcsWrap .wcs .sub {
+	float: left;
+	margin-bottom: 10px;
+}
+
+.wcsWrap .wcs .txt {
+	float: left;
+	line-height: 18px;
+}
+
+.bannerWrap {
+	float: right;
+	width: 50%;
+	background: #6075ba;
+}
+
+.bannerWrap .banner {
+	float: left;
+	width: 45%;
+	height: 167px;
+	padding: 20px;
+	margin: 25px 0 0 15px;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/main/no_install_img.png)
+		no-repeat 2px 7px;
+}
+
+.bannerWrap .banner .txt {
+	margin: 0 0 0 198px;
+}
+
+.bannerWrap .banner .link {
+	margin: 14px 0 0 198px;
+}
+
+.wide_banner {
+	position: relative;
+}
+
+.wide_banner .pull-left {
+	float: left;
+	position: relative;
+	z-index: 1;
+}
+
+.wide_banner .pull-right {
+	float: right;
+}
+
+.wide_banner .bg.pull-left {
+	width: 50%;
+	height: 310px;
+	background: #6075ba;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.wide_banner .bg.pull-right {
+	width: 50%;
+	height: 310px;
+	background: #3b4e9b;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 0;
+}
+
+.sectionBottomBg {
+	width: 100%;
+	height: 249px;
+	background: #f8f7f6;
+}
+
+.sectionBottom {
+	width: 1000px;
+	margin: 0 auto;
+	height: 249px;
+}
+
+.sectionBottom .eventWrap {
+	float: left;
+	width: 49%;
+	height: 171px;
+	margin: 52px 1% 0 30px;
+}
+
+.sectionBottom .eventWrap .tit {
+	float: left;
+	margin-bottom: 15px;
+}
+
+.sectionBottom .eventWrap ul {
+	float: right;
+}
+
+.sectionBottom .eventWrap ul li {
+	float: left;
+	margin: 0 2px;
+}
+
+.sectionBottom .eventWrap .event {
+	clear: both;
+	border: solid 1px #e2e2e2;
+	overflow: hidden;
+}
+
+.sectionBottom .libraryWrap {
+	float: left;
+	width: 46%;
+	height: 171px;
+	margin: 52px 1% 0 3%;
+}
+
+.sectionBottom .libraryWrap .tit {
+	float: left;
+	margin-bottom: 15px;
+}
+
+.sectionBottom .libraryWrap .more {
+	float: right;
+	width: 43px;
+	margin-right: 10px;
+	background: url(https://img.payzon.co.kr/_guideImg/common/more_arr.gif)
+		no-repeat right 3px;
+}
+
+.sectionBottom .libraryWrap .more a {
+	color: #2077ce;
+}
+
+.sectionBottom .libraryWrap ul {
+	clear: both;
+}
+
+.sectionBottom .libraryWrap ul li {
+	float: left;
+	width: 100%;
+	line-height: 21px;
+}
+
+.sectionBottom .libraryWrap ul li>a {
+	display: inline-block;
+	width: 330px;
+	height: 18px;
+	overflow: hidden;
+}
+
+.sectionBottom .inquiryWrap ul li span {
+	color: #2077ce;
+}
+
+.sectionBottom .libraryWrap .file {
+	float: left;
+	width: 30px;
+	height: 16px;
+	padding: 3px 0px 0 0;
+}
+
+.sectionBottom .libraryWrap .date {
+	float: right;
+	width: 70px;
+	color: #acacac;
+	padding: 0 10px;
+	0
+	0;
+}
+
+.sectionBottom .libraryWrap .event {
+	clear: both;
+	border: solid 1px #e2e2e2;
+	overflow: hidden;
+}
+
+.sectionBottom .inquiryWrap {
+	float: left;
+	width: 46%;
+	height: 160px;
+	padding: 0 0 0 20px;
+	margin: 52px 0 0 0;
+	border-left: solid 1px #efefef;
+}
+
+.sectionBottom .inquiryWrap .tit {
+	float: left;
+	margin-bottom: 15px;
+}
+
+.sectionBottom .inquiryWrap .more {
+	float: right;
+	width: 43px;
+	margin-right: -5px;
+	background: url(https://img.payzon.co.kr/_guideImg/common/more_arr.gif)
+		no-repeat right 3px;
+}
+
+.sectionBottom .inquiryWrap .more a {
+	color: #2077ce;
+}
+
+.sectionBottom .inquiryWrap ul {
+	clear: both;
+}
+
+.sectionBottom .inquiryWrap ul li {
+	float: left;
+	width: 100%;
+	padding-left: 10px;
+	margin-bottom: 1px;
+	line-height: 24px;
+	background: url(https://img.payzon.co.kr/_guideImg/common/list_dott.gif)
+		no-repeat 0 47%;
+}
+
+.sectionBottom .inquiryWrap ul li span {
+	color: #2077ce;
+	font-weight: bold;
+}
+
+.sectionBottom .inquiryWrap .date {
+	float: right;
+	width: 70px;
+	color: #acacac;
+}
+
+.sectionBottom .inquiryWrap .event {
+	clear: both;
+	border: solid 1px #efefef;
+	overflow: hidden;
+}
+
+.content .bottom {
+	clear: both;
+	position: relative;
+}
+
+.content .bottom .safe {
+	float: left;
+	margin: 34px 0 30px 20px;
+}
+
+.content .bottom .norton {
+	float: left;
+	margin: 34px 0 30px 48px;
+}
+
+.content .bottom .kisa {
+	float: left;
+	margin: 34px 0 30px 68px;
+}
+
+.content .bottom .goTop {
+	position: absolute;
+	top: 46px;
+	right: -49px;
+}
+
+.content .bottom .tit {
+	margin-top: 40px;
+	text-align: center;
+}
+
+.content .bottom .tit span {
+	display: inline-block;
+	margin-left: 10px;
+	border-bottom: solid 1px #ff6600;
+}
+
+.content .bottom .tit a {
+	display: inline-block;
+	margin: 0 10px;
+}
+/* .content .bottom ul{height:136px; overflow:hidden;} */
+.content .bottom .bx-wrapper+.goTop {
+	top: 66px;
+}
+
+/* íŽ˜ì´ì¡´ì´ëž€ */
+.goJoinWrap {
+	width: 100%;
+	height: 139px;
+	background: #6075ba
+		url(https://img.payzon.co.kr/_guideImg/sub/go_join_pattern.png) repeat
+		0 0;;
+}
+
+.goJoinWrap .goJoin {
+	width: 905px;
+	padding: 42px 0 0 95px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+
+.goJoinWrap .goJoin span {
+	float: left;
+	margin-right: 82px;
+}
+
+.goJoinWrap .goJoin a {
+	float: left;
+	margin: -12px 13px 19px 0;
+}
+
+.goJoinWrap .goJoin .goJoinBg {
+	width: 1080px;
+	height: 139px;
+	background: url(https://img.payzon.co.kr/_guideImg/sub/go_join_bg.gif)
+		no-repeat 0 0;
+	position: absolute;
+	top: 0px;
+	left: -41px;
+	z-index: -1;
+}
+
+.advantageWrap {
+	width: 100%; /* background:#f6f6f6;*/
+}
+
+.advantageWrap .advantage {
+	width: 1000px;
+	padding-top: 26px;
+	margin: 0 auto;
+}
+
+.advantageWrap .advantage h2 {
+	padding: 29px 0 20px 0;
+	text-align: center;
+}
+
+.advantageWrap .advantage ul li {
+	float: left;
+}
+
+.advantageWrap .advantage ul .left {
+	margin: 4px 0 0 42px;
+}
+
+.advantageWrap .advantage ul .list {
+	margin: 0 26px 24px 51px;
+}
+/*íŽ˜ì´ì¡´ ìž¥ì  ìˆ˜ì •*/
+.advantageWrap.new {
+	width: 100%; /* background:#f6f6f6;*/
+}
+
+.advantageWrap.new .advantage {
+	width: 970px;
+	padding-top: 26px;
+	padding-bottom: 40px;
+	margin: 0 auto;
+}
+
+.advantageWrap.new .advantage h2 {
+	padding: 29px 0 30px 0;
+	margin-bottom: 40px;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	background:
+		url('https://img.payzon.co.kr/_guideImg/sub/benefit_line.png')
+		no-repeat center bottom;
+}
+
+.advantageWrap.new .advantage h2 strong {
+	color: #ff6666;
+}
+
+.advantageWrap.new .advantage .al-left {
+	width: 300px;
+	float: left;
+}
+
+.advantageWrap.new .advantage .al-left h3 {
+	padding: 20px 0 12px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.advantageWrap.new .advantage .al-left p {
+	font-size: 14px;
+	line-height: 18px;
+	color: #333;
+}
+
+.advantageWrap.new .advantage .al-left p span {
+	color: #ff3333;
+}
+
+.advantageWrap.new .advantage .al-right {
+	width: 670px;
+	float: right
+}
+
+.advantageWrap.new .advantage .al-right li {
+	width: 250px;
+	height: 70px;
+	float: left;
+	margin: 0 0 25px 15px;
+	padding-left: 70px;
+}
+
+.advantageWrap.new .advantage .al-right li h3 {
+	margin-bottom: 8px;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: bold;
+}
+
+.advantageWrap.new .advantage .al-right li h3 span {
+	color: #0066cc;
+}
+
+.advantageWrap.new .advantage .al-right li p {
+	font-size: 12px;
+	color: #666;
+	line-height: 18px;
+	letter-spacing: -0.3px;
+}
+
+.advantageWrap.new .advantage .al-right li.li01 {
+	background: url(https://img.payzon.co.kr/_guideImg/sub/benefit_01.png)
+		no-repeat left top;
+}
+
+.advantageWrap.new .advantage .al-right li.li02 {
+	background: url(https://img.payzon.co.kr/_guideImg/sub/benefit_02.png)
+		no-repeat left top;
+}
+
+.advantageWrap.new .advantage .al-right li.li03 {
+	background: url(https://img.payzon.co.kr/_guideImg/sub/benefit_03.png)
+		no-repeat left top;
+}
+
+.advantageWrap.new .advantage .al-right li.li04 {
+	background: url(https://img.payzon.co.kr/_guideImg/sub/benefit_04.png)
+		no-repeat left top;
+}
+
+.advantageWrap.new .advantage .al-right li.li05 {
+	background: url(https://img.payzon.co.kr/_guideImg/sub/benefit_05.png)
+		no-repeat left top;
+}
+
+.advantageWrap.new .advantage .al-right li.li06 {
+	background: url(https://img.payzon.co.kr/_guideImg/sub/benefit_06.png)
+		no-repeat left top;
+}
+
+.content .join {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.content .join h2 {
+	float: left;
+	margin: 36px 0 18px 0;
+}
+
+.content .join h2 input {
+	margin: 0 10px 0 6px;
+}
+
+.content .join .brief {
+	float: right;
+	margin: 36px 0 0 0;
+}
+
+.content .join .accept {
+	width: 98%;
+	height: 100px;
+	padding: 10px;
+	border-top: solid 2px #000;
+	border-bottom: solid 1px #d4d4d4;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+.content .join .check {
+	display: inline-block;
+	width: 8px;
+	height: 10px;
+	margin-right: 3px;
+	text-indent: -9999px;
+	background: url(https://img.payzon.co.kr/_guideImg/common/check.png)
+		no-repeat 50% 50%;
+}
+
+.content .join table {
+	width: 100%;
+	border-top: solid 2px #858585;
+}
+
+.content .join table th {
+	font-weight: bold;
+	border-right: solid 1px #e0e0e0;
+	border-bottom: solid 1px #e0e0e0;
+	background: #f8f8f8;
+}
+
+.content .join table .tit {
+	width: 130px;
+	height: 40px;
+	padding-left: 19px;
+}
+
+.content .join table td {
+	padding-left: 7px;
+	border-bottom: solid 1px #e0e0e0;
+}
+
+.content .join table .long {
+	width: 500px;
+}
+
+.content .join table .longInput {
+	width: 156px;
+	height: 28px;
+	line-height: 28px;
+	padding-left: 5px;
+	border-top: solid 1px #d1d1d1;
+	border-right: solid 1px #e3e3e3;
+	border-bottom: solid 1px #e3e3e3;
+	border-left: solid 1px #d1d1d1;
+	background: #fafafa;
+	outline: none;
+}
+
+.content .join table .long span {
+	margin-left: 10px;
+	font-size: 11px;
+	color: #8a8a8a;
+}
+
+.content .join table .shortTit {
+	width: 65px;
+	text-align: center;
+	border-right: none !important;
+}
+
+.content .join table .shortInput {
+	width: 60px;
+	height: 28px;
+	line-height: 28px;
+	padding-left: 5px;
+	border-top: solid 1px #d1d1d1;
+	border-right: solid 1px #e3e3e3;
+	border-bottom: solid 1px #e3e3e3;
+	border-left: solid 1px #d1d1d1;
+	background: #fafafa;
+	outline: none;
+}
+
+.content .join table .emailTit {
+	padding: 14px 0 0 19px;
+	height: 68px;
+	vertical-align: top;
+}
+
+.content .join table .mailCheck {
+	margin-left: 10px;
+}
+
+.content .join table .emailLong .mailTxt {
+	display: inline-block;
+	margin-top: 5px;
+	color: #8a8a8a;
+}
+
+.content .join table .emailLong .mailTxt span {
+	text-decoration: underline;
+}
+
+.content .join .fjBtn {
+	margin-top: 40px;
+	text-align: center;
+}
+
+/* ìˆ˜ì • */
+.payzon5sWrap {
+	width: 100%;
+	padding-bottom: 64px;
+	background: url(https://img.payzon.co.kr/_guideImg/sub/payzon_5s_bg.gif)
+		repeat 0 0;
+}
+
+.payzon5sWrap .payzon5s {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.pay5s {
+	text-align: center;
+}
+
+.payServiceWrap {
+	width: 100%;
+	border-top: solid 1px #f4f4f4;
+	border-bottom: solid 1px #f4f4f4;
+	background: #fbfbfb;
+}
+
+.payService {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.payService h3.tit {
+	margin: 0 0 19px 2px;
+}
+
+.payService table {
+	width: 100%;
+	padding-bottom: 30px;
+}
+
+.payService .humanPayT thead th {
+	background: #6699cc;
+}
+
+.payService .humanPayT tbody th {
+	border-bottom: solid 1px #6699cc;
+}
+
+.payService .humanPayT tbody td {
+	border-bottom: solid 1px #6699cc;
+}
+
+.payService .pensionPayT thead th {
+	background: #66ccc8;
+}
+
+.payService .pensionPayT tbody th {
+	border-bottom: solid 1px #66ccc8;
+}
+
+.payService .pensionPayT tbody td {
+	border-bottom: solid 1px #66ccc8;
+}
+
+.payService .commonT {
+	padding-bottom: 70px;
+}
+
+.payService .commonT thead th {
+	background: #999;
+}
+
+.payService .commonT tbody th {
+	padding-left: 40px !important;
+	border-bottom: solid 1px #999;
+}
+
+.payService .commonT tbody td {
+	border-bottom: solid 1px #999;
+}
+
+.payService table thead th {
+	height: 30px;
+	text-align: center;
+}
+
+.payService table thead th.acticle {
+	width: 180px;
+	border-right: solid 2px #fbfbfb;
+}
+
+.payService table tbody th {
+	padding-left: 50px;
+	font-size: 16px;
+	border-right: solid 2px #fbfbfb;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/sub/service_table_tit_bg.gif)
+		repeat 0 0;
+}
+
+.payService table tbody td {
+	padding: 20px 0;
+	font-size: 14px;
+}
+
+.payService table tbody td li {
+	float: left;
+	width: 335px;
+	padding: 0 0 5px 45px;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/sub/service_table_dia.gif)
+		no-repeat 33px 4px;
+}
+
+.payService table tbody td li li {
+	float: left;
+	padding: 5px 0 0 12px;
+	font-size: 12px !important;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/sub/service_table_dott.gif)
+		no-repeat 0 10px;
+}
+
+/* ë¡œê·¸ì¸ ë ˆì´ì–´ */
+.logLayer {
+	width: 545px;
+	height: 360px;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-khtml-border-radius: 50px;
+	-o-border-radius: 50px;
+	background: #fff;
+	position: relative;
+}
+
+.logLayer h1 {
+	padding: 29px 0 22px 76px;
+}
+
+.logLayer .loginWrap {
+	margin: 0 0 25px 74px;
+}
+
+.logLayer .loginWrap .login {
+	float: left;
+	width: 320px;
+}
+
+.logLayer .loginWrap .login .idInput {
+	width: 295px;
+	height: 33px;
+	line-height: 33px;
+	padding-left: 5px;
+	margin-bottom: 11px;
+	border: solid 1px #ccc;
+	outline: none;
+}
+
+.logLayer .loginWrap .login .pwInput {
+	width: 295px;
+	height: 33px;
+	line-height: 33px;
+	padding-left: 5px;
+	margin-bottom: 15px;
+	border: solid 1px #ccc;
+	outline: none;
+}
+
+.logLayer .loginWrap .login .checkbox {
+	margin-right: 5px;
+}
+
+.logLayer .loginWrap .login span {
+	margin-right: 10px;
+}
+
+.logLayer .loginWrap a {
+	float: left;
+}
+
+.logLayer .bottom {
+	width: 515px;
+	height: 105px;
+	padding-left: 30px;
+	border-radius: 0 0 50px 50px;
+	-webkit-border-radius: 0 0 50px 50px;
+	-ms-border-radius: 0 0 50px 50px;
+	-khtml-border-radius: 0 0 50px 50px;
+	-o-border-radius: 0 0 50px 50px;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/common/login_layer_bg.gif)
+		repeat 0 0;
+}
+
+.logLayer .bottom .section {
+	float: left;
+	width: 47%;
+	margin: 21px 0 0 0;
+}
+
+.logLayer .bottom .section img {
+	float: left;
+	margin-right: 14px;
+}
+
+.logLayer .bottom .section div a img {
+	margin-top: 14px;
+}
+
+.logLayer .close {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+}
+
+/* ê²°ì œì•ˆë‚´ */
+.content .list03 {
+	width: 100%;
+}
+
+.content .list03 li {
+	float: left;
+	margin: 0 2% 59px 2%;
+	position: relative;
+}
+
+.content .list03 li a {
+	position: absolute;
+	bottom: 21px;
+	left: 72px;
+}
+
+.priceWrap {
+	width: 100%;
+	background: url(https://img.payzon.co.kr/_guideImg/sub/price_bg.gif)
+		repeat 0 0;
+}
+
+.priceWrap .price {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 54px 0 0 0;
+}
+
+.priceWrap .price h3 {
+	margin-bottom: 48px;
+	text-align: center;
+}
+
+.priceWrap .price ul {
+	overflow: hidden;
+	width: 100%;
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+.priceWrap .price ul li {
+	display: inline-block;
+	margin: 0 3% 0 3%;
+	text-align: center;
+}
+/*ì´ìš©ìš”ê¸ˆ ê°€ê²©ì •ì±… ìˆ˜ì •*/
+.priceWrap.new {
+	width: 100%;
+	background: url(https://img.payzon.co.kr/_guideImg/sub/price_bg.gif)
+		repeat 0 0;
+}
+
+.priceWrap.new .price {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 54px 0 0 0;
+	text-align: center;
+}
+
+.priceWrap.new .price .icon-img {
+	height: 70px;
+}
+
+.priceWrap.new .price h3 {
+	font-size: 27px;
+	line-height: 32px;
+	font-weight: bold;
+	color: #333;
+	text-align: center;
+	margin: 10px 0;
+}
+
+.priceWrap.new .price p {
+	font-size: 16px;
+	letter-spacing: -0.5px;
+	color: #666;
+}
+
+.priceWrap.new .price ul {
+	float: left;
+	width: 100%;
+	margin-top: 45px;
+	margin-bottom: 50px;
+}
+
+.priceWrap.new .price ul li {
+	float: left;
+	width: 25%;
+	margin: 0;
+	text-align: center;
+}
+
+.priceWrap.new .price ul li img {
+	vertical-align: bottom;
+}
+
+.priceWrap.new .price ul li h3 {
+	font-size: 20px;
+	line-height: 32px;
+}
+
+.priceWrap.new .price ul li p {
+	font-size: 13px;
+	line-height: 18px;
+	letter-spacing: 0px;
+	color: #333
+}
+
+.priceWrap.new .price ul li p strong {
+	color: #ff0033;
+}
+
+.content .payment h3 {
+	margin: 50px 0 33px 0;
+	text-align: center;
+}
+
+.content .payment ul {
+	float: left;
+	width: 100%;
+}
+
+.content .payment ul li {
+	float: left;
+	margin: 0 2.2% 50px 2.2%;
+}
+
+/* íšŒì›ê°€ìž… ì •ë³´ìž…ë ¥*/
+.content h3.tit {
+	margin: 34px 0 17px 0;
+}
+
+.content .joinWrap table {
+	width: 100%;
+	border-top: solid 2px #858585;
+}
+
+.content .joinWrap table th {
+	width: 117px;
+	height: 40px;
+	padding-left: 32px;
+	font-weight: bold;
+	border-right: solid 1px #e0e0e0;
+	border-bottom: solid 1px #e0e0e0;
+	background: #f8f8f8;
+}
+
+.content .joinWrap table td {
+	padding-left: 7px;
+	border-bottom: solid 1px #e0e0e0;
+}
+
+.content .joinWrap table td .inputM {
+	float: left;
+	width: 156px;
+	height: 25px;
+	padding-left: 5px;
+	line-height: 25px;
+	border-top: solid 1px #d1d1d1;
+	border-right: solid 1px #e3e3e3;
+	border-bottom: solid 1px #e3e3e3;
+	border-left: solid 1px #d1d1d1;
+	background: #fafafa;
+	outline: none;
+}
+
+.content .joinWrap table td .inputL {
+	float: left;
+	width: 532px;
+	height: 25px;
+	padding-left: 5px;
+	line-height: 25px;
+	margin-left: 7px;
+	border-top: solid 1px #d1d1d1;
+	border-right: solid 1px #e3e3e3;
+	border-bottom: solid 1px #e3e3e3;
+	border-left: solid 1px #d1d1d1;
+	background: #fafafa;
+	outline: none;
+}
+
+.content .joinWrap table td .inputS {
+	float: left;
+	width: 60px;
+	height: 25px;
+	padding-left: 5px;
+	line-height: 25px;
+	border-top: solid 1px #d1d1d1;
+	border-right: solid 1px #e3e3e3;
+	border-bottom: solid 1px #e3e3e3;
+	border-left: solid 1px #d1d1d1;
+	background: #fafafa;
+	outline: none;
+}
+
+.content .joinWrap table td .small {
+	float: left;
+	margin: 7px 0 0 15px;
+	font-size: 11px;
+	color: #8a8a8a;
+}
+
+.content .joinWrap table .last {
+	border-bottom: solid 1px #858585;
+}
+
+.content .joinWrap table .zipCode {
+	float: left;
+	margin-right: 5px;
+}
+
+.content .joinWrap table select {
+	float: left;
+	margin: 5px 0 0 0;
+}
+
+.content .joinWrap table .none {
+	float: left;
+	margin: 7px 3px 0 3px;
+}
+
+.content .joinWrap table .codeBtn {
+	float: left;
+	margin-left: 5px;
+}
+
+.content .joinWrap table .email {
+	padding-top: 13px;
+	height: 68px;
+	vertical-align: top;
+}
+
+.content .joinWrap table .emailAcc {
+	float: left;
+	margin: 8px;
+}
+
+.content .joinWrap table .email .small {
+	margin-left: 0 !important;
+}
+
+.content .joinWrap table .email .small .color {
+	color: #3366cc;
+}
+
+.content .freeJoinBtn {
+	margin: 44px 0 81px 0;
+	text-align: center;
+}
+
+/* íšŒì›ê°€ìž… ì •ë³´ìž…ë ¥ ì¶”ê°€_20220929 */
+/* .content .joinWrap{margin: 100px 0} */
+.content .joinWrap .joinGuide .txt {
+	color: #8a8a8a;
+	line-height: 2.6;
+}
+
+.content .joinWrap .joinGuide .ft_black {
+	color: #000;
+	font-weight: bold;
+}
+
+.content .joinWrap .joinGuide .ft_red {
+	color: #ff0000;
+}
+
+.content .joinWrap .freeJoinBtn .btn_black {
+	width: 190px;
+	height: 50px;
+	background: #000;
+	display: block;
+	color: #fff;
+	display: flex;
+	font-size: 15px;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	border-radius: 6px;
+}
+
+/* íšŒì›ê°€ìž… ì•½ê´€ë™ì˜ */
+.content .joinWrap .acceptCheck {
+	float: left;
+	margin: 3px 5px 0 5px;
+}
+
+.content .joinWrap .acceptCheck h3.tit {
+	float: left;
+}
+
+.content .joinWrap .acceptWrap {
+	width: 100%;
+	height: 110px;
+	padding: 10px;
+	border-top: solid 2px #000;
+	border-bottom: solid 1px #d4d4d4;
+	overflow-y: scroll;
+	line-height: 150%;
+}
+
+.content .joinWrap .acceptWrap span {
+	color: #0070c0;
+}
+
+.content .joinWrap .joinCheckWrap {
+	width: 100%;
+	height: 203px;
+	text-align: center;
+	border-top: solid 2px #000;
+	border-bottom: solid 1px #d4d4d4;
+}
+
+.content .joinWrap .joinCheckWrap .txt {
+	margin-top: 60px;
+}
+
+.content .joinWrap .joinCheckWrap .checking {
+	margin-top: 28px;
+}
+
+.content .joinWrap .joinCheckWrap .checking .checkInput {
+	display: inline-block;
+	width: 295px;
+	height: 33px;
+	padding-left: 5px;
+	margin-right: 10px;
+	vertical-align: top;
+	line-height: 33px;
+	border: solid 1px #ccc;
+	outline: none;
+}
+
+.content .joinWrap .joinCheckWrap .checking a {
+	display: inline-block;
+}
+/* íšŒì›ê°€ìž… ì•½ê´€ ìˆ˜ì • */
+.content .accept01 {
+	width: 48%;
+	float: left;
+}
+
+.content .accept02 {
+	width: 48%;
+	float: right;
+}
+
+.content h3.tit label, .content h3.tit {
+	font-size: 20px;
+	font-weight: 900;
+}
+
+.content .accept03:before {
+	content: "";
+	display: block;
+	width: 100%;
+}
+
+.content .accept03 {
+	clear: both;
+	padding-top: 5px;
+}
+
+.content .joinWrap .acceptWrap {
+	height: 150px;
+	padding: 10px 0 10px 10px;
+	line-height: 1.6;
+}
+
+.content .joinWrap .acceptCheck {
+	margin: 4px 5px 0;
+}
+
+.content .joinWrap .joinCheckWrap .txt {
+	font-size: 17px;
+}
+
+/* íšŒì›ê°€ìž… ì™„ë£Œ */
+.content .thx {
+	text-align: center;
+	margin: 24px 0 55px 0;
+}
+
+.content .thx .payzonBtn {
+	padding-top: 40px;
+}
+
+.content .thx .payzonBtn a {
+	margin: 0 5px;
+}
+
+.benefitWrap {
+	width: 100%;
+	background: #f6f6f6;
+}
+
+.benefitWrap .benefit {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.benefitWrap h3.txt {
+	padding: 50px 0 27px 0;
+	text-align: center;
+}
+
+.benefitWrap .list li {
+	float: left;
+	width: 25%;
+	height: 159px;
+	margin: 0 0 33px 0;
+	text-align: center;
+	position: relative;
+}
+
+.benefitWrap .list li span {
+	position: absolute;
+	top: 10px;
+	left: 44%;
+}
+
+/* ê³ ê°ì„¼í„° ì•„ì´ë””/ë¹„ë²ˆì°¾ê¸° ê²°ê³¼ */
+.comstomerNavWrap {
+	width: 100%;
+	height: 45px;
+	border-bottom: solid 1px #dddddd;
+}
+
+.comstomerNavWrap .comstomerNav {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.comstomerNavWrap .comstomerNav h2 {
+	float: left;
+}
+
+.comstomerNavWrap .comstomerNav ul {
+	float: left;
+}
+
+.comstomerNavWrap .comstomerNav ul li {
+	float: left;
+}
+
+.content .custmerTit {
+	float: left;
+	margin: 60px 0 41px 46px;
+}
+
+.content .custmerTit.noticeTit {
+	float: none !important;
+	margin: 60px 0 0 0 !important;
+}
+
+.content .findWrap {
+	clear: both;
+	width: 905px;
+	margin: 0 auto;
+	padding-bottom: 137px;
+}
+
+.content .findWrap ul {
+	width: 100%;
+	height: 40px;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/customer/tab_menu_bg.gif)
+		repeat-x 0 0;
+}
+
+.content .findWrap ul li {
+	float: left;
+	width: 224px;
+	height: 38px;
+}
+
+.content .findWrap ul li a {
+	display: block;
+	width: 224px;
+	height: 25px;
+	padding-top: 13px;
+	text-align: center;
+	font-weight: bold;
+	color: #000;
+}
+
+.content .findWrap ul li a:hover {
+	text-decoration: none;
+}
+
+.content .findWrap ul .on {
+	height: 39px !important;
+	border-top: solid 1px #7c7c7c;
+	border-right: solid 1px #7c7c7c; /*border-bottom:solid 1px #fff;*/
+	border-left: solid 1px #7c7c7c;
+	background: #fff;
+}
+
+.content .findWrap ul .off {
+	border: solid 1px #d3d3d3;
+	background: #f7f7f7;
+}
+
+.content .findWrap .findIDWrap .img {
+	text-align: center;
+	margin: 53px 0 0 0;
+}
+
+.content .findWrap .findIDWrap .brief {
+	text-align: center;
+	margin: 53px 0 44px 0;
+}
+
+.content .findWrap .findIDWrap .btnWrap {
+	text-align: center;
+	margin: 0 0 50px 0;
+}
+
+.content .findWrap .findIDWrap .btnWrap a {
+	margin: 0 4px;
+}
+
+.content .findWrap .findIDWrap .findID {
+	float: left;
+	width: 28.8%;
+	min-height: 192px;
+	max-height: 235px;
+	padding: 16px;
+	margin-right: 10px;
+	border: solid 1px #e3e3e3;
+	background: #f9f9f9;
+}
+
+.content .findWrap .findIDWrap .findID.last {
+	margin: 0 !important;
+}
+
+.content .findWrap .findIDWrap .findID h4 {
+	height: 29px;
+	padding-top: 6px;
+	margin-bottom: 22px;
+	font-weight: bold;
+	font-size: 14px;
+	border-bottom: solid 1px #e3e3e3;
+}
+
+.content .findWrap .findIDWrap .findID h4 .inputFind {
+	margin-right: 5px;
+}
+
+.content .findWrap .findIDWrap .findID p span {
+	float: left;
+	width: 69px;
+	padding-left: 15px;
+	margin-top: 8px;
+}
+
+.content .findWrap .findIDWrap .findID p span.dash {
+	width: 13px;
+	padding: 0;
+	text-align: center;
+}
+
+.content .findWrap .findIDWrap .findID p .inputM {
+	float: left;
+	width: 99px;
+	height: 27px;
+	padding-left: 5px;
+	margin-bottom: 9px;
+	line-height: 27px;
+	outline: none;
+}
+
+.content .findWrap .findIDWrap .findID p .inputS {
+	float: left;
+	width: 33px;
+	height: 27px;
+	padding-left: 5px;
+	margin-bottom: 9px;
+	line-height: 27px;
+	outline: none;
+}
+
+.content .findWrap .findIDWrap .findID p .inputL {
+	float: left;
+	width: 167px;
+	height: 27px;
+	padding-left: 5px;
+	margin-bottom: 9px;
+	line-height: 27px;
+	outline: none;
+}
+
+.content .findWrap .findIDWrap .findID .findBtn {
+	margin-top: 16px;
+	text-align: center;
+}
+
+.content .findWrap .findIDWrap.result2 {
+	border-bottom: solid 1px #dddddd;
+}
+
+.content .findWrap .findIDWrap .user {
+	margin-bottom: 50px;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	color: #0066ff;
+}
+
+.content .findWrap .findIDWrap .result {
+	width: 450px;
+	margin: 0 auto;
+	padding-bottom: 12px;
+}
+
+.content .findWrap .findIDWrap .result span {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 24px;
+	margin: -20px 0 0 20px;
+}
+
+.content .findWrap .findIDWrap .btnWrap.pwResult {
+	margin-top: 40px;
+}
+
+/* ê³µì§€ì‚¬í•­ ë¦¬ìŠ¤íŠ¸/ë·° */
+.content .noticeWrap {
+	width: 905px;
+	margin: 0 auto;
+}
+
+.content .noticeWrap .sub-menu {
+	float: left;
+	margin-top: 17px;
+}
+
+.content .noticeWrap .sub-menu li {
+	float: left;
+}
+
+.content .noticeWrap .sub-menu li a {
+	display: block;
+	width: 151px;
+	height: 29px;
+	text-indent: -9999px;
+}
+
+.content .noticeWrap .sub-menu li.on a, .content .noticeWrap .sub-menu li:hover a
+	{
+	border: solid 1px #333;
+}
+
+.content .noticeWrap .sub-menu li a {
+	border: solid 1px #ccc;
+}
+
+.content .noticeWrap .sub-menu li+li a {
+	border-left: none !important;
+}
+
+.content .noticeWrap .sub-menu li.data a {
+	background: #fff
+		url(https://img.payzon.co.kr/_guideImg/customer/costomer-sub-01-off.png)
+		no-repeat 50% 50%;
+}
+
+.content .noticeWrap .sub-menu li.data.on a, .content .noticeWrap .sub-menu li.data:hover a
+	{
+	background: #333
+		url(https://img.payzon.co.kr/_guideImg/customer/costomer-sub-01-on.png)
+		no-repeat 50% 50%;
+}
+
+.content .noticeWrap .sub-menu li.form a {
+	background: #fff
+		url(https://img.payzon.co.kr/_guideImg/customer/costomer-sub-02-off.png)
+		no-repeat 50% 50%;
+}
+
+.content .noticeWrap .sub-menu li.form.on a, .content .noticeWrap .sub-menu li.form:hover a
+	{
+	background: #333
+		url(https://img.payzon.co.kr/_guideImg/customer/costomer-sub-02-on.png)
+		no-repeat 50% 50%;
+}
+
+.content .noticeWrap .sub-menu li.notice a {
+	background: #fff
+		url(https://img.payzon.co.kr/_guideImg/customer/costomer-sub-03-off.png)
+		no-repeat 50% 50%;
+}
+
+.content .noticeWrap .sub-menu li.notice.on a, .content .noticeWrap .sub-menu li.notice:hover a
+	{
+	background: #333
+		url(https://img.payzon.co.kr/_guideImg/customer/costomer-sub-03-on.png)
+		no-repeat 50% 50%;
+}
+
+.content .noticeWrap .sub-menu li.update a {
+	background: #fff
+		url(https://img.payzon.co.kr/_guideImg/customer/costomer-sub-04-off.png)
+		no-repeat 50% 50%;
+}
+
+.content .noticeWrap .sub-menu li.update.on a, .content .noticeWrap .sub-menu li.update:hover a
+	{
+	background: #333
+		url(https://img.payzon.co.kr/_guideImg/customer/costomer-sub-04-on.png)
+		no-repeat 50% 50%;
+}
+
+.content .customerSearch {
+	float: right; /* margin:120px 0 15px 0; */
+	margin: 20px 0 15px 0;
+}
+
+.content .customerSearch select {
+	float: left;
+	height: 25px;
+}
+
+.content .customerSearch input {
+	float: left;
+	width: 125px;
+	height: 23px;
+	line-height: 23px;
+	padding-left: 5px;
+	margin: 0 3px;
+	border: solid 1px #ccc;
+	outline: none;
+}
+
+.content .customerSearch a {
+	float: left;
+}
+
+.content .noticeList {
+	width: 100%;
+	border-top: solid 2px #333;
+}
+
+.content .noticeList th {
+	height: 40px;
+	text-align: center;
+	border-bottom: solid 1px #dddddd;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/customer/table_th_bar.gif)
+		no-repeat right 50%;
+}
+
+.content .noticeList .num {
+	width: 52px;
+}
+
+.content .noticeList .sort {
+	width: 126px;
+}
+
+.content .noticeList .name {
+	width: 106px;
+}
+
+.content .noticeList .date {
+	width: 124px;
+	background: none;
+}
+
+.content .noticeList th.dateRef {
+	background: none;
+}
+
+.content .noticeList td {
+	height: 37px;
+	text-align: center;
+	color: #999;
+	border-bottom: solid 1px #dddddd;
+}
+
+.content .noticeList td.tit {
+	text-align: left;
+	padding-left: 10px;
+}
+
+.content .noticeList td.tit a:link {
+	color: #666;
+}
+
+.content .noticeList td.tit a:hover {
+	color: #0075c8;
+}
+
+.content .gotoList {
+	float: right;
+}
+
+.content .gotoList.top { /* margin:120px 0 15px 0; */
+	margin: 20px 0 15px 0;
+}
+
+.content .gotoList.bottom {
+	margin: 15px 0 50px 0;
+}
+
+.content .noticeView {
+	width: 100%;
+	border-top: solid 2px #333;
+}
+
+.content .noticeView th {
+	height: 40px;
+	text-align: center;
+	border-bottom: solid 1px #dddddd;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/customer/table_th_bar.gif)
+		no-repeat right 50%;
+}
+
+.content .noticeView td {
+	border-bottom: solid 1px #dddddd;
+}
+
+.content .noticeView .titT {
+	width: 85px;
+}
+
+.content .noticeView .tit {
+	text-align: left;
+	padding-left: 20px;
+	font-weight: bold;
+}
+
+.content .noticeView .dateT {
+	width: 85px;
+}
+
+.content .noticeView .date {
+	width: 100px;
+	color: #999;
+}
+
+.content .noticeView .viewT {
+	width: 85px;
+}
+
+.content .noticeView th.view {
+	width: 80px;
+	color: #999;
+	background: none;
+}
+
+.content .noticeView .con {
+	padding: 25px;
+	font-size: 10pt;
+	line-height: 24px;
+}
+
+.content .noticeView .prev {
+	height: 38px;
+	text-align: center;
+}
+
+/* íŽ˜ì´ì§• */
+.pageing {
+	float: left;
+	margin: 0 auto;
+	position: relative;
+	left: 50%;
+	padding: 30px 0 80px 0;
+}
+
+.pageing .page {
+	float: left;
+	position: relative;
+	right: 50%;
+}
+
+.pageing .page ul li {
+	float: left;
+	margin: 0 2px;
+	border: solid 1px #e1e1e1;
+	background: #fff;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	-o-border-radius: 2px;
+}
+
+.pageing .page ul li.spacing {
+	letter-spacing: -3px;
+}
+
+.pageing .page ul li a {
+	display: block;
+	height: 13px;
+	padding: 4px 8px;
+}
+
+.pageing .page ul li a:hover {
+	text-decoration: none;
+}
+
+.pageing .page ul li.on {
+	border: solid 1px #006eb8;
+	background: #0f71d4;
+}
+
+.pageing .page ul li.on a {
+	color: #fff;
+}
+
+/* faq ë¦¬ìŠ¤íŠ¸ */
+.content .faqSearch {
+	clear: both;
+	width: 100%;
+	padding: 18px 0;
+	margin-top: 20px;
+	margin-bottom: 24px;
+	text-align: center;
+	border-top: solid 1px #dedcda;
+	border-bottom: solid 1px #dedcda;
+	background: #f8f8f8;
+}
+
+.content .faqSearch .dd#selSeachItem_msdd {
+	float: none;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.content .faqSearch input {
+	display: inline-block;
+	width: 358px;
+	height: 23px;
+	line-height: 23px;
+	padding-left: 5px;
+	margin: 0 7px;
+	border: solid 1px #ccc;
+	background: #fff;
+	outline: none;
+}
+
+.content .faqSearch .anchor {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* ì˜¨ë¼ì¸ ë¬¸ì˜ */
+.content .onlineList {
+	width: 100%;
+	border-top: solid 2px #333;
+}
+
+.content .onlineList th {
+	width: 70px;
+	height: 25px;
+	padding: 15px 0 0 15px;
+	vertical-align: top;
+	border-bottom: solid 1px #dddddd;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/customer/table_th_bar.gif)
+		no-repeat right 16px;
+}
+
+.content .onlineList td {
+	padding-left: 20px;
+	border-bottom: solid 1px #dddddd;
+}
+
+.content .onlineList .radioInput {
+	vertical-align: middle;
+}
+
+.content .onlineList span.sort {
+	margin: 0 20px 0 10px;
+}
+
+.content .onlineList td .tit {
+	width: 512px;
+	height: 28px;
+	line-height: 28px;
+	padding-left: 5px;
+	border-top: solid 1px #a9a9a9;
+	border-right: solid 1px #dbdbdb;
+	border-bottom: solid 1px #dbdbdb;
+	border-left: solid 1px #a9a9a9;
+	outline: none;
+}
+
+.content .onlineList td textarea {
+	width: 780px;
+	height: 142px;
+	padding: 10px;
+	margin: 8px 0;
+}
+
+.content .onlineList td .fileInput {
+	float: left;
+	height: 28px;
+	margin-right: 8px;
+}
+
+.content .onlineList td img {
+	float: left;
+}
+
+.content .onlineList td .input {
+	display: inline-block;
+	width: 145px;
+	height: 28px;
+	line-height: 28px;
+	padding-left: 5px;
+	margin: 0 0px;
+	border-top: solid 1px #a9a9a9;
+	border-right: solid 1px #dbdbdb;
+	border-bottom: solid 1px #dbdbdb;
+	border-left: solid 1px #a9a9a9;
+	background: #fff;
+	outline: none;
+}
+
+.content .onlineList td span {
+	margin: 0 3px;
+}
+
+.content .noticeWrap .btnWrap {
+	margin: 24px 0 106px 0;
+	text-align: center;
+}
+
+.content .noticeWrap .btnWrap a {
+	margin: 0 3px;
+}
+
+.content .findIDWrap.online {
+	border-top: solid 2px #333;
+}
+
+/* ìžë£Œì‹¤ */
+.content .noticeList .down {
+	width: 106px;
+}
+
+.content .noticeList .view {
+	width: 124px; /*background:none;*/
+}
+
+.content .noticeList .viewRef {
+	width: 60px;
+}
+
+.content .noticeList .dateRef {
+	width: 80px;
+	background: none;
+}
+
+.content .noticeList table {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.content .noticeList table td {
+	text-align: center;
+	border: none;
+}
+
+.content .noticeView table {
+	width: 10%;
+	margin-left: 20px;
+}
+
+.content .noticeView table td {
+	text-align: center;
+	border: none;
+}
+
+.content .noticeView .dataWrap {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.content .noticeView .dataWrap .data {
+	display: table-cell;
+	width: 238px;
+	height: 327px;
+	vertical-align: middle;
+	border: solid 1px #ccc;
+}
+
+.content .noticeView .dataWrap .data img {
+	display: block;
+	margin: 0 auto;
+}
+
+.content .noticeView .dataWrap div {
+	display: inline-block;
+	width: 240px;
+	height: 330px;
+	margin-right: 17px;
+}
+
+.content .noticeView table.__se_tbl {
+	width: auto
+}
+
+/* ê²°ì œë‚´ì—­ */
+.paymentList {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.paymentList {
+	border-top: solid 2px #333;
+}
+
+.paymentList th {
+	height: 40px;
+	color: #333;
+	text-align: center;
+	border-bottom: solid 1px #dddddd;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/customer/table_th_bar.gif)
+		no-repeat right 50%;
+}
+
+.paymentList th.date {
+	width: 111px;
+}
+
+.paymentList th.money {
+	width: 114px;
+}
+
+.paymentList th.specTrans {
+	width: 117px;
+}
+
+.paymentList th.tax {
+	width: 123px;
+}
+
+.paymentList th.bill {
+	width: 104px;
+}
+
+.paymentList th.receipt {
+	width: 93px;
+}
+
+.paymentList th.cash {
+	width: 110px;
+}
+
+.paymentList th.purList {
+	background: none;
+}
+
+.paymentList th.deadline {
+	width: 111px;
+}
+
+.paymentList th.bank {
+	width: 140px;
+}
+
+.paymentList th.status {
+	width: 100px;
+	background: none;
+}
+
+.paymentList td {
+	height: 37px;
+	color: #666;
+	text-align: center;
+	border-bottom: solid 1px #dddddd;
+}
+
+.paymentList td.bill {
+	color: #000;
+}
+
+.cashWrap {
+	width: 100%;
+	height: 144px;
+	background: #f0f4f5;
+}
+
+.cashWrap .cash {
+	width: 980px;
+	margin: 0 auto;
+}
+
+.cashWrap .cash .tit {
+	float: left;
+	margin: 24px 0 0 20px;
+}
+
+.cashWrap .cash .txt {
+	float: left;
+	margin: 41px 0 0 56px;
+}
+
+.cashWrap .cash .gotopage {
+	float: left;
+	margin: 21px 0 0 57px;
+}
+
+.autoPayWrap {
+	width: 100%;
+	margin: 80px 0 0 0;
+	padding: 0 0 50px 0;
+	background: #f8f8f8;
+}
+
+.autoPayWrap .noticeWrap {
+	width: 905px;
+	margin: 0 auto;
+}
+
+.autoPayWrap .noticeWrap .custmerTit {
+	float: left;
+	margin: 60px 0 41px 0;
+}
+
+.printSection {
+	width: 100%;
+}
+
+.busiLicenseWrap {
+	float: left;
+	width: 50%;
+	background: #6f8caa
+		url(https://img.payzon.co.kr/_guideImg/mypage/printSection_pattern.png)
+		repeat 0 0;
+}
+
+.busiLicenseWrap .busiLicense {
+	float: right;
+	width: 490px;
+	height: 139px;
+	position: relative;
+	z-index: 0;
+}
+
+.busiLicenseWrap .busiLicense .txt {
+	margin: 34px 0 0 174px;
+}
+
+.busiLicenseWrap .busiLicense .printBtn {
+	margin: 19px 0 0 174px;
+}
+
+.busiLicenseWrap .busiLicenseBg {
+	width: 192px;
+	height: 139px;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/mypage/business_license_bg.gif)
+		no-repeat 0 0;
+	position: absolute;
+	top: 0;
+	left: -41px;
+	z-index: -1;
+}
+
+.docEvidenceWrap {
+	float: right;
+	width: 50%;
+	background: #9d9181
+		url(https://img.payzon.co.kr/_guideImg/mypage/printSection_pattern.png)
+		repeat 0 0;
+}
+
+.docEvidenceWrap .docEvidence {
+	float: left;
+	width: 490px;
+	height: 139px;
+	position: relative;
+	z-index: 0;
+}
+
+.docEvidenceWrap .docEvidence .tit {
+	margin: 34px 0 0 49px;
+}
+
+.docEvidenceWrap .docEvidence .txt {
+	float: left;
+	margin: 15px 0 0 51px;
+}
+
+.docEvidenceWrap .docEvidence .printBtn {
+	float: left;
+	margin: 19px 0 0 81px;
+}
+
+.docEvidenceWrap .docEvidenceBg {
+	width: 79px;
+	height: 69px;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/mypage/docu_evidence_bg.gif)
+		no-repeat 0 0;
+	position: absolute;
+	top: 70px;
+	right: -39px;
+	z-index: -1;
+}
+
+/* ì‚¬ì—…ìžë“±ë¡ì¦ ë ˆì´ì–´ */
+.busiLicenseLayer {
+	width: 661px;
+	height: 934px;
+	padding: 16px 15px;
+	border: solid 1px #999;
+	position: relative;
+}
+
+.busiLicenseLayer .close {
+	position: absolute;
+	top: 14px;
+	right: 15px;
+}
+
+/* ì¦ë¹™ì„œë¥˜ ë ˆì´ì–´ */
+.docuEvidenceLayer {
+	width: 640px;
+	height: 600px;
+	padding: 35px 24px 29px 26px;
+	position: relative;
+}
+
+.docuEvidenceLayer h2 {
+	margin-bottom: 28px;
+}
+
+.docuEvidenceLayer .docuInfo {
+	width: 100%;
+	margin-bottom: 20px;
+	border-top: solid 1px #000;
+}
+
+.docuEvidenceLayer .docuInfo th {
+	width: 150px;
+	border-bottom: solid 1px #e5e5e5;
+	color: #333;
+	font-weight: bold;
+	text-align: center;
+	background: #fbfbfb;
+}
+
+.docuEvidenceLayer .docuInfo td {
+	padding: 10px;
+	border-bottom: solid 1px #e5e5e5;
+	color: #333;
+	line-height: 20px;
+}
+
+.docuEvidenceLayer .docuInfo td span {
+	color: #cc3333;
+}
+
+.docuEvidenceLayer .docuStandard {
+	width: 100%;
+	margin-bottom: 25px;
+	border-top: solid 1px #000;
+}
+
+.docuEvidenceLayer .docuStandard thead th {
+	height: 35px;
+	border-bottom: solid 1px #e5e5e5;
+	color: #333;
+	font-weight: bold;
+	text-align: center;
+	background: #f8fdff;
+}
+
+.docuEvidenceLayer .docuStandard th {
+	width: 150px;
+	border-right: solid 1px #e5e5e5;
+	border-bottom: solid 1px #e5e5e5;
+	color: #333;
+	font-weight: bold;
+	text-align: center;
+	background: #fbfbfb;
+}
+
+.docuEvidenceLayer .docuStandard th.last {
+	border-right: none;
+}
+
+.docuEvidenceLayer .docuStandard td {
+	padding: 10px;
+	border-bottom: solid 1px #e5e5e5;
+	color: #333;
+	text-align: center;
+}
+
+.docuEvidenceLayer .docuStandard td.line {
+	border-right: solid 1px #e5e5e5;
+}
+
+.docuEvidenceLayer .costomer {
+	text-align: center;
+}
+
+.docuEvidenceLayer .close {
+	position: absolute;
+	top: 14px;
+	right: 15px;
+}
+
+/* SMS/ì´ë©”ì¼ ë°œì‹ ë‚´ì—­ */
+.sendSearch {
+	clear: both;
+	width: 767px;
+	margin: 0 auto;
+	padding-bottom: 13px;
+}
+
+.sendSearch .checkInput {
+	float: left;
+	margin: 5px 0 0 32px;
+}
+
+.sendSearch span {
+	float: left;
+	margin: 5px 6px 0 10px;
+}
+
+.sendSearch .textInput {
+	float: left;
+	width: 95px;
+	height: 25px;
+	padding-left: 5px;
+	line-height: 18px;
+	border: solid 1px #d1d1d1;
+	background: #fafafa;
+	outline: none;
+}
+
+.sendSearch .dateWrap .checkInput {
+	margin-left: 0 !important;
+}
+
+.sendSearch .telWrap a {
+	float: left;
+	margin-left: 7px;
+}
+
+.smsSend {
+	width: 100%;
+	border-top: solid 2px #333;
+}
+
+.smsSend th {
+	height: 40px;
+	color: #333;
+	text-align: center;
+	border-bottom: solid 1px #dddddd;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/customer/table_th_bar.gif)
+		no-repeat right 50%;
+}
+
+.smsSend th.num {
+	width: 58px;
+}
+
+.smsSend th.date {
+	width: 152px;
+}
+
+.smsSend th.tit {
+	width: 173px;
+}
+
+.smsSend th.con {
+	width: 215px;
+}
+
+.smsSend th.from {
+	width: 108px;
+}
+
+.smsSend th.to {
+	width: 101px;
+}
+
+.smsSend th.minus {
+	background: none;
+}
+
+.smsSend td {
+	height: 37px;
+	color: #666;
+	text-align: center;
+	border-bottom: solid 1px #dddddd;
+}
+
+.smsSend td img {
+	vertical-align: middle;
+	margin-top: -1px;
+}
+
+.smsSend td.color {
+	color: #333;
+}
+
+.smsSend td.minus {
+	color: #ff6c00;
+	font-weight: bold;
+}
+
+.conOver {
+	clear: both;
+	width: 160px;
+	height: 210px;
+	padding: 18px 14px 15px 14px;
+	border: solid 1px #000;
+	background: #ffffcc;
+	box-shadow: 2px 2px 0px rgba(224, 224, 224, 0.5);
+}
+
+.conOver span {
+	float: right;
+	margin-right: 15px;
+}
+
+.smsSituationWide {
+	width: 100%;
+	height: 314px;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/mypage/sms_situation_bg.gif)
+		repeat 0 0;
+}
+
+.smsSituationWide .smsSituationWrap {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.smsSituationWide .smsSituationWrap .smsSituation {
+	float: left;
+	width: 63.7%;
+}
+
+.smsSituationWide .smsSituationWrap .smsSituation .chargeWrap {
+	float: left;
+	width: 42%;
+	margin-left: 8%;
+	background: none;
+}
+
+.smsSituationWide .smsSituationWrap .smsSituation .freeWrap {
+	float: left;
+	width: 42%;
+	margin-right: 8%;
+}
+
+.smsSituationWide .smsSituationWrap .smsSituation h4 {
+	margin: 32px 0 42px 0;
+	text-align: center;
+}
+
+.smsSituationWide .smsSituationWrap .smsSituation p {
+	clear: both;
+	width: 77%;
+	height: 19px;
+	margin: 0 auto;
+	padding-bottom: 19px;
+}
+
+.smsSituationWide .smsSituationWrap .smsSituation p .left {
+	float: left;
+}
+
+.smsSituationWide .smsSituationWrap .smsSituation p .right {
+	float: right;
+}
+
+.smsSituationWide .smsSituationWrap .smsSituation p .right img {
+	margin: 0 1px;
+}
+
+.smsSituationWide .smsSituationWrap .smsSituation p .right img.comma {
+	margin-bottom: -3px;
+}
+
+.smsSituationWide .smsSituationWrap .smsSituation p .right img.minus {
+	vertical-align: middle;
+	margin: -13px 5px 0 0;
+}
+
+.smsSituationWide .smsSituationWrap .chargeWrap {
+	float: left;
+	width: 36.3%;
+	height: 160px;
+	background: #bd8a87
+		url(https://img.payzon.co.kr/_guideImg/mypage/charge_secition_bg.gif)
+		no-repeat 0 0;
+}
+
+.smsSituationWide .smsSituationWrap .chargeWrap .tit {
+	margin: 35px 0 0 127px;
+}
+
+.smsSituationWide .smsSituationWrap .chargeWrap .chargeBtn {
+	margin: 16px 0 0 128px;
+}
+
+.smsSituationWide .smsSituationWrap .sendWrap {
+	float: left;
+	width: 36.3%;
+	height: 153px;
+	background: #ffe917
+		url(https://img.payzon.co.kr/_guideImg/mypage/send_secition_bg.gif)
+		no-repeat right bottom;
+}
+
+.smsSituationWide .smsSituationWrap .sendWrap .tit {
+	margin: 24px 0 0 32px;
+}
+
+.smsSituationWide .smsSituationWrap .sendWrap .txt {
+	margin: 13px 0 0 29px;
+}
+
+.smsSituationWide .smsSituationWrap .sendWrap .sendBtn {
+	margin: 7px 0 0 30px;
+}
+
+.sendSearch .selectbox {
+	float: left;
+	width: 92px;
+	height: 25px;
+	border: solid 1px #d1d1d1;
+	background: #fafafa;
+	position: relative;
+}
+
+.sendSearch .selectbox .option {
+	float: left;
+	margin-left: 10px;
+}
+
+.sendSearch .selectbox .arr {
+	float: right;
+	margin: 4px;
+}
+
+.sendSearch .selectbox div {
+	width: 92px;
+	border: solid 1px #d1d1d1;
+	background: #fafafa;
+	position: absolute;
+	top: 25px;
+	left: -1px;
+}
+
+.sendSearch .selectbox div a {
+	display: block;
+	margin: 5px;
+}
+
+.emailSend {
+	width: 100%;
+	border-top: solid 2px #333;
+}
+
+.emailSend th {
+	height: 40px;
+	color: #333;
+	text-align: center;
+	border-bottom: solid 1px #dddddd;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/customer/table_th_bar.gif)
+		no-repeat right 50%;
+}
+
+.emailSend th.num {
+	width: 58px;
+}
+
+.emailSend th.date {
+	width: 152px;
+}
+
+.emailSend th.tit {
+	width: 286px;
+}
+
+.emailSend th.from {
+	width: 151px;
+}
+
+.emailSend th.to {
+	width: 146px;
+}
+
+.emailSend th.mailCheck {
+	background: none;
+}
+
+.emailSend td {
+	height: 37px;
+	color: #666;
+	text-align: center;
+	border-bottom: solid 1px #dddddd;
+}
+
+.emailSend td.tit {
+	text-align: left;
+	padding-left: 10px;
+}
+
+.emailSend td.mail {
+	text-decoration: underline;
+}
+
+.emailSend td span {
+	color: #ef007c;
+}
+
+/* ì˜¨ë¼ì¸ ë¬¸ì˜ë‚´ì—­ */
+.searchWrap {
+	float: right; /*width:310px;*/
+	margin: 107px 6px 0 0;
+}
+
+.searchWrap .checkInput {
+	float: left;
+	margin: 5px 0 0 12px;
+}
+/*.searchWrap span{float:left; margin:5px 6px 0 10px;}*/
+.searchWrap .textInput {
+	float: left;
+	width: 95px;
+	height: 25px;
+	padding-left: 5px;
+	line-height: 18px;
+	border: solid 1px #d1d1d1;
+	background: #fafafa;
+	outline: none;
+}
+
+.searchWrap a {
+	float: left;
+	margin-left: 7px;
+}
+
+.dd .ddTitle {
+	height: 19px !important; /*margin-right:5px;*/
+}
+
+.dd .ddTitle span.ddTitleText {
+	line-height: 19px !important;
+}
+
+.dd .ddTitle span.arrow {
+	margin-top: 1px;
+}
+
+.inquTable {
+	width: 100%;
+	border-top: solid 2px #333;
+}
+
+.inquTable th {
+	height: 40px;
+	color: #333;
+	text-align: center;
+	border-bottom: solid 1px #dddddd;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/customer/table_th_bar.gif)
+		no-repeat right 50%;
+}
+
+.inquTable th.num {
+	width: 58px;
+}
+
+.inquTable th.date {
+	width: 102px;
+}
+
+.inquTable th.sort {
+	width: 122px;
+}
+
+.inquTable th.tit {
+	width: 307px;
+}
+
+.inquTable th.file {
+	width: 90px;
+}
+
+.inquTable th.email {
+	width: 136px;
+}
+
+.inquTable th.reply {
+	background: none;
+}
+
+.inquTable td {
+	height: 37px;
+	color: #666;
+	text-align: center;
+	border-bottom: solid 1px #dddddd;
+}
+
+.inquTable td.tit {
+	padding-left: 10px;
+	text-align: left;
+}
+
+.inquTable td.tit a {
+	color: #000;
+}
+
+.inquTable td span {
+	color: #ef007c;
+}
+
+.noticeWrap .requestBtn {
+	text-align: right;
+	margin: 25px 0 0 0;
+}
+
+.shortcutWide {
+	width: 100%;
+	height: 139px;
+}
+
+.shortcutWide .faqWrap {
+	float: left;
+	width: 50%;
+	height: 139px;
+	background: #aa906f;
+}
+
+.shortcutWide .faqWrap .faq {
+	float: right;
+	width: 500px;
+	position: relative;
+}
+
+.shortcutWide .faqWrap .faq .tit {
+	margin: 26px 0 0 176px;
+}
+
+.shortcutWide .faqWrap .faq .txt {
+	margin: 12px 0 0 175px;
+}
+
+.shortcutWide .faqWrap .faq .goBtn {
+	margin: 17px 0 0 174px;
+}
+
+.shortcutWide .faqWrap .faq .faqBg {
+	width: 198px;
+	height: 119px;
+	background: url(https://img.payzon.co.kr/_guideImg/mypage/faq_bg.gif)
+		no-repeat 0 0;
+	position: absolute;
+	top: 0;
+	left: -41px;
+}
+
+.shortcutWide {
+	width: 100%;
+	height: 139px;
+}
+
+.shortcutWide .dataWrap {
+	float: right;
+	width: 50%;
+	height: 139px;
+	background: #8eadab
+		url(https://img.payzon.co.kr/_guideImg/mypage/data_bg_01.gif)
+		no-repeat 30px 23px;
+}
+
+.shortcutWide .dataWrap .data {
+	float: left;
+	width: 500px;
+	position: relative;
+}
+
+.shortcutWide .dataWrap .data .tit {
+	margin: 26px 0 0 176px;
+}
+
+.shortcutWide .dataWrap .data .txt {
+	margin: 12px 0 0 175px;
+}
+
+.shortcutWide .dataWrap .data .goBtn {
+	margin: 17px 0 0 174px;
+}
+
+.shortcutWide .dataWrap .data .dataBg {
+	width: 83px;
+	height: 68px;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/mypage/data_bg_02.gif)
+		no-repeat 0 0;
+	position: absolute;
+	top: 70px;
+	right: -40px;
+}
+
+/* ë¬¸ì˜ë‚´ì—­ ë·° */
+.inquViewTable {
+	width: 100%;
+	border-top: solid 2px #333;
+}
+
+.inquViewTable th {
+	width: 85px;
+	height: 30px;
+	padding-top: 13px;
+	color: #333;
+	text-align: center;
+	vertical-align: top;
+	border-bottom: solid 1px #dddddd;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/customer/table_th_bar.gif)
+		no-repeat right 15px;
+}
+
+.inquViewTable td {
+	height: 43px;
+	padding-left: 25px;
+	color: #666;
+	border-bottom: solid 1px #dddddd;
+}
+
+.inquViewTable td.sort {
+	width: 325px;
+}
+
+.inquViewTable td.tit {
+	font-weight: bold;
+}
+
+.inquViewTable td.con {
+	padding: 13px 0 13px 25px;
+}
+
+.inquViewTable td.bg {
+	background: #fafafa;
+}
+
+.inquViewTable th.bg {
+	background: #fafafa
+		url(https://img.payzon.co.kr/_guideImg/customer/table_th_bar.gif)
+		no-repeat right 15px;
+}
+
+/* ì¿ í°ê´€ë¦¬ */
+.noticeWrap .cpTit {
+	margin-bottom: 28px;
+}
+
+.noticeWrap h4 {
+	margin-bottom: 44px;
+	font-size: 28px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.couponWrap .coupon {
+	padding: 34px 0 5px 0;
+	text-align: center;
+	color: #464646;
+	font-weight: bold;
+	border-top: solid 2px #333;
+	border-bottom: solid 1px #dddddd;
+}
+
+.couponWrap .coupon p {
+	margin-bottom: 24px;
+}
+
+.couponWrap .coupon p .txtInput {
+	width: 263px;
+	height: 28px;
+	padding-left: 5px;
+	line-height: 18px;
+	vertical-align: middle;
+	border: solid 1px #e6e6e6;
+	background: #f7f7f7;
+	outline: none;
+}
+
+.couponWrap .coupon p a img {
+	margin: 0 5px;
+	vertical-align: middle;
+}
+
+.couponWrap ul {
+	width: 790px;
+	margin: 0 auto;
+	padding-top: 28px;
+}
+
+.couponWrap ul li {
+	float: left;
+	width: 48.5%;
+	height: 14px;
+	padding-left: 1.5%;
+	margin-bottom: 5px;
+	color: #464646;
+	background: url(https://img.payzon.co.kr/_guideImg/mypage/list_dott.gif)
+		no-repeat 0 50%;
+}
+
+.couponTable {
+	width: 100%;
+	border-top: solid 2px #333;
+}
+
+.couponTable th {
+	height: 40px;
+	color: #333;
+	text-align: center;
+	border-bottom: solid 1px #dddddd;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/customer/table_th_bar.gif)
+		no-repeat right 50%;
+}
+
+.couponTable th.date {
+	width: 136px;
+}
+
+.couponTable th.tit {
+	width: 463px;
+}
+
+.couponTable th.expiry {
+	width: 185px;
+}
+
+.couponTable th.end {
+	background: none;
+}
+
+.couponTable td {
+	height: 37px;
+	color: #666;
+	text-align: center;
+	border-bottom: solid 1px #dddddd;
+}
+
+.couponTable td.tit {
+	padding-left: 10px;
+	text-align: left;
+}
+
+.couponTable td span {
+	color: #ef007c;
+}
+
+/* íšŒì›ì •ë³´ ë³€ê²½ */
+.content .noticeWrap .modiTable {
+	width: 100%;
+	border-top: solid 2px #858585;
+}
+
+.content .noticeWrap .modiTable th {
+	width: 117px;
+	height: 40px;
+	padding-left: 32px;
+	font-weight: bold;
+	border-right: solid 1px #e0e0e0;
+	border-bottom: solid 1px #e0e0e0;
+	background: #f8f8f8;
+}
+
+.content .noticeWrap .modiTable td .id {
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "ë‹ì›€", Dotum;
+}
+
+.content .noticeWrap .pw th {
+	width: 157px !important;
+}
+
+.content .noticeWrap .modiTable td {
+	padding-left: 7px;
+	border-bottom: solid 1px #e0e0e0;
+}
+
+.content .noticeWrap .modiTable td .inputM {
+	float: left;
+	width: 156px;
+	height: 25px;
+	padding-left: 5px;
+	line-height: 25px;
+	border-top: solid 1px #d1d1d1;
+	border-right: solid 1px #e3e3e3;
+	border-bottom: solid 1px #e3e3e3;
+	border-left: solid 1px #d1d1d1;
+	background: #fafafa;
+	outline: none;
+}
+
+.content .noticeWrap .modiTable td .inputL {
+	float: left;
+	width: 532px;
+	height: 25px;
+	padding-left: 5px;
+	line-height: 25px;
+	margin-left: 7px;
+	border-top: solid 1px #d1d1d1;
+	border-right: solid 1px #e3e3e3;
+	border-bottom: solid 1px #e3e3e3;
+	border-left: solid 1px #d1d1d1;
+	background: #fafafa;
+	outline: none;
+}
+
+.content .noticeWrap .modiTable td .inputS {
+	float: left;
+	width: 60px;
+	height: 25px;
+	padding-left: 5px;
+	line-height: 25px;
+	border-top: solid 1px #d1d1d1;
+	border-right: solid 1px #e3e3e3;
+	border-bottom: solid 1px #e3e3e3;
+	border-left: solid 1px #d1d1d1;
+	background: #fafafa;
+	outline: none;
+}
+
+.content .noticeWrap .modiTable td .small {
+	float: left;
+	margin: 7px 0 0 15px;
+	font-size: 11px;
+	color: #8a8a8a;
+}
+
+.content .noticeWrap .modiTable .last {
+	border-bottom: solid 1px #858585;
+}
+
+.content .noticeWrap .modiTable .zipCode {
+	float: left;
+}
+
+.content .noticeWrap .modiTable select {
+	float: left;
+	margin: 5px 0 0 0;
+}
+
+.content .noticeWrap .modiTable .none {
+	float: left;
+	margin: 7px 3px 0 3px;
+}
+
+.content .noticeWrap .modiTable .codeBtn {
+	float: left;
+	margin-left: 5px;
+}
+
+.content .noticeWrap .modiTable .email {
+	padding-top: 13px;
+	height: 68px;
+	vertical-align: top;
+}
+
+.content .noticeWrap .modiTable .emailAcc {
+	float: left;
+	margin: 8px;
+}
+
+.content .noticeWrap .modiTable .email .small {
+	margin-left: 0 !important;
+}
+
+.content .noticeWrap .modiTable .email .small .color {
+	color: #3366cc;
+}
+
+.memLeaveWrap {
+	width: 100%;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/mypage/leave_box_pattern.gif)
+		repeat 0 0;
+}
+
+.memLeaveWrap .memLeave {
+	width: 953px;
+	height: 139px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 0;
+} /*z-index:999;*/
+.memLeaveWrap .memLeave p {
+	float: left;
+	margin: 30px 0 0 37px;
+}
+
+.memLeaveWrap .memLeave span {
+	float: left;
+	margin: 46px 0 0 30px;
+}
+
+.memLeaveWrap .memLeave a {
+	float: left;
+	margin: 57px 0 0 118px;
+}
+
+.memLeaveWrap .memLeave .memLeaveBg {
+	width: 1080px;
+	height: 139px;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/mypage/leave_box_bg.gif)
+		no-repeat 0 0;
+	position: absolute;
+	top: 0;
+	left: -88px;
+	z-index: -1;
+}
+
+/* íšŒì›ì •ë³´ ë³€ê²½ í™•ì¸ */
+.modifyCheckWrap .tit {
+	margin: 73px 0 40px 0;
+	text-align: center;
+}
+
+.modifyCheckWrap .modifyCheck {
+	width: 576px;
+	margin: 0 auto;
+	border-top: solid 2px #858585;
+	border-bottom: solid 1px #858585;
+}
+
+.modifyCheckWrap .modifyCheck th {
+	width: 149px;
+	height: 80px;
+	text-align: center;
+	font-weight: bold;
+	border-right: solid 1px #e0e0e0;
+	background: #f8f8f8;
+}
+
+.modifyCheckWrap .modifyCheck td .inputM {
+	float: left;
+	width: 274px;
+	height: 25px;
+	padding-left: 5px;
+	margin-left: 6px;
+	line-height: 18px;
+	border-top: solid 1px #d1d1d1;
+	border-right: solid 1px #e3e3e3;
+	border-bottom: solid 1px #e3e3e3;
+	border-left: solid 1px #d1d1d1;
+	background: #fafafa;
+	outline: none;
+}
+
+/* íšŒì›íƒˆí‡´ */
+.leaveLayer {
+	width: 650px;
+	padding: 5px 34px 38px 27px;
+	position: relative;
+}
+
+.leaveLayer h2 {
+	margin: 30px 0 15px 0;
+}
+
+.leaveLayer ol li {
+	padding-left: 20px;
+	margin-bottom: 15px;
+	background: url(https://img.payzon.co.kr/_guideImg/mypage/leave_ol.gif)
+		no-repeat;
+}
+
+.leaveLayer ol li.no1 {
+	background-position: 0 0;
+}
+
+.leaveLayer ol li.no1 span {
+	color: #ff6666;
+}
+
+.leaveLayer ol li.no2 {
+	background-position: 0 -27px;
+}
+
+.leaveLayer ol li.no2 span {
+	color: #ff3333;
+}
+
+.leaveLayer ol li.no3 {
+	background-position: 0 -67px;
+}
+
+.leaveLayer .txt {
+	margin-bottom: 15px;
+}
+
+.leaveLayer textarea {
+	width: 607px;
+	height: 149px;
+	padding: 10px;
+	border: solid 1px #ccc;
+}
+
+.leaveLayer .leave {
+	width: 629px;
+	padding: 19px 0;
+	text-align: center;
+	background: #eee;
+}
+
+.leaveLayer .leave input {
+	width: 223px;
+	height: 28px;
+	padding-left: 5px;
+	line-height: 18px;
+	border: solid 1px #ccc;
+	outline: none;
+}
+
+.leaveLayer .leaveBtn {
+	margin-top: 17px;
+	text-align: center;
+}
+
+.leaveLayer .close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+/* íšŒì›íƒˆí‡´ ì¶”ê°€_20220929 */
+.pz_layer_warpV2 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(153, 153, 153, 0.6);
+	z-index: 10;
+}
+
+.pz_layer_warpV2 .layer_inner {
+	min-width: 450px;
+	height: auto;
+	padding: 55px 50px;
+	background: #fff;
+	border: 1px solid #999;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 0px rgb(0 0 0/ 30%);
+	box-sizing: border-box;
+	letter-spacing: -0.025em;
+}
+
+.pz_layer_warpV2 .pz_layer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+.pz_layer_warpV2 .guide {
+	position: relative;
+	border: 1px solid #000;
+	width: 620px;
+}
+
+.pz_layer_warpV2 .guide .close {
+	position: absolute;
+	top: 0;
+	right: -50px;
+}
+
+.pz_layer_warpV2 .guide .tit {
+	font-size: 20px;
+	font-weight: 900;
+	text-align: center;
+}
+
+.pz_layer_warpV2 .guide .txt {
+	color: #8a8a8a;
+	line-height: 2.6;
+	margin: 40px 0;
+}
+
+.pz_layer_warpV2 .guide .txt li {
+	display: flex;
+}
+
+.pz_layer_warpV2 .guide .ft_black {
+	color: #000;
+	font-weight: bold;
+	margin-right: 6px;
+}
+
+.pz_layer_warpV2 .guide .ft_red {
+	color: #ff0000;
+}
+
+.pz_layer_warpV2 .btn_black {
+	width: 190px;
+	height: 50px;
+	background: #000;
+	display: block;
+	color: #fff;
+	display: flex;
+	font-size: 15px;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+/* ìš°íŽ¸ë²ˆí˜¸ */
+.zipcodelayer {
+	width: 625px;
+	height: 460px;
+	color: #666;
+	background: #fff;
+	position: relative;
+}
+
+.zipcodelayer h1 {
+	height: 22px;
+	padding: 35px 0 27px 26px;
+}
+
+.zipcodelayer ul {
+	width: 586px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+.zipcodelayer ul li {
+	float: left;
+	width: 120px;
+	height: 40px;
+	margin: 10px 0 0 0;
+}
+
+.zipcodelayer ul li.on {
+	font-weight: bold;
+	border-top: solid 2px #000;
+	border-right: solid 2px #000;
+	border-left: solid 2px #000;
+	background: #fff;
+}
+
+.zipcodelayer ul li.on+li.off {
+	border-left: none;
+}
+
+.zipcodelayer ul li.off {
+	height: 39px;
+	border-top: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	border-left: solid 1px #ccc;
+}
+
+.zipcodelayer ul li a {
+	display: block;
+	padding: 13px 0;
+	text-align: center;
+	text-decoration: none;
+}
+
+.zipcodelayer ul li.on a {
+	color: #000;
+}
+
+.zipcodelayer ul li.off a {
+	color: #999;
+}
+
+.zipcodelayer .boxing {
+	width: 586px;
+	margin: 0 auto;
+	padding: 35px 0;
+	text-align: center;
+	border-top: solid 2px #333;
+	border-bottom: solid 1px #dddddd;
+}
+
+.zipcodelayer .boxing .input {
+	width: 218px;
+	height: 28px;
+	padding-left: 5px;
+	line-height: 18px;
+	vertical-align: middle;
+	border: solid 1px #ccc;
+	outline: none;
+}
+
+.zipcodelayer .boxing .search {
+	vertical-align: middle;
+	margin-left: 5px;
+}
+
+.zipcodelayer .boxing p {
+	margin-top: 19px;
+}
+
+.zipcodelayer .result table {
+	width: 586px;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+
+.zipcodelayer .result table td {
+	height: 33px;
+	font-size: 14px;
+}
+
+.zipcodelayer .result table td.code {
+	width: 75px;
+	text-align: center;
+}
+
+.zipcodelayer .result table td.choice {
+	width: 105px;
+	text-align: center;
+}
+
+.zipcodelayer .close {
+	position: absolute;
+	top: 14px;
+	right: 12px;
+}
+
+/* ê²°ì œí•˜ê¸° SMS ì¶©ì „ */
+.content p.payTxt {
+	text-align: center;
+}
+
+.payWrap {
+	color: #666;
+	width: 880px;
+	margin: 0 auto;
+	padding: 0 0 60px 0;
+}
+
+.payWrap h3 {
+	margin: 45px 0 23px 0;
+}
+
+.payWrap h3:first-child {
+	margin: 0 0 23px 0;
+}
+
+.payWrap .sortSelectTable {
+	width: 880px;
+	line-height: 18px;
+	border-top: solid 2px #000;
+}
+
+.payWrap .sortSelectTable th {
+	height: 38px;
+	text-align: center;
+	border-right: solid 1px #edeeef;
+	border-bottom: solid 1px #e4e4e4;
+}
+
+.payWrap .sortSelectTable th.grade {
+	width: 118px;
+	font-weight: bold;
+	color: #000;
+}
+
+.payWrap .sortSelectTable th.select {
+	width: 84px;
+	font-weight: bold;
+	color: #000;
+}
+
+.payWrap .sortSelectTable th.date {
+	width: 130px;
+	font-weight: bold;
+	color: #000;
+}
+
+.payWrap .sortSelectTable th.fee {
+	width: 249px;
+	font-weight: bold;
+	color: #000;
+}
+
+.payWrap .sortSelectTable th.limit {
+	border-right: none;
+	font-weight: bold;
+	color: #000;
+}
+
+.payWrap .sortSelectTable th.green {
+	color: #fff;
+	font-weight: bold;
+	background: #05b113;
+	padding: 30px 0;
+}
+
+.payWrap .sortSelectTable th.blue {
+	color: #fff;
+	font-weight: bold;
+	background: #0473e4;
+	padding: 30px 0;
+}
+
+.payWrap .sortSelectTable th.pink {
+	color: #fff;
+	font-weight: bold;
+	background: #cf1854;
+	padding: 30px 0;
+}
+
+.payWrap .sortSelectTable th.gray {
+	color: #fff;
+	font-weight: bold;
+	background: #a3a3a3;
+	padding: 30px 0;
+}
+
+.payWrap .sortSelectTable td {
+	height: 73px;
+	text-align: center;
+	border-right: solid 1px #edeeef;
+	border-bottom: solid 1px #e4e4e4;
+}
+
+.payWrap .sortSelectTable td.fee {
+	padding-right: 20px;
+	position: relative;
+}
+
+.payWrap .sortSelectTable td.fee strong {
+	color: #ff0000;
+	font-size: 14px;
+}
+
+.payWrap .sortSelectTable td.fee span {
+	position: absolute;
+	top: 21px;
+	right: 37px;
+}
+
+.payWrap .sortSelectTable td.range {
+	text-align: left;
+	padding-left: 30px;
+}
+
+.payWrap .sortSelectTable td.limit {
+	border-right: none;
+}
+
+.payWrap .sortSelectTable td.limit span, .payWrap .sortSelectTable td.range span
+	{
+	color: #ef007c;
+	font-weight: bold;
+}
+
+.payWrap .addServiceTable {
+	width: 880px;
+	line-height: 18px;
+	border-top: solid 2px #000;
+}
+
+.payWrap .addServiceTable th {
+	height: 50px;
+	text-align: center;
+	border-bottom: solid 1px #e4e4e4;
+}
+
+.payWrap .addServiceTable th input {
+	margin: 0 5px 0 33px;
+	vertical-align: middle;
+}
+
+.payWrap .addServiceTable th span {
+	margin-right: 33px;
+	color: #000;
+	vertical-align: middle;
+}
+
+.payWrap .addServiceTable th.orange {
+	color: #fff;
+	font-weight: bold;
+	background: #b0a489
+		url(https://img.payzon.co.kr/_guideImg/sub/pay_sort_bg.png) repeat 0 0;
+}
+
+.payWrap .addServiceTable th span.on {
+	font-weight: bold;
+}
+
+.payWrap .addServiceTable tbody th {
+	width: 118px;
+	height: 86px;
+	border-right: solid 1px #edeeef;
+	background: #f7f7f7;
+}
+
+.payWrap .addServiceTable td {
+	width: 152px;
+	text-align: center;
+	color: #000;
+	border-right: solid 1px #edeeef;
+	border-bottom: solid 1px #e4e4e4;
+}
+
+.payWrap .addServiceTable td input {
+	margin-bottom: 10px;
+}
+
+.payWrap .addServiceTable td .gray {
+	color: #666;
+}
+
+.payWrap .addServiceTable td strong {
+	font-weight: bold;
+}
+
+.payWrap .addServiceTable td .blue {
+	display: inline-block;
+	width: 21px;
+	text-align: right;
+	color: #0075c8;
+}
+
+.payWrap .payWay {
+	width: 880px;
+	line-height: 18px;
+	border-top: solid 2px #383d4a;
+}
+
+.payWrap .payWay .head {
+	height: 37px;
+	text-align: center;
+	border-bottom: solid 1px #e4e4e4;
+}
+
+.payWrap .payWay .head .way {
+	display: inline-block;
+	margin: 10px 40px 0 40px;
+	color: #000;
+}
+
+.payWrap .payWay .head .way input {
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.payWrap .payWay .head .way .on {
+	font-weight: bold;
+	s
+}
+
+.payWrap .payWay .con {
+	padding: 20px;
+	border-bottom: solid 1px #e4e4e4;
+}
+
+.payWrap .payWay .con .color {
+	color: #0f5ee1;
+}
+
+.payWrap .payWay .con .width {
+	display: inline-block;
+	margin-left: 75px;
+}
+
+.payWrap .payWay .con a {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.payWrap .payWay .con a .img {
+	margin-top: 5px;
+}
+
+.payWrap .payTable {
+	width: 880px;
+	height: 68px;
+	line-height: 18px;
+	border-top: solid 2px #383d4a;
+	border-bottom: solid 1px #dddce1;
+}
+
+.payWrap .payTable td {
+	text-align: center;
+	font-size: 16px;
+	color: #000;
+}
+
+.payWrap .payTable td strong {
+	display: inline-block;
+	margin-left: 10px;
+	font-weight: bold;
+	color: #ff0000;
+}
+
+.payWrap .payTable td img {
+	vertical-align: middle;
+	margin: 0 15px;
+}
+
+.payWrap .payTable td.total {
+	color: #fff;
+	background: #565656;
+	width: 270px;
+}
+
+.payWrap .payTable td.total .size {
+	font-size: 18px;
+}
+
+.payWrap .payTable td.total strong {
+	color: #f9fd15;
+}
+
+.payWrap .payBtn {
+	width: 880px;
+	margin: 56px 0 107px 0;
+	text-align: center;
+}
+
+/* ì„¸ê¸ˆê³„ì‚°ì„œ ë°œí–‰ */
+.taxInvocie {
+	width: 645px;
+	padding: 35px 24px 26px 27px;
+	position: relative;
+}
+
+.taxInvocie h1 {
+	margin-bottom: 18px;
+}
+
+.taxInvocie p span {
+	color: #ef007c;
+}
+
+.taxInvocie table {
+	width: 100%;
+	margin-top: 30px;
+	border-top: solid 1px #000;
+}
+
+.taxInvocie table th {
+	width: 130px;
+	height: 35px;
+	padding-left: 28px;
+	border-bottom: solid 1px #e5e5e5;
+	background: #fbfbfb;
+}
+
+.taxInvocie table td {
+	padding-left: 5px;
+	border-bottom: solid 1px #e5e5e5;
+}
+
+.taxInvocie table td .inputR {
+	float: left;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.taxInvocie table td span {
+	float: left;
+	margin-right: 30px;
+}
+
+.taxInvocie table td .inputS {
+	width: 66px;
+	height: 24px;
+	padding-left: 5px;
+	margin-right: 8px;
+	line-height: 24px;
+	border: solid 1px #ccc;
+	outline: none;
+}
+
+.taxInvocie table td .inputM {
+	width: 138px;
+	height: 24px;
+	padding-left: 5px;
+	line-height: 24px;
+	border: solid 1px #ccc;
+	outline: none;
+}
+
+.taxInvocie table td .inputL {
+	width: 231px;
+	height: 24px;
+	padding-left: 5px;
+	line-height: 24px;
+	border: solid 1px #ccc;
+	outline: none;
+}
+
+.taxInvocie table td .inputA {
+	width: 459px;
+	height: 24px;
+	padding-left: 5px;
+	line-height: 24px;
+	border: solid 1px #ccc;
+	outline: none;
+}
+
+.taxInvocie .invoiceP {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.taxInvocie .close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+/* ë¬´ë£Œì²´í—˜ë¡œê·¸ì¸ */
+.content .trialTit {
+	text-align: center;
+	margin-top: 93px;
+}
+
+.content .emailInput {
+	padding: 39px 0 20px 0;
+	text-align: center;
+}
+
+.content .emailInput input {
+	display: inline-block;
+	vertical-align: middle;
+	width: 333px;
+	height: 38px;
+	padding-left: 5px;
+	line-height: 36px;
+	color: #666;
+	font-size: 16px;
+	border: solid 3px #666;
+	outline: none;
+} /* margin-top:-37px; */
+.content .emailInput span {
+	vertical-align: middle;
+}
+
+.content .checkInput {
+	text-align: center;
+}
+
+.content .checkInput input {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -3px;
+}
+
+.content .trialTxt {
+	text-align: center;
+	margin-top: 40px;
+}
+
+.content .trialBtn {
+	text-align: center;
+	margin: 47px 0 64px 0;
+}
+
+.content .trialBtn a {
+	margin: 0 7px;
+}
+
+/* ê±°ëž˜ëª…ì„¸ì„œ */
+.transactionDetail {
+	width: 630px;
+	padding: 35px 15px 26px 15px;
+	position: relative;
+}
+
+.transactionDetail h1 {
+	margin-bottom: 18px;
+}
+
+.transactionDetail table {
+	border-top: solid 1px #000;
+}
+
+.transactionDetail table.supplier {
+	float: left;
+	width: 380px;
+}
+
+.transactionDetail table.buyer {
+	float: right;
+	width: 215px;
+}
+
+.transactionDetail table.detailT {
+	width: 100%;
+}
+
+.transactionDetail table th {
+	height: 35px;
+	padding-left: 20px;
+	border-bottom: solid 1px #e5e5e5;
+	background: #fbfbfb;
+}
+
+.transactionDetail table th.width {
+	width: 100px;
+}
+
+.transactionDetail table th.head {
+	padding: 0;
+	text-align: center;
+	font-weight: bold;
+}
+
+.transactionDetail table th.date {
+	padding: 0;
+	text-align: center;
+	border-right: solid 1px #e5e5e5;
+}
+
+.transactionDetail table th.sort {
+	border-left: solid 1px #e5e5e5;
+	border-right: solid 1px #e5e5e5;
+}
+
+.transactionDetail table td {
+	padding-left: 5px;
+	border-bottom: solid 1px #e5e5e5;
+}
+
+.transactionDetail table td.sort {
+	text-align: center;
+	border-left: solid 1px #e5e5e5;
+	border-right: solid 1px #e5e5e5;
+}
+
+.transactionDetail table td.cash {
+	text-align: center;
+}
+
+.transactionDetail .breif {
+	clear: both;
+	width: 100%;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.transactionDetail .invoiceP {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.transactionDetail .close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+/* ì˜ìˆ˜ì¦(ê³µê¸‰ë°›ëŠ”ìžìš©) */
+.receiptLayer {
+	width: 320px;
+	padding: 20px 30px;
+}
+
+.receiptLayer table {
+	width: 100%;
+}
+
+.receiptLayer table.receiptT {
+	border-top: solid 1px #000;
+}
+
+.receiptLayer table th {
+	height: 35px;
+	text-align: center;
+	border-bottom: solid 1px #e5e5e5;
+	background: #fbfbfb;
+}
+
+.receiptLayer table th.Tit {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.receiptLayer table .thB {
+	border-right: solid 1px #e5e5e5;
+}
+
+.receiptLayer table td {
+	height: 35px;
+	padding-left: 5px;
+	border-bottom: solid 1px #e5e5e5;
+}
+
+.receiptLayer table td.right {
+	text-align: right;
+}
+
+.receiptLayer table.list th, .receiptLayer table.list td {
+	text-align: center;
+	padding: 0;
+	border-right: solid 1px #e5e5e5;
+}
+
+.receiptLayer table .thB {
+	border-right: solid 1px #e5e5e5;
+}
+
+.receiptLayer table .Bnone {
+	border-bottom: none;
+	background: none;
+	padding: 0
+}
+
+.receiptLayer table .BRnone {
+	border-right: none !important;
+}
+
+.receiptLayer table .center {
+	text-align: center;
+}
+
+.receiptLayer .btnWrap {
+	text-align: center;
+	padding: 20px 0;
+}
+
+.receiptLayer .btnWrap a {
+	margin: 0 5px;
+}
+
+/* ì„œë¹„ìŠ¤ ì´ìš©ì•½ê´€ */
+.serviceYak {
+	width: 700px;
+	padding: 10px;
+}
+
+.serviceYak .acceptWrap {
+	width: 100%;
+	height: 500px;
+	padding: 10px;
+	line-height: 18px;
+	border-top: solid 2px #000;
+	border-bottom: solid 1px #d4d4d4;
+	overflow-y: scroll;
+}
+
+.serviceYak .close {
+	position: absolute;
+	top: 10px;
+	right: 12px;
+}
+
+.serviceYak .titi {
+	padding: 5px 0;
+}
+
+.serviceYak .tit {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/* ì´ìš©ì•ˆë‚´ ë ˆì´ì–´ */
+.guidePayLayer {
+	width: 545px;
+	padding: 147px 0 36px 0;
+	margin-bottom: 30px;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-khtml-border-radius: 50px;
+	-o-border-radius: 50px;
+	background: #fff
+		url(https://img.payzon.co.kr/_guideImg/common/guide_pay_layer_bg.png)
+		no-repeat 50% 43px;
+	position: relative;
+}
+
+.guidePayLayer h1 {
+	text-align: center;
+}
+
+.guidePayLayer p {
+	margin: 20px 62px 35px 62px;
+	line-height: 18px;
+} /*.guidePayLayer p{margin:20px 70px 35px 70px; line-height:18px;}*/
+.guidePayLayer p span {
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.guidePayLayer p .color {
+	color: #ef007c;
+}
+
+.payButton {
+	text-align: center;
+}
+
+.payButton a {
+	display: inline-block;
+	width: 89px;
+	padding: 10px 0;
+	margin: 0 3px;
+	color: #fff;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-o-border-radius: 5px;
+	background: #3c3c3c;
+}
+
+.payButton.wide a {
+	width: 129px;
+}
+
+.payButton a:hover {
+	text-decoration: none;
+}
+
+.guidePayLayer .close {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+}
+
+/* ì‚¬ì´íŠ¸ë§µ */
+.sitemap {
+	width: 900px;
+}
+
+.sitemap .sitemapMenu {
+	float: left;
+	margin: 13px 37px 60px 0;
+}
+
+.sitemap .sitemapMenu.last {
+	margin-right: 0px !important;
+}
+
+.sitemap .sitemapService {
+	float: left;
+	width: 150px;
+	margin: 25px 37px 50px 0;
+}
+
+.sitemap .sitemapService.last {
+	margin-right: 0px !important;
+}
+
+.sitemap .sitemapService .morph {
+	display: inline-block;
+	width: 46px;
+	height: 46px;
+	position: relative;
+}
+
+.sitemap .sitemapService .morph span.child {
+	position: absolute;
+	top: 9px;
+	left: 9px;
+}
+
+.sitemap .sitemapService p {
+	margin: 15px 0;
+}
+
+.sitemap .sitemapService ul li {
+	line-height: 20px;
+}
+
+.postcodify_displays {
+	height: 567px;
+}
+
+.history {
+	margin: 0 20px;
+	padding: 20px;
+	border-top: solid 1px #000;
+}
+
+.history p {
+	margin: 15px 0;
+	line-height: 1.8;
+	font-size: 13px;
+	color: #999;
+}
+
+.history p span {
+	font-size: 16px;
+	color: #333
+}
+
+/*ìžë£Œì‹¤*/
+/*ìžë£Œì‹¤ - ì¸ê¸°ì„œì‹ ì¶”ê°€*/
+.pz-form-box {
+	margin-bottom: 30px;
+}
+
+.pz-form-box .combine-thum {
+	width: 165px;
+	float: left;
+	margin-right: 20px;
+	margin-top: 30px;
+	border: none;
+	position: relative;
+	overflow: hidden;
+}
+
+.pz-form-box .combine-thum:nth-of-type(5n) {
+	margin-right: 0;
+}
+
+.pz-form-box .combine-thum .label {
+	width: 53px;
+	height: 51px;
+	background:
+		url("https://img.payzon.co.kr/_guideImg/common/popular_label.png")
+		no-repeat 0 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.pz-form-box .combine-thum .valign {
+	display: block;
+	position: relative;
+	width: 163px;
+	height: 228px;
+	border: 1px solid #c4c4c4;
+	overflow: hidden;
+}
+
+.pz-form-box .combine-thum .mouse-over {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	text-align: center;
+}
+
+.pz-form-box .combine-thum .mouse-over a {
+	display: none;
+	width: 165px;
+	height: 230px;
+}
+
+.pz-form-box .combine-thum .mouse-over a img {
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.pz-form-box .combine-thum:hover .mouse-over a {
+	display: block;
+}
+
+.pz-form-box .combine-thum .valign img {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.pz-form-box .combine-thum .title {
+	width: auto;
+	height: 34px;
+	overflow: hidden;
+	margin-top: 15px;
+	line-height: 1.2
+}
+
+.pz-form-box .combine-thum .title a {
+	font-size: 13px;
+	text-align: left;
+	line-height: 1.3;
+	color: #444;
+}
+/*ë¦¬ìŠ¤íŠ¸ ë”ë³´ê¸° ì¶”ê°€*/
+.refContainer .noticeList tr:last-child td {
+	border-bottom: 0;
+}
+
+.refContainer .moreSec:after {
+	clear: both;
+	display: table;
+	content: "";
+	zoom: 1;
+}
+
+.refContainer .moreSec__infinite {
+	*display: none;
+	height: 36px;
+	border-top: solid 1px #a5a5a5;
+	border-bottom: solid 1px #a5a5a5;
+	position: relative;
+	z-index: 0;
+}
+
+.refContainer .moreSec__number {
+	font-size: 13px;
+	color: #595959;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 1;
+}
+
+.refContainer .moreSec__btn {
+	display: block;
+	height: 18px;
+	padding: 10px 0;
+	font-size: 13px;
+	color: #000;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+}
+
+.refContainer .moreSec__btn:hover {
+	font-size: 13px;
+	color: #000;
+}
+
+.refContainer .moreSec__all {
+	display: block;
+	height: 18px;
+	padding: 8px 0 10px 0;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	z-index: 1;
+}
+
+.refContainer .moreSec__page {
+	height: 34px;
+	padding: 20px 0;
+	position: relative;
+	z-index: 0;
+}
+
+.refContainer .moreSec__paging {
+	text-align: center;
+}
+
+.refContainer .moreSec__paging span {
+	display: inline-block;
+	width: 27px;
+	height: 15px;
+	padding: 5px 0 6px 0;
+	font-weight: bold;
+	color: #fff;
+	vertical-align: middle;
+	border: solid 1px #666;
+	background: #666;
+}
+
+.refContainer .moreSec__paging span.prev, .refContainer .moreSec__paging span.next
+	{
+	width: 27px;
+	height: 27px;
+	padding: 0;
+	margin: 0 5px;
+}
+
+.refContainer .moreSec__paging span.next a {
+	border-left: solid 1px #ddd;
+}
+
+.refContainer .moreSec__paging span.prev a, .refContainer .moreSec__paging span.next a
+	{
+	width: 27px;
+	height: 27px;
+	padding: 0;
+	margin: -1px;
+}
+
+.refContainer .moreSec__paging span.prev+span a {
+	border-left: solid 1px #ddd;
+}
+
+.refContainer .moreSec__paging span+span a {
+	border-left: 0 none;
+}
+
+.refContainer .moreSec__paging span a {
+	display: block;
+	height: 15px;
+	padding: 5px 0 6px 0;
+	margin: -6px -1px -10px -1px;
+	color: #444;
+	font-weight: normal;
+	text-decoration: none;
+	border: solid 1px #ddd;
+	background: #fff;
+}
+
+.refContainer .moreSec__paging span.prev a img, .refContainer .moreSec__paging span.next a img
+	{
+	width: 27px;
+}
+
+/************** Skin 1 *********************/
+.dd {
+	/*display:inline-block !important;*/
+	text-align: left;
+	background-color: #fff;
+	font-family: 'Nanum Gothic', Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	float: left;
+	color: #333333;
+}
+
+.dd .ddTitle {
+	background: #ffffff;
+	border: 1px solid #ededed;
+	padding: 3px;
+	text-indent: 0;
+	cursor: default;
+	overflow: hidden;
+	height: 16px;
+	line-height: 18px;
+}
+
+.dd .ddTitle span.arrow {
+	background: url("/_commonImg/external/jquery.dd/dd_arrow.gif") no-repeat
+		0 0;
+	float: right;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+
+.dd .ddTitle span.ddTitleText {
+	text-indent: 1px;
+	overflow: hidden;
+	line-height: 12px;
+}
+
+.dd .ddTitle span.ddTitleText img {
+	text-align: left;
+	padding: 0 10px 0 5px;
+}
+
+.dd .ddTitle img.selected {
+	padding: 0 10px 0 0;
+	vertical-align: top;
+}
+
+.dd .ddChild {
+	position: absolute;
+	border: 1px solid #ededed;
+	border-top: none;
+	display: none;
+	margin: 0;
+	width: auto;
+	overflow: auto;
+	overflow-x: hidden !important;
+	background-color: #ffffff;
+	padding-bottom: 5px;
+	top:;
+}
+
+.dd .ddChild .opta a, .dd .ddChild .opta a:visited {
+	padding-left: 10px;
+	padding-right: 10px
+}
+
+.dd .ddChild a {
+	display: block;
+	padding: 2px 0 2px 3px;
+	text-decoration: none;
+	color: #000;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.dd .ddChild a:hover {
+	background-color: #4294f1;
+	color: #ffffff;
+}
+
+.dd .ddChild a img {
+	border: 0;
+	padding: 0 2px 0 10px;;
+	vertical-align: middle;
+}
+
+.dd .ddChild a.selected {
+	background-color: #4294f1;
+	color: #ffffff;
+}
+
+.hidden {
+	display: none;
+}
+
+.dd .borderTop {
+	border-top: 1px solid #c3c3c3 !important;
+}
+/*.dd .noBorderTop{border-top:none 0  !important}*/
+
+/************** Skin 2 *********************/
+.dd2 {
+	/*display:inline-block !important;*/
+	text-align: left;
+	background-color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	float: left;
+}
+
+.dd2 .ddTitle {
+	background: transparent
+		url("/_commonImg/external/jquery.dd/msDropDown.gif") no-repeat;
+	padding: 0 3px;
+	text-indent: 0;
+	cursor: default;
+	overflow: hidden;
+	height: 36px;
+}
+
+.dd2 .ddTitle span.arrow {
+	background: transparent
+		url("/_commonImg/external/jquery.dd/icon-arrow.gif") no-repeat 0 0;
+	float: right;
+	display: inline-block;
+	width: 27px;
+	height: 27px;
+	cursor: pointer;
+	top: 5px;
+	position: relative;
+	right: 2px;
+}
+
+.dd2 .ddTitle span.ddTitleText {
+	text-indent: 1px;
+	overflow: hidden;
+	line-height: 33px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	_position: relative;
+	_top: 4px
+}
+
+.dd2 .ddTitle span.ddTitleText img {
+	text-align: left;
+	padding: 0 2px 0 0;
+}
+
+.dd2 .ddTitle img.selected {
+	padding: 0 2px 0 0;
+	vertical-align: top;
+}
+
+.dd2 .ddChild {
+	position: absolute;
+	border: 1px solid #c3c3c3;
+	border-top: none;
+	display: none;
+	margin: 0;
+	width: auto;
+	overflow: auto;
+	overflow-x: hidden !important;
+	background-color: #ffffff;
+	font-size: 14px;
+}
+
+.dd2 .ddChild .opta a, .dd2 .ddChild .opta a:visited {
+	padding-left: 10px
+}
+
+.dd2 .ddChild a {
+	display: block;
+	padding: 3px 0 3px 3px;
+	text-decoration: none;
+	color: #000;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.dd2 .ddChild a:hover {
+	background-color: #89BFFD;
+}
+
+.dd2 .ddChild a img {
+	border: 0;
+	padding: 0 2px 0 0;
+	vertical-align: middle;
+}
+
+.dd2 .ddChild a.selected {
+	background-color: #89BFFD;
+}
+
+.dd2 .borderTop {
+	border-top: 1px solid #c3c3c3 !important;
+}
+/*.dd2 .noBorderTop{border-top:none 0  !important}*/
+
+/************* use sprite *****************/
+.dd .ddChild a.sprite, .dd .ddChild a.sprite:visited {
+	background-image: url(/_commonImg/external/jquery.dd/sprite.gif);
+	background-repeat: no-repeat;
+	padding-left: 24px;
+}
+
+.dd .ddChild a.calendar, .dd .ddChild a.calendar:visited {
+	background-position: 0 -404px;
+}
+
+.dd .ddChild a.shoppingcart, .dd .ddChild a.shoppingcart:visited {
+	background-position: 0 -330px;
+}
+
+.dd .ddChild a.cd, .dd .ddChild a.cd:visited {
+	background-position: 0 -439px;
+}
+
+.dd .ddChild a.email, .dd .ddChild a.email:visited {
+	background-position: 0 -256px;
+}
+
+.dd .ddChild a.faq, .dd .ddChild a.faq:visited {
+	background-position: 0 -183px;
+}
+
+.dd .ddChild a.games, .dd .ddChild a.games:visited {
+	background-position: 0 -365px;
+}
+
+.dd .ddChild a.music, .dd .ddChild a.music:visited {
+	background-position: 0 -146px;
+}
+
+.dd .ddChild a.phone, .dd .ddChild a.phone:visited {
+	background-position: 0 -109px;
+}
+
+.dd .ddChild a.graph, .dd .ddChild a.graph:visited {
+	background-position: 0 -73px;
+}
+
+.dd .ddChild a.secured, .dd .ddChild a.secured:visited {
+	background-position: 0 -37px;
+}
+
+.dd .ddChild a.video, .dd .ddChild a.video:visited {
+	background-position: 0 0;
+}
+/*******************************/

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mabatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace 속성값은 Mapper 인터페이스와 동일한 이름으로 작성한다. -->
+<mapper namespace="org.zerock.mapper.KyuyoHistoryMapper">
+	<!-- id 속성값은 메서드 이름과 동일하게 작성한다. -->
+	<!-- resultType 속성의 값은 select 쿼리의 결과를 특정 클래스의 객체로 만들기 위해서 설정한다. -->
+	<select id="getList"
+		resultType="org.zerock.domain.KyuyoHistoryVO">
+		select * from kyuyo_history order by shain_no
+	</select>
+
+
+
+	<insert id="insert">
+		insert into kyuyo_history (shain_no, kizoku_ym,
+		sikyu_pay, kojyo_pay)
+		values (#{shain_no}, #{kizoku_ym}, #{sikyu_pay},
+		#{kojyo_pay})
+	</insert>
+
+	<update id="update">
+		update kyuyo_history
+		set
+		kizoku_ym=#{kizoku_ym},
+		sikyu_pay = #{sikyu_pay},
+		kojyo_pay = #{kojyo_pay}
+		where shain_no=
+		#{shain_no} and kizoku_ym = #{kizoku_ym}
+	</update>
+
+	<select id="kyuyoTotal"
+		resultType="org.zerock.domain.KyuyoTotalVO">
+		SELECT
+		kizoku_YM,
+		sum(sikyu_pay) as sumSikyuPay,
+		sum(kojyo_pay) as sumKojyoPay,
+		COUNT(*) as count
+		from kyuyo_history where SUBSTR(kizoku_ym, 1, 4) = #{kizoku_ym} group by
+		kizoku_ym order by kizoku_ym
+	</select>
+
+	<select id="read" resultType="org.zerock.domain.KyuyoHistoryVO">
+		select * from kyuyo_history where shain_no = #{shain_no} and kizoku_ym =
+		#{kizoku_ym}
+	</select>
+
+	<delete id="delete">
+		delete kyuyo_history where shain_no = #{shain_no}
+	</delete>
+	
+	<delete id="deleteTotal">
+		delete kyuyo_history where kizoku_ym = #{kizoku_ym}
+	</delete>
+
+	<select id="findByYM" resultType="org.zerock.domain.KyuyoHistoryVO">
+		select * from kyuyo_history where kizoku_ym = #{kizoku_ym} ORDER by shain_no
+	</select>
+
+</mapper>

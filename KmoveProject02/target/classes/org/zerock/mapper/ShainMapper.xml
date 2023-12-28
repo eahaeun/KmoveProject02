@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zerock.mapper.ShainMapper">
+
+	<select id="getCount" resultType="int">
+		select count(*) from shain
+	</select>
+
+	<select id="getCountByEmpType" resultType="int"
+		parameterType="String">
+		SELECT COUNT(*) FROM shain WHERE koyo_keitai =
+		#{empType}
+	</select>
+
+	<insert id="insert">
+  	<![CDATA[
+      INSERT INTO shain (
+        shain_no, shain_nm, address, birth, busho_nm, yakushoku_nm, kihon_pay,
+        renraku_tel, renraku_email, nyusha_ymd, taishoku_ymd, ginko_nm,
+        koza_num, zaishoku_st, kyuka, koyo_keitai
+      )
+      VALUES (
+        #{shain_no}, #{shain_nm}, #{address}, #{birth}, #{busho_nm}, #{yakushoku_nm},
+        #{kihon_pay}, #{renraku_tel}, #{renraku_email}, #{nyusha_ymd, jdbcType=TIMESTAMP},
+        NULL, #{ginko_nm}, #{koza_num}, '在職', NULL, #{koyo_keitai}
+      )
+    ]]>
+	</insert>
+
+	<select id="getList" resultType="org.zerock.domain.ShainVO">
+		select * from shain order by
+		shain_no
+	</select>
+
+	<select id="getListByKoyoKeitai"
+		resultType="org.zerock.domain.ShainVO">
+		<![CDATA[
+		SELECT * FROM shain
+		WHERE shain_no IN (
+		SELECT shain_no FROM kyuyo_history
+		WHERE kizoku_ym = #{kizoku_ym}
+		)
+		AND koyo_keitai IN ('正社員', '契約社員')
+		]]>
+	</select>
+
+	<select id="read" resultType="org.zerock.domain.ShainVO">
+		select * from Shain where shain_no
+		= #{shain_no}
+	</select>
+
+	<update id="update">
+		update Shain
+		set
+		kihon_pay = #{kihon_pay}
+		where
+		shain_no= #{shain_no}
+	</update>
+
+	<update id="updateTaishokuYMD"
+		parameterType="org.zerock.domain.TaishokuVO">
+		UPDATE shain
+		SET taishoku_ymd = #{taishoku_ymd,
+		jdbcType=TIMESTAMP}, zaishoku_st =
+		'退職'
+		WHERE shain_no = #{shain_no}
+	</update>
+
+	<update id="cancelShain"
+		parameterType="org.zerock.domain.TaishokuVO">
+		UPDATE shain SET
+		taishoku_ymd = NULL, zaishoku_st = '在職'
+		WHERE shain_no =
+		#{shain_no}
+	</update>
+
+	<!-- 영광 -->
+	<select id="findByShain_no"
+		resultType="org.zerock.domain.ShainVO">
+		SELECT * FROM shain WHERE shain_no IN (
+		SELECT shain_no FROM kyuyo_history WHERE kizoku_ym = #{kizoku_ym}
+		) ORDER by shain_no
+	</select>
+</mapper>

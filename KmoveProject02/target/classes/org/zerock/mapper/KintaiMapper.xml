@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zerock.mapper.KintaiMapper">
+
+	<select id="getList" resultType="org.zerock.domain.KintaiVO">
+		select * from kintai order by
+		kintai_km
+	</select>
+
+	<!-- mapper.xml 파일 내에 해당 부분을 추가합니다. -->
+	<insert id="insert">
+		INSERT INTO kintai_history VALUES (
+		kintai_seq.nextval,
+		#{shain_no},
+		#{kintai_km},
+		#{nyuryoku_ymd},
+		#{kaishi_ymd},
+		#{shuryo_ymd},
+		#{kintai_hour},
+		#{kintai_pay}
+		)
+	</insert>
+	
+	<select id="read" resultType="org.zerock.domain.KintaiHistoryVO"> 
+	select * from Kintai_history where shain_no = #{shain_no}
+	</select>
+	
+	<select id="findBykintaiHistory" resultType="org.zerock.domain.KintaiHistoryVO">
+	
+	select * from Kintai_history where shain_no = #{shain_no} and TO_CHAR(nyuryoku_ymd, 'YYYY-MM') = #{kizoku_ym}
+	
+	</select>
+
+</mapper>

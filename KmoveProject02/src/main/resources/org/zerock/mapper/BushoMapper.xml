@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zerock.mapper.BushoMapper">
+
+	<select id="getList" resultType="org.zerock.domain.BushoVO">
+		select * from busho
+	</select>
+
+	<insert id="insert">
+		insert into busho values (#{busho_nm})
+	</insert>
+
+	<delete id="delete">
+		delete busho where busho_nm = #{busho_nm}
+	</delete>
+
+	<update id="update">
+		UPDATE busho SET busho_nm = #{new_value} WHERE busho_nm = #{busho_nm}
+	</update>
+
+</mapper>
