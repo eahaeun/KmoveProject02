@@ -29,7 +29,7 @@
 	  <!-- 검색 & 정렬 -->
 	  <div class="e_total" style="overflow:visible">
 	    <div class="border_paysearch_2 wp_100 ">
-	        <ul class="bold w_70 p_t5 c">* 帰属年月 </ul>
+	        <ul class="bold w_70 p_t5 c">* 帰属年度 </ul>
 	        <ul class="p_t1">        
 	         <select name="kizoku_ym" id="kizoku_ym" style="width:100px;">
 	         </select>
