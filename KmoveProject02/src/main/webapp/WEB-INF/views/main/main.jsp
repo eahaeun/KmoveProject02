@@ -122,179 +122,140 @@
 
 <hr>
 
-<!-- <div class="main_titimg">
+<div class="main_titimg">
     <div class="p_total_tit p_t10">
-      <ul class="p_b10" style="width:1080px"><img src="./�޿����� ������ - HOME_files/tit_p_total.gif" width="63" height="17" hspace="10"></ul>
-      <ul class="btn1">  
-         <div class="ddOutOfVision" style="height:0px;overflow:hidden;position:absolute;" id="frmPmttYear_msddHolder"><select name="frmPmttYear" id="frmPmttYear">
-          <option value="">����</option>
-	<option value="2015">2015 ��</option>
-	<option value="2016">2016 ��</option>
-	<option value="2017">2017 ��</option>
-	<option value="2018">2018 ��</option>
-	<option value="2019">2019 ��</option>
-	<option value="2020">2020 ��</option>
-	<option value="2021">2021 ��</option>
-	<option value="2022">2022 ��</option>
-	<option value="2023" selected="">2023 ��</option>
-	<option value="2024">2024 ��</option>
-        </select></div><div id="frmPmttYear_msdd" class="dd" style="width: 67.4px;"><div id="frmPmttYear_title" class="ddTitle"><span id="frmPmttYear_arrow" class="arrow"></span><span class="ddTitleText" id="frmPmttYear_titletext"><span class="ddTitleText">2023 ��</span></span></div><div id="frmPmttYear_child" class="ddChild" style="width: 65.4px; height: 157px;"><a href="javascript:void(0);" class="enabled" style="[object CSSStyleDeclaration]" id="frmPmttYear_msa_0"><span class="ddTitleText">����</span></a><a href="javascript:void(0);" class="enabled" style="[object CSSStyleDeclaration]" id="frmPmttYear_msa_1"><span class="ddTitleText">2015 ��</span></a><a href="javascript:void(0);" class="enabled" style="[object CSSStyleDeclaration]" id="frmPmttYear_msa_2"><span class="ddTitleText">2016 ��</span></a><a href="javascript:void(0);" class="enabled" style="[object CSSStyleDeclaration]" id="frmPmttYear_msa_3"><span class="ddTitleText">2017 ��</span></a><a href="javascript:void(0);" class="enabled" style="[object CSSStyleDeclaration]" id="frmPmttYear_msa_4"><span class="ddTitleText">2018 ��</span></a><a href="javascript:void(0);" class="enabled" style="[object CSSStyleDeclaration]" id="frmPmttYear_msa_5"><span class="ddTitleText">2019 ��</span></a><a href="javascript:void(0);" class="enabled" style="[object CSSStyleDeclaration]" id="frmPmttYear_msa_6"><span class="ddTitleText">2020 ��</span></a><a href="javascript:void(0);" class="enabled" style="[object CSSStyleDeclaration]" id="frmPmttYear_msa_7"><span class="ddTitleText">2021 ��</span></a><a href="javascript:void(0);" class="enabled" style="[object CSSStyleDeclaration]" id="frmPmttYear_msa_8"><span class="ddTitleText">2022 ��</span></a><a href="javascript:void(0);" class="selected enabled" style="[object CSSStyleDeclaration]" id="frmPmttYear_msa_9"><span class="ddTitleText">2023 ��</span></a><a href="javascript:void(0);" class="enabled" style="[object CSSStyleDeclaration]" id="frmPmttYear_msa_10"><span class="ddTitleText">2024 ��</span></a></div></div>
-          </ul>
+      <ul class="p_b10" style="width:1080px"><img src="../resources/img/tit_p_total.png" width="63" height="17" hspace="10"></ul>
     </div>
     <div class="p_total p_b20">  
-      <ul>
-        <div id="table1">
+        <div id="table1" style="width:95.6%;">
         <p class="caption"></p>
         <ul>
-        <li class="w_100 tit">�ͼӿ���</li>
-        <li class="w_100 tit">�޿�����</li>
-        <li class="w_200 tit">����Ⱓ</li>
-        <li class="w_100 tit">������</li>
-        <li class="w_100 tit">�ο�</li>
-        <li class="w_180 tit">�����Ѿ�</li>
-        <li class="w_180 tit">�����Ѿ�</li>
-        <li class="w_181 tit">�����޾�</li>
+        <li class="w_200 tit">帰属年月</li>
+        <li class="w_200 tit">精算期間</li>
+        <li class="w_100 tit">支給日</li>
+        <li class="w_100 tit">人数</li>
+        <li class="w_180 tit">支払総額</li>
+        <li class="w_180 tit">控除総額</li>
+        <li class="w_181 tit">差引総額</li>
          </ul>
 
-        <ul class="overColorSet" title="20230101">
-        <li class="w_100 c ">2023-01</li>
-        <li class="w_100 c">�޿�-1��</li>
+<!--         <ul class="overColorSet">
+        <li class="w_200 c ">2023-01</li>
         <li class="w_200 c">2023-01-01 ~ 2023-01-31</li>
         <li class="w_100 c">2023-02-05</li>
         <li class="w_100 c">8</li>
         <li class="w_155 con_r p_r25 bold c_blue">26,300,000</li>
         <li class="w_155 con_r p_r25 bold c_red">3,144,830</li>
         <li class="w_156 con_r p_r25 bold c_black ">23,155,170</li>
-        </ul>
-        <ul class="overColorSet" title="20230201">
-        <li class="w_100 c ">2023-02</li>
-        <li class="w_100 c">�޿�-1��</li>
-        <li class="w_200 c">2023-02-01 ~ 2023-02-28</li>
-        <li class="w_100 c">2023-03-05</li>
-        <li class="w_100 c">8</li>
-        <li class="w_155 con_r p_r25 bold c_blue">26,300,000</li>
-        <li class="w_155 con_r p_r25 bold c_red">3,144,830</li>
-        <li class="w_156 con_r p_r25 bold c_black ">23,155,170</li>
-        </ul>
-        <ul class="overColorSet" title="20230301">
-        <li class="w_100 c ">2023-03</li>
-        <li class="w_100 c">�޿�-1��</li>
-        <li class="w_200 c">2023-03-01 ~ 2023-03-31</li>
-        <li class="w_100 c">2023-04-05</li>
-        <li class="w_100 c">8</li>
-        <li class="w_155 con_r p_r25 bold c_blue">26,300,000</li>
-        <li class="w_155 con_r p_r25 bold c_red">3,144,830</li>
-        <li class="w_156 con_r p_r25 bold c_black ">23,155,170</li>
-        </ul>
-        <ul class="overColorSet" title="20230401">
-        <li class="w_100 c ">2023-04</li>
-        <li class="w_100 c">�޿�-1��</li>
-        <li class="w_200 c">2023-04-01 ~ 2023-04-30</li>
-        <li class="w_100 c">2023-05-05</li>
-        <li class="w_100 c">8</li>
-        <li class="w_155 con_r p_r25 bold c_blue">26,300,000</li>
-        <li class="w_155 con_r p_r25 bold c_red">3,144,830</li>
-        <li class="w_156 con_r p_r25 bold c_black ">23,155,170</li>
-        </ul>
-        <ul class="overColorSet" title="20230501">
-        <li class="w_100 c ">2023-05</li>
-        <li class="w_100 c">�޿�-1��</li>
-        <li class="w_200 c">2023-05-01 ~ 2023-05-31</li>
-        <li class="w_100 c">2023-06-05</li>
-        <li class="w_100 c">8</li>
-        <li class="w_155 con_r p_r25 bold c_blue">26,300,000</li>
-        <li class="w_155 con_r p_r25 bold c_red">3,144,830</li>
-        <li class="w_156 con_r p_r25 bold c_black ">23,155,170</li>
-        </ul>
-        <ul class="overColorSet" title="20230601">
-        <li class="w_100 c ">2023-06</li>
-        <li class="w_100 c">�޿�-1��</li>
-        <li class="w_200 c">2023-06-01 ~ 2023-06-30</li>
-        <li class="w_100 c">2023-07-05</li>
-        <li class="w_100 c">8</li>
-        <li class="w_155 con_r p_r25 bold c_blue">26,300,000</li>
-        <li class="w_155 con_r p_r25 bold c_red">3,144,830</li>
-        <li class="w_156 con_r p_r25 bold c_black ">23,155,170</li>
-        </ul>
-        <ul class="overColorSet" title="20230701">
-        <li class="w_100 c ">2023-07</li>
-        <li class="w_100 c">�޿�-1��</li>
-        <li class="w_200 c">2023-07-01 ~ 2023-07-31</li>
-        <li class="w_100 c">2023-08-05</li>
-        <li class="w_100 c">8</li>
-        <li class="w_155 con_r p_r25 bold c_blue">26,300,000</li>
-        <li class="w_155 con_r p_r25 bold c_red">3,144,830</li>
-        <li class="w_156 con_r p_r25 bold c_black ">23,155,170</li>
-        </ul>
-        <ul class="overColorSet" title="20230801">
-        <li class="w_100 c ">2023-08</li>
-        <li class="w_100 c">�޿�-1��</li>
-        <li class="w_200 c">2023-08-01 ~ 2023-08-31</li>
-        <li class="w_100 c">2023-09-05</li>
-        <li class="w_100 c">8</li>
-        <li class="w_155 con_r p_r25 bold c_blue">26,300,000</li>
-        <li class="w_155 con_r p_r25 bold c_red">3,144,830</li>
-        <li class="w_156 con_r p_r25 bold c_black ">23,155,170</li>
-        </ul>
-        <ul class="overColorSet" title="20230901">
-        <li class="w_100 c ">2023-09</li>
-        <li class="w_100 c">�޿�-1��</li>
-        <li class="w_200 c">2023-09-01 ~ 2023-09-30</li>
-        <li class="w_100 c">2023-10-05</li>
-        <li class="w_100 c">8</li>
-        <li class="w_155 con_r p_r25 bold c_blue">26,300,000</li>
-        <li class="w_155 con_r p_r25 bold c_red">3,144,830</li>
-        <li class="w_156 con_r p_r25 bold c_black ">23,155,170</li>
-        </ul>
-        <ul class="overColorSet" title="20231001">
-        <li class="w_100 c ">2023-10</li>
-        <li class="w_100 c">�޿�-1��</li>
-        <li class="w_200 c">2023-10-01 ~ 2023-10-31</li>
-        <li class="w_100 c">2023-11-05</li>
-        <li class="w_100 c">8</li>
-        <li class="w_155 con_r p_r25 bold c_blue">26,300,000</li>
-        <li class="w_155 con_r p_r25 bold c_red">3,144,830</li>
-        <li class="w_156 con_r p_r25 bold c_black ">23,155,170</li>
-        </ul>
-        <ul class="overColorSet" title="20231101">
-        <li class="w_100 c ">2023-11</li>
-        <li class="w_100 c">�޿�-1��</li>
-        <li class="w_200 c">2023-11-01 ~ 2023-11-30</li>
-        <li class="w_100 c">2023-12-05</li>
-        <li class="w_100 c">8</li>
-        <li class="w_155 con_r p_r25 bold c_blue">26,300,000</li>
-        <li class="w_155 con_r p_r25 bold c_red">3,144,830</li>
-        <li class="w_156 con_r p_r25 bold c_black ">23,155,170</li>
-        </ul>
-        <ul class="overColorSet" title="20231201">
-        <li class="w_100 c ">2023-12</li>
-        <li class="w_100 c">�޿�-1��</li>
-        <li class="w_200 c">2023-12-01 ~ 2023-12-31</li>
-        <li class="w_100 c">2024-01-05</li>
-        <li class="w_100 c">8</li>
-        <li class="w_155 con_r p_r25 bold c_blue">26,300,000</li>
-        <li class="w_155 con_r p_r25 bold c_red">3,144,830</li>
-        <li class="w_156 con_r p_r25 bold c_black ">23,155,170</li>
-        </ul>
-
-        <ul class="total_last">
-        <li class="w_100 c c_black ">���հ�</li>
-        <li class="w_100 c "></li>
-        <li class="w_200 c "></li>
-        <li class="w_100 c "></li>
-        <li class="w_100 c "></li>
-        <li class="w_155 con_r p_r25 c_blue ">315,600,000</li>
-        <li class="w_155 con_r p_r25 c_red ">37,737,960</li>
-        <li class="w_156 con_r p_r25 c_black ">277,862,040</li>
-        </ul>
-        </div>
-      </ul>
-    </div> -->
+        </ul> -->
+        
+    </div>
 
   </div>  
-  </section>
+</div>
+
+<script>
+$(document).ready(function() {
+
+    // 페이지 로딩시 현재 연도 데이터 자동 로드
+    var currentYear = new Date().getFullYear();
+    $.ajax({
+        type: 'GET',
+        url: '/kyuyo/getKyuyoData',
+        data: { kizoku_ym: currentYear },
+        dataType: 'xml', // XML 데이터로 받기
+        success: function(data) {
+		
+        	//컨테이너 요소 가져오기
+        	var tableContainers = document.querySelectorAll("#table1");
+        	var tableContainer = tableContainers[tableContainers.length - 1];
+
+          //합계를 구하기 위한 변수 선언
+            var totalSumSikyuPay = 0;
+            var totalSumKojyoPay = 0;
+            
+          //데이터를 받아서 사용할 수 있게 변수에 넣음
+            $(data).find('item').each(function() {
+                var kizoku_ym = $(this).find('kizoku_ym').text();
+                var count = $(this).find('count').text();
+                var sumSikyuPay = $(this).find('sumSikyuPay').text();
+                var sumKojyoPay = $(this).find('sumKojyoPay').text();
+                var difference = parseInt(sumSikyuPay, 10) - parseInt(sumKojyoPay, 10);
+              
+                //합계 구하기
+                totalSumSikyuPay += parseInt(sumSikyuPay, 10);
+                totalSumKojyoPay += parseInt(sumKojyoPay, 10);
+                
+                //날짜 변환
+                function getLastDayOfMonth(year, month) {
+                	  // month에 1을 더해야 합니다. JavaScript의 getMonth()는 0부터 시작합니다.
+                	  const date = new Date(year, month, 0);
+                	  return date.getDate(); // 해당 월의 마지막 날짜 반환
+                	}
+                //월을 1월이면 01로 바꿔줌.
+                function formatMonth(month) {
+                	  // padStart() 함수를 사용하여 월을 두 자리 숫자로 변환합니다.
+                	  return String(month).padStart(2, '0');
+                	}
+                
+                var dateString = kizoku_ym; // 예시로 문자열 형식의 날짜
+
+                var dateObject = new Date(dateString);
+				var year = dateObject.getFullYear();
+				//월은 0부터 시작하기 때문에 + 1을 해줌
+				var month = formatMonth(dateObject.getMonth() + 1);
+				//지급월은 다음달이기 때문에 + 2를 해줌
+				var sikyuMonth = formatMonth(dateObject.getMonth() + 2);
+				//지급 월이 12월이 넘어갈경우 다음年도 1월로
+				if (sikyuMonth > 12) {
+					   var nextYear = year + 1;
+					  sikyuMonth = formatMonth(sikyuMonth - 12);
+					}else{
+						nextYear = year;
+					}
+				//마지막 일
+				var lastDayOfMonth = getLastDayOfMonth(year, month);
+				
+				// 새로운 ul 요소 생성
+	        	var newRow = document.createElement("ul");
+	        	newRow.className = "anchor ulPayTotalList";
+	        	
+				// 각 li 요소의 내용 설정
+				newRow.innerHTML = 
+				    '<li class="w_200 c ">' + kizoku_ym + '</li>' +
+				    '<li class="w_200 c ">' + year + '-' + month + '-01 ~ ' + year + '-' + month + '-' + lastDayOfMonth + '</li>' +
+				    '<li class="w_100 c ">' + nextYear + '-' + sikyuMonth + '-05</li>' +
+				    '<li class="w_100 c ">' + count + '</li>' +
+				    '<li class="w_155 con_r p_r25 bold c_blue">' + sumSikyuPay + ' &nbsp;&nbsp;</li>' +
+				    '<li class="w_155 con_r p_r25 bold c_red">' + sumKojyoPay + ' &nbsp;&nbsp;</li>' +
+				    '<li class="w_156 con_r p_r25 bold c_black ">' + difference + ' &nbsp;&nbsp;</li>';
+
+				// 새로운 ul 요소를 컨테이너 요소에 추가
+				tableContainer.appendChild(newRow);
+            });
+            
+          	//합계 출력
+            var totalRow = document.createElement("ul");
+            totalRow.className = "b_yellow";
+            totalRow.innerHTML = 
+                '<li class="w_200 c c_black ">合計</li>' +
+                '<li class="w_200 p_t3"></li>' +
+                '<li class="w_100 p_t3"></li>' +
+                '<li class="w_100 p_t3"></li>' +
+                '<li class="w_155 con_r p_r25 bold c_blue">' + totalSumSikyuPay + ' &nbsp;&nbsp;</li>' +
+                '<li class="w_155 con_r p_r25 bold c_red">' + totalSumKojyoPay + ' &nbsp;&nbsp;</li>' +
+                '<li class="w_156 con_r p_r25 bold c_black ">' + (totalSumSikyuPay - totalSumKojyoPay) + ' &nbsp;&nbsp;</li>';
 
 
+            // 새로운 합계 ul 요소를 컨테이너 요소에 추가
+            tableContainer.appendChild(totalRow);
+        },
+        error: function() {
+            alert('Error occurred while fetching data.');
+        }
+    });
+});
+</script>
 
 
 <%@include file="../includes/footer.jsp"%>

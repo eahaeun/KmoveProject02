@@ -13,7 +13,7 @@
 		</ul>
 		<ul class="login_menu">
 			<div class="direct">
-				<span><a href="/join">会員登録</a></span> <span><a href="/logout">ログアウト</a></span>
+				<span><a href="/main/join">会員登録</a></span> <span><a href="/main/logout">ログアウト</a></span>
 			</div>
 		</ul>
 	</div>
@@ -50,7 +50,7 @@
                     <a href=""><span>勤怠管理</span></a>
                     <div class="menu_2depth_01_2020 " style="z-index:9999;">
                         <ul class="menu_01">
-                            <li><a href="">勤怠記録・管理</a></li>
+                            <li><a href="/kintai/list">勤怠記録・管理</a></li>
                             <li><a href="">勤怠一覧</a></li>
                             <li><a href="">休暇一覧</a></li>
                         </ul>
@@ -61,8 +61,8 @@
                     <a href=""><span>給与管理</span></a>
                     <div class="menu_2depth_01_2020 " style="z-index:9999;">
                         <ul class="menu_01">
-                            <li><a href="">給与入力・管理</a></li>
-                            <li><a href="">給与台帳</a></li>
+                            <li><a href="/kyuyo/kyuyokanrishokigamen">給与入力・管理</a></li>
+                            <li><a href="/kyuyo/kyuyoDaicho">給与台帳</a></li>
                             <li><a href="">社員別給与記録</a></li>
                         </ul>
                     </div>
@@ -72,7 +72,7 @@
                     <a href=""><span>退職管理</span></a>
                     <div class="menu_2depth_01_2020" style="z-index:9999;">
                         <ul class="menu_01">
-                            <li><a href="">退職処理</a></li>
+                            <li><a href="/taishoku/list">退職処理</a></li>
                             <li><a href="">退職金入力・管理</a></li>
                         </ul>
                     </div>
