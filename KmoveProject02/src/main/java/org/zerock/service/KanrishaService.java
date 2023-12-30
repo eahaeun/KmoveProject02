@@ -7,6 +7,6 @@ public interface KanrishaService {
 	
 	public KanrishaVO login(String kanrisha_uid, String kanrisha_pw);
 	
-	public KanrishaVO get();
+	public KanrishaVO get(String kanrisha_uid);
 	
 }

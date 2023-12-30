@@ -35,6 +35,6 @@ public class KanrishaMapperTests {
 	
 	@Test
 	public void testGet() {
-		log.info(mapper.get());
+		log.info(mapper.get("user00"));
 	}
 }

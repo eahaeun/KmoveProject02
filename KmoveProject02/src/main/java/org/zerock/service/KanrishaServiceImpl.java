@@ -26,8 +26,8 @@ public class KanrishaServiceImpl implements KanrishaService {
 	}
 
 	@Override
-	public KanrishaVO get() {
-		return mapper.get();
+	public KanrishaVO get(String kanrisha_uid) {
+		return mapper.get(kanrisha_uid);
 	}	
 	
 	

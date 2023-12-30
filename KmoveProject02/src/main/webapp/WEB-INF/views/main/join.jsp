@@ -26,7 +26,7 @@
 <div class="content">
     <div class="joinWrap">
     
-    <form id="joinForm" action="/join" method="post">
+    <form id="joinForm" action="/main/join" method="post" onsubmit="return validateForm();">
     <h3 class="tit" style="padding-top:10px;"><span class="hidden"></span><img src="${pageContext.request.contextPath}/resources/img/join_title_02.png" alt="정보입력"></h3>
     <div class="joinInfo">
       <h3 class="tit"><img src="${pageContext.request.contextPath}/resources/img/join_tit_01.png" alt="가입정보"></h3>
@@ -85,37 +85,28 @@
     </div>
     </form>
   </div>
-  </div>
-
-
-<!-- <div class="container">
-    <form id="joinForm" action="/join" method="post">
-        <h2>회원 가입</h2>
-        <div>
-            <label for="id" id="id-label">아이디:</label> <input type="text" name="kanrisha_uid">
-        </div>
-        <div>
-            <label for="pw" id="pw-label">비밀번호:</label> <input type="password" name="kanrisha_pw">
-        </div>
-        <div>
-            <label for="pw-confirm" id="pw-confirm-label">비밀번호 확인:</label> <input type="password" name="confirm_pw">
-        </div>
-        <div>
-            <label for="name" id="name-label">이름:</label> <input type="text" name="kanrisha_nm">
-        </div>
-        <div>
-            <label for="tel" id="tel-label">전화번호:</label> <input type="text" name="renraku_tel">
-        </div>
-        <div>
-            <label for="email" id="email-label">이메일:</label> <input type="text" name="renraku_email">
-        </div>
-        <div class="button-container">
-            <input type="submit" value="회원 가입" class="search-button" onclick="validateAndSubmit()">
-        </div>
-    </form>
 </div>
 
+<script>
+function validateForm() {
+    // 필수 필드 확인
+    var idField = document.getElementById("frmSignUpIden");
+    var pwField = document.getElementById("frmSignUpPass");
+    var pwCmpField = document.getElementById("frmSignUpPassCmp");
+    var operField = document.getElementById("frmSignUpOper");
+    var telField = document.getElementById("frmSignUpTel");
+    var mailIdField = document.getElementById("frmSignUpMailId");
 
- -->
+    if (idField.value === "" || pwField.value === "" || pwCmpField.value === "" || operField.value === "" || telField.value === "" || mailIdField.value === "") {
+        alert("空白のフィールドを記入してください。");
+        return false; // form 제출을 막음
+    }
+
+    // 다른 필요한 유효성 검사 로직을 여기에 추가할 수 있습니다.
+
+    return true; // form을 제출함
+}
+</script>
+
 
 <%@include file="../includes/footer.jsp"%>

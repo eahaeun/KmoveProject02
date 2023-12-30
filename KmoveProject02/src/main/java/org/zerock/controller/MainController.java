@@ -3,6 +3,7 @@ package org.zerock.controller;
 import java.time.LocalDate;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,15 +32,19 @@ public class MainController {
 	private KaishaService kaishaService;
 
 	@GetMapping("/main")
-	public void main(Model model, HttpServletRequest request) {
+	public void main(Model model, HttpServletRequest request, HttpSession session) {
 		// 클라이언트의 IP 주소 가져오기
         String ip_address = getClientIpAddress(request);
+        
+        // 세션에서 id가져옴
+        String kanrisha_uid = (String) session.getAttribute("kanrisha_uid");
+        
         // 모델에 속성 추가
         model.addAttribute("today", LocalDate.now());
         // 모델에 속성 추가
         model.addAttribute("ip_address", ip_address);
 	    model.addAttribute("kaisha", kaishaService.read());
-	    model.addAttribute("kanrisha", kanrishaService.get());
+	    model.addAttribute("kanrisha", kanrishaService.get(kanrisha_uid));
 	}
 
 	// 클라이언트의 IP 주소를 가져오는 메서드
@@ -65,13 +70,13 @@ public class MainController {
 	    System.out.println(!confirm_pw.equals(vo.getKanrisha_pw()));
 	    
 	    if (!confirm_pw.equals(vo.getKanrisha_pw())) {
-	    	rttr.addFlashAttribute("error", "비밀번호와 확인이 일치하지 않습니다.");
-	    	return "redirect:/joinFail";
+	    	rttr.addFlashAttribute("error", "「パスワード」と「確認」が一致しません。");
+	    	return "redirect:/main/joinFail";
 	    }
 	    kanrishaService.register(vo);
 	    rttr.addFlashAttribute("kanrisha_nm", vo.getKanrisha_nm());
 
-	    return "redirect:/joinSuccess";
+	    return "redirect:/main/joinSuccess";
 	}
 
 
@@ -95,17 +100,27 @@ public class MainController {
 	@PostMapping("/login")
 	public String login(@RequestParam("kanrisha_uid") String kanrisha_uid,
             @RequestParam("kanrisha_pw") String kanrisha_pw,
-            RedirectAttributes rttr) {
+            RedirectAttributes rttr, HttpSession session) {
 		System.out.println("kkkkkkkkk : " + kanrisha_uid);
 		System.out.println(kanrisha_pw);
 		KanrishaVO vo = kanrishaService.login(kanrisha_uid, kanrisha_pw);
 		if(vo != null) {
-			return "redirect:/main";
+			session.setAttribute("kanrisha_uid", kanrisha_uid);
+			return "redirect:/main/main";
 		} else {
-			rttr.addFlashAttribute("error", "로그인에 실패하였습니다.");
-			return "redirect:/login";
+			rttr.addFlashAttribute("error", "IDまたはパスワードが一致しません。");
+			return "redirect:/main/login";
 		}
 	}
 		
+	@GetMapping("/logout")
+	public String logout(HttpSession session) {
+	    // 세션에서 사용자 정보 제거
+	    session.removeAttribute("kanrisha_uid");
+	    // 또는 세션을 완전히 무효화하려면 session.invalidate();을 사용할 수 있습니다.
+
+	    // 로그아웃 후 로그인 페이지로 리다이렉트
+	    return "redirect:/main/login";
+	}
 
 }

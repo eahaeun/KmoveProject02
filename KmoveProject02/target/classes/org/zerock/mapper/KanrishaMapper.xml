@@ -17,6 +17,6 @@
 	</select>
 	
 	<select id="get" resultType="org.zerock.domain.KanrishaVO">
-		select * from kanrisha where kanrisha_uid = 'user00'
+		select * from kanrisha where kanrisha_uid = #{kanrisha_uid}
 	</select>
 </mapper>

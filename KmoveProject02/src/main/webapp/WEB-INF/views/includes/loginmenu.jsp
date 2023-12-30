@@ -13,8 +13,7 @@
 		</ul>
 		<ul class="login_menu">
 			<div class="direct">
-				<!-- <span><a href="/main/join">会員登録</a></span> -->
-				<span><a href="/main/logout">ログアウト</a></span>
+				<span><a href="/main/join">会員登録</a></span>
 			</div>
 		</ul>
 	</div>

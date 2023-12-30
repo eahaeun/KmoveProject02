@@ -1,0 +1,144 @@
+.modal {
+	display: none; /* 기본적으로 숨김 */
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4); /* 배경에 어둡게 */
+}
+
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	margin-left: 470px;
+	border: 1px solid #888;
+	width: 0%;
+	height: 0%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+	margin-top: 100px;
+}
+
+.visualWrap .visual .parttern {
+	width: 100%;
+	background: url(../resources/img/visual_pattern2.png) repeat-x 0 0;
+}
+
+.visualWrap .visual .visContent {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+}
+
+.visualWrap .visColor01_2 {
+	width: 100%;
+	background: #485763;
+}
+
+.visualWrap .visColor01_2 .parttern .join {
+	position: absolute;
+	top: 270px;
+	left: 550px;
+}
+
+.visualWrap .visColor01_2 .parttern .trial {
+	position: absolute;
+	top: 270px;
+	left: 728px;
+}
+
+.logLayer {
+	width: 545px;
+	height: 360px;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-khtml-border-radius: 50px;
+	-o-border-radius: 50px;
+	background: #fff;
+	position: relative;
+}
+
+.logLayer h1 {
+	padding: 29px 0 22px 76px;
+}
+
+.logLayer .loginWrap {
+	margin: 0 0 25px 74px;
+}
+
+.logLayer .loginWrap .login {
+	float: left;
+	width: 320px;
+}
+
+.logLayer .loginWrap .login .idInput {
+	width: 295px;
+	height: 33px;
+	line-height: 33px;
+	padding-left: 5px;
+	margin-bottom: 11px;
+	border: solid 1px #ccc;
+	outline: none;
+}
+
+.logLayer .loginWrap .login .pwInput {
+	width: 295px;
+	height: 33px;
+	line-height: 33px;
+	padding-left: 5px;
+	margin-bottom: 15px;
+	border: solid 1px #ccc;
+	outline: none;
+}
+
+.logLayer .loginWrap .login .checkbox {
+	margin-right: 5px;
+}
+
+.logLayer .loginWrap .login span {
+	margin-right: 10px;
+}
+
+.logLayer .loginWrap a {
+	float: left;
+}
+
+.logLayer .bottom {
+	width: 515px;
+	height: 105px;
+	padding-left: 30px;
+	border-radius: 0 0 50px 50px;
+	-webkit-border-radius: 0 0 50px 50px;
+	-ms-border-radius: 0 0 50px 50px;
+	-khtml-border-radius: 0 0 50px 50px;
+	-o-border-radius: 0 0 50px 50px;
+	background:
+		url(https://img.payzon.co.kr/_guideImg/common/login_layer_bg.gif)
+		repeat 0 0;
+}
+
+.logLayer .bottom .section {
+	float: left;
+	width: 47%;
+	margin: 21px 0 0 0;
+}
+
+.logLayer .bottom .section img {
+	float: left;
+	margin-right: 14px;
+}
+
+.logLayer .bottom .section div a img {
+	margin-top: 14px;
+}
+
+.logLayer .close {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+}

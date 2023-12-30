@@ -9,7 +9,7 @@
 	<script>
 		// Flash attribute에서 전달된 메시지를 alert로 표시
 		alert("${error}");
-        window.location.href = "/join";
+        window.location.href = "/main/join";
 	</script>
 </c:if>
 
