@@ -9,6 +9,10 @@ a {
 	text-decoration: none;
 }
 
+.anchor {
+  cursor:pointer;
+}
+
 body {
 	line-height: 1;
 	min-width: 1200px;
