@@ -44,4 +44,9 @@ public class ShainMapperTests {
 	public void testGetList() {
 		mapper.getListByKoyoKeitai("2023-11");
 	}
+	
+	@Test
+	public void testGetListByZaishokuSt() {
+		mapper.getListByZaishokuSt("在職");
+	}
 } 

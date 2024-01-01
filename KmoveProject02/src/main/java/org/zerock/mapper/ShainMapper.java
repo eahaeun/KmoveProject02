@@ -14,7 +14,9 @@ public interface ShainMapper {
 
 	public List<ShainVO> getList();
 
-	public List<ShainVO> getListByKoyoKeitai(String kizoku_ym);
+	public List<ShainVO> getListByKoyoKeitai(String koyo_keitai);
+	
+	public List<ShainVO> getListByZaishokuSt(String zaishoku_st);
 
 	public ShainVO read(String shain_no);
 
@@ -25,4 +27,6 @@ public interface ShainMapper {
 	int cancelShain(String shain_no);
 	
 	public List<ShainVO> findByShain_no(String kizoku_ym);
+	
+	public void delete(String shain_no);
 }

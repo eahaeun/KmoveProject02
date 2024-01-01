@@ -21,4 +21,9 @@ public class ShainServiceTests {
 	public void testGetList() {
 		log.info(service.getListByKoyoKeitai("2023-11"));
 	}
+
+	@Test
+	public void testGetListByZaishokuSt() {
+		log.info(service.getListByZaishokuSt("在職"));
+	}
 }

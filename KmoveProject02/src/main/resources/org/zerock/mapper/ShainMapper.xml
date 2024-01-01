@@ -36,14 +36,12 @@
 
 	<select id="getListByKoyoKeitai"
 		resultType="org.zerock.domain.ShainVO">
-		<![CDATA[
-		SELECT * FROM shain
-		WHERE shain_no IN (
-		SELECT shain_no FROM kyuyo_history
-		WHERE kizoku_ym = #{kizoku_ym}
-		)
-		AND koyo_keitai IN ('正社員', '契約社員')
-		]]>
+		select * from shain where koyo_keitai = #{koyo_keitai}
+	</select>
+	
+	<select id="getListByZaishokuSt"
+		resultType="org.zerock.domain.ShainVO">
+		select * from shain where zaishoku_st = #{zaishoku_st}
 	</select>
 
 	<select id="read" resultType="org.zerock.domain.ShainVO">
@@ -83,4 +81,9 @@
 		SELECT shain_no FROM kyuyo_history WHERE kizoku_ym = #{kizoku_ym}
 		) ORDER by shain_no
 	</select>
+	
+	<delete id="delete">
+		delete from shain where shain_no = #{shain_no}
+	</delete>
+	
 </mapper>
