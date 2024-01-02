@@ -25,7 +25,18 @@ public class ShainController {
 
 	@GetMapping("/shainList")
 	public void getList(Model model) {
-
+		//카운트 전달
+		model.addAttribute("zaishokushaCount", shainService.getCountByStateType("在職"));
+		model.addAttribute("taishokushaCount", shainService.getCountByStateType("退職"));
+		model.addAttribute("seishainCount", shainService.getCountByEmpType("正社員"));
+		model.addAttribute("keiyakuCount", shainService.getCountByEmpType("契約社員"));
+		model.addAttribute("rinjiCount", shainService.getCountByEmpType("臨時社員"));
+		model.addAttribute("hakenCount", shainService.getCountByEmpType("派遣社員"));
+		model.addAttribute("itakuCount", shainService.getCountByEmpType("委託社員"));
+		model.addAttribute("partCount", shainService.getCountByEmpType("パートタイム"));
+		model.addAttribute("allshainCount", shainService.getCount());
+		
+		
 		List<ShainVO> shainList = shainService.getList();
 
 		for (int i = 0; i < shainList.size(); i++) {
@@ -68,6 +79,7 @@ public class ShainController {
 				if (taishokuYmd != null && taishokuYmd.contains(" ")) {
 					shain.setTaishoku_ymd(taishokuYmd.substring(0, taishokuYmd.indexOf(" ")));
 				}
+				
 			}
 
 			return shainList;

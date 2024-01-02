@@ -9,6 +9,8 @@ public interface ShainMapper {
 	public int getCount();
 
 	public int getCountByEmpType(String empType);
+	
+	public int getCountByStateType(String stateType);
 
 	public void insert(ShainVO vo);
 
@@ -29,4 +31,5 @@ public interface ShainMapper {
 	public List<ShainVO> findByShain_no(String kizoku_ym);
 	
 	public void delete(String shain_no);
+	
 }

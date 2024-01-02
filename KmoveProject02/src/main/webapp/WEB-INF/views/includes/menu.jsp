@@ -42,7 +42,7 @@
                     <div class="menu_2depth_01_2020 " style="z-index:9999;">
                         <ul class="menu_01">
                             <li><a href="">社員登録</a></li>
-                            <li><a href="">社員一覧・管理</a></li>
+                            <li><a href="/shain/shainList">社員一覧・管理</a></li>
                         </ul>
                     </div>
                 </li>

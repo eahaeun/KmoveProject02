@@ -13,6 +13,10 @@
 		SELECT COUNT(*) FROM shain WHERE koyo_keitai =
 		#{empType}
 	</select>
+	
+	<select id="getCountByStateType" resultType="int" parameterType="String">
+		select count(*) from shain where zaishoku_st = #{stateType}
+	</select>
 
 	<insert id="insert">
   	<![CDATA[
@@ -85,5 +89,7 @@
 	<delete id="delete">
 		delete from shain where shain_no = #{shain_no}
 	</delete>
+	
+	<!-- 사원조회 페이지 카운트들 -->
 	
 </mapper>

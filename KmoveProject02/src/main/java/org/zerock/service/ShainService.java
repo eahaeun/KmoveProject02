@@ -18,4 +18,11 @@ public interface ShainService {
 	public void deleteEdu(String shain_no);
 	
 	public void deleteCareer(String shain_no);
+	
+	public int getCount();
+	
+	public int getCountByEmpType(String empType);
+	
+	public int getCountByStateType(String stateType);
+	
 }

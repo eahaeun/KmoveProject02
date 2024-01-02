@@ -61,6 +61,22 @@ public class ShainServiceImpl implements ShainService {
 		careerMapper.delete(shain_no);
 	}
 	
+	@Override
+	public int getCount() {
+		return mapper.getCount();
+	}
+	
+	@Override
+	public int getCountByEmpType(String empType) {
+		return mapper.getCountByEmpType(empType);
+	}
+
+	@Override
+	public int getCountByStateType(String stateType) {
+		return mapper.getCountByStateType(stateType);
+	}
+	
+	
 	
 	
 }

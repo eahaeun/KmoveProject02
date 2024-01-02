@@ -10,7 +10,7 @@ a {
 }
 
 .anchor {
-  cursor:pointer;
+	cursor: pointer;
 }
 
 body {
@@ -2076,4 +2076,213 @@ textarea {
 	padding: 5px 0;
 	margin-bottom: 8px;
 	display: block;
+}
+
+/* background
+================================================== */
+.bg_td {
+	background-color: #72a0cf;
+}
+
+.bg_em_count01 {
+	background: url(/_commonImg/em_count_01.gif) no-repeat;
+	width: 171px;
+	height: 52px;
+}
+
+.bg_em_count02 {
+	background: url(/_commonImg/em_count_02.gif) no-repeat;
+	width: 165px;
+	height: 52px;
+}
+
+.bg_em_count03 {
+	background: url(/_commonImg/em_count_03.gif) no-repeat;
+	width: 636px;
+	height: 52px;
+}
+
+.bg_em_count04 {
+	background: url(/_commonImg/em_count_04.gif) no-repeat;
+	width: 155px;
+	height: 52px;
+}
+
+.bg_em_count01_n {
+	background: url(/_commonImg/em_count_01_n.gif) no-repeat;
+	width: 170px;
+	height: 52px;
+}
+
+.bg_em_count02_n {
+	background: url(/_commonImg/em_count_02_n.gif) no-repeat;
+	width: 140px;
+	height: 52px;
+}
+
+.bg_em_count03_n {
+	background: url(/_commonImg/em_count_03_n.gif) no-repeat;
+	width: 704px;
+	height: 52px;
+}
+
+.bg_em_count04_n {
+	background: url(/_commonImg/em_count_04_n.gif) no-repeat;
+	width: 133px;
+	height: 52px;
+}
+
+ul.em_count {
+	margin-left: 13px;
+}
+
+ul.em_count:first-child {
+	margin-left: 0;
+}
+
+ul.em_count li {
+	width: 131px;
+	height: auto;
+	text-align: center;
+	position: relative;
+}
+
+ul.em_count_division li {
+	width: 120px;
+}
+
+.em_count li p {
+	padding: 12px 0 8px 0;
+	repeat
+	0
+	0;
+}
+
+.em_count_work li p {
+	background-color: #ea5d89;
+}
+
+.em_count_division li p {
+	background-color: #70b5e2;
+}
+
+.em_count_resign li p {
+	background-color: #acacac;
+}
+
+.em_count_total li p {
+	background-color: #414141;
+}
+
+.em_count li div {
+	padding: 13px 0 12px 0;
+	background: #efefef;
+}
+
+.em_count_division li div {
+	background: #f9f9f9;
+}
+
+.em_count li i {
+	display: block;
+	height: 64px;
+	border-right: solid 1px #fff;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 0;
+}
+
+#table2 {
+	margin: 0;
+	float: left;
+	border: 1px;
+}
+
+#table2  ul {
+	float: left;
+	border-bottom: 0px solid #e2e2e2;
+	border-left: 0px solid #e2e2e2;
+}
+
+#table2 li {
+	height: 22px;
+	border-right: 1px solid #e2e2e2;
+}
+
+#table2 li.tit {
+	width: 461px;
+	border-bottom: 1px solid #e2e2e2;
+}
+/*메인 버튼*/
+div.btn {
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+	padding: 30px 0px;
+}
+
+/*근태설정 stop01*/
+div.diligence {
+	width: 100%;
+	text-align: center;
+	float: left;
+}
+
+div.diligence_list {
+	float: left;
+	width: 720px;
+	margin: 10px 0 0 20px;
+}
+
+.diligence_list li {
+	padding-top: 8px;
+	height: 30px;
+}
+
+.diligence_list li span.btn {
+	display: inline-block;
+	float: right;
+}
+
+div.diligence_list div.dil_w_list {
+	float: left;
+	margin: 0px;
+	width: 703px;
+}
+
+div.diligence_list div.dil_w_list_scroll {
+	float: left;
+	margin: 0px;
+	width: 720px;
+	height: 365px;
+	overflow: auto;
+}
+
+div.diligence_set {
+	float: right;
+	width: 400px;
+	margin: 10px 0 0 30px;
+}
+
+div.payset_list {
+	float: left;
+	width: 550px;
+	margin: 0 0 0 60px;
+}
+
+.payset_list li {
+	padding-top: 8px;
+	height: 30px;
+}
+
+div.payset_set {
+	float: left;
+	width: 320px;
+	margin: 0 0 0 20px;
+}
+
+.payset_set span.btn {
+	display: inline-block;
+	float: right;
 }
