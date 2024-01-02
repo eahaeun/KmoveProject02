@@ -206,11 +206,6 @@ document.getElementById("allshain").addEventListener("click", function() {
 		    $(".shainCheckbox").prop("checked", $(this).prop("checked"));
 		});
 
-		
-		
-		
-		
-		
 		//삭제 버튼 클릭 처리
 	    $("#btnSelectedDel").click(function() {
 	    	console.log("btnSelectedDel clicked!");
@@ -452,6 +447,9 @@ document.getElementById("allshain").addEventListener("click", function() {
 		    });
 		});
 		
+		document.getElementById("btnEmployeeInsGo").addEventListener("click", function() {
+	        window.location.href = "/shain/shainRegister";
+	    });
 		
 		
 		//테이블 갱신 함수
