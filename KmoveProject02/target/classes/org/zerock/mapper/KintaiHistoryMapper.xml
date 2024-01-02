@@ -23,4 +23,49 @@
 	
 	</select>
 
+
+	<select id="getDataByMonth" resultType="org.zerock.domain.KintaiHourVO">
+	<![CDATA[
+	    SELECT
+	    	kh.shain_no,
+	    	TO_CHAR(kh.kaishi_ymd, 'YYYY-MM') AS kaishi_month,
+	    	TO_CHAR(kh.shuryo_ymd, 'YYYY-MM') AS shuryo_month,
+	    	k.kintai_tani,
+	    	SUM(kintai_hour) AS total_kintai_hour
+		FROM
+		    kintai_history kh
+		    JOIN kintai k ON kh.kintai_km = k.kintai_km
+		WHERE
+		    TO_CHAR(kh.kaishi_ymd, 'YYYY-MM') = #{searchMonth, jdbcType=VARCHAR}
+		    OR TO_CHAR(kh.shuryo_ymd, 'YYYY-MM') = #{searchMonth, jdbcType=VARCHAR}
+		GROUP BY
+		    kh.shain_no,
+		    TO_CHAR(kh.kaishi_ymd, 'YYYY-MM'),
+		    TO_CHAR(kh.shuryo_ymd, 'YYYY-MM'),
+		    k.kintai_tani
+	]]>
+	</select>
+	
+	<select id="getDataByD" resultType="org.zerock.domain.KintaiHourVO">
+	<![CDATA[
+	    SELECT
+		    kh.shain_no,
+		    TO_CHAR(kh.kaishi_ymd, 'YYYY-MM') AS kaishi_month,
+		    TO_CHAR(kh.shuryo_ymd, 'YYYY-MM') AS shuryo_month,
+		    k.kintai_tani,
+		    SUM(kintai_hour) AS total_kintai_hour
+		FROM
+		    kintai_history kh
+		    JOIN kintai k ON kh.kintai_km = k.kintai_km
+		WHERE
+		    (TO_CHAR(kh.kaishi_ymd, 'YYYY-MM') = #{searchMonth, jdbcType=VARCHAR}
+		    OR TO_CHAR(kh.shuryo_ymd, 'YYYY-MM') = #{searchMonth, jdbcType=VARCHAR})
+		    AND k.kintai_tani = 'D'
+		GROUP BY
+		    kh.shain_no,
+		    TO_CHAR(kh.kaishi_ymd, 'YYYY-MM'),
+		    TO_CHAR(kh.shuryo_ymd, 'YYYY-MM'),
+		    k.kintai_tani
+	]]>
+	</select>
 </mapper>

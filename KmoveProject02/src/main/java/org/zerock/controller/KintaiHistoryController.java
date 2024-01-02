@@ -1,7 +1,5 @@
 package org.zerock.controller;
 
-import java.util.List;
-
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.zerock.domain.KintaiHistoryVO;
 import org.zerock.service.KintaiHistoryService;
+import org.zerock.service.KintaiHourService;
 import org.zerock.service.KintaiService;
 import org.zerock.service.ShainService;
 
@@ -27,6 +26,7 @@ public class KintaiHistoryController {
 	private ShainService shainService;
 	private KintaiService kintaiService;
 	private KintaiHistoryService kintaihistoryService;
+	private KintaiHourService kintaihourService;
 
 	@GetMapping("/list")
 	public void list(Model model) {
@@ -43,12 +43,14 @@ public class KintaiHistoryController {
         return ResponseEntity.ok("Data received and registered successfully!");
     }
 	
-	@GetMapping("/modify")
-	public void search(@RequestParam("shain_no") String shain_no, Model model) {
-	    List<KintaiHistoryVO> search = kintaihistoryService.search(shain_no);
-	    model.addAttribute("search", search);
+	@GetMapping("/view")
+	public void view(Model model, @RequestParam(name = "selectedMonth", required = false) String selectedMonth) {
+
+	    log.info("Selected Month: " + selectedMonth);
+	    model.addAttribute("list", shainService.getList());
+	    model.addAttribute("hour", kintaihourService.getDataByMonth(selectedMonth));
+	    model.addAttribute("dhour", kintaihourService.getDataByD(selectedMonth));
+	    
 	}
-	
-	
 
 }

@@ -24,5 +24,7 @@
 <link rel="stylesheet" href="../resources/css/base.css">
 <link rel="stylesheet" href="../resources/css/mainmenu.css">
 
+<!-- scroll bar -->
+<script src="../resources/js/scroll.js"></script>
 </head>
 <body>

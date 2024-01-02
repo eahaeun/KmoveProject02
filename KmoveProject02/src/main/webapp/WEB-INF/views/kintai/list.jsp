@@ -58,15 +58,11 @@
               <li class="w_119 tit"><strong>勤怠記録</strong> <span id="btnTipDiligenceMnt" class="anchor"><img src="https://img.payzon.co.kr/_commonImg/icon_help_s.gif" width="15px" height="14px" vspace="0" hspace="0" border="0" align="absmiddle" alt="팁" title="팁"></span></li>
             </ul>
             
-		<div id="disContentList" class="disContentList mCustomScrollbar _mCS_1" style="width:710px;"><div class="mCustomScrollBox mCS-dark" id="mCSB_1" style="position:relative; height:100%; overflow:hidden; max-width:100%;">
-		<div class="mCSB_container" style="position:relative; top:0;"><div id="table_dil_data">
+		<div id="disContentList" class="disContentList" style="width:715px;">
+		<div id="table_dil_data">
 		<ul id="employeeNo0" class="anchor" style="width:695px;">
 			<c:forEach items="${list}" var="shain">
 			  <li class="w_24 c">
-              <!-- <label class="label_check" for="grpEmployeeInfoId0"><img src="../resources/img/1px.png" width="1px;" height="1px">
-              <img src="../resources/img/1px.png" width="1px;" height="1px">
-              <input type="checkbox" name="grpEmployeeInfoId" id="grpEmployeeInfoId0" value="1162876^031">
-              </label> -->
               <input type="checkbox" name="selectedShain" value="${shain.shain_no}">
               </li>
               <li class="w_100 c">${shain.koyo_keitai}</li>
@@ -79,8 +75,25 @@
             </ul>
             
 			</div>
+			
+			
+			
+			<!-- 스크롤바 -->
+<!-- 			<div class="mCSB_scrollTools" style="position: absolute; display: block;">
+			    <a class="mCSB_buttonUp" oncontextmenu="return false;"></a>
+			    <div class="mCSB_draggerContainer">
+			        <div class="mCSB_dragger" style="position: absolute; height: 243px; top: 0px;" oncontextmenu="return false;">
+			            <div class="mCSB_dragger_bar" style="position: relative; line-height: 243px;"></div>
+			        </div>
+			        <div class="mCSB_draggerRail"></div>
+			    </div>
+			    <a class="mCSB_buttonDown" oncontextmenu="return false;"></a>
+			</div> -->
+
+			
+			
 			</div>
-			<div class="mCSB_scrollTools" style="position: absolute; display: block;"><a class="mCSB_buttonUp" oncontextmenu="return false;"></a><div class="mCSB_draggerContainer"><div class="mCSB_dragger" style="position: absolute; height: 243px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="position: relative; line-height: 243px;"></div></div><div class="mCSB_draggerRail"></div></div><a class="mCSB_buttonDown" oncontextmenu="return false;"></a></div></div></div>          </div>
+			</div>
         </div>
       </ul>
     </div>
