@@ -351,7 +351,7 @@ $(document).ready(function() {
 	    var kizoku_ym = listItem.find('.w_105').text(); // 첫 번째 열의 데이터 (年월)
 
 	    // 사용자에게 진짜 삭제할 것인지 물어보기
-	    var confirmDelete = confirm("정말로 삭제하시겠습니까?");
+	    var confirmDelete = confirm("本当に削除しますか？");
 	    
 	    if (confirmDelete) {
 	        // 삭제 요청을 서버에 전송
