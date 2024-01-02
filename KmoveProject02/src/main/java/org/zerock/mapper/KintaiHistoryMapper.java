@@ -12,7 +12,7 @@ public interface KintaiHistoryMapper {
 
 	public List<KintaiHistoryVO> search(String shain_no);
 
-	public KintaiHistoryVO read(String shain_no);
+	public List<KintaiHistoryVO> read(String shain_no);
 
 	public List<KintaiHistoryVO> findBykintaiHistory(@Param("shain_no") String shain_no,
 			@Param("kizoku_ym") String kizoku_ym);

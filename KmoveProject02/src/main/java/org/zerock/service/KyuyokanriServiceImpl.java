@@ -90,7 +90,7 @@ public class KyuyokanriServiceImpl implements KyuyokanriService {
 	}
 
 	@Override
-	public KintaiHistoryVO getKintaiHistory(String shain_no) {
+	public List<KintaiHistoryVO> getKintaiHistory(String shain_no) {
 		// TODO Auto-generated method stub
 		return kintaiHistroyMapper.read(shain_no);
 	}

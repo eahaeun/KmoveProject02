@@ -36,7 +36,7 @@ public interface KyuyokanriService {
 	//지금항목 T를 가져옴
 	public List<SikyuVO> getSikyuList();
 	
-	public KintaiHistoryVO getKintaiHistory(String shain_no);
+	public List<KintaiHistoryVO> getKintaiHistory(String shain_no);
 	
 	public List<KintaiHistoryVO> findBykintaiHistory(String shain_no, String kizoku_ym);
 }
