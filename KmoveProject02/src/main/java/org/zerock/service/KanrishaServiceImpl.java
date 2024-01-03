@@ -1,5 +1,7 @@
 package org.zerock.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.zerock.domain.KanrishaVO;
@@ -26,9 +28,21 @@ public class KanrishaServiceImpl implements KanrishaService {
 	}
 
 	@Override
-	public KanrishaVO get(String kanrisha_uid) {
-		return mapper.get(kanrisha_uid);
+	public KanrishaVO get() {
+		return mapper.get();
 	}	
 	
-	
+
+	@Override
+	public boolean update(KanrishaVO vo) {
+		// TODO Auto-generated method stub
+		return mapper.update(vo) > 0;
+	}
+
+	@Override
+	public boolean modify(KanrishaVO vo) {
+		boolean modifyResult = mapper.update(vo) == 1;
+		return modifyResult;
+	}
+
 }

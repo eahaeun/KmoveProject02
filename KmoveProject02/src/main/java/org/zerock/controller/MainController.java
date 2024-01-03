@@ -48,7 +48,7 @@ public class MainController {
         // 모델에 속성 추가
         model.addAttribute("ip_address", ip_address);
 	    model.addAttribute("kaisha", kaishaService.read());
-	    model.addAttribute("kanrisha", kanrishaService.get(kanrisha_uid));
+	    model.addAttribute("kanrisha", kanrishaService.get());
 	    
 		model.addAttribute("seishainCount", shainService.getCountByEmpType("正社員"));
 		model.addAttribute("keiyakuCount", shainService.getCountByEmpType("契約社員"));

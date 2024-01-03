@@ -1813,3 +1813,30 @@ div.pay_total {
 	height: 41px;
 	margin: 0;
 }
+
+
+/* 사용자 정보_회사정보 */
+div.c_info {
+	width: 800px;
+	margin: 20px 0px 0px 20px;
+	overflow: hidden;
+	float: left;
+}
+
+.c_info ul {
+	width: 100%;
+	float: left;
+}
+
+/* 사용자 정보_담당자정보 */
+div.staff_info {
+	width: 320px;
+	margin: 20px 0px 0px 20px;
+	overflow: hidden;
+	float: left;
+}
+
+.staff_info ul {
+	width: 100%;
+	float: left;
+}

@@ -17,6 +17,18 @@
 	</select>
 	
 	<select id="get" resultType="org.zerock.domain.KanrishaVO">
-		select * from kanrisha where kanrisha_uid = #{kanrisha_uid}
+		select * from kanrisha where rownum = 1
 	</select>
+
+	<update id="update" parameterType="org.zerock.domain.KanrishaVO">
+        <![CDATA[
+        UPDATE kanrisha
+        SET
+        kanrisha_uid = #{kanrisha_uid},
+        kanrisha_pw = #{kanrisha_pw},
+        kanrisha_nm = #{kanrisha_nm},
+        renraku_tel = #{renraku_tel},
+        renraku_email = #{renraku_email}
+        ]]>
+	</update>
 </mapper>

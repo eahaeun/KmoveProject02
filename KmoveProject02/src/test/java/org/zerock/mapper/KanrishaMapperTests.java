@@ -32,9 +32,7 @@ public class KanrishaMapperTests {
 	public void testLogin() {
 		mapper.selectById("15", "15");
 	}
-	
-	@Test
-	public void testGet() {
-		log.info(mapper.get("user00"));
-	}
+	/*
+	 * @Test public void testGet() { log.info(mapper.get("user00")); }
+	 */
 }

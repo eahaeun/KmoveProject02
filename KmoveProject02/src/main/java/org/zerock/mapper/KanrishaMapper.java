@@ -8,5 +8,7 @@ public interface KanrishaMapper {
 
 	KanrishaVO selectById(@Param("kanrisha_uid") String kanrisha_uid, @Param("kanrisha_pw") String kanrisha_pw);
 
-	public KanrishaVO get(String kanrisha_uid);
+	public KanrishaVO get();
+	
+	public int update(KanrishaVO vo);
 }

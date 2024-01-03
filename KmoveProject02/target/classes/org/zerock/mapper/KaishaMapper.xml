@@ -5,7 +5,29 @@
 <mapper namespace="org.zerock.mapper.KaishaMapper">
 
 	<select id="get" resultType="org.zerock.domain.KaishaVO">
-		select * from kaisha where daihyosha = '山田太郎'
+		select * from kaisha where daihyosha
+		= '山田太郎'
 	</select>
-	
+
+	<select id="read" resultType="org.zerock.domain.KaishaVO">
+		select * from kaisha
+	</select>
+
+	<update id="update" parameterType="org.zerock.domain.KaishaVO">
+        <![CDATA[
+        UPDATE kaisha
+        SET
+            kaisha_nm = #{kaisha_nm},
+            daihyosha = #{daihyosha},
+            jigyosha_no = #{jigyosha_no},
+            hojin_no = #{hojin_no},
+            setsuritsu_ymd = #{setsuritsu_ymd},
+            homepage = #{homepage},
+            address = #{address},
+            kaisha_tel = #{kaisha_tel},
+            renraku_fax = #{renraku_fax},
+            jitai = #{jitai},
+            jishu = #{jishu}
+        ]]>
+	</update>
 </mapper>
