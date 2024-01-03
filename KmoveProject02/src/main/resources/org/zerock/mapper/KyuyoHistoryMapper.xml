@@ -57,4 +57,9 @@
 		select * from kyuyo_history where kizoku_ym = #{kizoku_ym} ORDER by shain_no
 	</select>
 
+	<select id="kyuyoByDate" resultType="org.zerock.domain.KyuyoHistoryVO">
+	SELECT * 
+	FROM kyuyo_history
+	WHERE shain_no = #{shain_no} and kizoku_ym BETWEEN #{start_ym} AND #{end_ym} ORDER by kizoku_ym
+	</select>
 </mapper>

@@ -64,7 +64,7 @@
                         <ul class="menu_01">
                             <li><a href="/kyuyo/kyuyokanrishokigamen">給与入力・管理</a></li>
                             <li><a href="/kyuyo/kyuyoDaicho">給与台帳</a></li>
-                            <li><a href="">社員別給与記録</a></li>
+                            <li><a href="/kyuyo/shainbetsuKyuyo">社員別給与記録</a></li>
                         </ul>
                     </div>
                 </li>

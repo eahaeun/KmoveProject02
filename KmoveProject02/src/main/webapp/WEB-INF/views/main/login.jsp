@@ -79,7 +79,7 @@
 		      
 		      
 		    </div><!-- bottom -->
-		    <span class="anchor"><img src="https://img.payzon.co.kr/_guideImg/common/layer_close_btn.gif" class="close" alt="닫기"></span>
+		    <span class="anchor"><img src="../resources/img/layer_close_btn.gif" class="close" alt="닫기"></span>
 		   </div>
 		 
 		 <iframe name="iFrmLog2" id="iFrmLog2" src="about:blank" tabindex="-1" width="0px" height="0px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" class="disHide"></iframe>

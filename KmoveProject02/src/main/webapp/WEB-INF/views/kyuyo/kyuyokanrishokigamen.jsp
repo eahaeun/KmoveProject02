@@ -46,7 +46,7 @@
 	      <ul class="p_t5  w_70 c">* 社員番号</ul>
 	      <input name="shain_no" type="text" class="border w_100" style="position: relative; top: -5px;"> 
 	      <!-- 이미지로 표시되는 검색 버튼 -->
- 		  <input type="image" src="https://img.payzon.co.kr/_commonImg/btn_s_search.png" width="23px" height="23px" id="searchButton" style="position: relative; bottom: -2px;"> 
+ 		  <input type="image" src="../resources/img/btn_s_search.png" width="23px" height="23px" id="searchButton" style="position: relative; bottom: -2px;"> 
 	</div> 
 	</form>
 </div> <!-- end etotal -->

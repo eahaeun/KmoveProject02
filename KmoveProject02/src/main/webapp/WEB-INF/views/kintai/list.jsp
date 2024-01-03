@@ -55,7 +55,7 @@
               <li class="w_100 tit"><strong>氏名</strong></li>
               <li class="w_120 tit"><strong>部署</strong></li>
               <li class="w_120 tit"><strong>役職</strong></li>
-              <li class="w_119 tit"><strong>勤怠記録</strong> <span id="btnTipDiligenceMnt" class="anchor"><img src="https://img.payzon.co.kr/_commonImg/icon_help_s.gif" width="15px" height="14px" vspace="0" hspace="0" border="0" align="absmiddle" alt="팁" title="팁"></span></li>
+              <li class="w_119 tit"><strong>勤怠記録</strong> <span id="btnTipDiligenceMnt" class="anchor"><img src="../resources/img/icon_help_s.gif" width="15px" height="14px" vspace="0" hspace="0" border="0" align="absmiddle" alt="팁" title="팁"></span></li>
             </ul>
             
 		<div id="disContentList" class="disContentList" style="width:715px;">
@@ -70,7 +70,7 @@
               <li class="w_100 c">${shain.shain_nm}</li>
               <li class="w_120 c">${shain.busho_nm}</li>
               <li class="w_120 c">${shain.yakushoku_nm}</li>
-              <li class="w_119 c"><span name="btnDiliMnt" id="btnDiliMnt" class="anchor" onclick="$.fn.employeeDiliList('1162876^031');"><img src="https://img.payzon.co.kr/_commonImg/btn_admin.png" width="52px" height="19px" alt="관리" title="관리"></span></li>
+              <li class="w_119 c"><span name="btnDiliMnt" id="btnDiliMnt" class="anchor" onclick="$.fn.employeeDiliList('1162876^031');"><img src="../resources/img/btn_admin.png" width="52px" height="19px" alt="관리" title="관리"></span></li>
 			</c:forEach>
             </ul>
             

@@ -25,5 +25,5 @@ public interface KyuyoHistoryMapper {
 	
 	public int deleteTotal(String kizoku_ym);
 	
-
+	public List<KyuyoHistoryVO> kyuyoByDate(@Param("shain_no") String shain_no, @Param("start_ym") String start_ym, @Param("end_ym") String end_ym);
 }

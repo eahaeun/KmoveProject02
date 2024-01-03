@@ -182,7 +182,7 @@ div.menu_2depth_01_2020 .menu_01 li {
 	width: 140px;
 	height: 23px;
 	padding-top: 5px;
-	padding-left: 9px;
+	padding-left: 6.5px;
 	border-bottom: 1px solid #4a4c55;
 	background: none;
 }
@@ -212,7 +212,6 @@ div.menu_2depth_01_2020.menu_01 li a:active {
 div.menu_2depth_01_2020 .menu_01 li a:focus {
 	background: #51535d;
 }
-
 
 /* 메뉴 항목 텍스트 중앙 정렬 */
 .menu_2depth_01_2020 ul.menu_01 li a {
@@ -1286,4 +1285,214 @@ div.pay_total {
 
 #pop01 ul.em {
 	background-color: #ffffff;
+}
+
+.private_mr8 {
+	margin-right: 8px;
+}
+
+/*휴가설정 팝업, 사원레이어*/
+#pop01 div.pop_search {
+	margin: 0px 0px 0px 15px;
+	padding: 0px;
+	float: left;
+}
+
+.pop_search li {
+	float: left;
+}
+
+.pop_search li.right {
+	float: right;
+}
+
+#pop01 div.pop_search_l5 {
+	margin: 0px 0px 0px 5px;
+	padding: 0px;
+	float: left;
+}
+
+.pop_search_l5 li {
+	float: left;
+}
+
+.pop_search_l5 li.right {
+	float: right;
+}
+
+#pop01 div.em_photo {
+	width: 120px;
+	margin: 10px 0px 10px 15px;
+	padding: 0px;
+	float: left;
+	display: inline-block;
+}
+
+#pop01 div.em_photo li {
+	width: 120px;
+	height: 137px;
+	display: table-cell;
+	vertical-align: middle;
+	float: left;
+	display: inline-block;
+	text-align: center;
+}
+
+#pop01 div.em_table {
+	margin: 10px 0px 10px 15px;
+	float: left;
+}
+
+.em_table ul {
+	float: left;
+	border-bottom: 1px solid #e2e2e2;
+	border-left: 1px solid #e2e2e2;
+	color: #333333;
+}
+
+.em_table li {
+	float: left;
+	height: 25px;
+	border-right: 1px solid #e2e2e2;
+	padding-top: 8px;
+}
+
+.em_table li.tit {
+	background-color: #f6fdff;
+	color: #333333;
+	text-align: center;
+	padding-top: 8px;
+	font-weight: bold;
+}
+
+.em_table li.tit_y {
+	background-color: #fefff6;
+	color: #333333;
+	text-align: center;
+	padding-top: 8px;
+	font-weight: bold;
+}
+
+#pop01 div.holiday {
+	float: left;
+	margin: 0px;
+	height: 340px;
+	overflow: auto;
+}
+
+#pop01 div.Logo {
+	float: left;
+	margin: 0px;
+	height: 180px;
+	overflow: auto;
+}
+
+#pop01 div.pop_table {
+	margin: 0px 15px 0px 15px;
+	padding: 0px;
+	color: #666666;
+	float: left;
+}
+
+.pop_table P.caption {
+	border-bottom: 2px solid #4499fa;
+	height: 2px;
+}
+
+.pop_table ul {
+	float: left;
+	border-bottom: 1px solid #e2e2e2;
+	border-left: 1px solid #e2e2e2;
+	color: #333333;
+}
+
+.pop_table  ul.b_none {
+	width: 100%;
+	float: left;
+	border-bottom: 0px solid #e2e2e2;
+	border-left: 1px solid #e2e2e2;
+}
+
+.pop_table li {
+	float: left;
+	height: 25px;
+	border-right: 1px solid #e2e2e2;
+	padding-top: 8px;
+}
+
+.pop_table li.input_cell {
+	float: left;
+	height: 28px;
+	border-right: 1px solid #e2e2e2;
+	padding-top: 5px;
+}
+
+.pop_table li.tit {
+	background-color: #f6fdff;
+	color: #333333;
+	text-align: center;
+	padding-top: 8px;
+	font-weight: bold;
+}
+
+.pop_table li.logo {
+	float: left;
+	height: 35px;
+	border-right: 1px solid #e2e2e2;
+	padding-top: 8px;
+}
+
+.pop_table li.logoImg {
+	float: left;
+	height: 34px;
+	border-right: 1px solid #e2e2e2;
+	padding-top: 8px;
+}
+
+#pop01 div.pop_table_ecard {
+	margin: 0px 5px 0px 5px;
+	padding: 0px;
+	color: #666666;
+	float: left;
+}
+
+.pop_table_ecard P.caption {
+	border-bottom: 2px solid #4499fa;
+	height: 2px;
+}
+
+.pop_table_ecard ul {
+	float: left;
+	border-bottom: 1px solid #e2e2e2;
+	border-left: 1px solid #e2e2e2;
+	color: #333333;
+}
+
+.pop_table_ecard ul.b_none {
+	width: 100%;
+	float: left;
+	border-bottom: 0px solid #e2e2e2;
+	border-left: 1px solid #e2e2e2;
+}
+
+.pop_table_ecard li {
+	float: left;
+	height: 25px;
+	border-right: 1px solid #e2e2e2;
+	padding-top: 8px;
+}
+
+.pop_table_ecard li.input_cell {
+	float: left;
+	height: 28px;
+	border-right: 1px solid #e2e2e2;
+	padding-top: 5px;
+}
+
+.pop_table_ecard li.tit {
+	background-color: #f6fdff;
+	color: #333333;
+	text-align: center;
+	padding-top: 8px;
+	font-weight: bold;
 }
