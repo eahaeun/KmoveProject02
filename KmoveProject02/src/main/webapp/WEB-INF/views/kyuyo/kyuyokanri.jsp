@@ -89,9 +89,32 @@
               <li class="w_88 c"><c:out value="${shainjyoho.koyo_keitai}" /></li>
               <li class="w_85 c"><c:out value="${shainjyoho.shain_nm}" /></li>
               <li class="w_92 c"><c:out value="${shainjyoho.busho_nm}"/></li>
-              <li class="w_105 align_r bold"><span id="disTableGiveAmount1163051" class="p_r5 c_blue clsTableGiveAmount"><c:out value="${kyuyojyoho.sikyu_pay}"/></span></li>
-              <li class="w_100 align_r bold"><span id="disTableDeduAmount1163051" class="p_r5 c_red clsTableDeduAmount"><c:out value="${kyuyojyoho.kojyo_pay}"/></span></li>
-              <li class="w_100 align_r bold"><span id="disTableRealAmount1163051" class="p_r5 clsTableRealAmount"><c:set var="difference" value="${kyuyojyoho.sikyu_pay - kyuyojyoho.kojyo_pay}" /><c:out value="${difference}"/></span></li>
+				<li class="w_105 align_r bold">
+				    <span id="disTableGiveAmount1163051" class="p_r5 c_blue clsTableGiveAmount">
+				        <script>
+				            var sikyuPay = parseInt('${kyuyojyoho.sikyu_pay}', 10);
+				            document.write(isNaN(sikyuPay) ? 0 : sikyuPay.toLocaleString());
+				        </script>
+				    </span>
+				</li>
+				<li class="w_100 align_r bold">
+				    <span id="disTableDeduAmount1163051" class="p_r5 c_red clsTableDeduAmount">
+				        <script>
+				            var kojyoPay = parseInt('${kyuyojyoho.kojyo_pay}', 10);
+				            document.write(isNaN(kojyoPay) ? 0 : kojyoPay.toLocaleString());
+				        </script>
+				    </span>
+				</li>
+				
+				<li class="w_100 align_r bold">
+				    <span id="disTableRealAmount1163051" class="p_r5 clsTableRealAmount">
+				        <c:set var="difference" value="${kyuyojyoho.sikyu_pay - kyuyojyoho.kojyo_pay}" />
+				        <script>
+				            document.write(parseInt('${difference}', 10).toLocaleString());
+				        </script>
+				    </span>
+				</li>
+
             </ul>
           </div><!-- end table_dil -->
         </div>
@@ -176,7 +199,13 @@
 			<!-- 지급총액 -->
 			<ul class="b_red  border_rt">
               <li class="w_127 tit b_blue c"><strong><a href="#none" onclick="$.fn.setPaymentItemHeightControl();">支給総額</a></strong></li>
-              <li class="w_132 b_blue align_r"><span id="sikyuTotalPay" class="p_r7 bold c_blue">${sikyuTotalPaySet}</span></li>
+              <li class="w_132 b_blue align_r">
+				    <span id="sikyuTotalPay" class="p_r7 bold c_blue">
+				        <script>
+				            document.write(parseInt('${sikyuTotalPaySet}', 10).toLocaleString());
+				        </script>
+				    </span>
+			  </li>
             </ul>
 			
 			<c:set var="listSize" value="${fn:length(findByKintai)}" />
@@ -245,13 +274,25 @@
             <!-- 공제총액 -->
 			<ul class="disDedsItemBlank"><li class="w_127 tit"></li><li class="w_132 con"></li><li class="calc" style="display: none;"></li></ul><ul class="disDedsItemBlank"><li class="w_127 tit"></li><li class="w_132 con"></li><li class="calc" style="display: none;"></li></ul>            <ul class="b_red">
               <li class="w_127 tit c"><strong>控除総額</strong></li>
-              <li class="w_132 align_r"><span id="kojyoTotalPay" class="p_r7 c_red" style="font-weight:bold;"><c:out value="${kojyoTotalPay}"/></span></li>
+              <li class="w_132 align_r">
+	              <span id="kojyoTotalPay" class="p_r7 c_red" style="font-weight:bold;">
+					  	<script>
+				            document.write(parseInt('${kojyoTotalPay}', 10).toLocaleString());
+				        </script>
+				  </span>
+			  </li>
             </ul>
           </div>
         </ul>
         
         <c:set var="jisshuSokaiGaku" value="${sikyuTotalPaySet-kojyoTotalPay}"/>
-        <ul class="pay_bg c font16 p_b10 p_t10 c_white wp_100" style="background-color:#2C587C;"><strong>差引総額 : <span id="jisshuSokaiGaku" class="c_yellow"><c:out value="${jisshuSokaiGaku}"/></span></strong>円</ul>
+        <ul class="pay_bg c font16 p_b10 p_t10 c_white wp_100" style="background-color:#2C587C;">
+        <strong>差引総額 : 
+        <span id="jisshuSokaiGaku" class="c_yellow">
+		    <script>
+		        document.write(parseInt('${jisshuSokaiGaku}', 10).toLocaleString());
+		    </script>
+		</span>
       </div>
       </ul>
       

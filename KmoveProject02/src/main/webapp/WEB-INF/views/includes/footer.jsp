@@ -29,7 +29,7 @@
 			事業者登録番号: 120-86-50680<br>
 			通信販売業届出番号: 153-1911号<br>
 			個人情報保護責任者: 石川界人
-          <img src="../resources/img/common/f_email.png" alt="">
+          <img src="../resources/img/f_email.png" alt="">
         </p>
       </div>
     </div>

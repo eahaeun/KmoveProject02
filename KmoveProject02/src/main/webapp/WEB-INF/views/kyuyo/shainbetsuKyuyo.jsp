@@ -241,14 +241,16 @@ function goKyuyoJyoho(shain_no) {
 				var newRow = document.createElement("ul");
 				newRow.className = "clsRows";
 				
-				newRow.innerHTML = '<li class="w_105">' + kizoku_ym + '</li>' +
-				'<li class="w_120 a_r"><span class="private_mr8">' + sikyu_pay + '</span></li>' +
-				'<li class="w_120 a_r"><span class="private_mr8">' + kojyo_pay + '</span></li>' +
-				'<li class="w_120 a_r"><span class="private_mr8">' + difference + '</span></li>' +
-				'<li class="w_100 a_r"><span class="private_mr8">' + kokuminNenkin + '</span></li>' +
-				'<li class="w_100 a_r"><span class="private_mr8">' + kenkoHoken + '</span></li>' +
-				'<li class="w_105 a_r"><span class="private_mr8">' + choukiRyouyohoken + '</span></li>' +
-				'<li class="w_100 a_r"><span class="private_mr8">' + koyouHoken + '</span></li>';
+				newRow.innerHTML = 
+				    '<li class="w_105">' + kizoku_ym + '</li>' +
+				    '<li class="w_120 a_r"><span class="private_mr8">' + parseInt(sikyu_pay, 10).toLocaleString() + '</span></li>' +
+				    '<li class="w_120 a_r"><span class="private_mr8">' + parseInt(kojyo_pay, 10).toLocaleString() + '</span></li>' +
+				    '<li class="w_120 a_r"><span class="private_mr8">' + parseInt(difference, 10).toLocaleString() + '</span></li>' +
+				    '<li class="w_100 a_r"><span class="private_mr8">' + parseInt(kokuminNenkin, 10).toLocaleString() + '</span></li>' +
+				    '<li class="w_100 a_r"><span class="private_mr8">' + parseInt(kenkoHoken, 10).toLocaleString() + '</span></li>' +
+				    '<li class="w_105 a_r"><span class="private_mr8">' + parseInt(choukiRyouyohoken, 10).toLocaleString() + '</span></li>' +
+				    '<li class="w_100 a_r"><span class="private_mr8">' + parseInt(koyouHoken, 10).toLocaleString() + '</span></li>';
+
 
 		    // 기존 리스트를 새로운 리스트로 갱신
 				tableContainer.appendChild(newRow);
@@ -261,13 +263,14 @@ function goKyuyoJyoho(shain_no) {
             // 각 li 요소의 내용 설정
             totalUl.innerHTML =
                 '<li class="w_105 bold p_t3">합계</li>' +
-                '<li class="w_120 a_r"><span class="private_mr8">' + totalSikyuPay + '</span></li>' +
-                '<li class="w_120 a_r"><span class="private_mr8">' + totalKojyoPay + '</span></li>' +
-                '<li class="w_120 a_r"><span class="private_mr8">' + (totalSikyuPay - totalKojyoPay) + '</span></li>' +
-                '<li class="w_100 a_r"><span class="private_mr8">' + totalKokuminNenkin + '</span></li>' +
-                '<li class="w_100 a_r"><span class="private_mr8">' + totalKenkoHoken + '</span></li>' +
-                '<li class="w_105 a_r"><span class="private_mr8">' + totalChoukiRyouyohoken + '</span></li>' +
-                '<li class="w_100 a_r"><span class="private_mr8">' + totalKoyouHoken + '</span></li>';
+                '<li class="w_120 a_r"><span class="private_mr8">' + parseInt(totalSikyuPay, 10).toLocaleString() + '</span></li>' +
+                '<li class="w_120 a_r"><span class="private_mr8">' + parseInt(totalKojyoPay, 10).toLocaleString() + '</span></li>' +
+                '<li class="w_120 a_r"><span class="private_mr8">' + parseInt((totalSikyuPay - totalKojyoPay), 10).toLocaleString() + '</span></li>' +
+                '<li class="w_100 a_r"><span class="private_mr8">' + parseInt(totalKokuminNenkin, 10).toLocaleString() + '</span></li>' +
+                '<li class="w_100 a_r"><span class="private_mr8">' + parseInt(totalKenkoHoken, 10).toLocaleString() + '</span></li>' +
+                '<li class="w_105 a_r"><span class="private_mr8">' + parseInt(totalChoukiRyouyohoken, 10).toLocaleString() + '</span></li>' +
+                '<li class="w_100 a_r"><span class="private_mr8">' + parseInt(totalKoyouHoken, 10).toLocaleString() + '</span></li>';
+
 
             // 합계를 나타내는 ul 요소를 컨테이너 요소에 추가
 			tableContainer.appendChild(totalUl);

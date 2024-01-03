@@ -95,15 +95,19 @@
         <p class="caption"></p>
         <ul>
         <li class="w_180 tit">正社員</li>
-        <li class="w_210 con">7</li>
+        <li class="w_210 con">${seishainCount}</li>
         </ul>
         <ul>
         <li class="w_180 tit">契約社員</li>
-        <li class="w_210 con">1</li>
+        <li class="w_210 con">${keiyakuCount}</li>
+        </ul>
+        <ul>
+        <li class="w_180 tit">臨時社員</li>
+        <li class="w_210 con">${rinjiCount}</li>
         </ul>
         <ul>
         <li class="w_180 tit">パートタイム</li>
-        <li class="w_210 con">1</li>
+        <li class="w_210 con">${partCount}</li>
         </ul>
 <!--         <ul>
         <li class="w_180 tit">�Ͽ���</li>
@@ -111,7 +115,7 @@
         </ul> -->
         <ul>
         <li class="w_180 tit_total">総計</li>
-        <li class="w_210 con b_yellow bold">12</li>
+        <li class="w_210 con b_yellow bold">${allshainCount}</li>
         </ul>
         </div>
       </ul>
@@ -221,14 +225,14 @@ $(document).ready(function() {
 	        	newRow.className = "anchor ulPayTotalList";
 	        	
 				// 각 li 요소의 내용 설정
-				newRow.innerHTML = 
+				newRow.innerHTML =
 				    '<li class="w_200 c ">' + kizoku_ym + '</li>' +
 				    '<li class="w_200 c ">' + year + '-' + month + '-01 ~ ' + year + '-' + month + '-' + lastDayOfMonth + '</li>' +
 				    '<li class="w_100 c ">' + nextYear + '-' + sikyuMonth + '-05</li>' +
 				    '<li class="w_100 c ">' + count + '</li>' +
-				    '<li class="w_155 con_r p_r25 bold c_blue">' + sumSikyuPay + ' &nbsp;&nbsp;</li>' +
-				    '<li class="w_155 con_r p_r25 bold c_red">' + sumKojyoPay + ' &nbsp;&nbsp;</li>' +
-				    '<li class="w_156 con_r p_r25 bold c_black ">' + difference + ' &nbsp;&nbsp;</li>';
+				    '<li class="w_155 con_r p_r25 bold c_blue">' + parseInt(sumSikyuPay, 10).toLocaleString() + ' &nbsp;&nbsp;</li>' +
+				    '<li class="w_155 con_r p_r25 bold c_red">' + parseInt(sumKojyoPay, 10).toLocaleString() + ' &nbsp;&nbsp;</li>' +
+				    '<li class="w_156 con_r p_r25 bold c_black ">' + (parseInt(sumSikyuPay, 10) - parseInt(sumKojyoPay, 10)).toLocaleString() + ' &nbsp;&nbsp;</li>';
 
 				// 새로운 ul 요소를 컨테이너 요소에 추가
 				tableContainer.appendChild(newRow);
@@ -237,15 +241,15 @@ $(document).ready(function() {
           	//합계 출력
             var totalRow = document.createElement("ul");
             totalRow.className = "b_yellow";
-            totalRow.innerHTML = 
+
+            totalRow.innerHTML =
                 '<li class="w_200 c c_black ">合計</li>' +
                 '<li class="w_200 p_t3"></li>' +
                 '<li class="w_100 p_t3"></li>' +
                 '<li class="w_100 p_t3"></li>' +
-                '<li class="w_155 con_r p_r25 bold c_blue">' + totalSumSikyuPay + ' &nbsp;&nbsp;</li>' +
-                '<li class="w_155 con_r p_r25 bold c_red">' + totalSumKojyoPay + ' &nbsp;&nbsp;</li>' +
-                '<li class="w_156 con_r p_r25 bold c_black ">' + (totalSumSikyuPay - totalSumKojyoPay) + ' &nbsp;&nbsp;</li>';
-
+                '<li class="w_155 con_r p_r25 bold c_blue">' + parseInt(totalSumSikyuPay, 10).toLocaleString() + ' &nbsp;&nbsp;</li>' +
+                '<li class="w_155 con_r p_r25 bold c_red">' + parseInt(totalSumKojyoPay, 10).toLocaleString() + ' &nbsp;&nbsp;</li>' +
+                '<li class="w_156 con_r p_r25 bold c_black ">' + (parseInt(totalSumSikyuPay, 10) - parseInt(totalSumKojyoPay, 10)).toLocaleString() + ' &nbsp;&nbsp;</li>';
 
             // 새로운 합계 ul 요소를 컨테이너 요소에 추가
             tableContainer.appendChild(totalRow);
@@ -257,5 +261,5 @@ $(document).ready(function() {
 });
 </script>
 
-
+<br><br>
 <%@include file="../includes/footer.jsp"%>

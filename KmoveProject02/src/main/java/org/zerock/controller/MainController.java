@@ -17,6 +17,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.domain.KanrishaVO;
 import org.zerock.service.KaishaService;
 import org.zerock.service.KanrishaService;
+import org.zerock.service.ShainService;
 
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
@@ -30,6 +31,9 @@ public class MainController {
 	
 	@Setter(onMethod_ = @Autowired)
 	private KaishaService kaishaService;
+	
+	@Setter(onMethod_ = @Autowired)
+	private ShainService shainService;
 
 	@GetMapping("/main")
 	public void main(Model model, HttpServletRequest request, HttpSession session) {
@@ -45,6 +49,12 @@ public class MainController {
         model.addAttribute("ip_address", ip_address);
 	    model.addAttribute("kaisha", kaishaService.read());
 	    model.addAttribute("kanrisha", kanrishaService.get(kanrisha_uid));
+	    
+		model.addAttribute("seishainCount", shainService.getCountByEmpType("正社員"));
+		model.addAttribute("keiyakuCount", shainService.getCountByEmpType("契約社員"));
+		model.addAttribute("rinjiCount", shainService.getCountByEmpType("臨時社員"));
+		model.addAttribute("partCount", shainService.getCountByEmpType("パートタイム"));
+		model.addAttribute("allshainCount", shainService.getCount());
 	}
 
 	// 클라이언트의 IP 주소를 가져오는 메서드

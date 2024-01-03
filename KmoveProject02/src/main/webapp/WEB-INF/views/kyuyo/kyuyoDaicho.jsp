@@ -191,11 +191,10 @@ $(document).ready(function() {
 				    '<li class="w_170 ">' + year + '-' + month + '-01 ~ ' + year + '-' + month + '-' + lastDayOfMonth + '</li>' +
 				    '<li class="w_120 ">' + nextYear + '-' + sikyuMonth + '-05</li>' +
 				    '<li class="w_92 ">' + count + '</li>' +
-				    '<li class="w_132 bold c_blue a_r">' + sumSikyuPay + ' &nbsp;&nbsp;</li>' +
-				    '<li class="w_132 bold c_red a_r">' + sumKojyoPay + ' &nbsp;&nbsp;</li>' +
-				    '<li class="w_143 bold a_r">' + difference + ' &nbsp;&nbsp;</li>' +
+				    '<li class="w_132 bold c_blue a_r">' + parseInt(sumSikyuPay, 10).toLocaleString() + ' &nbsp;&nbsp;</li>' +
+				    '<li class="w_132 bold c_red a_r">' + parseInt(sumKojyoPay, 10).toLocaleString() + ' &nbsp;&nbsp;</li>' +
+				    '<li class="w_143 bold a_r">' + parseInt(difference, 10).toLocaleString() + ' &nbsp;&nbsp;</li>' +
 				    '<li class="w_70 c"><span class="anchor"><img value="삭제하기" src="../resources/img/btn_s_delete.png" width="43px" height="19px" class="p_l5 "></span></li>';
-
 
 				// 새로운 ul 요소를 컨테이너 요소에 추가
 				tableContainer.appendChild(newRow);
@@ -210,10 +209,10 @@ $(document).ready(function() {
                 '<li class="w_170 p_t3"></li>' +
                 '<li class="w_120 p_t3"></li>' +
                 '<li class="w_92 p_t3"></li>' +
-                '<li class="w_132 bold c_blue p_t3 a_r">' + totalSumSikyuPay + ' &nbsp;&nbsp;</li>' +
-                '<li class="w_132 bold c_red p_t3 a_r">' + totalSumKojyoPay + ' &nbsp;&nbsp;</li>' +
-                '<li class="w_143 bold p_t3 a_r">' + (totalSumSikyuPay - totalSumKojyoPay) + ' &nbsp;&nbsp;</li>' +
-                '<li class="w_70 c p_t3"></li>';
+                '<li class="w_132 bold c_blue p_t3 a_r">' + parseInt(totalSumSikyuPay, 10).toLocaleString() + ' &nbsp;&nbsp;</li>' +
+                '<li class="w_132 bold c_red p_t3 a_r">' + parseInt(totalSumKojyoPay, 10).toLocaleString() + ' &nbsp;&nbsp;</li>' +
+                '<li class="w_143 bold p_t3 a_r">' + parseInt((totalSumSikyuPay - totalSumKojyoPay), 10).toLocaleString() + ' &nbsp;&nbsp;</li>' +
+				'<li class="w_70 c p_t3"></li>';
 
 
             // 새로운 합계 ul 요소를 컨테이너 요소에 추가
