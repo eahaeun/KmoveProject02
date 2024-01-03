@@ -3,14 +3,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.zerock.mapper.TaishokuMapper">
 
-	<select id="getTaishokuVO" resultType="org.zerock.domain.TaishokuVO">
+	<select id="getTaishokuVO"
+		resultType="org.zerock.domain.TaishokuVO">
 		SELECT shain.ZAISHOKU_ST,
 		shain.shain_no, shain.shain_nm, shain.busho_nm, shain.yakushoku_nm,
 		shain.nyusha_ymd, shain.taishoku_ymd, taishoku.taishoku_pay,
 		taishoku_renraku, taishoku_jiyu
 		FROM shain
-		LEFT JOIN taishoku ON
-		shain.shain_no = taishoku.shain_no
+		LEFT JOIN taishoku ON shain.shain_no = taishoku.shain_no
+		ORDER BY shain.shain_no
+
 	</select>
 
 	<insert id="insertTaishoku">
@@ -24,11 +26,13 @@
 		DELETE from taishoku where shain_no= #{shain_no}
 	</delete>
 
-	<select id="taishokuSet" resultType="org.zerock.domain.TaishokuVO">
+	<select id="taishokuSet"
+		resultType="org.zerock.domain.TaishokuVO">
 		SELECT taishoku_jiyu,
 		taishoku_renraku
 		FROM taishoku
-		WHERE shain_no = #{shain_no}
+		WHERE
+		shain_no = #{shain_no}
 	</select>
 
 	<select id="getTaishokuInfo"
@@ -45,7 +49,8 @@
 
 	<update id="updateTaishoku">
 		UPDATE taishoku
-		SET taishoku_jiyu = #{taishoku_jiyu}, taishoku_renraku =
+		SET taishoku_jiyu = #{taishoku_jiyu},
+		taishoku_renraku =
 		#{taishoku_renraku}
 		WHERE shain_no = #{shain_no}
 	</update>
