@@ -110,27 +110,59 @@
 		<c:set var="totaldifference" value="0" />
 		<c:forEach var="kyuyojyoho" items="${kyuyojyoho}">       
           <ul>
-			<!-- 지급총액 -->
-            <li class="w_140 a_r b_blue bold c_blue"><c:out value="${kyuyojyoho.sikyu_pay}" />&nbsp;&nbsp;</li>
-            <!-- 공제총액 -->
-            <li class="w_140 a_r b_red c_red bold"><c:out value="${kyuyojyoho.kojyo_pay}" />&nbsp;&nbsp;</li>
-            <!-- 실지급액 -->
-			<c:set var="difference" value="${kyuyojyoho.sikyu_pay - kyuyojyoho.kojyo_pay}" />
-            <li class="w_150 a_r bold b_gray2"><c:out value="${difference}" />&nbsp;&nbsp;</li>
-			<c:set var="totalSikyu_pay" value="${totalSikyu_pay + kyuyojyoho.sikyu_pay}" />
-			<c:set var="totalkojyo_pay" value="${totalkojyo_pay + kyuyojyoho.kojyo_pay}" />
-			<c:set var="totaldifference" value="${totaldifference + difference}" />          
-          </ul>
+		    <!-- 지급총액 -->
+		    <li class="w_140 a_r b_blue bold c_blue">
+		        <script>
+		            document.write(parseInt('${kyuyojyoho.sikyu_pay}', 10).toLocaleString());
+		        </script>
+		        &nbsp;&nbsp;
+		    </li>
+		    <!-- 공제총액 -->
+		    <li class="w_140 a_r b_red c_red bold">
+		        <script>
+		            document.write(parseInt('${kyuyojyoho.kojyo_pay}', 10).toLocaleString());
+		        </script>
+		        &nbsp;&nbsp;
+		    </li>
+		    <!-- 실지급액 -->
+		    <c:set var="difference" value="${kyuyojyoho.sikyu_pay - kyuyojyoho.kojyo_pay}" />
+		    <li class="w_150 a_r bold b_gray2">
+		        <script>
+		            document.write(parseInt('${difference}', 10).toLocaleString());
+		        </script>
+		        &nbsp;&nbsp;
+		    </li>
+		    <c:set var="totalSikyu_pay" value="${totalSikyu_pay + kyuyojyoho.sikyu_pay}" />
+		    <c:set var="totalkojyo_pay" value="${totalkojyo_pay + kyuyojyoho.kojyo_pay}" />
+		    <c:set var="totaldifference" value="${totaldifference + difference}" />
+		</ul>
+
 		</c:forEach>
 		
           <ul class="b_yellow">
-			<!-- 지급총액 총계 -->
-            <li class="w_140 a_r bold"><c:out value="${totalSikyu_pay}" />&nbsp;&nbsp;</li>
-			<!-- 공제총액 총계 -->
-            <li class="w_140 a_r bold"><c:out value="${totalkojyo_pay}" />&nbsp;&nbsp;</li>
-            <!-- 실지금액 총계 -->
-            <li class="w_150 a_r bold "><c:out value="${totaldifference}" />&nbsp;&nbsp;</li>
-          </ul>
+		    <!-- 지급총액 총계 -->
+		    <li class="w_140 a_r bold">
+		        <script>
+		            document.write(parseInt('${totalSikyu_pay}', 10).toLocaleString());
+		        </script>
+		        &nbsp;&nbsp;
+		    </li>
+		    <!-- 공제총액 총계 -->
+		    <li class="w_140 a_r bold">
+		        <script>
+		            document.write(parseInt('${totalkojyo_pay}', 10).toLocaleString());
+		        </script>
+		        &nbsp;&nbsp;
+		    </li>
+		    <!-- 실지금액 총계 -->
+		    <li class="w_150 a_r bold">
+		        <script>
+		            document.write(parseInt('${totaldifference}', 10).toLocaleString());
+		        </script>
+		        &nbsp;&nbsp;
+		    </li>
+		</ul>
+
 		
         </div>
       </div>
