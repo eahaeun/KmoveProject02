@@ -1496,3 +1496,320 @@ div.pay_total {
 	padding-top: 8px;
 	font-weight: bold;
 }
+
+/*footer푸터*/
+.footer.new {
+	clear: both;
+	background: #CAD9F0;
+}
+
+.footer.new .utility {
+	position: relative;
+	border-bottom: 1px solid #dadada;
+}
+
+.footer.new .utility .content {
+	height: auto !important;
+}
+
+.footer.new .list-utility {
+	padding: 18px 0;
+	margin-bottom: 0
+}
+
+.footer.new .list-utility li {
+	position: relative;
+	display: inline-block;
+	padding: 0 25px;
+	line-height: 1;
+	margin-right: -5px;
+}
+
+.footer.new .list-utility li:first-child {
+	padding-left: 0;
+}
+
+.footer.new .list-utility li:after {
+	content: "";
+	width: 1px;
+	height: 13px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #d8d8d8;
+}
+
+.footer.new .list-utility li:last-child:after {
+	display: none;
+}
+
+.footer.new .list-utility li a {
+	font-size: 14px;
+}
+
+.footer.new .list-utility li.private-txt a {
+	font-weight: bold;
+}
+
+.footer.new .content {
+	width: 980px !important;
+	height: 205px;
+	min-height: 0px !important;
+	padding: 0;
+	position: relative;
+	z-index: 0;
+}
+
+.footer.new .content .top {
+	position: absolute;
+	top: 0;
+	right: -65px;
+	padding: 0;
+	margin: 0;
+}
+
+.footer.new .center {
+	float: left;
+	width: 438px;
+}
+
+.footer.new .center img {
+	vertical-align: bottom;
+}
+
+.footer.new .center p {
+	margin: 38px 0 15px 0;
+	font-size: 18px;
+	font-weight: bold;
+	color: #000;
+}
+
+.footer.new .center p.cscenter-info {
+	margin-top: 10px;
+	font-size: 13px;
+	color: #434850;
+	font-weight: normal;
+}
+
+.footer.new .center .cs-btn {
+	display: inline-block;
+	width: 124px;
+	height: 27px;
+	padding-left: 18px;
+	margin-left: 6px;
+	border-radius: 27px;
+	border: 1px solid #f2f2f2;
+	font-size: 13px;
+	line-height: 25px;
+	letter-spacing: -0.5px;
+	color: #000;
+	background: #fff
+		url("//img.payzon.co.kr/_guideImg/common/cs_btn_bg.png") no-repeat
+		125px center;
+	box-sizing: content-box;
+}
+
+.footer.new .customer {
+	float: left;
+	margin: 34px 0 0 51px;
+}
+
+.footer.new .siteKind {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.footer.new .siteKind select::-ms-expand {
+	display: none /* È­»ìÇ¥ ¾ø¾Ö±â for IE10, 11*/
+}
+
+.footer.new .siteKind select {
+	display: block;
+	width: 194px;
+	height: 28px;
+	margin-top: 10px;
+	padding-left: 10px;
+	line-height: 26px;
+	text-decoration: none;
+	border-radius: 2px;
+	border: solid 1px #cbd4d9;
+	background: #fff
+		url("//img.payzon.co.kr/_guideImg/common/footer-family-arr.gif")
+		no-repeat 187px 50%;
+	box-sizing: content-box;
+	-webkit-appearance: none; /* È­»ìÇ¥ ¾ø¾Ö±â for chrome*/
+	-moz-appearance: none; /* È­»ìÇ¥ ¾ø¾Ö±â for firefox*/
+	appearance: none /* È­»ìÇ¥ ¾ø¾Ö±â °øÅë*/
+}
+
+.footer.new .siteKind option {
+	text-decoration: none;
+	color: #757575;
+	line-height: 20px;
+	font-size: 12px;
+}
+
+.footer.new .address {
+	float: left;
+	margin: 72px 0 0 0;
+	font-size: 13px;
+	line-height: 1.5;
+	color: #434850;
+}
+
+.footer.new .address p {
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.footer.new .address strong {
+	display: block;
+	color: #000;
+}
+
+.footer.new .address p:first-child {
+	float: left;
+	width: 310px;
+}
+
+.footer.new .address p:last-child {
+	float: right;
+}
+
+.about {
+	width: 980px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.content {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+/* tmp */
+.certiArea {
+	float: left;
+}
+
+.partnerArea {
+	float: right;
+}
+
+.certiArea div, .partnerArea div {
+	display: inline-block;
+	padding: 24px 0;
+	margin-right: -3px;
+}
+
+.partnerArea div:last-child {
+	margin-right: 0;
+}
+
+.commonBtn {
+	display: inline-block;
+	width: auto;
+	height: 21px;
+	padding-left: 20px;
+	padding-right: 7px;
+	border: 1px solid #e8e8e8;
+	background:
+		url('https://www.payzon.co.kr/_commonImg/btn_common_icon.png')
+		no-repeat center left;
+	color: #999;
+	line-height: 21px;
+}
+
+/* border-radius */
+.ui-widget-content.ui-widget-content {
+	border-radius: 10px;
+}
+
+/* ºê¶ó¿ìÀú Áö¿ø ¾È³» 20220916 */
+.curtain-bannerV2 {
+	min-width: 100%;
+	height: 50px;
+	background: #ffffee;
+	border-bottom: 1px solid #e6e6d7;
+	font-size: 12px;
+	color: #000;
+}
+
+.curtain-bannerV2 .content {
+	height: 51px;
+	position: relative;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	letter-spacing: 0px;
+}
+
+.curtain-bannerV2 .btn {
+	position: relative;
+	z-index: 10;
+	font-size: 12px;
+	border-radius: 19.5px;
+	line-height: 10px;
+	margin-left: 20px;
+	background: #067dfd;
+	color: #fff;
+}
+
+.curtain-bannerV2 .btnClose {
+	position: relative;
+	float: right;
+	margin: 4px;
+	font-size: 12px;
+	color: #000;
+}
+
+.curtain-bannerV2 .notice {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: auto;
+	color: #000;
+}
+
+.curtain-bannerV2 .notice>img {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	margin-bottom: 3px;
+}
+
+.curtain-bannerV2 .notice ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding-left: 25px;
+	height: 41px;
+}
+
+.curtain-bannerV2 .notice .btn {
+	background: none;
+	padding: 0;
+	margin: 0;
+}
+
+.curtain-bannerV2 .notice a {
+	width: auto;
+	height: auto;
+	border: 0;
+}
+
+.curtain-bannerV2 .notice .btnimg {
+	width: 100%;
+	height: 41px;
+	margin: 0;
+}
