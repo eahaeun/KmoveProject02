@@ -6,8 +6,9 @@ import lombok.Data;
 public class SikyuVO {
 
 	private String sikyu_km;
-    private String hansu_tani;
+    private String sikyu_tani;
     private int ikkatsu_pay;
+    private String sikyu_active;
     
 }
 

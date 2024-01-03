@@ -9,27 +9,38 @@
 		select * from kojyo
 	</select>
 	
-	
-	
-	<insert id="insert">
-		INSERT INTO kojyo (kojyo_km, hansu_tani, biko)
-		values (#{kojyo_km}, #{hansu_tani}, #{biko})
-	</insert>
-	
-	<update id="update">
-		update Kojyo
-		set
-		hansu_tani =#{hansu_tani},
-		biko = #{biko}
-		where Kojyo= #{Kojyo}
-	</update>
-	
-	<select id="read" resultType="org.zerock.domain.KojyoVO"> 
-	select * from Kojyo where kojyo_km = #{kojyo_km}
+	<select id="get" resultType="org.zerock.domain.KojyoVO">
+		select * from kojyo
 	</select>
-	
+
+	<select id="getByKojyoKm" resultType="org.zerock.domain.KojyoVO">
+		select * from kojyo where
+		kojyo_km = #{kojyo_km}
+	</select>
+
+	<update id="update" parameterType="Map">
+		UPDATE kojyo
+		SET
+		kojyo_km =
+		#{vo.kojyo_km},
+		hansu_tani = #{vo.hansu_tani, jdbcType=CHAR},
+		biko =
+		#{vo.biko},
+		kojyo_active = #{vo.kojyo_active, jdbcType=CHAR}
+		WHERE
+		kojyo_km = #{target_kojyo_km}
+	</update>
+
+	<insert id="create" parameterType="org.zerock.domain.KojyoVO">
+        <![CDATA[
+        INSERT INTO kojyo VALUES (#{kojyo_km}, #{hansu_tani, jdbcType=CHAR}, #{biko}, #{kojyo_active, jdbcType=CHAR})
+        ]]>
+	</insert>
+
 	<delete id="delete">
-		delete Kojyo where kojyo_km = #{kojyo_km}
+		delete from kojyo where
+		kojyo_km =
+		#{kojyo_km}
 	</delete>
 	
 </mapper>

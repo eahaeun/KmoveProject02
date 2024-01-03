@@ -8,26 +8,38 @@
 	<select id="getList" resultType="org.zerock.domain.SikyuVO">
 		select * from Sikyu
 	</select>
-	
-	<insert id="insert">
-		INSERT INTO Sikyu (sikyu_km, hansu_tani, ikkatsu_pay)
-		values (#{sikyu_km}, #{hansu_tani}, #{ikkatsu_pay})
-	</insert>
-	
-	<update id="update">
-		update Sikyu
-		set
-		hansu_tani =#{hansu_tani},
-		ikkatsu_pay = #{ikkatsu_pay}
-		where Sikyu= #{Sikyu}
-	</update>
-	
-	<select id="read" resultType="org.zerock.domain.SikyuVO"> 
-	select * from Sikyu where Sikyu_km = #{Sikyu_km}
+
+	<select id="get" resultType="org.zerock.domain.SikyuVO">
+		select * from sikyu
 	</select>
-	
+
+	<select id="getBySikyuKm" resultType="org.zerock.domain.SikyuVO">
+		select * from sikyu where
+		sikyu_km = #{sikyu_km}
+	</select>
+
+	<update id="update" parameterType="Map">
+		UPDATE sikyu
+		SET
+		sikyu_km =
+		#{vo.sikyu_km},
+		sikyu_tani = #{vo.sikyu_tani, jdbcType=CHAR},
+		ikkatsu_pay = #{vo.ikkatsu_pay},
+		sikyu_active = #{vo.sikyu_active,
+		jdbcType=CHAR}
+		WHERE sikyu_km = #{target_km}
+	</update>
+
+	<insert id="create" parameterType="org.zerock.domain.SikyuVO">
+        <![CDATA[
+        INSERT INTO sikyu VALUES (#{sikyu_km}, #{sikyu_tani, jdbcType=CHAR}, #{ikkatsu_pay}, #{sikyu_active, jdbcType=CHAR})
+        ]]>
+	</insert>
+
 	<delete id="delete">
-		delete Sikyu where Sikyu_km = #{Sikyu_km}
+		delete from sikyu where
+		sikyu_km =
+		#{sikyu_km}
 	</delete>
-	
+
 </mapper>

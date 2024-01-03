@@ -32,7 +32,7 @@
                         <ul class="menu_01">
                             <li><a href="/setting/kaishaRead">管理者情報</a></li>
                             <li><a href="/setting/kyukaRead">休暇・勤怠設定</a></li>
-                            <li><a href="">給与項目設定</a></li>
+                            <li><a href="/setting/sikyuRead">給与項目設定</a></li>
                         </ul>
                     </div>
                 </li>
