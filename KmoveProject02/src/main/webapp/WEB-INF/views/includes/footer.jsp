@@ -4,8 +4,10 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
-<br><br><br><br>
-<div class="footer new" style="margin: 0; padding: 0;">
+<br><br><br>
+
+
+<div class="footer new">
 
     <div class="content">
       <div class="center" style="margin-left: -160px;">
@@ -18,7 +20,7 @@
         </p>
       </div>
 
-      <div class="address" style="padding: 0;">
+      <div class="address">
         <p>
           <strong>株式会社 TEAM ONE</strong>
 			代表者：櫻井孝宏 <br>
@@ -28,7 +30,7 @@
         <p>
 			事業者登録番号: 120-86-50680<br>
 			通信販売業届出番号: 153-1911号<br>
-			個人情報保護責任者: 石川界人
+			個人情報保護責任者: 石川界人<br>
           <img src="../resources/img/f_email.png" alt="">
         </p>
       </div>

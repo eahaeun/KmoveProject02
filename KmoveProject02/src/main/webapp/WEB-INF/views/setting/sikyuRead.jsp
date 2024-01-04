@@ -264,19 +264,13 @@
       <a href="#none"><img id="btnDedSItemClear" src="../resources/img/btn_e.png" width="91px" height="27px" alt="내용지우기" class="p_l5"></a></ul>
 
 
-	</form>
-  </div>
-</div>
+			</form>
+		  </div>
+		</div>
+
 <hr class="hr_50">
-  </div>
-
-
-
-
-
-
-
-
+</div>
+</div>
 
 
 
@@ -292,11 +286,11 @@
 <script>
 // 폼 초기화 함수
 function resetForm() {
-	document.forms[0].reset(); // 인덱스 0은 첫 번째 폼입니다.
+	document.forms[0].reset();
 }
 
 function resetForm2() {
-	document.forms[1].reset(); // 인덱스 0은 첫 번째 폼입니다.
+	document.forms[1].reset();
 }
 
 
