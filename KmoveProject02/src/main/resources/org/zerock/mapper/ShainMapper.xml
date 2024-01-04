@@ -90,6 +90,13 @@
 		delete from shain where shain_no = #{shain_no}
 	</delete>
 	
-	<!-- 사원조회 페이지 카운트들 -->
+	<!-- 목록 보여주기 용 -->
+	<!-- Mapper XML 파일의 일부분 -->
+
+	<select id="getKoyoKeitai" resultType="string">
+	    SELECT DISTINCT koyo_keitai
+	    FROM shain
+	</select>
+
 	
 </mapper>

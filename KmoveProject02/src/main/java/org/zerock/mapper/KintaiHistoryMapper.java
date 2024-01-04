@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import org.zerock.domain.KintaiHistoryVO;
 import org.zerock.domain.KintaiHourVO;
+import org.zerock.domain.KyukaHourVO;
 
 public interface KintaiHistoryMapper {
 
@@ -21,4 +22,9 @@ public interface KintaiHistoryMapper {
 	public List<KintaiHourVO> getDataByMonth(String searchMonth);
 	
 	public List<KintaiHourVO> getDataByD(String searchMonth);
+	
+	public List<KyukaHourVO> getKHour();
+	
+	public List<KintaiHistoryVO> getShain(String shain_no);
+
 }

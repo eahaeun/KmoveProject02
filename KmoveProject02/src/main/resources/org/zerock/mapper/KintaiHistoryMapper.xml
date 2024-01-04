@@ -68,4 +68,47 @@
 		    k.kintai_tani
 	]]>
 	</select>
+	
+	<select id="getKHour" resultType="org.zerock.domain.KyukaHourVO">
+	<![CDATA[
+	    SELECT
+	    	kh.shain_no,
+	    	EXTRACT(YEAR FROM kh.kaishi_ymd) AS kaishi_year,  
+	    	EXTRACT(YEAR FROM kh.shuryo_ymd) AS shuryo_year,  
+	    	k.kintai_tani,
+	    	SUM(kintai_hour) AS total_kintai_hour
+		FROM
+		    kintai_history kh
+		    JOIN kintai k ON kh.kintai_km = k.kintai_km
+		WHERE
+		    (EXTRACT(YEAR FROM kh.kaishi_ymd) = EXTRACT(YEAR FROM CURRENT_DATE)
+		    OR EXTRACT(YEAR FROM kh.shuryo_ymd) = EXTRACT(YEAR FROM CURRENT_DATE))
+		    AND k.kintai_tani = 'D'
+		GROUP BY
+		    kh.shain_no,
+		    EXTRACT(YEAR FROM kh.kaishi_ymd),  
+		    EXTRACT(YEAR FROM kh.shuryo_ymd),  
+		    k.kintai_tani
+	]]>
+	</select>
+	
+	<select id="getShain" resultType="org.zerock.domain.KintaiHistoryVO" parameterType="string">
+    <![CDATA[
+		SELECT
+			kh.shain_no, 
+			kh.nyuryoku_ymd,
+			kh.kintai_km,
+			kh.kaishi_ymd,
+			kh.shuryo_ymd,
+			kh.kintai_hour
+		FROM
+			kintai_history kh
+			JOIN kintai k ON kh.kintai_km = k.kintai_km
+		WHERE
+			kh.shain_no = #{shain_no}
+			AND EXTRACT(YEAR FROM kh.kaishi_ymd) = EXTRACT(YEAR FROM SYSDATE)
+			AND EXTRACT(YEAR FROM kh.shuryo_ymd) = EXTRACT(YEAR FROM SYSDATE)
+			AND k.kintai_tani = 'D'
+    ]]>
+</select>
 </mapper>

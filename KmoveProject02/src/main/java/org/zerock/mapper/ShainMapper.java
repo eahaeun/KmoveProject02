@@ -32,4 +32,6 @@ public interface ShainMapper {
 	
 	public void delete(String shain_no);
 	
+	public List<String> getKoyoKeitai();
+	
 }
