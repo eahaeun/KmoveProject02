@@ -6,7 +6,44 @@
 <%@include file="../includes/modalheader.jsp"%>
 <%@include file="../includes/menu.jsp"%>
 
+<script>
+// 검색
+function filterTable() {
+	// 입력된 검색어 가져오기
+	var input = document.getElementById('searchInput'); // 만약 다른 ID를 사용하고 싶다면 해당 ID로 변경
+	console.log("searchInput : " + searchInput);
+	var filter = input.value.toUpperCase();
 
+	// 테이블과 행 가져오기
+	var table = document.getElementById('table_dil_data');
+	var ulElements = table.getElementsByTagName('ul');
+
+	// 각 행을 반복하며 필터링 적용
+	for (var i = 0; i < ulElements.length; i++) {
+		var lis = ulElements[i].getElementsByTagName('li');
+		var found = false; // 검색어 일치 여부
+
+		// 각 li에 대해 검색어 일치 확인
+		for (var j = 0; j < lis.length; j++) {
+			var li = lis[j];
+			if (li) {
+				var txtValue = li.textContent || li.innerText;
+				if (txtValue.toUpperCase().indexOf(filter) > -1) {
+					found = true;
+					break;
+				}
+			}
+		}
+
+		// 검색어에 일치하는 경우 행을 보이게 하고, 아닌 경우 숨김 처리
+		if (found) {
+			ulElements[i].style.display = '';
+		} else {
+			ulElements[i].style.display = 'none';
+		}
+	}
+}
+</script>
 
 <div id="main_container">
   <!-- 타이틀 이미지 -->
@@ -26,27 +63,26 @@
   <!-- 검색 & 정렬 -->
     <div class="search_box p_b10 p_l10 ">
     
-	<!-- <form name="frmSrchEmployee" id="frmSrchEmployee" onsubmit="return $.fn.frmLeavItemSrchCheck();">
+	<form name="frmSrchEmployee" id="frmSrchEmployee" onsubmit="return $.fn.frmLeavItemSrchCheck();">
 	<input type="hidden" name="frmEmplStatNum" id="frmEmplStatNum" value="1">
         <ul class="tit w_100 bold">* 休暇項目選択&nbsp;</ul> 
         <ul class="p_t1">
 			<select name="selLvItCode" id="selLvItCode" style="width:130px;" class="goSelect">
-           　		<option value="goLeaveSet">휴가 설정하기</option>
+           　		<option value="goLeaveSet">수정필요</option>
         </select>
         </ul>
 
         <ul class="p_l5">
-        <input name="srchAllKwrd" id="srchAllKwrd" type="text" value="검색어 입력" class="border w_170 height_22 p_l5" onfocus="this.value = (this.value == '검색어 입력')?'':this.value;"></ul>
+        <input name="searchInput" id="searchInput" type="text" placeholder="キーワード入力" class="border w_170 height_22 p_l5" onkeyup="filterTable()"></ul>
         <ul class="p_t1">
         <input type="image" value="검색" src="../resources/img/btn_s_search.png" width="23px" height="23px" alt="검색" title="검색" class="p_l5 "></ul>
 		</form>
 
-      <a href=""><img name="btnSrchInit" id="btnSrchInit" type="image" value="전체보기" src="../resources/img/btn_list_all01.png" width="74px" height="23px" alt="전체보기" title="전체보기" class="p_l5"></a>
-       -->
+      	<a href="/kintai/remain"><img name="btnSrchInit" id="btnSrchInit" type="image" value="전체보기" src="../resources/img/btn_list_all01.png" width="74px" height="23px" alt="전체보기" title="전체보기" class="p_l5"></a>
       
-      <ul class="right p_t1" style="float:left;">
-          <!-- <div style="float:left; margin-left:160px;"> -->
-          <div style="float:left;">
+      
+     	 <ul class="right p_t1" style="float:right;" id="jyoho">
+          <div style="float:left; margin-left:160px;">
          	<select name="koyo_keitai" id="koyo_keitai" style="width:100px;" class="goSelect">
 	            <option value="雇用形態" disabled selected>雇用形態</option>
 	            <c:forEach items="${koyoKeitaiList}" var="koyoKeitai">
@@ -69,7 +105,7 @@
 
    <!-- 휴가조회 리스트 -->
       <div class="e_total">
-        <div id="table1" style="width: 82.8%;">
+        <div id="table1">
         <p class="caption"></p>
         <ul>
         <li class="w_105 tit ">雇用形態</li>
@@ -77,37 +113,39 @@
         <li class="w_100 tit"><a href="" class="c_linkblue"><strong>氏名</strong></a></li>
         <li class="w_120 tit"><a href="" class="c_linkblue"><strong>部署</strong></a></li>
         <li class="w_120 tit"><a href="" class="c_linkblue"><strong>役職</strong></a></li>
-        <!-- <li class="w_170 tit">休暇項目</li> -->
+        <li class="w_170 tit">休暇項目</li>
         <li class="w_140 tit">全体</li>
         <li class="w_140 tit">使用</li>
         <li class="w_140 tit">残り</li>
         </ul>
-
-		<c:forEach items="${list}" var="shain">
-	        <ul class="anchor clsListingTable shainList" data-shain-no="${shain.shain_no}">
-	          <li class="w_105 ">${shain.koyo_keitai}</li>
-	          <li class="w_105 ">${shain.shain_no}</li>
-	          <li class="w_100 ">${shain.shain_nm}</li>
-	          <li class="w_120 ">${shain.busho_nm}</li>
-	          <li class="w_120 ">${shain.yakushoku_nm}</li>
-	          <!-- <li class="w_170 ">2017_연차 수정필요</li> -->
-	          <li class="w_140 bold">${shain.kyuka}</li>
-	          <li class="w_140 bold c_blue">
-		          	<c:forEach items="${khour}" var="khour">
-	                      <c:if test="${khour.shain_no eq shain.shain_no}">
-	                                ${khour.total_kintai_hour}
-	                      </c:if>
-	                </c:forEach>
-	          </li>
-	          <li class="w_140 bold c_red">
-	          		<c:forEach items="${khour}" var="khour">
-                         <c:if test="${khour.shain_no eq shain.shain_no}">
-                                ${shain.kyuka - khour.total_kintai_hour}
-                         </c:if>
-                    </c:forEach>
-	          </li>
-	        </ul>
-		</c:forEach>
+		
+		<div id="table_dil_data">
+			<c:forEach items="${list}" var="shain">
+		        <ul class="anchor clsListingTable shainList" data-shain-no="${shain.shain_no}">
+		          <li class="w_105 ">${shain.koyo_keitai}</li>
+		          <li class="w_105 ">${shain.shain_no}</li>
+		          <li class="w_100 ">${shain.shain_nm}</li>
+		          <li class="w_120 ">${shain.busho_nm}</li>
+		          <li class="w_120 ">${shain.yakushoku_nm}</li>
+		          <li class="w_170 ">수정필요</li>
+		          <li class="w_140 bold">${shain.kyuka}</li>
+		          <li class="w_140 bold c_blue">
+			          	<c:forEach items="${khour}" var="khour">
+		                      <c:if test="${khour.shain_no eq shain.shain_no}">
+		                                ${khour.total_kintai_hour}
+		                      </c:if>
+		                </c:forEach>
+		          </li>
+		          <li class="w_140 bold c_red">
+		          		<c:forEach items="${khour}" var="khour">
+	                         <c:if test="${khour.shain_no eq shain.shain_no}">
+	                                ${shain.kyuka - khour.total_kintai_hour}
+	                         </c:if>
+	                    </c:forEach>
+		          </li>
+		        </ul>
+			</c:forEach>
+		</div>
 
         </div>
     </div>

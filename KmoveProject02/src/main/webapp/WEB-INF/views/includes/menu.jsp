@@ -31,7 +31,7 @@
                     <div class="menu_2depth_01_2020 " style="z-index:9999;">
                         <ul class="menu_01">
                             <li><a href="/setting/kaishaRead">管理者情報</a></li>
-                            <li><a href="/setting/kyukaRead">休暇・勤怠設定</a></li>
+                            <li><a href="">休暇・勤怠設定</a></li>
                             <li><a href="/setting/sikyuRead">給与項目設定</a></li>
                         </ul>
                     </div>
@@ -53,7 +53,7 @@
                         <ul class="menu_01">
                             <li><a href="/kintai/list">勤怠記録・管理</a></li>
                             <li><a href="/kintai/view">勤怠一覧</a></li>
-                            <li><a href="">休暇一覧</a></li>
+                            <li><a href="/kintai/remain">休暇一覧</a></li>
                         </ul>
                     </div>
                 </li>
