@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zerock.mapper.KyukaMapper">
+
+	<select id="get" resultType="org.zerock.domain.KyukaVO">
+		select * from kyuka
+	</select>
+
+	<select id="getByKyukaKm" resultType="org.zerock.domain.KyukaVO">
+		select * from kyuka where
+		kyuka_km = #{kyuka_km}
+	</select>
+
+	<update id="update" parameterType="map">
+		UPDATE kyuka
+		SET
+		kyuka_km = #{vo.kyuka_km},
+		kaishi_ymd = #{vo.kaishi_ymd},
+		shuryo_ymd = #{vo.shuryo_ymd},
+		kyuka_active = #{vo.kyuka_active, jdbcType=CHAR}
+		WHERE kyuka_km = #{target_km}
+	</update>
+
+
+	<insert id="create" parameterType="org.zerock.domain.KyukaVO">
+        <![CDATA[
+        INSERT INTO kyuka VALUES (#{kyuka_km}, #{kaishi_ymd}, #{shuryo_ymd}, #{kyuka_active, jdbcType=CHAR})
+        ]]>
+	</insert>
+
+	<delete id="delete">
+		delete from kyuka where
+		kyuka_km =
+		#{kyuka_km}
+	</delete>
+
+
+</mapper>

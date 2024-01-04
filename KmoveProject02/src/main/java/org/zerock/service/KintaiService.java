@@ -9,4 +9,14 @@ public interface KintaiService {
 	
 	public List<KintaiVO> getList();
 	
+	public List<KintaiVO> get(String Kintai_km);
+
+	public boolean update(KintaiVO vo, String target_kintai_km);
+
+	public void delete(String kintai_km);
+
+	public void create(KintaiVO vo);
+	
+	public KintaiVO getByKintaiKm(String kintai_km);
+	
 }

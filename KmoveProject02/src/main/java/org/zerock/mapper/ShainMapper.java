@@ -34,4 +34,6 @@ public interface ShainMapper {
 	
 	public List<String> getKoyoKeitai();
 	
+	public int addKyuka();
+	
 }

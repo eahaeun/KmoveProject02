@@ -67,7 +67,7 @@
           </ul>
           <ul>
           <li class="w_100 tit">電話</li>
-          <li class="w_170 con">${kaisha.renraku_tel}</li>
+          <li class="w_170 con">${kaisha.kaisha_tel}</li>
           <li class="w_100 tit">ファックス</li>
           <li class="w_169 con">${kaisha.renraku_fax}</li>
           </ul>

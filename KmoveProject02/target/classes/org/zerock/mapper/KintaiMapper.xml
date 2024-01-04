@@ -9,28 +9,37 @@
 		kintai_km
 	</select>
 
-	<!-- mapper.xml 파일 내에 해당 부분을 추가합니다. -->
-	<insert id="insert">
-		INSERT INTO kintai_history VALUES (
-		kintai_seq.nextval,
-		#{shain_no},
-		#{kintai_km},
-		#{nyuryoku_ymd},
-		#{kaishi_ymd},
-		#{shuryo_ymd},
-		#{kintai_hour},
-		#{kintai_pay}
-		)
+	<select id="get" resultType="org.zerock.domain.KintaiVO">
+		select * from kintai
+	</select>
+
+	<select id="getByKintaiKm"
+		resultType="org.zerock.domain.KintaiVO">
+		select * from kintai where
+		kintai_km = #{kintai_km}
+	</select>
+
+	<update id="update" parameterType="Map">
+		UPDATE kintai
+		SET
+		kintai_km =
+		#{vo.kintai_km},
+		kintai_tani = #{vo.kintai_tani, jdbcType=CHAR},
+		kintai_group = #{vo.kintai_group},
+		kintai_active = #{vo.kintai_active, jdbcType=CHAR}
+		WHERE kintai_km = #{target_kintai_km}
+	</update>
+
+	<insert id="create" parameterType="org.zerock.domain.KintaiVO">
+        <![CDATA[
+        INSERT INTO kintai VALUES (#{kintai_km}, #{kintai_tani}, #{kintai_group}, #{kintai_active})
+        ]]>
 	</insert>
-	
-	<select id="read" resultType="org.zerock.domain.KintaiHistoryVO"> 
-	select * from Kintai_history where shain_no = #{shain_no}
-	</select>
-	
-	<select id="findBykintaiHistory" resultType="org.zerock.domain.KintaiHistoryVO">
-	
-	select * from Kintai_history where shain_no = #{shain_no} and TO_CHAR(nyuryoku_ymd, 'YYYY-MM') = #{kizoku_ym}
-	
-	</select>
+
+	<delete id="delete">
+		delete from kintai where
+		kintai_km =
+		#{kintai_km}
+	</delete>
 
 </mapper>

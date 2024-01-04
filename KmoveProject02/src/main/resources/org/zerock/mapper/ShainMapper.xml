@@ -98,5 +98,8 @@
 	    FROM shain
 	</select>
 
-	
+	<!-- 휴가15일추가 -->
+	<update id="addKyuka" parameterType="org.zerock.domain.ShainVO">
+		update shain set kyuka = kyuka +15 where rownum >0
+	</update>
 </mapper>
