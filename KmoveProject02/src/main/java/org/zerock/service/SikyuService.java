@@ -16,5 +16,5 @@ public interface SikyuService {
 	
 	public SikyuVO getBySikyuKm(String sikyu_km);
 
-
+	public int getCount();
 }

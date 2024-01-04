@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -31,6 +32,9 @@ public class SikyuController {
 
 	@GetMapping("/sikyuRead")
 	public void sikyuget(Model model) {
+		model.addAttribute("sikyuCount",sikyuservice.getCount());
+		model.addAttribute("kojyoCount",kojyoservice.getCount());
+		
 		List<SikyuVO> sikyuread = sikyuservice.get("sikyu_km");
 		log.info(sikyuread);
 		model.addAttribute("sikyuList", sikyuread);
@@ -39,19 +43,33 @@ public class SikyuController {
 		log.info(kojyoread);
 		model.addAttribute("kojyoList", kojyoread);
 	}
+	
+	@PostMapping("/sikyuRead")
+	@ResponseBody
+	public SikyuVO test(@RequestParam("sikyu_km") String sikyu_km, Model model) {
+		model.addAttribute("sikyuCount",sikyuservice.getCount());
+		model.addAttribute("kojyoCount",kojyoservice.getCount());
+		
+		System.out.println("성공 : " + sikyu_km);
+
+		SikyuVO sikyu = sikyuservice.getBySikyuKm(sikyu_km);
+		log.info("hahaha: " + sikyu);
+
+		return sikyu;
+	}
 
 	@PostMapping("/sikyuUpdate")
 	public String sikyuUpdate(SikyuVO vo, @RequestParam("target_km") String target_km) {
-		log.info(vo);
+		log.info("hahaha" + vo.toString());
 		sikyuservice.update(vo, target_km);
 		return "redirect:/setting/sikyuRead";
 	}
-
+	
 	@PostMapping("/sikyuCreate")
-	public String sikyuCreate(SikyuVO vo) {
-		sikyuservice.create(vo);
-		return "redirect:/setting/sikyuRead";
-	}
+    public String sikyuCreate(@ModelAttribute SikyuVO sikyu) {
+		sikyuservice.create(sikyu);
+    	return "redirect:/setting/sikyuRead";
+    }
 
 	@PostMapping("/sikyuDelete")
 	public String sikyuDelete(@RequestParam("sikyu_km") String sikyu_km) {
@@ -70,7 +88,6 @@ public class SikyuController {
 	public String kojyoCreate(KojyoVO vo) {
 		kojyoservice.create(vo);
 		return "redirect:/setting/sikyuRead";
-
 	}
 
 	@PostMapping("/kojyoDelete")
@@ -79,16 +96,6 @@ public class SikyuController {
 		return "redirect:/setting/sikyuRead";
 	}
 	
-	@PostMapping("/sikyuRead")
-	@ResponseBody
-	public SikyuVO test(@RequestParam("sikyu_km") String sikyu_km, Model model) {
-		System.out.println("성공" + sikyu_km);
-
-		SikyuVO sikyu = sikyuservice.getBySikyuKm(sikyu_km);
-
-		return sikyu;
-	}
-
 	@PostMapping("/kojyoRead")
 	@ResponseBody
 	public KojyoVO tested(@RequestParam("kojyo_km") String kojyo_km, Model model) {

@@ -48,4 +48,11 @@ public class SikyuServiceImpl implements SikyuService {
 		return sikyuMapper.getBySikyuKm(sikyu_km);
 	}
 
+	@Override
+	public int getCount() {
+		return sikyuMapper.getCount();
+	}
+	
+	
+
 }

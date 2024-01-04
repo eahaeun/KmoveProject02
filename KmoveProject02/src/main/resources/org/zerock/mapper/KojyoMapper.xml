@@ -43,4 +43,8 @@
 		#{kojyo_km}
 	</delete>
 	
+	<select id="getCount" resultType="int">
+		select count(*) from kojyo
+	</select>
+	
 </mapper>

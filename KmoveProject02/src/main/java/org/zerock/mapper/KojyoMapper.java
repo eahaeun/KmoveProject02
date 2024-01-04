@@ -20,4 +20,6 @@ public interface KojyoMapper {
 	
 	public KojyoVO getByKojyoKm(String kojyo_km);
 
+	//카운트
+	public int getCount();
 }

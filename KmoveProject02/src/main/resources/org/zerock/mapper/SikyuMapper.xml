@@ -21,25 +21,29 @@
 	<update id="update" parameterType="Map">
 		UPDATE sikyu
 		SET
-		sikyu_km =
-		#{vo.sikyu_km},
+		sikyu_km = #{vo.sikyu_km},
+		kazei_active = #{vo.kazei_active, jdbcType=CHAR},
+		hikazei_nm = #{vo.hikazei_nm},
+		hikazei_limit = #{vo.hikazei_limit},
 		sikyu_tani = #{vo.sikyu_tani, jdbcType=CHAR},
 		ikkatsu_pay = #{vo.ikkatsu_pay},
-		sikyu_active = #{vo.sikyu_active,
-		jdbcType=CHAR}
+		sikyu_active = #{vo.sikyu_active,jdbcType=CHAR}
 		WHERE sikyu_km = #{target_km}
 	</update>
 
 	<insert id="create" parameterType="org.zerock.domain.SikyuVO">
         <![CDATA[
-        INSERT INTO sikyu VALUES (#{sikyu_km}, #{sikyu_tani, jdbcType=CHAR}, #{ikkatsu_pay}, #{sikyu_active, jdbcType=CHAR})
+        INSERT INTO sikyu VALUES (#{sikyu_km}, #{kazei_active, jdbcType=CHAR}, #{hikazei_nm}, #{hikazei_limit}, #{sikyu_tani, jdbcType=CHAR}, #{ikkatsu_pay}, #{sikyu_active, jdbcType=CHAR})
         ]]>
 	</insert>
 
 	<delete id="delete">
 		delete from sikyu where
-		sikyu_km =
-		#{sikyu_km}
+		sikyu_km = #{sikyu_km}
 	</delete>
+	
+	<select id="getCount" resultType="int">
+		select count(*) from sikyu
+	</select>
 
 </mapper>

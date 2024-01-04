@@ -19,4 +19,7 @@ public interface SikyuMapper {
 	public void create(SikyuVO vo);
 	
 	public SikyuVO getBySikyuKm(String sikyu_km);
+	
+	//카운트
+	public int getCount();
 }

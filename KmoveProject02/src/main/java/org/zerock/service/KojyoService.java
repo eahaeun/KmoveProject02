@@ -15,5 +15,7 @@ public interface KojyoService {
 	public void delete(String kojyo_km);
 	
 	public KojyoVO getByKojyoKm(String kojyo_km);
+	
+	public int getCount();
 
 }

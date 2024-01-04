@@ -47,4 +47,10 @@ public class KojyoServiceImpl implements KojyoService {
 		return kojyoMapper.getByKojyoKm(kojyo_km);
 	}
 
+	@Override
+	public int getCount() {
+		return kojyoMapper.getCount();
+	}
+
+	
 }
