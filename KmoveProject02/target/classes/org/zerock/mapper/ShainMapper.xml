@@ -102,4 +102,30 @@
 	<update id="addKyuka" parameterType="org.zerock.domain.ShainVO">
 		update shain set kyuka = kyuka +15 where rownum >0
 	</update>
+	
+	<!-- shainModify -->
+	<update id="modify" parameterType="org.zerock.domain.ShainVO">
+		update Shain set
+		shain_nm=#{shain_nm},
+		address=#{address},
+		birth=#{birth},
+		busho_nm=#{busho_nm},
+		yakushoku_nm=#{yakushoku_nm},
+		kihon_pay=#{kihon_pay},
+		renraku_tel=#{renraku_tel},
+		renraku_email=#{renraku_email},
+		nyusha_ymd=#{nyusha_ymd},
+		taishoku_ymd=null,
+		ginko_nm=#{ginko_nm},
+		koza_num=#{koza_num},
+		zaishoku_st='在職',
+		kyuka=null,
+		koyo_keitai=#{koyo_keitai}
+		where
+		shain_no=#{shain_no}
+	</update>
+	
+	<select id="get" resultType="org.zerock.domain.ShainVO" parameterType="String">
+	select * from shain where shain_no=#{shain_no}
+	</select>
 </mapper>

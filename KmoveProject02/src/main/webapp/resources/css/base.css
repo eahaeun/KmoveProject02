@@ -2942,3 +2942,7 @@ dark-thin-current
 .mCS-dark-thin-current>.mCSB_scrollTools .mCSB_buttonRight {
 	background-position: -80px -56px;
 } */
+.notice a, .online_c a, .part a, .logo_reg, .c_666, #table_employee li,
+	#table1 li.tit, li, #table1 li.tit_thin {
+	color: #666666;
+}

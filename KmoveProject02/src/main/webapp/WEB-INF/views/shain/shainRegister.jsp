@@ -4,15 +4,29 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
-<%@include file="../includes/header.jsp"%>
+<%@include file="../includes/modalheader.jsp"%>
 <%@include file="../includes/menu.jsp"%>
+
 
 <script>
 function triggerFileInput() {
 	console.log("하하");
 	document.getElementById('fileInput').click();
 }
+
+function toggleModal(modalId) {
+	var modal = document.getElementById(modalId);
+	modal.style.display = (modal.style.display === 'none' || modal.style.display === '') ? 'block'
+			: 'none';
+}
+
+function reloadModal(modalType) {
+    toggleModal(modalType); // 모달 닫기
+    // 모달을 닫았다가 다시 열면 모달의 내용이 새로 고침됨
+    toggleModal(modalType); // 모달 열기
+}
 </script>
+
 
 
 <div id="main_container">
@@ -93,7 +107,11 @@ function triggerFileInput() {
 				<option value="${busho.busho_nm}">${busho.busho_nm}</option>
 			</c:forEach>
           </select>
-          <div class="img"><span class="anchor"><img name="idCmpnDprtSet" id="idCmpnDprtSet" src="../resources/img/btn_settingadmin.png" width="42px" height="20px"></span></div>
+          <div class="img">
+          	<span class="anchor">
+          		<img src="../resources/img/btn_settingadmin.png" width="42px" height="20px" onclick="toggleModal('myModal1')">
+            </span>
+          </div>
         </li>
         
         <li class="titLeft p_l28" style="width:77px;">役職</li>
@@ -355,6 +373,15 @@ function triggerFileInput() {
 	</div>
 </div>   
     
+
+
+
+
+
+
+
+
+
     
 <script type="text/javascript">
 $(document).ready(function(e) {

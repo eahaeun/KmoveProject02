@@ -25,4 +25,8 @@ public interface ShainService {
 	
 	public int getCountByStateType(String stateType);
 	
+	public boolean modify(ShainVO vo);
+	
+	public ShainVO get(String shain_no);
+	
 }

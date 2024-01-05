@@ -36,4 +36,8 @@ public interface ShainMapper {
 	
 	public int addKyuka();
 	
+	public int modify(ShainVO vo);
+	
+	public ShainVO get(String shain_no);
+	
 }

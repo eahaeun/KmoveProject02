@@ -2099,3 +2099,35 @@ div.emreg_rt {
 	width: 800px;
 	margin: 10px 0 0 40px;
 }
+
+/* 부서 설정 */
+ul.last {
+	float: left;
+	margin: 0px 15px 10px 15px;
+	width: 189px;
+	height: 20px;
+	background-color: #a6a6a6;
+	text-align: right;
+	padding-top: 5px;
+}
+
+ul.last li a:link {
+	color: #ffffff;
+	font-size: 11px;
+	padding-right: 5px;
+}
+
+ul.last li A:visited {
+	color: #ffffff;
+	font-size: 11px;
+	padding-right: 5px;
+}
+
+ul.last li a:hover {
+	color: #ffff99;
+}
+
+li.footer {
+	width: 100%;
+	padding: 20px 5px;
+}

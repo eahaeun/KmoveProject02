@@ -99,23 +99,23 @@
         <div id="table1" style="width:1149px;">
         <p class="caption"></p>
         <ul>
-        <li class="w_24 tit"><label class="label_check" for="chkBoxGrpEmployeeInfo"><input type="checkbox" id="selectAllCheckbox"/></label></li>
-		<li class="tit w_74">雇用形態</li>
-		<li class="tit w_100">入社日</li>
-		<li class="tit w_92">社員番号</li>
-		<li class="tit w_92">氏名</li>
-		<li class="tit w_100">部署</li>
-		<li class="tit w_90">役職</li>
-		<li class="tit w_110">生年月日</li>
-		<li class="tit w_120">携帯電話</li>
-		<li class="tit w_165">メール</li>
-		<li class="tit w_100">退職日</li>
-		<li class="tit w_70">在職状態</li>
+	        <li class="w_24 tit"><label class="label_check" for="chkBoxGrpEmployeeInfo"><input type="checkbox" id="selectAllCheckbox"/></label></li>
+			<li class="tit w_74">雇用形態</li>
+			<li class="tit w_100">入社日</li>
+			<li class="tit w_92">社員番号</li>
+			<li class="tit w_92">氏名</li>
+			<li class="tit w_100">部署</li>
+			<li class="tit w_90">役職</li>
+			<li class="tit w_110">生年月日</li>
+			<li class="tit w_120">携帯電話</li>
+			<li class="tit w_165">メール</li>
+			<li class="tit w_100">退職日</li>
+			<li class="tit w_70">在職状態</li>
         </ul>
 
 
           <c:forEach items="${shainList}" var="shain">
-	        <ul class="tmpClass anchor" style="background-color: rgb(255, 255, 255);">
+	        <ul class="tmpClass anchor row-clickable" style="background-color: rgb(255, 255, 255);">
 	          <li class="w_24"><input type="checkbox" class="shainCheckbox" value="${shain.shain_no}"/></li>
 	          <li class="w_74 goEmployeeView">${shain.koyo_keitai}</li>
 	          <li class="w_100 goEmployeeView">${shain.nyusha_ymd}</li>
@@ -487,7 +487,18 @@ document.getElementById("allshain").addEventListener("click", function() {
 		    });
 		}
 
-
+		
+		
+		//modify 이동
+		$(document).on("click", ".row-clickable", function(event){
+		    if ($(event.target).is("input:checkbox")) {
+		        return;
+		    }
+		    var shain_no = $(this).find(".goEmployeeView:eq(2)").text();
+		    
+		    console.log("열 clicked" + shain_no);
+		    window.location.href = "/shain/shainModify?shain_no=" + shain_no;
+		});
 
 
 });

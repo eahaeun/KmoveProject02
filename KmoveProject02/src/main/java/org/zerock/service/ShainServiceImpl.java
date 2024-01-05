@@ -77,6 +77,16 @@ public class ShainServiceImpl implements ShainService {
 	}
 	
 	
-	
+	@Override
+	public boolean modify(ShainVO vo) {
+	    boolean modifyResult = mapper.modify(vo) == 1;
+	    return modifyResult;
+	}
+
+	@Override
+	public ShainVO get(String shain_no) {
+		return mapper.get(shain_no);
+	}
+
 	
 }
