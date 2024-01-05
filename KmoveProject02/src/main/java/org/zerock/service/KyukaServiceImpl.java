@@ -56,6 +56,11 @@ public class KyukaServiceImpl implements KyukaService {
 		// TODO Auto-generated method stub
 		return shainMapper.addKyuka() == 0;
 	}
+
+	@Override
+	public void addKyuka() {
+		shainMapper.addKyuka();
+	}
 	
 	
 

@@ -64,8 +64,11 @@ public class KyukaController {
 
 	@PostMapping("/kyukaCreate")
 	public String kyukacreate(KyukaVO vo) {
+		if(vo.getKyuka_active() == "O") {
+			kyukaservice.addKyuka();
+			log.info("休暇 plus 15日");
+		}
 		kyukaservice.create(vo);
-		kyukaservice.updateKyuka();
 
 		return "redirect:/setting/kyukaRead";
 	}
@@ -86,6 +89,7 @@ public class KyukaController {
 
 	@PostMapping("/kintaiCreate")
 	public String kintaicreate(KintaiVO vo) {
+		log.info("hahaha : " + vo);
 		kintaiservice.create(vo);
 		return "redirect:/setting/kyukaRead";
 

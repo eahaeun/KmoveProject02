@@ -17,4 +17,6 @@ public interface KyukaService {
 	public KyukaVO getByKyukaKm(String kyuka_km);
 	
 	public boolean updateKyuka();
+	
+	public void addKyuka();
 }

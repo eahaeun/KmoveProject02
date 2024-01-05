@@ -22,24 +22,24 @@
 	<update id="update" parameterType="Map">
 		UPDATE kintai
 		SET
-		kintai_km =
-		#{vo.kintai_km},
+		kintai_km = #{vo.kintai_km},
 		kintai_tani = #{vo.kintai_tani, jdbcType=CHAR},
 		kintai_group = #{vo.kintai_group},
+		kyuka_kojyo = #{vo.kyuka_kojyo},
 		kintai_active = #{vo.kintai_active, jdbcType=CHAR}
-		WHERE kintai_km = #{target_kintai_km}
+		WHERE
+		kintai_km = #{target_kintai_km}
 	</update>
 
 	<insert id="create" parameterType="org.zerock.domain.KintaiVO">
         <![CDATA[
-        INSERT INTO kintai VALUES (#{kintai_km}, #{kintai_tani}, #{kintai_group}, #{kintai_active})
+        INSERT INTO kintai VALUES (#{kintai_km}, #{kintai_tani}, #{kintai_group}, #{kyuka_kojyo}, #{kintai_active})
         ]]>
 	</insert>
 
 	<delete id="delete">
 		delete from kintai where
-		kintai_km =
-		#{kintai_km}
+		kintai_km = #{kintai_km}
 	</delete>
 
 </mapper>

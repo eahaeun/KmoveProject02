@@ -411,3 +411,42 @@ input[type="text"] {
 	</div>
 </body>
 </html>
+
+
+<script>
+//버튼 4개
+	$("#btnLvItIns").click(function() {
+      	console.log("btnPayItemIns clicked");
+        $("#kyukaRegisterButton").click();
+      });
+
+      $("#btnLvItUpd").click(function() {
+        $("#kyukaUpdateButton").click();
+      });
+
+      $("#btnLvItDel").click(function() {
+        $("#kyukaDeleteButton").click();
+      });
+
+      $("#btnLvItReset").click(function() {
+        resetForm();
+      });
+      
+      //버튼4개
+      $("#btnDlgnIns").click(function() {
+        $("#kintaiRegisterButton").click();
+      });
+
+      $("#btnDlgnUpd").click(function() {
+        $("#kintaiUpdateButton").click();
+      });
+
+      $("#btnDlgnDel").click(function() {
+        $("#kintaiDeleteButton").click();
+      });
+
+      $("#btnDlgnReset").click(function() {
+        resetForm2();
+      });
+
+</script>

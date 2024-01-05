@@ -485,7 +485,7 @@ $('.sikyu-row').click(
 	$('#kojyoDeleteButton').click(function() {
 		event.preventDefault();
 		
-		if (confirm("정말로 삭제하시겠습니까?")) {
+		if (confirm("本当に削除しますか？")) {
 			// 입력된 값을 가져오기
 			var kojyo_km = $('#kojyo_km').val();
 
@@ -531,6 +531,7 @@ $('.sikyu-row').click(
       });
 
       $("#btnPayItemClear").click(function() {
+    	  event.preventDefault();
         resetForm();
       });
       
@@ -548,6 +549,7 @@ $('.sikyu-row').click(
       });
 
       $("#btnDedSItemClear").click(function() {
+    	  event.preventDefault();
         resetForm2();
       });
 
