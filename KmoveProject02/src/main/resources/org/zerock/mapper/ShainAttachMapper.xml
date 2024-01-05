@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zerock.mapper.ShainAttachMapper">
+
+    <insert id="insert" parameterType="org.zerock.domain.ShainAttachVO">
+        insert into shain_attach (shain_no, shain_uuid, shain_uploadpath, file_nm)
+        values (#{shain_no}, #{shain_uuid}, #{shain_uploadpath}, #{file_nm})
+    </insert>
+
+	<select id="getAttachByShainNo" resultType="org.zerock.domain.ShainAttachVO">
+		select * from shain_attach where shain_no = #{shain_no}
+	</select>
+	
+	<update id="updateAttach">
+		update shain_attach set 
+		shain_uuid = #{shain_uuid},
+		shain_uploadpath = #{shain_uploadpath},
+		file_nm = #{file_nm}
+		where
+		shain_no=#{shain_no}
+	</update>
+</mapper>

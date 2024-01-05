@@ -18,7 +18,6 @@ public class BushoServiceImpl implements BushoService {
 
 	@Override
 	public List<BushoVO> getList() {
-		log.info("getBushoList.......");
 		return mapper.getList();
 	}
 
@@ -36,6 +35,11 @@ public class BushoServiceImpl implements BushoService {
 	public boolean remove(String busho_nm) {
 		log.info("Busho register......");
 		return mapper.delete(busho_nm) == 1;
+	}
+	
+	@Override
+	public BushoVO get(String busho_nm) {
+		return mapper.get(busho_nm);
 	}
 
 }

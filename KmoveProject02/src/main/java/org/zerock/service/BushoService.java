@@ -13,5 +13,7 @@ public interface BushoService {
 	int modify(String busho_nm, String new_value);
 
 	public boolean remove(String busho_nm);
+	
+	public BushoVO get(String busho_nm);
 		
 }

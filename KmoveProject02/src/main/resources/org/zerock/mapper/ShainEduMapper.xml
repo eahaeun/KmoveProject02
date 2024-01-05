@@ -8,4 +8,28 @@
 		delete from shain_edu where shain_no = #{shain_no}
 	</delete>
 	
+	<insert id="register">
+        insert into shain_edu
+        values
+            (#{shain_no, jdbcType=VARCHAR}, #{gakureki_kb, jdbcType=VARCHAR}, #{nyugaku_ym, jdbcType=VARCHAR}, #{sotsugyo_ym, jdbcType=VARCHAR}, #{gakko_nm, jdbcType=VARCHAR}, #{senko, jdbcType=VARCHAR}, #{jyotai, jdbcType=VARCHAR})
+    </insert>
+
+	<update id="eduModify" parameterType="org.zerock.domain.ShainEduVO">
+    	update shain_edu set
+    	gakureki_kb=#{gakureki_kb},
+    	nyugaku_ym=#{nyugaku_ym},
+    	sotsugyo_ym=#{sotsugyo_ym},
+    	gakko_nm=#{gakko_nm},
+    	senko=#{senko},
+    	jyotai=#{jyotai}
+    	where
+    	shain_no=#{shain_no}
+	</update>
+
+
+    <select id="getEduByShainNo" parameterType="String" resultType="org.zerock.domain.ShainEduVO">
+        select * from shain_edu
+        where shain_no=#{shain_no}
+    </select>
+	
 </mapper>

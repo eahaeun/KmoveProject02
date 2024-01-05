@@ -8,4 +8,26 @@
 		delete from shain_career where shain_no = #{shain_no}
 	</delete>
 	
+	<insert id="register">
+		insert into shain_career
+		values
+			(#{shain_no, jdbcType=VARCHAR}, #{kaisha_nm, jdbcType=VARCHAR}, #{nyusha_ymd2, jdbcType=TIMESTAMP}, #{taishoku_ymd2, jdbcType=TIMESTAMP}, #{saishu_yakushoku, jdbcType=VARCHAR}, #{taishoku_jiyu, jdbcType=VARCHAR})
+	</insert>
+	
+	<update id="careerModify" parameterType="org.zerock.domain.ShainCareerVO">
+		update shain_career set
+		kaisha_nm=#{kaisha_nm},
+		nyusha_ymd2=#{nyusha_ymd2},
+		taishoku_ymd2=#{taishoku_ymd2},
+		saishu_yakushoku=#{saishu_yakushoku},
+		taishoku_jiyu=#{taishoku_jiyu}
+		where
+		shain_no=#{shain_no}
+		</update>
+	
+	<select id="getCareerByShainNo" parameterType="String" resultType="org.zerock.domain.ShainCareerVO">
+    SELECT * FROM shain_career
+    WHERE shain_no = #{shain_no}
+	</select>
+	
 </mapper>

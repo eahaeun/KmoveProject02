@@ -14,4 +14,5 @@ public interface BushoMapper {
 
 	public int delete(String busho_nm);
 
+	public BushoVO get(String busho_nm); 
 }

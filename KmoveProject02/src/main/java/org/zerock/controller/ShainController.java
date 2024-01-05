@@ -1,31 +1,55 @@
 package org.zerock.controller;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import org.zerock.domain.RequestVO;
+import org.zerock.domain.ShainAttachVO;
+import org.zerock.domain.ShainCareerListVO;
+import org.zerock.domain.ShainCareerVO;
+import org.zerock.domain.ShainEduListVO;
+import org.zerock.domain.ShainEduVO;
 import org.zerock.domain.ShainVO;
+import org.zerock.service.BushoService;
+import org.zerock.service.ShainAttachService;
+import org.zerock.service.ShainCareerService;
+import org.zerock.service.ShainEduService;
 import org.zerock.service.ShainService;
+import org.zerock.service.YakushokuService;
 
+import lombok.AllArgsConstructor;
 import lombok.Setter;
+import lombok.extern.log4j.Log4j;
 
 @Controller
 @RequestMapping("/shain/*")
+@Log4j
+@AllArgsConstructor
 public class ShainController {
-	@Setter(onMethod_ = @Autowired)
 	private ShainService shainService;
+	private BushoService bushoService;
+	private YakushokuService yakushokuService;
+	private ShainCareerService shainCareerService;
+	private ShainEduService shainEduService;
+	private ShainAttachService shainAttachservice;
 
 	@GetMapping("/shainList")
 	public void getList(Model model) {
-		//카운트 전달
+		// 카운트 전달
 		model.addAttribute("zaishokushaCount", shainService.getCountByStateType("在職"));
 		model.addAttribute("taishokushaCount", shainService.getCountByStateType("退職"));
 		model.addAttribute("seishainCount", shainService.getCountByEmpType("正社員"));
@@ -35,8 +59,7 @@ public class ShainController {
 		model.addAttribute("itakuCount", shainService.getCountByEmpType("委託社員"));
 		model.addAttribute("partCount", shainService.getCountByEmpType("パートタイム"));
 		model.addAttribute("allshainCount", shainService.getCount());
-		
-		
+
 		List<ShainVO> shainList = shainService.getList();
 
 		for (int i = 0; i < shainList.size(); i++) {
@@ -79,7 +102,7 @@ public class ShainController {
 				if (taishokuYmd != null && taishokuYmd.contains(" ")) {
 					shain.setTaishoku_ymd(taishokuYmd.substring(0, taishokuYmd.indexOf(" ")));
 				}
-				
+
 			}
 
 			return shainList;
@@ -102,7 +125,7 @@ public class ShainController {
 
 			return shainList;
 		}
-		
+
 		return null;
 
 	}
@@ -117,18 +140,89 @@ public class ShainController {
 		}
 
 		return "redirect:/shain/shainList";
+	} // 사원조회/삭제 end
+
+	
+	
+	
+	
+	
+	
+	// 사원등록
+	@GetMapping("/shainRegister")
+	public void register(Model model) {
+		model.addAttribute("bushoList", bushoService.getList());
+		model.addAttribute("yakushokuList", yakushokuService.getList());
+
 	}
 
-	/*
-	 * @GetMapping("/test") public void test(Model model) {
-	 * model.addAttribute("bushoList", bushoService.getList()); }
-	 */
+	@PostMapping("/shainRegister")
+	public String register(ShainVO vo, @ModelAttribute(value = "ShainEduListVO") ShainEduListVO eduList,
+			@ModelAttribute(value = "shainCareerListVO") ShainCareerListVO careerList, MultipartFile[] uploadFile,
+			String shain_no, ShainAttachVO shainAttachVO) {
+		System.out.println("하하");
+		shainService.register(vo);
+		
+		for (ShainCareerVO careerVO : careerList.getShainCareerList()) {
+			careerVO.setShain_no(vo.getShain_no());
+			shainCareerService.register(careerVO);
+		}
 
-	/*
-	 * @PostMapping("/bushoModify") public void bushoModify(BushoVO vo) {
-	 * bushoService.modify(vo); }
-	 * 
-	 * @PostMapping("/bushoRemove") public void bushoModify(String busho_nm) {
-	 * bushoService.remove(busho_nm); }
-	 */
+		for (ShainEduVO eduVO : eduList.getShainEduList()) {
+			eduVO.setShain_no(vo.getShain_no());
+			shainEduService.register(eduVO);
+		}
+
+		String uploadFolder = "C:\\upload";
+
+		File uploadPath = new File(uploadFolder, getFolder());
+		String filePath = uploadPath.getPath();
+		if (uploadPath.exists() == false) {
+			uploadPath.mkdirs();
+		}
+
+		for (MultipartFile multipartFile : uploadFile) {
+
+			String uploadFileName = multipartFile.getOriginalFilename();
+
+			uploadFileName = uploadFileName.substring(uploadFileName.lastIndexOf("\\") + 1);
+
+			UUID uuid = UUID.randomUUID();
+
+			uploadFileName = uuid.toString() + "_" + uploadFileName;
+
+			File saveFile = new File(uploadPath, uploadFileName);
+
+			shainAttachVO.setShain_no(shain_no);
+			shainAttachVO.setFile_nm(multipartFile.getOriginalFilename());
+			shainAttachVO.setShain_uuid(uploadFileName);
+			shainAttachVO.setShain_uploadpath(filePath);
+
+			try {
+				if (shainAttachservice.getProfile(shain_no) == null) {
+					multipartFile.transferTo(saveFile);
+					shainAttachservice.uploadProfile(shainAttachVO);
+				} else {
+					multipartFile.transferTo(saveFile);
+					shainAttachservice.updateAttach(shainAttachVO);
+				}
+			} catch (Exception e) {
+				log.error(e.getMessage());
+			}
+		}
+
+		return "redirect:/shain/shainList";
+	}
+
+
+	private String getFolder() {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+		Date date = new Date();
+
+		String str = sdf.format(date);
+
+		return str.replace("-", File.separator);
+	}
+
 }

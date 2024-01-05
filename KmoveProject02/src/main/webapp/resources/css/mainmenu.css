@@ -2002,3 +2002,100 @@ div.dil_search_box {
 #pop01 ul.em {
 	background-color: #ffffff;
 }
+
+/*사원등록*/
+div.emreg_lt01 {
+	float: left;
+	width: 325px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.emreg_lt01 ul.emreg_btn {
+	text-align: center;
+	height: 150px;
+}
+
+div.emreg_lt {
+	float: right;
+	width: 308px;
+	margin: 29px 0 0 0px;
+	padding: 11px;
+}
+
+.emreg_lt ul {
+	padding: 0px;
+	float: left;
+}
+
+.emreg_lt ul.em_photo {
+	width: 120px;
+	margin: 0px 0px 10px 0px;
+	padding: 0px;
+	float: left;
+	display: inline-block;
+}
+
+.emreg_lt ul.em_photo li.ph {
+	width: 120px;
+	height: 137px;
+	display: table-cell;
+	vertical-align: middle;
+	display: inline-block;
+	text-align: center;
+}
+
+.emreg_lt ul div.emreg_table {
+	margin: 1px 0px 10px 15px;
+	/*float:left;*/
+	display: inline-block;
+}
+
+.emreg_table ul {
+	float: left;
+	border-left: 1px solid #e7e7dc;
+	border-bottom: 1px solid #e1e5dc;
+	color: #333333;
+}
+
+.emreg_table li {
+	float: left;
+	height: 21px;
+	border-right: 1px solid #e7e7dc;
+	background-color: #FFFFFF;
+	padding-top: 5px;
+}
+
+.emreg_table li.tit_y {
+	background-color: #fffcf3;
+	color: #42311e;
+	text-align: left;
+	padding-top: 5px;
+	padding-left: 10px;
+}
+
+div.emreg_lt_addinfo {
+	float: left;
+	width: 330px;
+	margin: 0px;
+	padding: 0px;
+	background: url(https://img.payzon.co.kr/_commonImg/emreg_bg.gif) repeat;
+}
+
+.emreg_lt_addinfo ul.tab {
+	width: 100%;
+	margin: 0px 0px 0px 10px;
+	padding: 0px;
+	float: left;
+}
+
+.emreg_lt_addinfo ul.tab li {
+	float: left;
+	text-align: center;
+}
+
+div.emreg_rt {
+	/* float:right; */
+	width: 800px;
+	margin: 10px 0 0 40px;
+}

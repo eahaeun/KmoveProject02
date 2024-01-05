@@ -20,4 +20,7 @@
 		UPDATE busho SET busho_nm = #{new_value} WHERE busho_nm = #{busho_nm}
 	</update>
 
+	<select id="get" resultType="org.zerock.domain.BushoVO" parameterType="String">
+		select * from busho where busho_nm = #{busho_nm}
+	</select>
 </mapper>

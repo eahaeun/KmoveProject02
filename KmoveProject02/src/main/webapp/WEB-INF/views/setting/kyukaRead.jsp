@@ -180,7 +180,7 @@
                 <li class="w_120 c"><strong>休暇控除</strong></li>
                 <li class="con">
                 <select name="kyuka_kojyo" id="kyuka_kojyo" style="width:200px;">
-					<option value="${null}" selected>선택하세요</option>
+					<option value="${null}" selected>選択してください</option>
 					<c:forEach items="${kyukaList}" var="kyuka">
 						<option value="${kyuka.kyuka_km}">${kyuka.kyuka_km}</option>
 					</c:forEach>
