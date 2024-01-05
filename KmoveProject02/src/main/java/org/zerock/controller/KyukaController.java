@@ -64,7 +64,8 @@ public class KyukaController {
 
 	@PostMapping("/kyukaCreate")
 	public String kyukacreate(KyukaVO vo) {
-		if(vo.getKyuka_active() == "O") {
+		log.info("휴가 " + vo.getKyuka_active());
+		if ("O".equals(vo.getKyuka_active())) {
 			kyukaservice.addKyuka();
 			log.info("休暇 plus 15日");
 		}
