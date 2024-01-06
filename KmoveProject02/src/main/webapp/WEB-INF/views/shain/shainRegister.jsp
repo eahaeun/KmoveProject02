@@ -10,7 +10,7 @@
 
 <script>
 function triggerFileInput() {
-	console.log("하하");
+	console.log("사진 등록");
 	document.getElementById('fileInput').click();
 }
 
@@ -416,6 +416,18 @@ $(document).ready(function(e) {
 });
 </script>
 
+<script>
+document.getElementById('btnEmplSaveCancel').addEventListener('click', function(event) {
+    event.preventDefault(); // 기본 동작 막기
+    window.location.href = '/shain/shainRegister'; // 페이지 이동
+});
+
+document.getElementById('btnLinkList').addEventListener('click', function(event) {
+    event.preventDefault(); // 기본 동작 막기
+    window.location.href = '/shain/shainList'; // 페이지 이동
+});
+
+</script>
 	
 
 
