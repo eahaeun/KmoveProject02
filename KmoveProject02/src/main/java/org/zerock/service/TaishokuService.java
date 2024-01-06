@@ -15,4 +15,6 @@ public interface TaishokuService {
 	int cancelTaishoku(String shain_no);
 
 	int cancelShain(String shain_no);
+	
+	void savePay(String shain_no, String sikyu_ymd, int taishoku_pay);
 }

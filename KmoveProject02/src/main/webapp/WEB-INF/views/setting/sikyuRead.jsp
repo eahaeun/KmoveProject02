@@ -42,13 +42,16 @@
 	            <ul class="sikyu-row anchor" data-sikyu-km="${sikyu.sikyu_km}">
 	              <li class="w_90  bold p_l10" title="CD001">${sikyu.sikyu_km}</li><!-- 0 -->
 	              <li class="w_190 p_l10">
-		              	<c:if test="${sikyu.kazei_active eq 'O'}">전체과세</c:if>
-					    <c:if test="${sikyu.kazei_active eq 'X'}">비과세_${sikyu.hikazei_nm}</c:if>
+		              	<c:if test="${sikyu.kazei_active eq 'O'}">課税</c:if>
+					    <c:if test="${sikyu.kazei_active eq 'X'}">非課税_${sikyu.hikazei_nm}</c:if>
 	              </li>
 	              <li class="w_92 con_r p_r13">
-	              		<script>
-			            	document.write(parseInt('${sikyu.hikazei_limit}', 10).toLocaleString());
-			        	</script>
+	              	<c:if test="${sikyu.hikazei_limit ne 0}">
+				    	<script>
+					        document.write(parseInt('${sikyu.hikazei_limit}', 10).toLocaleString());
+					    </script>
+					</c:if>
+
 	              </li>
 	              <li class="w_88 c">
 		              <c:if test="${sikyu.sikyu_tani eq 'X'}">無し</c:if>
@@ -57,9 +60,11 @@
 		              <c:if test="${sikyu.sikyu_tani eq 'H'}">100円単位</c:if>
 	              </li>
 	              <li class="w_150 c">
-		                <script>
-			            	document.write(parseInt('${sikyu.ikkatsu_pay}', 10).toLocaleString());
-			        	</script>
+		              <c:if test="${sikyu.ikkatsu_pay ne 0}">
+			                <script>
+				            	document.write(parseInt('${sikyu.ikkatsu_pay}', 10).toLocaleString());
+				        	</script>
+				      </c:if>
 	              </li>
 	              <li class="w_70 c">
 	              	<c:if test="${sikyu.sikyu_active eq 'O'}"><img src="../resources/img/icon_o.gif" width="17" height="17"></c:if>

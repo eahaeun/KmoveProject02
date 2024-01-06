@@ -63,6 +63,9 @@ public class TaishokuServiceImpl implements TaishokuService {
 		return mapper2.cancelShain(shain_no);
 	}
 
-
+	@Override
+	public void savePay(String shain_no, String sikyu_ymd, int taishoku_pay) {
+		mapper.savePay(shain_no, sikyu_ymd, taishoku_pay);
+	}
 		
 }

@@ -16,7 +16,7 @@ public class ShainServiceTests {
 
 	@Setter(onMethod_ = @Autowired)
 	private ShainService service;
-	
+
 	@Test
 	public void testGetList() {
 		log.info(service.getListByKoyoKeitai("2023-11"));
@@ -25,5 +25,10 @@ public class ShainServiceTests {
 	@Test
 	public void testGetListByZaishokuSt() {
 		log.info(service.getListByZaishokuSt("在職"));
+	}
+
+	@Test
+	public void testgetKihonPay() {
+		log.info(service.getKihonPay("S0001"));
 	}
 }

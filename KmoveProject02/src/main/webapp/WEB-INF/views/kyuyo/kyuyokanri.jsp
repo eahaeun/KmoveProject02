@@ -161,13 +161,13 @@
               	<li class="w_127 tit"><span class="p_l10"><c:out value="${sikyu.sikyu_km}"/></span></li>
               	<c:set var="unitMultiplier" value="1" />
 					   <c:choose>
-					   <c:when test="${sikyu.hansu_tani eq 'O'}">
+					   <c:when test="${sikyu.sikyu_tani eq 'O'}">
 					        <c:set var="unitMultiplier" value="1" />
 					   </c:when>
-					   <c:when test="${sikyu.hansu_tani eq 'T'}">
+					   <c:when test="${sikyu.sikyu_tani eq 'T'}">
 					        <c:set var="unitMultiplier" value="10" />
 					   </c:when>
-					   <c:when test="${sikyu.hansu_tani eq 'H'}">
+					   <c:when test="${sikyu.sikyu_tani eq 'H'}">
 					       <c:set var="unitMultiplier" value="100" />
 					   </c:when>
 				</c:choose>
@@ -290,9 +290,11 @@
         <strong>差引総額 : 
         <span id="jisshuSokaiGaku" class="c_yellow">
 		    <script>
-		        document.write(parseInt('${jisshuSokaiGaku}', 10).toLocaleString());
+			    var formattedNumber = parseInt('${jisshuSokaiGaku}', 10).toLocaleString();
+			    document.write(formattedNumber + ' 円');
 		    </script>
 		</span>
+		</strong>
       </div>
       </ul>
       

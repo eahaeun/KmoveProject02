@@ -6,11 +6,15 @@
 	<select id="getTaishokuVO"
 		resultType="org.zerock.domain.TaishokuVO">
 		SELECT shain.ZAISHOKU_ST,
-		shain.shain_no, shain.shain_nm, shain.busho_nm, shain.yakushoku_nm,
-		shain.nyusha_ymd, shain.taishoku_ymd, taishoku.taishoku_pay,
-		taishoku_renraku, taishoku_jiyu
+		shain.shain_no, shain.shain_nm,
+		shain.busho_nm, shain.yakushoku_nm,
+		shain.nyusha_ymd,
+		shain.taishoku_ymd, taishoku.taishoku_pay,
+		taishoku_renraku,
+		taishoku_jiyu
 		FROM shain
-		LEFT JOIN taishoku ON shain.shain_no = taishoku.shain_no
+		LEFT JOIN taishoku ON shain.shain_no =
+		taishoku.shain_no
 		ORDER BY shain.shain_no
 
 	</select>
@@ -61,6 +65,13 @@
 		SET taishoku_jiyu = null,
 		taishoku_renraku = null,
 		taishoku_pay = 0
+		WHERE shain_no = #{shain_no}
+	</update>
+
+	<update id="savePay">
+		UPDATE taishoku
+		SET sikyu_ymd = #{sikyu_ymd},
+		taishoku_pay = #{taishoku_pay}
 		WHERE shain_no = #{shain_no}
 	</update>
 </mapper>

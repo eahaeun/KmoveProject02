@@ -62,4 +62,8 @@
 	FROM kyuyo_history
 	WHERE shain_no = #{shain_no} and kizoku_ym BETWEEN #{start_ym} AND #{end_ym} ORDER by kizoku_ym
 	</select>
+	
+	<select id="readSikyuWithShainNo" resultType="org.zerock.domain.KyuyoHistoryVO">
+	select sikyu_pay from kyuyo_history where shain_no = #{shain_no}
+	</select>
 </mapper>

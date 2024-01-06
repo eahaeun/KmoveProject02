@@ -17,13 +17,13 @@ import lombok.extern.log4j.Log4j;
 public class ShainServiceImpl implements ShainService {
 	@Setter(onMethod_ = @Autowired)
 	private ShainMapper mapper;
-	
+
 	@Setter(onMethod_ = @Autowired)
 	private ShainEduMapper eduMapper;
-	
+
 	@Setter(onMethod_ = @Autowired)
 	private ShainCareerMapper careerMapper;
-	
+
 	public void register(ShainVO vo) {
 		log.info("register.....");
 		mapper.insert(vo);
@@ -39,18 +39,17 @@ public class ShainServiceImpl implements ShainService {
 	public List<ShainVO> getListByKoyoKeitai(String koyo_keitai) {
 		return mapper.getListByKoyoKeitai(koyo_keitai);
 	}
-	
 
 	@Override
 	public List<ShainVO> getListByZaishokuSt(String zaishoku_st) {
 		return mapper.getListByZaishokuSt(zaishoku_st);
 	}
-	
+
 	@Override
 	public void delete(String shain_no) {
 		mapper.delete(shain_no);
 	}
-	
+
 	@Override
 	public void deleteEdu(String shain_no) {
 		eduMapper.delete(shain_no);
@@ -60,12 +59,12 @@ public class ShainServiceImpl implements ShainService {
 	public void deleteCareer(String shain_no) {
 		careerMapper.delete(shain_no);
 	}
-	
+
 	@Override
 	public int getCount() {
 		return mapper.getCount();
 	}
-	
+
 	@Override
 	public int getCountByEmpType(String empType) {
 		return mapper.getCountByEmpType(empType);
@@ -75,12 +74,11 @@ public class ShainServiceImpl implements ShainService {
 	public int getCountByStateType(String stateType) {
 		return mapper.getCountByStateType(stateType);
 	}
-	
-	
+
 	@Override
 	public boolean modify(ShainVO vo) {
-	    boolean modifyResult = mapper.modify(vo) == 1;
-	    return modifyResult;
+		boolean modifyResult = mapper.modify(vo) == 1;
+		return modifyResult;
 	}
 
 	@Override
@@ -88,5 +86,20 @@ public class ShainServiceImpl implements ShainService {
 		return mapper.get(shain_no);
 	}
 
-	
+	@Override
+	public List<ShainVO> getSelectedShainData(List<String> selectedShainNos) {
+		return mapper.selectByShainNos(selectedShainNos);
+
+	}
+
+	@Override
+	public ShainVO readShainByNo(String shain_no) {
+		return mapper.read(shain_no);
+	}
+
+	@Override
+	public ShainVO getKihonPay(String shain_no) {
+		return mapper.getKihonPay(shain_no);
+	}
+
 }

@@ -74,7 +74,7 @@
                     <div class="menu_2depth_01_2020" style="z-index:9999;">
                         <ul class="menu_01">
                             <li><a href="/taishoku/list">退職処理</a></li>
-                            <li><a href="">退職金入力・管理</a></li>
+                            <li><a href="/taishoku/taishokuMnt">退職金入力・管理</a></li>
                         </ul>
                     </div>
                 </li>

@@ -29,4 +29,9 @@ public interface ShainService {
 	
 	public ShainVO get(String shain_no);
 	
+	public List<ShainVO> getSelectedShainData(List<String> selectedShainNos);
+
+	ShainVO readShainByNo(String shain_no);
+	
+	ShainVO getKihonPay(String shain_no);
 }

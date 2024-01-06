@@ -128,4 +128,16 @@
 	<select id="get" resultType="org.zerock.domain.ShainVO" parameterType="String">
 	select * from shain where shain_no=#{shain_no}
 	</select>
+	
+	<select id="selectByShainNos"
+		resultType="org.zerock.domain.ShainVO">
+	SELECT * FROM shain WHERE SHAIN_NO IN
+        <foreach collection="list" item="item" open="(" separator="," close=")">
+            #{item, jdbcType=VARCHAR}
+        </foreach>
+	</select>
+	
+	<select id="getKihonPay" resultType="org.zerock.domain.ShainVO">
+		select kihon_pay from shain where shain_no=#{shain_no}
+	</select>
 </mapper>
