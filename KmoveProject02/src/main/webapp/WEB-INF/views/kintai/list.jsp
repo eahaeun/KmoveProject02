@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 
-<%@include file="../includes/header.jsp"%>
+<%@include file="../includes/modalheader.jsp"%>
 <%@include file="../includes/menu.jsp"%>
 
 
@@ -70,26 +70,15 @@
               <li class="w_100 c">${shain.shain_nm}</li>
               <li class="w_120 c">${shain.busho_nm}</li>
               <li class="w_120 c">${shain.yakushoku_nm}</li>
-              <li class="w_119 c"><span name="btnDiliMnt" id="btnDiliMnt" class="anchor" onclick="$.fn.employeeDiliList('1162876^031');"><img src="../resources/img/btn_admin.png" width="52px" height="19px" alt="관리" title="관리"></span></li>
+              <li class="w_119 c">
+              	<span name="btnDiliMnt" id="btnDiliMnt" class="anchor">
+				    <img src="../resources/img/btn_admin.png" width="52px" height="19px" alt="관리" title="관리" onclick="btnDiliMntCilck('${shain.shain_no}')" >
+				</span>
+              </li>
 			</c:forEach>
-            </ul>
+         </ul>
             
-			</div>
-			
-			
-			
-			<!-- 스크롤바 -->
-<!-- 			<div class="mCSB_scrollTools" style="position: absolute; display: block;">
-			    <a class="mCSB_buttonUp" oncontextmenu="return false;"></a>
-			    <div class="mCSB_draggerContainer">
-			        <div class="mCSB_dragger" style="position: absolute; height: 243px; top: 0px;" oncontextmenu="return false;">
-			            <div class="mCSB_dragger_bar" style="position: relative; line-height: 243px;"></div>
-			        </div>
-			        <div class="mCSB_draggerRail"></div>
-			    </div>
-			    <a class="mCSB_buttonDown" oncontextmenu="return false;"></a>
-			</div> -->
-
+		</div>
 			
 			
 			</div>
@@ -152,11 +141,14 @@
             <li class="w_135 c"><strong>手当て</strong></li>
             <li class="con"><input name="kintai_pay" id="kintai_pay" type="text" class="white clsAmount" style="width:210px;color:#eb4e5d;text-align:right;" placeholder="勤務分類が支給手当に該当する場合"></li>
           </ul>
+          
 <!--           <ul>
             <li class="w_135 c"><strong>적요</strong></li>
             <li class="con"><input name="frmDlsvEtcs" id="frmDlsvEtcs" type="text" value="* 적요가 있으신 경우 입력해주세요." class="white" style="width:190px;" placeholder="* 적요가 있으신 경우 입력해주세요."></li>
           </ul> -->
-        </div></ul>
+          
+        </div>
+        </ul>
         <hr class="hr_5">
 
         <ul class="c">
@@ -165,16 +157,9 @@
         	<span name="btnDlgnSaveIns" id="btnDlgnSaveIns" class="anchor" onclick="simulateSaveClick()">
         		<img src="../resources/img/btn_save_s2.png" width="60px" height="27px">
 	        </span>
-	      <!-- <a href="#none" onclick="javascript:$.fn.frmDlgnSaveInit();"> -->
 	      <img src="../resources/img/btn_e.png" width="91px" height="27px" class="p_l5" onclick="resetForm()">
         </span>
 
-	<!-- 수정/수정취소 -->
-	<!--         <span id="grpBtn02" class="disHide">
-        <input name="btnDlgnSaveUpd" id="btnDlgnSaveUpd" type="image" value="수정" src="https://img.payzon.co.kr/_commonImg/btn_modify_s.png" width="60px" height="27px" alt="수정" title="수정">
-	    <span onclick="javascript:$.fn.frmDlgnSaveInit();" class="anchor"><img value="수정취소" src="https://img.payzon.co.kr/_commonImg/btn_modify_cancle.png" width="73px" height="27px" alt="수정취소" title="수정취소" class="p_l5">
-	    </span>
-        </span> -->
 
         </ul>
       </form></div>
@@ -183,6 +168,111 @@
  </div>
 
 
+
+<!-- 모달 -->
+<div id="kyukaModal" class="modal">
+		<div class="modal-content" style="width:52.8%;">
+		<div id="pop01" style="width:790px;">
+			  <ul class="tit">
+			    <li>社員別勤怠記録</li>
+			  </ul>
+			  <ul class="part p_t10">
+			    <div class="w_720 height_27 p_l15 p_t10 p_b10">
+			      <li class="bold font12 ">
+			        <span class="c_999">•氏名 :</span> 山田太郎 (S0001)
+			        &nbsp;&nbsp;&nbsp;
+			        <span class="c_999"> •部署 :</span> 営業部        &nbsp;&nbsp;&nbsp;
+			        <span class="c_999">•役職 :</span> 主任        <span name="spnEmplIndxCode" id="spnEmplIndxCode" class="disHide">1166491^031</span>
+			        
+			        <span name="spnChkBoxValue" id="spnChkBoxValue" class="disHide">1166491</span>
+			          <div class="f_right">
+			            <select name="frmDlsvYYYY" id="frmDlsvYYYY" style="width:80px;">
+			              <option value="">選択</option>
+							<option value="2024" selected="">2024 年</option>
+			            </select>
+			          </div>
+			        </li>
+			      </div>
+			      
+			      <div class="pop_table w_720">
+			        <p class="caption"></p>
+			        <ul>
+			          <li class="w_85  tit"><strong>入力日</strong></li>
+			          <li class="w_85  tit"><strong>勤怠項目</strong></li>
+			          <li class="w_190  tit"><strong>勤怠期間</strong></li>
+			          <li class="w_60  tit"><strong>勤怠日数</strong></li>
+			          <li class="w_85  tit"><strong>金額</strong></li>
+			          <li class="w_106  tit"><strong>備考</strong></li>
+			          <li class="w_100  tit"><strong>修正・削除</strong></li>
+			          </ul>
+			          </div>
+			          
+			          <div class="holiday">
+			            <div id="disContentList" class="disContentList pop_table" style="width: 720px;">
+			            
+			                <ul id="ulDL" class="clspass" title="">
+			                  <li class="w_85  c">2024-01-01</li>
+			                  <li class="w_85  c" title="011">有給休暇</li>
+			                  <li class="w_190  c">2024-01-01 ~ 2024-01-02</li>
+			                  <li class="w_60  c">2</li>
+			                  <li class="w_85  c bold "></li>
+			                  <li class="w_106  c "></li>
+			                  <li class="w_100  c ">
+			                  	<span id="btnDlgnSaveUpd" class="anchor">
+			                  		<img src="../resources/img/btn_s_modify.png" width="43px" height="19px">
+			                  	</span>
+			                  	<span id="btnDlgnSaveDel" class="anchor">
+			                  		<img src="../resources/img/btn_s_delete.png" width="43px" height="19px" class="p_l5 ">
+			                  	</span>
+			                  </li>
+			                </ul>
+			                
+			                <ul id="ulDL" class="clspass" title="">
+			                  <li class="w_85  c">2024-01-04</li>
+			                  <li class="w_85  c" title="011">遅刻</li>
+			                  <li class="w_190  c">2024-01-04</li>
+			                  <li class="w_60  c">1</li>
+			                  <li class="w_85  c bold "></li>
+			                  <li class="w_106  c "></li>
+			                  <li class="w_100  c ">
+			                  	<span id="btnDlgnSaveUpd" class="anchor">
+			                  		<img src="../resources/img/btn_s_modify.png" width="43px" height="19px">
+			                  	</span>
+			                  	<span id="btnDlgnSaveDel" class="anchor">
+			                  		<img src="../resources/img/btn_s_delete.png" width="43px" height="19px" class="p_l5 ">
+			                  	</span>
+			                  </li>
+			                </ul>
+			                
+			                <ul id="ulDL" class="clspass" title="">
+			                  <li class="w_85  c">2024-01-06</li>
+			                  <li class="w_85  c" title="011">休日勤務</li>
+			                  <li class="w_190  c">2024-01-06</li>
+			                  <li class="w_60  c">1</li>
+			                  <li class="w_85  c bold ">3,000</li>
+			                  <li class="w_106  c "></li>
+			                  <li class="w_100  c ">
+			                  	<span id="btnDlgnSaveUpd" class="anchor">
+			                  		<img src="../resources/img/btn_s_modify.png" width="43px" height="19px">
+			                  	</span>
+			                  	<span id="btnDlgnSaveDel" class="anchor">
+			                  		<img src="../resources/img/btn_s_delete.png" width="43px" height="19px" class="p_l5 ">
+			                  	</span>
+			                  </li>
+			                </ul>
+			                
+			                
+			  			</div>
+			          </div>
+			
+			    </ul>
+			
+			    <ul>
+			    <li>.</li>
+			    </ul>
+			</div>
+		</div>
+	</div>
 
 	
 	
@@ -287,25 +377,6 @@ $(document).ready(function () {
             selectedShainValues.push($(this).val());
         });
         
-        
-/*      // 입력란이 비어있는지 확인
-        var isEmpty = false;
-
-        // 각 입력란의 값을 확인
-        $("form input").each(function() {
-            if ($(this).val().trim() === "") {
-                isEmpty = true;
-                return false; // 반복문 중단
-            }
-        });
-
-        // 공란이 있으면 경고창 표시
-        if (isEmpty) {
-            alert("すべての項目を記入してください。");
-            return false; // 폼 제출 중지
-        } */
-        
-        
         console.log("selectedShain : " + selectedShainValues);
 		
         formData.forEach(function(value, key) {
@@ -344,6 +415,22 @@ $(document).ready(function () {
         event.preventDefault();
     });
 });
+
+
+
+
+
+
+// !!!!!!!!!!!!!!! 관리 버튼 기능 추가!!!!!!!!!!!!!!!!
+function btnDiliMntCilck(shain_no) {
+    console.log(shain_no);
+    openkyukaModal();
+}
+
+
+function openkyukaModal() {
+    document.getElementById('kyukaModal').style.display = 'block';
+}
 
 </script>
 
