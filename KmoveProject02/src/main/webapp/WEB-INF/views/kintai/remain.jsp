@@ -68,7 +68,7 @@ function filterTable() {
         <ul class="tit w_100 bold">* 休暇項目選択&nbsp;</ul> 
         <ul class="p_t1">
 			<select name="selLvItCode" id="selLvItCode" style="width:130px;" class="goSelect">
-           　		<option value="goLeaveSet">수정필요</option>
+           　		<option value="goLeaveSet">2024_有休</option>
         </select>
         </ul>
 
@@ -127,7 +127,7 @@ function filterTable() {
 		          <li class="w_100 ">${shain.shain_nm}</li>
 		          <li class="w_120 ">${shain.busho_nm}</li>
 		          <li class="w_120 ">${shain.yakushoku_nm}</li>
-		          <li class="w_170 ">수정필요</li>
+		          <li class="w_170 ">2024_有休</li>
 		          <li class="w_140 bold">${shain.kyuka}</li>
 		          <li class="w_140 bold c_blue">
 			          	<c:forEach items="${khour}" var="khour">

@@ -162,7 +162,7 @@ function reloadModal(modalType) {
     <a name="aTagMenu01"></a>
     <!-- //폼.입력.급여/4대보험-->
     <!-- //급여: G1 -->
-    <ul id="lblPayN4" style="height:50px;"><img src="https://img.payzon.co.kr/_commonImg/emreg_tit_03.gif" width="112px" height="19px" vspace="8" hspace="5" border="0" alt="급여/4대보험" title="급여/4대보험"><span id="btnTipPayN4" class="anchor"><img src="https://img.payzon.co.kr/_commonImg/icon_help_s.gif" width="15px" height="14px" vspace="10" hspace="0" border="0" alt="팁" title="팁"></span></ul>
+    <ul id="lblPayN4" style="height:50px;"><img src="../resources/img/emreg_tit_03.png" width="112px" height="19px" vspace="8" hspace="5" border="0" alt="급여/4대보험" title="급여/4대보험"><span id="btnTipPayN4" class="anchor"><img src="https://img.payzon.co.kr/_commonImg/icon_help_s.gif" width="15px" height="14px" vspace="10" hspace="0" border="0" alt="팁" title="팁"></span></ul>
     <ul class="p_b5 c_blue"><strong><span class="c_red b">+</span> 給与</strong></ul>
 
      <ul>

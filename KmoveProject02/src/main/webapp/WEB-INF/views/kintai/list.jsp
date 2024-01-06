@@ -132,7 +132,7 @@
           <ul>
             <li class="w_135 c"><strong id="kintaiDaysLabel"><span id="disDlgnDays">勤怠</span></strong></li>
             <li class="con">
-            <input name="kintai_hour" id="kintaiDays" type="text" placeholder="근태일수" class="text" style="width:80px;" maxlength="5">
+            <input name="kintai_hour" id="kintaiDays" type="text" placeholder="日数/時間" class="text" style="width:80px;" maxlength="5">
             <strong id="kintaiDaysELabel"></strong>
             </li>
           </ul>

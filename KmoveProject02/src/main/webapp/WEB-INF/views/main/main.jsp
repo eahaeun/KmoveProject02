@@ -162,7 +162,7 @@
 $(document).ready(function() {
 
     // 페이지 로딩시 현재 연도 데이터 자동 로드
-    var currentYear = new Date().getFullYear();
+    var currentYear = new Date().getFullYear() - 1;
     $.ajax({
         type: 'GET',
         url: '/kyuyo/getKyuyoData',

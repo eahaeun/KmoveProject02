@@ -81,12 +81,6 @@
 	    </div>
 	  
 	    
-	    <div class="btn c">
-	    <li>
-	    <input name="btnGetPrint" id="btnGetPrint" type="image" value="인쇄하기" src="/_commonImg/btn_print_s.png" alt="인쇄하기" title="인쇄하기">
-	    <input name="btnGetExcel" id="btnGetExcel" type="image" value="엑셀로 다운로드" src="/_commonImg/btn_xls_down_s.png" hspace="15" alt="엑셀로 다운로드" title="엑셀로 다운로드">
-	    </li>
-	    </div>
 	
 	  </div>
 </div>
@@ -101,49 +95,6 @@
 
 
 
-
-	<form>
-		<input type="month" name="selectedMonth">
-	</form>
-	
-	<table border="1" width="100%">
-		<thead>
-			<tr>
-				<th>구분</th>
-				<th>사원번호</th>
-				<th>성명</th>
-				<th>부서</th>
-				<th>직위</th>
-				<th>합계</th>
-				<th>휴가공제</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach items="${list}" var="shain">
-				<tr>
-					<td>${shain.koyo_keitai}</td>
-					<td>${shain.shain_no}</td>
-					<td>${shain.shain_nm}</td>
-					<td>${shain.busho_nm}</td>
-					<td>${shain.yakushoku_nm}</td>
-					<td><c:forEach items="${hour}" var="hour">
-							<c:if test="${hour.shain_no eq shain.shain_no}">
-                    			${hour.total_kintai_hour}${hour.kintai_tani}
-                			</c:if>
-                		</c:forEach>
-					</td>
-
-					<td><c:forEach items="${dhour}" var="dhour">
-							<c:if test="${dhour.shain_no eq shain.shain_no}">
-                    			${dhour.total_kintai_hour}
-                			</c:if>
-                		</c:forEach>
-					</td>
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
-	<br>
 	
 	
 	<script>
