@@ -436,3 +436,87 @@ $(document).ready(function () {
 	
 </body>
 </html>
+
+
+
+<!-- 모달 -->
+<div id="kyukaModal" class="modal">
+		<div class="modal-content" style="width:52.8%;">
+		<div id="pop01" style="width:790px;">
+			  <ul class="tit">
+			    <li>社員別勤怠記録</li>
+			  </ul>
+			  <ul class="part p_t10">
+			    <div class="w_720 height_27 p_l15 p_t10 p_b10">
+			      <li class="bold font12 ">
+			        <span class="c_999">•氏名 :</span> 山田太郎 (S0001)
+			        &nbsp;&nbsp;&nbsp;
+			        <span class="c_999"> •部署 :</span> 営業部        &nbsp;&nbsp;&nbsp;
+			        <span class="c_999">•役職 :</span> 主任        <span name="spnEmplIndxCode" id="spnEmplIndxCode" class="disHide">1166491^031</span>
+			        
+			        <span name="spnChkBoxValue" id="spnChkBoxValue" class="disHide">1166491</span>
+			          <div class="f_right">
+			            <select name="frmDlsvYYYY" id="frmDlsvYYYY" style="width:80px;">
+			              <option value="">選択</option>
+							<option value="2024" selected="">2024 年</option>
+			            </select>
+			          </div>
+			        </li>
+			      </div>
+			      
+			      <div class="pop_table w_720">
+			        <p class="caption"></p>
+			        <ul>
+			          <li id="nyuryoku_ymd" class="w_85  tit"><strong>入力日</strong></li>
+			          <li id="kintai_km" class="w_85  tit"><strong>勤怠項目</strong></li>
+			          <li id="kintai_day" class="w_190  tit"><strong>勤怠期間</strong></li>
+			          <li id="kintai_hour" class="w_60  tit"><strong>勤怠日数</strong></li>
+			          <li id="kintai_pay" class="w_85  tit"><strong>金額</strong></li>
+			          <li class="w_106  tit"><strong>備考</strong></li>
+			          <li class="w_100  tit"><strong>修正・削除</strong></li>
+			          </ul>
+			          </div>
+			          
+			          <div class="holiday">
+			            <div id="disContentList" class="disContentList pop_table" style="width: 720px;">
+			            
+			                <ul id="ulDL" class="clspass" title="">
+			                  <li class="w_85  c">2024-01-01</li>
+			                  <li class="w_85  c" title="011">有給休暇</li>
+			                  <li class="w_190  c">2024-01-01 ~ 2024-01-02</li>
+			                  <li class="w_60  c">2</li>
+			                  <li class="w_85  c bold "></li>
+			                  <li class="w_106  c "></li>
+			                  <li class="w_100  c ">
+			                  	<span id="btnDlgnSaveUpd" class="anchor">
+			                  		<img src="../resources/img/btn_s_modify.png" width="43px" height="19px">
+			                  	</span>
+			                  	<span id="btnDlgnSaveDel" class="anchor">
+			                  		<img src="../resources/img/btn_s_delete.png" width="43px" height="19px" class="p_l5 ">
+			                  	</span>
+			                  </li>
+			                </ul>
+			                
+			  			</div>
+			          </div><!-- end holiday -->
+			
+			    </ul>
+			
+			    <ul>
+			    <li>.</li>
+			    </ul>
+			    
+			</div>
+		</div>
+	</div>
+			<option value="正社員" ${'正社員' eq shain.koyo_keitai ? 'selected' : ''}>正社員</option>
+			<option value="契約社員" ${'契約社員' eq shain.koyo_keitai ? 'selected' : ''}>契約社員</option>
+			<option value="臨時社員" ${'臨時社員' eq shain.koyo_keitai ? 'selected' : ''}>臨時社員</option>
+			<option value="派遣社員" ${'派遣社員' eq shain.koyo_keitai ? 'selected' : ''}>派遣社員</option>
+			<option value="委託社員" ${'委託社員' eq shain.koyo_keitai ? 'selected' : ''}>委託社員</option>
+			<option value="パートタイム" ${'パートタイム' eq shain.koyo_keitai ? 'selected' : ''}>パートタイム</option>
+
+
+<c:forEach var="kintai" items="${save}">
+	<option value="${kintai.kintai_km}" ${kintai.kintai_km eq selectedKintai.kintai_km ? 'selected' : ''} data-tani="${kintai.kintai_tani}">${kintai.kintai_km}</option>
+</c:forEach>

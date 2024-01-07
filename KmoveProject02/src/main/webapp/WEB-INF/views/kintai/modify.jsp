@@ -27,11 +27,9 @@
     <div class="diligence_list">
       <div class="dil_search_box">
 
-	<form name="frmSrchEmployee" id="frmSrchEmployee" onsubmit="return $.fn.frmSrchCheck();">
 		<input type="hidden" name="frmStatNum" id="frmStatNum" value="1">
         <ul><input name="srchKwrd" id="srchKwrd" type="text" value="검색어 입력" class="border w_170 height_22 p_l5" onfocus="this.value = (this.value == '검색어 입력')?'':this.value;"></ul><ul class="p_t1">
         <input type="image" value="검색어 입력" src="../resources/img/btn_s_search.png" width="23px" height="23px" alt="검색어 입력" title="검색어 입력" class="p_l5 "></ul>
-	</form>
         <ul class="p_t1"><input name="btnSrchInit" id="btnSrchInit" type="image" value="전체보기" src="../resources/img/btn_list_all01.png" width="74px" height="23px" alt="전체보기" title="전체보기" class="p_l5"></ul>
         <ul class="p_t5 p_l10 c_red">* 複数選択時、勤怠記録を一括適用できます。</ul>
      </div>
@@ -89,18 +87,15 @@
 
     <!-- 근태 설정 리스트_설정 -->
     <div class="diligence_set">
-	<form id="kintai">
-	<input type="hidden" name="frmLeavItemChecking" id="frmLeavItemChecking" value="">
-	<input type="hidden" name="frmCurrentId" id="frmCurrentId" value="">
-	<input type="hidden" name="frmDlsvIndx" id="frmDlsvIndx" value="">
-	<input type="hidden" name="frmMode" id="frmMode" value="ins">
+	<form id="kintai" action="/kintai/modify" method="post">
+	<input type="hidden" name="kintai_no" id="kintai_no" value="${param.kintai_no}">
       <ul class="aling_r"><span id="btnDiligenceHelpView" class="anchor"><img src="https://img.payzon.co.kr/_commonImg/icon_help.gif" width="38" height="15" alt="도움말" vspace="8"></span></ul>
       <ul>
         <div id="table0">
           <p class="caption"></p>
           <ul>
             <li class="w_135 c"><strong>入力日</strong></li>
-            <li class="con"><input name="nyuryoku_ymd" id="nyuryoku_ymd" type="date" class="white hasDatepicker" style="width:190px;" readonly></li>
+            <li class="con"><input value="${selectedKintai.nyuryoku_ymd}" name="nyuryoku_ymd" id="nyuryoku_ymd" type="date" class="white hasDatepicker" style="width:190px;" readonly></li>
           </ul>
           
           <ul>
@@ -108,7 +103,8 @@
             <li class="con">
               <select name="kintai_km" id="frmDlgnCode" style="width:190px;">
 				<c:forEach var="kintai" items="${save}">
-					<option value="${kintai.kintai_km}" data-tani="${kintai.kintai_tani}">${kintai.kintai_km}</option>
+					<option value="${kintai.kintai_km}" ${kintai.kintai_km eq selectedKintai.kintai_km ? 'selected' : ''} data-tani="${kintai.kintai_tani}">${kintai.kintai_km}</option>
+					<%-- <option value="${kintai.kintai_km}" data-tani="${kintai.kintai_tani}">${kintai.kintai_km}</option> --%>
 				</c:forEach>
               </select>
             </li>
@@ -116,20 +112,20 @@
           
           <ul>
             <li class="w_135 c"><strong>適用期間</strong></li>
-            <li class="con"><input name="kaishi_ymd" id="kaishi_ymd" type="date" placeholder="시작일" class="text hasDatepicker" style="width:80px;" maxlength="10"> ~ <input name="shuryo_ymd" id="frmDlsvEndD" type="date" placeholder="종료일" class="text hasDatepicker" style="width:80px;" maxlength="10"></li>
+            <li class="con"><input value="${selectedKintai.kaishi_ymd}" name="kaishi_ymd" id="kaishi_ymd" type="date" placeholder="시작일" class="text hasDatepicker" style="width:80px;" maxlength="10"> ~ <input value="${selectedKintai.shuryo_ymd}" name="shuryo_ymd" id="frmDlsvEndD" type="date" placeholder="종료일" class="text hasDatepicker" style="width:80px;" maxlength="10"></li>
           </ul>
           
           <ul>
             <li class="w_135 c"><strong id="kintaiDaysLabel"><span id="disDlgnDays">勤怠</span></strong></li>
             <li class="con">
-            <input name="kintai_hour" id="kintaiDays" type="text" placeholder="日数/時間" class="text" style="width:80px;" maxlength="5">
+            <input value="${selectedKintai.kintai_hour}" name="kintai_hour" id="kintaiDays" type="text" placeholder="日数/時間" class="text" style="width:80px;" maxlength="5">
             <strong id="kintaiDaysELabel"></strong>
             </li>
           </ul>
           
           <ul>
             <li class="w_135 c"><strong>手当て</strong></li>
-            <li class="con"><input name="kintai_pay" id="kintai_pay" type="text" class="white clsAmount" style="width:210px;color:#eb4e5d;text-align:right;" placeholder="勤務分類が支給手当に該当する場合"></li>
+            <li class="con"><input value="${selectedKintai.kintai_pay}" name="kintai_pay" id="kintai_pay" type="text" class="white clsAmount" style="width:210px;color:#eb4e5d;text-align:right;" placeholder="勤務分類が支給手当に該当する場合"></li>
           </ul>
           
         </div>
@@ -197,17 +193,17 @@
 			            
 			                <ul id="ulDL" class="clspass" title="">
 			                  <input type="hidden" id="kintai_no">
-			                  <li class="w_85  c"></li>
-			                  <li class="w_85  c" title="011"></li>
-			                  <li class="w_190  c"></li>
-			                  <li class="w_60  c"></li>
+			                  <li class="w_85  c">2024-01-01</li>
+			                  <li class="w_85  c" title="011">有給休暇</li>
+			                  <li class="w_190  c">2024-01-01 ~ 2024-01-02</li>
+			                  <li class="w_60  c">2</li>
 			                  <li class="w_85  c bold "></li>
 			                  <li class="w_106  c "></li>
 			                  <li class="w_100  c ">
-			                  	<span id="btnDlgnSaveUpd" class="anchor" style="display:none;">
+			                  	<span id="btnDlgnSaveUpd" class="anchor">
 			                  		<img src="../resources/img/btn_s_modify.png" width="43px" height="19px">
 			                  	</span>
-			                  	<span id="btnDlgnSaveDel" class="anchor" style="display:none;">
+			                  	<span id="btnDlgnSaveDel" class="anchor">
 			                  		<img src="../resources/img/btn_s_delete.png" width="43px" height="19px" class="p_l5 ">
 			                  	</span>
 			                  </li>
@@ -232,8 +228,8 @@
 
 // 저장 기능을 하는 버튼을 클릭하는 시뮬레이션
 function simulateSaveClick() {
-    console.log("save button clicked!")
     document.getElementById('saveButton').click();
+    console.log("save button clicked!")
 }
 
 // 페이지 내의 모든 form 요소를 찾아 초기 상태로 리셋
@@ -307,66 +303,6 @@ $(document).ready(function () {
         }
     });
     
-    // 폼이 제출될 때의 이벤트 처리
-    $("#kintai").submit(function(event) {
-        // 폼 데이터 생성
-        var formData = new FormData();
-        formData.append("shain_no", "");
-        formData.append("nyuryoku_ymd", $("#nyuryoku_ymd").val()); // 입력일
-        formData.append("kintai_km", $("select[name='kintai_km']").val()); // 근태항목
-        formData.append("kaishi_ymd", $("input[name='kaishi_ymd']").val()); // 기간 시작일
-        formData.append("shuryo_ymd", $("input[name='shuryo_ymd']").val()); // 기간 종료일
-        formData.append("kintai_hour", $("input[name='kintai_hour']").val()); // 근태일수
-        // formData.append("kintai_pay", $("input[name='kintai_pay']").val()); // 금액
-
-     	// "kintai_pay"에 입력값이 없으면 null로 설정
-        var kintaiPayValue = $("input[name='kintai_pay']").val();
-        console.log("kintai pay is: " + kintaiPayValue);
-        formData.append("kintai_pay", kintaiPayValue !== "" ? kintaiPayValue : "0"); // 금액
-        
-        // 체크된 체크박스의 값을 배열로 가져오기
-        var selectedShainValues = [];
-        $('input[name="selectedShain"]:checked').each(function() {
-            selectedShainValues.push($(this).val());
-        });
-        
-        console.log("selectedShain : " + selectedShainValues);
-		
-        formData.forEach(function(value, key) {
-            console.log(key, value);
-        });
-        
-        // 선택된 직원들에 대해 반복문을 통해 각각의 shain_no 값을 formData에 추가하고 Ajax 요청 보내기
-        for (var i = 0; i < selectedShainValues.length; i++) {
-            // 현재 선택된 직원의 shain_no 값을 formData에 추가
-            formData.set('shain_no', selectedShainValues[i]);
-            
-            console.log([formData.entries()]);
-
-            // Ajax를 통해 서버로 데이터 전송
-            $.ajax({
-                type: "POST",
-                url: "/kintai/list", // 서버의 주소 또는 서블릿 매핑 주소
-                data: formData,
-                processData: false,
-                contentType: false,
-                success: function(response) {
-                    // 서버로부터의 응답을 처리
-                    console.log(response);
-                    location.reload(); // 페이지 새로고침 또는 초기 페이지로 이동
-                },
-                error: function(xhr, status, error) {
-                    console.error(xhr);
-                    console.error(status);
-                    console.error(error);
-                }
-            });
-        }
-
-        //alert("データが正常に登録されました。"); // 등록 성공 시 알림창 표시
-        // 폼 제출 중지 (기본 동작 방지)
-        event.preventDefault();
-    });
 });
 
 
@@ -438,7 +374,7 @@ function updateModalKintai(shain_no, modalId) {
                         '<span id="btnDlgnSaveUpd" class="anchor" onclick="updBtnClick(' + item.kintai_no + ')">' +
                         '<img src="../resources/img/btn_s_modify.png" width="43px" height="19px">' +
                         '</span>' +
-                        '<span id="btnDlgnSaveDel" class="anchor" onclick="delBtnClick(' + item.kintai_no + ')">' +
+                        '<span id="btnDlgnSaveDel" class="anchor">' +
                         '<img src="../resources/img/btn_s_delete.png" width="43px" height="19px" class="p_l5 ">' +
                         '</span>' +
                         '</li>');
@@ -466,10 +402,10 @@ function updBtnClick(kintai_no) {
         data: {
         	kintai_no: kintai_no
         },
+        dataType: 'json',
         success: function (data) {
             // JSON 데이터 처리
             console.log("success");
-            location.href = '/kintai/modify?kintai_no=' + kintai_no;
         },
         error: function (error) {
             console.log("AJAX Error: ", error);
@@ -478,26 +414,7 @@ function updBtnClick(kintai_no) {
 }
 
 
-function delBtnClick(kintai_no) {
-	console.log('Clicked Delete with kintai_no:', kintai_no);
-	$.ajax({
-        type: 'POST',
-        url: '/kintai/delete',
-        data: {
-        	kintai_no: kintai_no
-        },
-        success: function (data) {
-            // JSON 데이터 처리
-            console.log("success");
-            alert("データを削除しました。");
-            location.reload();
 
-        },
-        error: function (error) {
-            console.log("AJAX Error: ", error);
-        }
-    });
-}
 
 
 

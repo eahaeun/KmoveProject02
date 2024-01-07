@@ -46,4 +46,27 @@ public class KintaiHistoryServiceImpl implements KintaiHistoryService {
 		return shainMapper.getKoyoKeitai();
 	}
 
+	@Override
+	public List<KintaiHistoryVO> read(String shain_no) {
+		return mapper.read(shain_no);
+	}
+
+	@Override
+	public KintaiHistoryVO getByKintaiNo(String kintai_no) {
+		return mapper.getByKintaiNo(kintai_no);
+	}
+
+	@Override
+	public void update(KintaiHistoryVO vo) {
+		mapper.update(vo);
+	}
+
+	@Override
+	public void delete(String kintai_no) {
+		mapper.delete(kintai_no);
+	}
+	
+	
+	
+
 }

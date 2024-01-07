@@ -4,27 +4,38 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.zerock.mapper.KintaiHistoryMapper">
 
-    <insert id="insert">
-        insert into KINTAI_HISTORY
-        values (kintai_seq.nextval, #{shain_no}, #{kintai_km}, #{nyuryoku_ymd, jdbcType=TIMESTAMP}, #{kaishi_ymd, jdbcType=TIMESTAMP}, #{shuryo_ymd, jdbcType=TIMESTAMP}, #{kintai_hour}, #{kintai_pay})
-    </insert>
-    
-    <select id="search" parameterType="java.lang.String" resultType="org.zerock.domain.KintaiHistoryVO">
-    	SELECT * FROM KINTAI_HISTORY WHERE shain_no = #{shain_no}
+	<insert id="insert">
+		insert into KINTAI_HISTORY
+		values (kintai_seq.nextval,
+		#{shain_no}, #{kintai_km}, #{nyuryoku_ymd,
+		jdbcType=TIMESTAMP},
+		#{kaishi_ymd, jdbcType=TIMESTAMP}, #{shuryo_ymd,
+		jdbcType=TIMESTAMP},
+		#{kintai_hour}, #{kintai_pay})
+	</insert>
+
+	<select id="search" parameterType="java.lang.String"
+		resultType="org.zerock.domain.KintaiHistoryVO">
+		SELECT * FROM KINTAI_HISTORY WHERE shain_no = #{shain_no}
 	</select>
-    
-    <select id="read" resultType="org.zerock.domain.KintaiHistoryVO"> 
-	select * from Kintai_history where shain_no = #{shain_no}
+
+	<select id="read" resultType="org.zerock.domain.KintaiHistoryVO">
+		select * from Kintai_history where
+		shain_no = #{shain_no}
 	</select>
-	
-	<select id="findBykintaiHistory" resultType="org.zerock.domain.KintaiHistoryVO">
-	
-	select * from Kintai_history where shain_no = #{shain_no} and TO_CHAR(nyuryoku_ymd, 'YYYY-MM') = #{kizoku_ym}
-	
+
+	<select id="findBykintaiHistory"
+		resultType="org.zerock.domain.KintaiHistoryVO">
+
+		select * from Kintai_history where shain_no = #{shain_no}
+		and
+		TO_CHAR(nyuryoku_ymd, 'YYYY-MM') = #{kizoku_ym}
+
 	</select>
 
 
-	<select id="getDataByMonth" resultType="org.zerock.domain.KintaiHourVO">
+	<select id="getDataByMonth"
+		resultType="org.zerock.domain.KintaiHourVO">
 	<![CDATA[
 	    SELECT
 	    	kh.shain_no,
@@ -45,8 +56,9 @@
 		    k.kintai_tani
 	]]>
 	</select>
-	
-	<select id="getDataByD" resultType="org.zerock.domain.KintaiHourVO">
+
+	<select id="getDataByD"
+		resultType="org.zerock.domain.KintaiHourVO">
 	<![CDATA[
 	    SELECT
 		    kh.shain_no,
@@ -68,7 +80,7 @@
 		    k.kintai_tani
 	]]>
 	</select>
-	
+
 	<select id="getKHour" resultType="org.zerock.domain.KyukaHourVO">
 	<![CDATA[
 	    SELECT
@@ -91,8 +103,9 @@
 		    k.kintai_tani
 	]]>
 	</select>
-	
-	<select id="getShain" resultType="org.zerock.domain.KintaiHistoryVO" parameterType="string">
+
+	<select id="getShain"
+		resultType="org.zerock.domain.KintaiHistoryVO" parameterType="string">
     <![CDATA[
 		SELECT
 			kh.shain_no, 
@@ -110,5 +123,26 @@
 			AND EXTRACT(YEAR FROM kh.shuryo_ymd) = EXTRACT(YEAR FROM SYSDATE)
 			AND k.kintai_tani = 'D'
     ]]>
-</select>
+	</select>
+
+	<select id="getByKintaiNo"
+		resultType="org.zerock.domain.KintaiHistoryVO">
+		select * from kintai_history where kintai_no = #{kintai_no}
+	</select>
+
+	<update id="update">
+		UPDATE kintai_history
+		SET
+		kintai_km = #{kintai_km},
+		nyuryoku_ymd = #{nyuryoku_ymd},
+		kaishi_ymd = #{kaishi_ymd},
+		shuryo_ymd = #{shuryo_ymd},
+		kintai_hour = #{kintai_hour},
+		kintai_pay = #{kintai_pay}
+		WHERE kintai_no = #{kintai_no}
+	</update>
+	
+	<delete id="delete">
+		delete from kintai_history WHERE kintai_no = #{kintai_no}
+	</delete>
 </mapper>

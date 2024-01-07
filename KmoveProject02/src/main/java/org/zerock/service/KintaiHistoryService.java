@@ -18,4 +18,12 @@ public interface KintaiHistoryService {
 	public List<KintaiHistoryVO> getShain(String shain_no);
 	
 	public List<String> getKoyoKeitai();
+	
+	public List<KintaiHistoryVO> read(String shain_no);
+	
+	public KintaiHistoryVO getByKintaiNo(String kintai_no);
+	
+	public void update(KintaiHistoryVO vo);
+	
+	public void delete(String kintai_no);
 }
