@@ -500,9 +500,6 @@ function delBtnClick(kintai_no) {
 }
 
 
-
-
-
 function openKyukaModal() {
     document.getElementById('kyukaModal').style.display = 'block';
 }
