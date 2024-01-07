@@ -459,14 +459,12 @@ $("#addTaishokuShainBtn").click(function() {
                 var millisecondsPerDay = 24 * 60 * 60 * 1000;
                 var daysOfWork = Math.round((taishokuDate - nyushaDate) / millisecondsPerDay);
 
-                $("#shain_nm").text(data.shain_nm);
-                $("#shain_no").val(shainNo);
-                console.log("사원번호" + $("#shain_no").val());
-                $("#nyusha_ymd").val(data.nyusha_ymd);
+                $("#disRtsvName").text(data.shain_nm);
+                $("#disRtsvNumber").val(shainNo);
+                $("#frmRtsvSttD").val(data.nyusha_ymd);
                 $("#taishoku_ymd").val(data.taishoku_ymd);
-                $("#yearsOfWork").val(yearsOfWork);
-                $("#daysOfWork").val(daysOfWork);
-                $("#exceptOfWork").val(0); // exceptOfWork를 0으로 설정
+                $("#disRtsvYear").val(yearsOfWork);
+                $("#disRtsvDays").val(daysOfWork);
 	             },
 	             error: function (error) {
 	                 console.error('Error fetching employee data:', error.responseText || error.statusText || error.message || error);
@@ -477,22 +475,15 @@ $("#addTaishokuShainBtn").click(function() {
 	      
 	      
 	      
-	       //급여목록을 불러오는 테이블
-	  $(document).ready(function () {
-    	$("#loadPay").click(function () {
-    	var taishokuDateStr = $("#taishoku_ymd").val();
-    	 if (!taishokuDateStr) {
-    	        alert("퇴직일을 선택해주세요.");
-    	        return;
-    	    }
-    	  var taishokuDateStr = $("#taishoku_ymd").val();
-    	  var shainNo = $("#shain_no").val();
-          var monthpay = 0;
+//급여목록을 불러오는 테이블
+$(document).ready(function () {
+    $("#loadPay").click(function () {
+		var taishokuDateStr = $("#frmRtsvEndD").val();
+		var shainNo = $("#disRtsvNumber").val();
+		var monthpay = 0;
           
-    	 
-    	 $("#kyuyoNaiyaku tbody text").empty();
         // 퇴직일 가져오기
-         var taishokuDate = new Date(taishokuDateStr);
+        var taishokuDate = new Date(taishokuDateStr);
         var startDate = new Date(taishokuDate);
  
         startDate.setMonth(startDate.getMonth() - 3);
@@ -600,11 +591,11 @@ $("#addTaishokuShainBtn").click(function() {
 	    $("#keisan").click(function () {
 	        var kyuyoTotal = parseInt($("#total3MSikyuPay").text());
 	        var daysDiffTotal = parseInt($("#daysDiffLabelTotal").text());
-	        var taishokuDateStr = $("#taishoku_ymd").val();
+	        var taishokuDateStr = $("#frmRtsvEndD").val();
 	        var taishokuDate = new Date(taishokuDateStr);
 	        var taishokuNendo = taishokuDate.getFullYear();
 	        var totalPer1DayAvr = Math.round(kyuyoTotal / daysDiffTotal);
-	        var taishokuShodoku = Math.round(totalPer1DayAvr * 30 * (parseInt($("#daysOfWork").val()) / 365));
+	        var taishokuShodoku = Math.round(totalPer1DayAvr * 30 * (parseInt($("#disRtsvDays").val()) / 365));
 
 
         $.ajax({
@@ -640,12 +631,14 @@ $("#addTaishokuShainBtn").click(function() {
 	  
 //저장
 $(document).ready(function () {
+	
+	
     $("#saveAll").click(function () {
-    	   var shain_no = $("#shain_no").val();
-    	   var sikyu_ymd = $("#sikyu_ymd").val();
+    	   var shain_no = $("#disRtsvNumber").val();
+    	   var sikyu_ymd = $("#frmRtsvPayD").val();
            var taishoku_pay = $("#total3").text();
            if(!sikyu_ymd){
-        	   alert("지급일을 선택해주세요.");
+        	   alert("支給日を選択してください。");
         	   return;
         	}
         	   
@@ -667,6 +660,9 @@ $(document).ready(function () {
                   }
               });
           });
+    
+    
+    
       });
       
       function formatDate(inputDate) {

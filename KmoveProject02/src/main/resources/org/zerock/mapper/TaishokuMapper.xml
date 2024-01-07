@@ -74,4 +74,8 @@
 		taishoku_pay = #{taishoku_pay}
 		WHERE shain_no = #{shain_no}
 	</update>
+
+	<select id="isExist" resultType="org.zerock.domain.TaishokuVO">
+		SELECT * from taishoku where shain_no = #{shain_no}
+	</select>
 </mapper>

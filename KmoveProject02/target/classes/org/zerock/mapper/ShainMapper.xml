@@ -13,9 +13,11 @@
 		SELECT COUNT(*) FROM shain WHERE koyo_keitai =
 		#{empType}
 	</select>
-	
-	<select id="getCountByStateType" resultType="int" parameterType="String">
-		select count(*) from shain where zaishoku_st = #{stateType}
+
+	<select id="getCountByStateType" resultType="int"
+		parameterType="String">
+		select count(*) from shain where zaishoku_st =
+		#{stateType}
 	</select>
 
 	<insert id="insert">
@@ -42,7 +44,7 @@
 		resultType="org.zerock.domain.ShainVO">
 		select * from shain where koyo_keitai = #{koyo_keitai}
 	</select>
-	
+
 	<select id="getListByZaishokuSt"
 		resultType="org.zerock.domain.ShainVO">
 		select * from shain where zaishoku_st = #{zaishoku_st}
@@ -82,27 +84,29 @@
 	<select id="findByShain_no"
 		resultType="org.zerock.domain.ShainVO">
 		SELECT * FROM shain WHERE shain_no IN (
-		SELECT shain_no FROM kyuyo_history WHERE kizoku_ym = #{kizoku_ym}
+		SELECT shain_no FROM
+		kyuyo_history WHERE kizoku_ym = #{kizoku_ym}
 		) ORDER by shain_no
 	</select>
-	
+
 	<delete id="delete">
 		delete from shain where shain_no = #{shain_no}
 	</delete>
-	
+
 	<!-- 목록 보여주기 용 -->
 	<!-- Mapper XML 파일의 일부분 -->
 
 	<select id="getKoyoKeitai" resultType="string">
-	    SELECT DISTINCT koyo_keitai
-	    FROM shain
+		SELECT DISTINCT koyo_keitai
+		FROM shain
 	</select>
 
 	<!-- 휴가15일추가 -->
 	<update id="addKyuka" parameterType="org.zerock.domain.ShainVO">
-		update shain set kyuka = kyuka +15 where rownum >0
+		update shain set kyuka =
+		kyuka +15 where rownum >0
 	</update>
-	
+
 	<!-- shainModify -->
 	<update id="modify" parameterType="org.zerock.domain.ShainVO">
 		update Shain set
@@ -124,20 +128,22 @@
 		where
 		shain_no=#{shain_no}
 	</update>
-	
-	<select id="get" resultType="org.zerock.domain.ShainVO" parameterType="String">
-	select * from shain where shain_no=#{shain_no}
+
+	<select id="get" resultType="org.zerock.domain.ShainVO"
+		parameterType="String">
+		select * from shain where shain_no=#{shain_no}
 	</select>
-	
-	<select id="selectByShainNos"
-		resultType="org.zerock.domain.ShainVO">
-	SELECT * FROM shain WHERE SHAIN_NO IN
-        <foreach collection="list" item="item" open="(" separator="," close=")">
-            #{item, jdbcType=VARCHAR}
-        </foreach>
+
+	<select id="selectByShainNos" resultType="org.zerock.domain.ShainVO">
+		SELECT * FROM shain WHERE SHAIN_NO IN
+		<foreach collection="list" item="item" open="(" separator=","
+			close=")">
+			#{item, jdbcType=VARCHAR}
+		</foreach>
 	</select>
-	
+
 	<select id="getKihonPay" resultType="org.zerock.domain.ShainVO">
-		select kihon_pay from shain where shain_no=#{shain_no}
+		select kihon_pay from shain
+		where shain_no=#{shain_no}
 	</select>
 </mapper>

@@ -13,9 +13,10 @@ public interface TaishokuMapper {
 	void updateTaishoku(TaishokuVO taishokuDTO);
 
 	TaishokuVO getTaishokuInfo(String shain_no);// 사원넘버 기준으로 확인.
+	
+	TaishokuVO isExist(String shain_no);
 
 	int cancelTaishoku(String shain_no);
 
-	void savePay(@Param("shain_no") String shain_no, @Param("sikyu_ymd") String sikyu_ymd,
-			@Param("taishoku_pay") int taishoku_pay);
+	void savePay(@Param("shain_no") String shain_no, @Param("sikyu_ymd") String sikyu_ymd, @Param("taishoku_pay") int taishoku_pay);
 }

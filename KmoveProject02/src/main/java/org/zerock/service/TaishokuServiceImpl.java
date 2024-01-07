@@ -9,8 +9,10 @@ import org.zerock.mapper.ShainMapper;
 import org.zerock.mapper.TaishokuMapper;
 
 import lombok.Setter;
+import lombok.extern.log4j.Log4j;
 
 @Service
+@Log4j
 public class TaishokuServiceImpl implements TaishokuService {
 	@Setter(onMethod_ = @Autowired)
 	private TaishokuMapper mapper;
@@ -28,22 +30,22 @@ public class TaishokuServiceImpl implements TaishokuService {
 	public void insertShainAndTaishoku(String shain_no, String taishoku_ymd, String taishoku_jiyu,
 			String taishoku_renraku) {
 		// TKDTO 객체를 생성하여 값을 설정
-		TaishokuVO shainDTO = new TaishokuVO();
-		shainDTO.setShain_no(shain_no);
-		shainDTO.setTaishoku_ymd(taishoku_ymd);
-		shainDTO.setTaishoku_jiyu(taishoku_jiyu);
-		shainDTO.setTaishoku_renraku(taishoku_renraku);
-		TaishokuVO existingData = mapper.getTaishokuInfo(shainDTO.getShain_no());
+		TaishokuVO vo = new TaishokuVO();
+		vo.setShain_no(shain_no);
+		vo.setTaishoku_ymd(taishoku_ymd);
+		vo.setTaishoku_jiyu(taishoku_jiyu);
+		vo.setTaishoku_renraku(taishoku_renraku);
+		TaishokuVO existingData = mapper.isExist(vo.getShain_no());
+		log.info("데이터 :" + existingData);
 		// 매퍼 메서드 호출
 		if (existingData != null) {
 			// 이미 존재하는 경우, UPDATE 쿼리 실행
-
-			mapper2.updateTaishokuYMD(shainDTO);
-			mapper.updateTaishoku(shainDTO);
+			mapper2.updateTaishokuYMD(vo);
+			mapper.updateTaishoku(vo);
 
 		} else {
-			mapper2.updateTaishokuYMD(shainDTO);
-			mapper.insertTaishoku(shainDTO);
+			mapper2.updateTaishokuYMD(vo);
+			mapper.insertTaishoku(vo);
 		}
 	}
 
