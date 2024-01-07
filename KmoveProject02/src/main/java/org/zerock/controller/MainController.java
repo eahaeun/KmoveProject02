@@ -107,6 +107,11 @@ public class MainController {
 		
 	}
 	
+	@GetMapping("/login2")
+	public void loginview2() {
+		
+	}
+	
 	@PostMapping("/login")
 	public String login(@RequestParam("kanrisha_uid") String kanrisha_uid,
             @RequestParam("kanrisha_pw") String kanrisha_pw,
