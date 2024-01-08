@@ -61,6 +61,22 @@
 	</filter>
 	<filter-mapping>
 		<filter-name>LoginCheckFilter</filter-name>
-		<url-pattern>/*</url-pattern>
+		<url-pattern>/kyuyo/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>LoginCheckFilter</filter-name>
+		<url-pattern>/kintai/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>LoginCheckFilter</filter-name>
+		<url-pattern>/setting/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>LoginCheckFilter</filter-name>
+		<url-pattern>/shain/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>LoginCheckFilter</filter-name>
+		<url-pattern>/taishoku/*</url-pattern>
 	</filter-mapping>
 </web-app>

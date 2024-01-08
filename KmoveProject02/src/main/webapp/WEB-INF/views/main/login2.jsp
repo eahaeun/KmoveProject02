@@ -5,10 +5,10 @@
 <%@include file="../includes/loginheader.jsp"%>
 <%@include file="../includes/loginmenu.jsp"%>
 
-<script>
+<!-- <script>
 alert("ログイン後にご利用いただけます。");
 openLoginModal();
-</script>
+</script> -->
 
 <div class="visualWrap">
 	<div class="visual visColor01_2">
