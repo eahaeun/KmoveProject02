@@ -301,6 +301,8 @@
 <script>
 $(document).ready(function() {
 	
+	var kyuyoTotalFor3Months = 0;
+	
 	function formatDate(date) {
         var year = date.getFullYear();
         var month = date.getMonth() + 1;
@@ -565,8 +567,10 @@ $(document).ready(function() {
   	                parseInt($("#Kyuyosougaku3").val(), 10) +
   	                parseInt($("#Kyuyosougaku4").val(), 10);
 
-  	            $("#total3MSikyuPay").text(total3MSikyuPay);
-  	            console.log(total3MSikyuPay);
+  	          	$("#total3MSikyuPay").text(total3MSikyuPay.toLocaleString());
+  	            
+  	          	kyuyoTotalFor3Months = total3MSikyuPay;
+  	            
   	        },
   	        error: function (error) {
   	            console.error('Error fetching employee data:', error);
@@ -579,7 +583,7 @@ $(document).ready(function() {
 	// 퇴직금 계산 버튼 클릭
   	$("#keisan").click(function () {
   		console.log("퇴직금 계산");
-  	    var kyuyoTotal = parseInt($("#total3MSikyuPay").text());
+  	    var kyuyoTotal = kyuyoTotalFor3Months;
   	    var daysDiffTotal = parseInt($("#daysDiffLabelTotal").text());
   	    var taishokuDateStr = $("#frmRtsvEndD").val();
   	    var taishokuDate = new Date(taishokuDateStr);
@@ -600,16 +604,18 @@ $(document).ready(function() {
   	            var koza = data.koza_num;
   	            var ginko_nm = data.ginko_nm;
   	            
+  	            taishoku_total3 = kyuyoTotal;
   	            
-  	            $("#one, #total1").text(kyuyoTotal);
+  	            $("#one").text(kyuyoTotal);
+  	            $("#total1").text(kyuyoTotal.toLocaleString());
   	            $("#two").text(totalPer1DayAvr);
   	            $("#three, #six, #seven, #eight, #nine, #ten, #eleven, #twelve").val(0);
-  	            $("#four, #total1, #total3").val(taishokuShodoku);
+  	            $("#four").val(taishokuShodoku);
   	            $("#five").text(taishokuNendo);
   	            $("#total2").text(0);
   	            var total2 = parseInt($("#total2").val());
   	            var total3 = parseInt(taishokuShodoku) - parseInt(total2);
-  	            $("#total3").text(kyuyoTotal);  // 수정된 부분
+  	            $("#total3").text(kyuyoTotal.toLocaleString());  // 수정된 부분
   	            $("#frmRtsvWays").val(ginko_nm + " " + koza);
   	        },
   	        error: function (xhr, status, errorThrown) {
@@ -626,7 +632,8 @@ $(document).ready(function() {
   		console.log("저장 버튼 클릭");
  	   var shain_no = $("#disRtsvNumber").val();
  	   var sikyu_ymd = new Date($("#frmRtsvPayD").val());
-        var taishoku_pay = $("#total3").text();
+        var taishoku_pay = kyuyoTotalFor3Months;
+        console.log("taishoku_pay" + taishoku_pay);
      	   
  	  $.ajax({
            type: "GET",

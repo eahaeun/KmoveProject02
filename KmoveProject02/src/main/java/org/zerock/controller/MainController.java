@@ -116,8 +116,6 @@ public class MainController {
 	public String login(@RequestParam("kanrisha_uid") String kanrisha_uid,
             @RequestParam("kanrisha_pw") String kanrisha_pw,
             RedirectAttributes rttr, HttpSession session) {
-		System.out.println("kkkkkkkkk : " + kanrisha_uid);
-		System.out.println(kanrisha_pw);
 		KanrishaVO vo = kanrishaService.login(kanrisha_uid, kanrisha_pw);
 		if(vo != null) {
 			session.setAttribute("kanrisha_uid", kanrisha_uid);
