@@ -428,6 +428,14 @@ function closeKyukaModal() {
     document.getElementById('kyukaModal').style.display = 'none';
 }
 
+var kyukaModal = document.getElementById('kyukaModal');
+
+window.addEventListener('click', function(event) {
+    if (event.target === kyukaModal) {
+    	closeKyukaModal();
+    }
+});
+
 </script>
 
 <%@include file="../includes/footer.jsp"%>

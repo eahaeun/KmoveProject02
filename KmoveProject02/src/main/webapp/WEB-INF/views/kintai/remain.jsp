@@ -256,6 +256,14 @@ $(document).ready(function(){
         updateTable(response);
     });
     
+    var kyukaModal = document.getElementById('kyukaModal');
+
+    window.addEventListener('click', function(event) {
+        if (event.target === kyukaModal) {
+        	closeKyukaModal();
+        }
+    });
+    
     
     // 모달 갱신 함수
     function updateTable(data) {

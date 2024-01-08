@@ -138,6 +138,14 @@ function closeLoginModal() {
             loginForm.submit();
         }
     });
+ 	
+    var loginModal = document.getElementById('loginModal');
+
+	window.addEventListener('click', function(event) {
+	    if (event.target === loginModal) {
+	    	closeLoginModal();
+	    }
+	});
 </script>
 
 <c:if test="${not empty error}">

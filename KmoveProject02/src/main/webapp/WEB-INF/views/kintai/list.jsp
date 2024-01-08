@@ -508,6 +508,15 @@ function closeKyukaModal() {
     document.getElementById('kyukaModal').style.display = 'none';
 }
 
+//모달 외부를 클릭했을 때 닫기
+var kyukaModal = document.getElementById('kyukaModal');
+
+window.addEventListener('click', function(event) {
+    if (event.target === kyukaModal) {
+    	closeKyukaModal();
+    }
+});
+
 </script>
 
 <%@include file="../includes/footer.jsp"%>

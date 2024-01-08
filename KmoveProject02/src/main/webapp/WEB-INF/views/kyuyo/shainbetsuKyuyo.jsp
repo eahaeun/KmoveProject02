@@ -340,7 +340,14 @@ document.getElementById('btnKyuyoReg').addEventListener('click', function() {
     window.location.href = '/kyuyo/kyuyokanrishokigamen';
 });
 
+//모달 밖 클릭시 모달close
+var myModal = document.getElementById('myModal');
 
+window.addEventListener('click', function(event) {
+	if (event.target === myModal) {
+		closeModal();
+	}
+});
 </script>
 
 

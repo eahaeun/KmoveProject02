@@ -654,6 +654,14 @@ $(document).ready(function() {
        });
    });
 	
+  	var addTaishokuShain = document.getElementById('addTaishokuShain');
+
+  	window.addEventListener('click', function(event) {
+  		if (event.target === addTaishokuShain) {
+  			closeTaishokuModal();
+  		}
+  	});
+	
 	
 });//end document ready 
 
