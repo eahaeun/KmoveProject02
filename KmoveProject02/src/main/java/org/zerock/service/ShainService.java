@@ -34,4 +34,6 @@ public interface ShainService {
 	ShainVO readShainByNo(String shain_no);
 	
 	ShainVO getKihonPay(String shain_no);
+
+	ShainVO getShainInfo(String shain_no);
 }

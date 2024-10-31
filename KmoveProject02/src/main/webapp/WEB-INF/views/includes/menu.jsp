@@ -43,6 +43,7 @@
                         <ul class="menu_01">
                             <li><a href="/shain/shainRegister">社員登録</a></li>
                             <li><a href="/shain/shainList">社員一覧・管理</a></li>
+                            <li><a href="/shain/shainChohyoPrint">在職証明書発行</a></li>
                         </ul>
                     </div>
                 </li>

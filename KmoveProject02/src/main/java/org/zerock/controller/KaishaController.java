@@ -27,8 +27,6 @@ public class KaishaController {
 
 	@PostMapping("/allUpdate")
 	public String kanrishaupdate(KaishaVO kaisha, KanrishaVO kanrisha) {
-		log.info("hahaha : " + kaisha);
-		log.info("kanrisha : " + kanrisha);
 		kanrishaService.update(kanrisha);
 		kaishaService.update(kaisha);
 

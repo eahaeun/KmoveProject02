@@ -51,7 +51,7 @@
 	</select>
 
 	<select id="read" resultType="org.zerock.domain.ShainVO">
-		select * from Shain where shain_no
+		select * from shain where shain_no
 		= #{shain_no}
 	</select>
 
@@ -144,6 +144,11 @@
 
 	<select id="getKihonPay" resultType="org.zerock.domain.ShainVO">
 		select kihon_pay from shain
+		where shain_no=#{shain_no}
+	</select>
+	
+	<select id="getShainInfo" resultType="org.zerock.domain.ShainVO">
+		select shain_no, shain_nm, address, birth, yakushoku_nm from shain
 		where shain_no=#{shain_no}
 	</select>
 </mapper>

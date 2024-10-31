@@ -98,7 +98,7 @@ public class MainController {
 	
 	@GetMapping("/joinFail")
 	public void joinFail(@ModelAttribute("error") String error) {
-	    System.out.println(error);
+	    System.out.println("error is " + error);
 	    // joinSuccess.jsp에서 이 값 활용 가능
 	}
 	

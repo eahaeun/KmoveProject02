@@ -43,4 +43,6 @@ public interface ShainMapper {
 	List<ShainVO> selectByShainNos(List<String> selectedShainNos);
 	
 	ShainVO getKihonPay(String shain_no);
+
+	ShainVO getShainInfo(String shain_no);
 }

@@ -8,7 +8,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -24,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 import org.zerock.domain.BushoVO;
 import org.zerock.domain.RequestVO;
 import org.zerock.domain.ShainAttachVO;
@@ -41,7 +41,6 @@ import org.zerock.service.ShainService;
 import org.zerock.service.YakushokuService;
 
 import lombok.AllArgsConstructor;
-import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 
 @Controller
@@ -369,5 +368,23 @@ public class ShainController {
 
 		return "redirect:/shain/shainList";
 	}
+	
+	// 사원장표출력 상세화면
+	@GetMapping("/shainChohyoPrint")
+	public void print(Model model) {
+		List<ShainVO> shainList = shainService.getList();
+		model.addAttribute("shainList", shainList);
+	}
 
+	//사원장표출력
+	@PostMapping("/print")
+	public ModelAndView printShains(@RequestParam String shain_no) {
+		ModelAndView mv = new ModelAndView();
+		ShainVO shain = shainService.readShainByNo(shain_no);
+		
+		mv.addObject("printShainInfo", shain);
+		mv.setViewName("shain/print");
+		return mv;
+	}
+	
 }

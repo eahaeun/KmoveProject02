@@ -101,5 +101,10 @@ public class ShainServiceImpl implements ShainService {
 	public ShainVO getKihonPay(String shain_no) {
 		return mapper.getKihonPay(shain_no);
 	}
+	
+	@Override
+	public ShainVO getShainInfo(String shain_no) {
+		return mapper.getShainInfo(shain_no);
+	}
 
 }
